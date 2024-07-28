@@ -1,0 +1,7 @@
+.imagenDeFondo {
+    background-image: url('../assets/Cuidadora\ y\ perro\ \(portada\).jpg');
+    background-size:cover; /* Ajusta la imagen para cubrir todo el div */
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; 
+}
