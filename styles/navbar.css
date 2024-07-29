@@ -1,0 +1,128 @@
+.navbar {
+    background-color: #44A194;
+    color: #FFFFFF;
+    padding: 30PX;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.navbar .nav--container {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+
+.navbar .navbar--menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .navbar--menu li{
+    margin: 0;
+    /*padding: 0;*/
+}
+
+.navbar .navbar--menu a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.navbar .navbar--menu a:hover{
+    color: #F0BB69;
+}
+
+
+.navbar .navbar--botones {
+    display: flex;
+    gap: 50px;
+}
+
+.navbar .navbar--botones .boton--claro{
+    background-color: #65B5A1;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-family: "sansita";
+    font-size: larger;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navbar .navbar--botones .boton--azul{
+    background-color: #124C5F;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-family: "sansita";
+    font-size: larger;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navbar .navbar--botones .boton--claro:hover{
+    background-color: #F0BB69;
+}
+
+.navbar .navbar--botones .boton--azul:hover{
+    background-color: #777;
+}
+
+@media(max-width: 770px){
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px;
+    }
+
+    .navbar .nav--container{
+        width: 100%;
+    }
+
+    .navbar .navbar--menu{
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar .navbar--menu li{
+        width: 100%;
+    }
+
+    .navbar .navbar--menu a{
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .navbar .navbar--botones{
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar .navbar--botones button{
+        width: 100%;
+        padding: 10px 0;
+        
+    }
+
+    .navbar .navbar--logo a img{
+        width: 300px;
+        height: auto;
+        text-align: center;
+        align-items: center;
+    }
+
+}
+
