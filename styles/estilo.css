@@ -50,13 +50,16 @@ div{
 .boton {
     color: var(--font-color-w);
     background-color: var(--color-tertiary);
-    padding: 20px;
+    padding: 1vh;
     border: none;
     border-radius: 30px;
     font-size: 5vh;
     font-family: 'Sansita';
-    position: inherit;
-    bottom: -100%;
+    height: 1hv;
+    width: 1hv;
+    position: relative;
+    bottom: -70%;
+    z-index: 2;
 }
 
 .imagenDeFondo {
@@ -73,11 +76,22 @@ div{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(3,1fr);
+    z-index: 0;
 }
 
 .divPerfil{
     position: relative;
     text-align: center;
+    bottom: -50%;
+    z-index: 2;
+
+}
+
+.nombreUbicacion{
+  font-family: 'Sansita';
+  color: black;
+  font-size: 2.7vw;
+  z-index: 2;
 }
 
 .imagenDePerfil{
@@ -89,10 +103,14 @@ div{
     grid-column: 3;
     grid-row: 3;
     position: relative;
-    bottom: -50%;
+    z-index: 2;
 }
 
-
+.ola{
+  position: absolute;
+  bottom: -30%;
+  z-index: 1;
+}
 
 
 
