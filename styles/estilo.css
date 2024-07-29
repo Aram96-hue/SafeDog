@@ -110,6 +110,9 @@ div{
   position: absolute;
   bottom: -30%;
   z-index: 1;
+  width: 100hv;
+  height: auto;
+  object-fit: cover;
 }
 
 
