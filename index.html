@@ -1,127 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SafeDog</title>
-    <!-- Conecto el CSS -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.8">
+    <link rel="icon" href="./assets/SafeDogWhite.png">
     <link rel="stylesheet" href="./styles/style.css">
-
-    <!-- Letra perzonalizada -->
-     
-    <!--Calistoga-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
-
-    <!-- Baskerville -->
+    <link href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap" rel="stylesheet">
-    <!--Roboto-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Login</title>
 </head>
-
 <body>
-
-    <!-- Creamos la estructura básica de la página con HTML semántico -->
-
-    <!-- Encabezado -->
-
-    <header>
-
-    </header>
-
-    <!-- Barra de navegación -->
-
-    <nav>
-        <div class="navbar" id="navbar">
-            <br>
-            <img src="./assets/SafeDog Logo Completo Negro.png"  width="200px">
-            <img src="./assets/SafeDog Logo Completo Blanco.png" width="200px">
-            <div class="buttons-navbar"></div>
-            <button class="button">Ser cuidador</button>
-            <button class="button">Iniciar sesión</button>
-            <button class="button">Registrarse</button>
-            <br>
+    <div id="login-main">
+     <div class="login" id="access">
+     <h1>Iniciar sesión</h1>
+     <form>
+        <div class="input">
+        <input type="text" name="username" placeholder="Correo" class="input-border">
         </div>
-
-    </nav>
-
-    <main>
-        <img src="./assets/Cuidadora y perro (portada).jpg" width="100%" class="CuidadorUbicacion">
-
-        <div class="ContactoCuidador">
-        <button class="button">Contactame</button>
-        <img src="./assets/Foto perfil cuidadora.jpeg" width="100px" class="FotoPerfil">
+        <div class="input">
+        <input type="text" name="password" placeholder="Contraseña" class="input-border">
         </div>
-
-        <h1>Servicios</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam placeat nisi reiciendis quisquam pariatur
-            repellat mollitia temporibus, adipisci provident debitis ad cumque harum, commodi dignissimos voluptatibus
-            sint consequatur sit! Voluptate.</p>
-        
-          <!-- Botones servicios -->
-
-        <div class="button-container">
-            <button class="pet-service-button">
-                <img src="./assets/iconos/Hospedaje.png" alt="Hospedaje">
-                <span>Hospedaje</span>
-            </button>
-            <button class="pet-service-button">
-                <img src="./assets/iconos/Tienda.png" alt="Tienda">
-                <span>Tienda</span>
-            </button>
-            <button class="pet-service-button">
-                <img src="./assets/iconos/Guarderia.png" alt="Guardería">
-                <span>Guardería</span>
-            </button>
-            <button class="pet-service-button">
-                <img src="./assets/iconos/Paseo.png" alt="Paseo">
-                <span>Paseo</span>
-            </button>
-            <button class="pet-service-button">
-                <img src="./assets/iconos/Baño.png" alt="Baño">
-                <span>Baño</span>
-            </button>
+        <div class="input" >
+        <button type="submit" class="input-border" id="ingresar">Ingresar</button>
         </div>
-<br>
-        <div class="Estelares"> 
-            <div>
-            <h2>Cuidador del mes</h2>
-            <img src="./assets/Travesura.png">
-            </div>
-            <div>
-            <h2>El perro mas travieso</h2>  
-            <img src="./assets/CuidadorMes.png">   
-            </div>
+        <div class="input">
+        <a href="https://www.w3schools.com/html/html_images_background.asp">Recuperar contraseña</a>
         </div>
-            
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt debitis, aperiam iure maiores, hic
-            officiis animi optio assumenda nulla soluta ratione quaerat, id dicta a? Consequatur possimus quas repellat
-            voluptatibus!</p>   
-
-    </main>
-
-
-    <!-- Pie de página -->
-
-    <footer class="footer">
-
-        <h3>SafeDog</h3>
-        <p class="footer">Footer</p>
-        <img src="./assets/SafeDog Icono Blanco.png" width="100">
-        <img src="./assets/SafeDog Icono Negro.png" width="100">
-
-    </footer>
-
-    <!-- Se conecta Javascript -->
-    <script src="./scripts/script.js">
-    </script>
+     </form>
+     </div>
+     <div class="login" id="register">
+     <h1>Bienvenido!</h1>
+    
+     <div class="input2">
+     <form action="https://www.trustedhousesitters.com/?utm_source=google&utm_medium=cpc&utm_campaign=GoogleAds_Direct_Search_Brand+Non-Brand_ROW_SouthAmerica_Acquisitions&utm_content=HO_PetSitting&gad_source=1&gclid=Cj0KCQjw-5y1BhC-ARIsAAM_oKlTgwFiTrqRImYfNe766zhif3C3pqg4ORR6aPMj2voWLmnmKuO5wOcaAggLEALw_wcB">
+     <button role="link" type="submit" class="input-border" id="ingresar">Registrarse</button>
+     </form>
+     </div>
+    </div>
+    <div id="login-bottom">
+    
+     
+    </div>
+     
 </body>
-
 </html>
