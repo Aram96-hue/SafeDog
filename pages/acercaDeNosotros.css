@@ -40,6 +40,8 @@ body{
     right: -22px;
 
 }
+
+/* Texto de prueba */
 .wrapper .carousel {
     display: grid;
     grid-auto-flow: column;
