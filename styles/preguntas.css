@@ -125,14 +125,16 @@ body {
   padding: 4.8rem 6.4rem 6.4rem 6.4rem;
 }
 
+.exttra-text-container {
+  margin-bottom: 4.8rem;
+}
 .extra-text {
   font-size: 2rem;
   line-height: 1.8;
-  margin-bottom: 4.8rem;
 }
 
 .extra--question-img-box {
-  background-image: url("../../assets/preguntas02.jpg");
+  background-image: url("../assets/preguntas02.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -207,4 +209,24 @@ body {
 .btn--form:hover {
   background-color: #fff;
   color: #555;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  color: #555;
+  background-color: #fff;
+}
+
+.contact--part {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+#contacto--btn.clicked {
+  background-color: #39b3a2;
+}
+
+.number--part {
+  pointer-events: none;
+  opacity: 0.4;
 }
