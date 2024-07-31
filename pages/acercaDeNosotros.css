@@ -1,3 +1,18 @@
+:root {
+    /* Colores */
+    
+    
+    /* --------------------------------- */
+    /* Color de fondo */
+    --bg-color: #FFF8E0;
+    /* Colores primarios */
+        --color-primary: black;
+        --color-secondary: #44A194;
+        --color-tertiary: #F0BB69;
+        --color-cuarto: #7F636E;
+    
+    }
+
 div{
     border: 5px solid rgb(0, 255, 4);
    
