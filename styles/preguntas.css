@@ -230,3 +230,9 @@ body {
   pointer-events: none;
   opacity: 0.4;
 }
+
+.input-feedback {
+  font-size: 1.6rem;
+  margin-top: 10px;
+  font-family: "Roboto", sans-serif;
+}
