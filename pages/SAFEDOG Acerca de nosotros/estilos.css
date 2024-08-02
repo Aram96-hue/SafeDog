@@ -51,7 +51,7 @@ h2 {
     background: linear-gradient(100deg, rgba(236, 135, 4, 0.824), rgb(199, 140, 21));
     animation: animate 10s linear infinite;
     -webkit-text-fill-color: transparent;
-    /* -webkit-background-clip: text; */
+    -webkit-background-clip: text;
 }
 .centrado {
     text-align:center;
@@ -67,7 +67,7 @@ h2 {
 }
 
 .fondoCuidamos{
-    background-image: url('https://images.pexels.com/photos/2666146/pexels-photo-2666146.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-image:url('./assets/ImgenAcercaDeSafeDog.jpeg');
     background-size: cover; /* Ajusta la imagen para cubrir todo el div */
     object-fit: cover;
     background-position: center center;
