@@ -44,6 +44,7 @@ body h2{
  font-family:var(--font-primary);
 }
 
+/*
 h2 {
     color: var(--color-primary);
     text-align: left;
@@ -52,18 +53,25 @@ h2 {
     animation: animate 10s linear infinite;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-}
+    font-size: 26px;
+}*/
+
 .centrado {
     text-align:center;
 }
 
+#titulo-seccion{
+    color: var();
+    text-align: left;
+    font-size: 30px;
+}
 
-.Tarjeta-miembro h2{
-    color: var(--color-cuarto);
+#tituloTarjeta { 
+    color: var(--color-cuarto) ;
     justify-content: center;
-    /* text-align: center; */
-    flex: auto;
-    padding: 50px;
+    text-align: center;
+    padding: 10px;
+
 }
 
 .fondoCuidamos{
@@ -85,7 +93,7 @@ h2 {
     /* Espaciado externo y centrado horizontalmente */
     width: 90%;
     background: linear-gradient( 135deg, #E3E3E3 10%, var(--color-tertiary) 100%);
-
+    opacity: 70%;
    /* Ancho máximo para mantener el texto legible*/
 }
 
@@ -99,6 +107,8 @@ text-align: justify;
     justify-content: center;
     /* Justificar el texto del párrafo */
     line-height: 1.5;
+    font-size:22px;
+    color: var(--color-primary);   
 }
 
 .AcercaDeSafe hr {
@@ -127,8 +137,15 @@ text-align: justify;
     line-height: 1.5;
 }
 
+.stat-block p{
+    line-height: 1.2;
+    font-size: 20px;
+}
+
 .stat-block ul{
+    line-height: 2.0;
     list-style: none;
+    font-size: 20px;
 }
 
 .image-div {
@@ -176,6 +193,9 @@ hr {
     /* Espaciado arriba y abajo de la línea */
 }
 
+#dog{
+    font-size: 50px;
+}
 
 
 @media screen and (max-width: 1480px) {
@@ -214,12 +234,13 @@ hr {
     height: auto;
     padding: 20px;
     }
+
 }
 
 
 .AcercaDelProyecto {
     display: flex;
-    background-color: #E3E3E3;
+    background-color: #65B5A1;
     padding: 60px 60px;
     width: 90%;
     box-shadow: 0px 5px 15px rgba(46, 23, 8, 0.5);
@@ -230,7 +251,7 @@ hr {
     padding: 50px 0px;
     margin-top: 150px;
     margin-bottom:  50px;
-    justify-content: center;
+    justify-content: center;   
 }
 
 #PerritoBloque {
@@ -242,12 +263,12 @@ hr {
     left:0px;
 }
 
-#acercaDe--cont {
-    text-align: left;
+acer#caDe--cont {
+    text-align: center;
     display: flex;
     width: 70%;
     padding: 0px 0px 0px 10px;
-
+    font-size: 22px;
 }
 
 .titulo1 {
@@ -297,7 +318,7 @@ hr {
     overflow: none;
     /*Animacion de lista desordenada*/
     
-    animation: slide 10s infinite;
+    animation: slide 20s infinite;
     width: 100%;
     height: auto;
     margin: 0;
@@ -384,7 +405,7 @@ hr {
     text-align: center;
     width: 100%;
     height: 100%;
-    padding: 40px;
+    padding: 50px;
     border-radius: 60px;
     margin: 20px;
     padding: 20px;
@@ -392,13 +413,14 @@ hr {
     flex-direction: column;
     align-items: center;
     background-attachment: fixed;
+    font-size: 18px;
    
     
 }
 
 .Tarjeta-miembro img {
-    width: 148px;
-    height: 148px;
+    width: 200px;
+    height: 200px;
     border-radius: 100%;
     border: #7F636E solid 5px;
     object-fit: cover;
@@ -411,7 +433,6 @@ overflow: hidden;
 background-position: center;
 }
 
-
 .botonTarjeta {
     margin-top: 15px;
     padding: 14px;
@@ -423,14 +444,14 @@ background-position: center;
     font-family: var(--font-secondary);
     font-size: 20px;
     text-decoration: none;
-    transition: all 400ms ease;
+    transition: all 600ms ease;
 }
 .botonTarjeta{
-    transition: all 400ms ease;
+    transition: all 600ms ease;
 }
 .botonTarjeta:hover{
-    color:var(--bg-color--);
-    background: linear-gradient( 135deg, var(--color-cuarto) 10%, #eadc93d1 100%);
+    
+    background: linear-gradient( 135deg, var(--color-cuarto) 10%, #393627d1 100%);
     border:var(--bg-color--);
 }
 
