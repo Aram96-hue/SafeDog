@@ -18,6 +18,11 @@ function isPhoneNumberValid(phone) {
   return telefonoRegex.test(phone);
 }
 
+function isNameValid(name) {
+  let nameRegex = /^[A-Za-z\s\-]+$/;
+  return nameRegex.test(name);
+}
+
 function sendEmail() {
   Email.send({
     Host: "smtp.elasticemail.com",
@@ -28,13 +33,31 @@ function sendEmail() {
     Subject: "SafeDog Comentario",
     Body: `Nombre: ${
       document.getElementById("full-name").value
-    }.<br /> Correo: ${document.getElementById("email").value}.<br /> Telefono: ${
+    }.<br /> Correo: ${
+      document.getElementById("email").value
+    }.<br /> Telefono: ${
       document.getElementById("number").hasAttribute("required")
         ? document.getElementById("number").value
         : "La persona no gusta comunicarse con nosotros activamente"
     }.<br /> Mensaje: ${document.getElementById("area-form").value}.`,
   }).then(alert("Formulario enviado correctamente."));
 }
+
+//Indicar en tiempo real si nombre tiene un caracter invalido
+document.getElementById("full-name").addEventListener("input", function () {
+  let nombre = document.getElementById("full-name").value.trim();
+  let nameRegex = /^[A-Za-z\s\-]+$/;
+  let nameError = document.getElementById("name-feedback");
+
+  if (!nameRegex.test(nombre)) {
+    // Muestra un mensaje de error si hay caracteres inválidos
+    nameError.textContent = "Caracter inválido";
+    nameError.style.color = "red";
+  } else {
+    // Borra el mensaje de error si el nombre es válido
+    nameError.textContent = "";
+  }
+});
 
 //if para indicar en tiempo real si es valido (correo)
 document.getElementById("email").addEventListener("input", function () {
@@ -43,10 +66,10 @@ document.getElementById("email").addEventListener("input", function () {
 
   if (!isEmailValid(correo)) {
     feedback.textContent = "Correo electrónico inválido ._.";
-    feedback.style.color = "white";
+    feedback.style.color = "red";
   } else {
     feedback.textContent = "Correo electrónico válido UwU";
-    feedback.style.color = "#39b3a2";
+    feedback.style.color = "white";
   }
 });
 
@@ -57,10 +80,10 @@ document.getElementById("number").addEventListener("input", function () {
 
   if (!isPhoneNumberValid(telefono)) {
     feedback.textContent = "Número telefónico inválido ._.";
-    feedback.style.color = "white";
+    feedback.style.color = "red";
   } else {
     feedback.textContent = "Número telefónico válido UwU";
-    feedback.style.color = "#39b3a2";
+    feedback.style.color = "white";
   }
 });
 
@@ -69,8 +92,10 @@ document.getElementById("contacto--btn").addEventListener("click", function () {
   document.getElementById("number--div").classList.toggle("number--part");
   if (document.getElementById("number").hasAttribute("required")) {
     document.getElementById("number").removeAttribute("required");
+    document.getElementById("arrow").setAttribute("name", "arrow-up-outline");
   } else {
     document.getElementById("number").setAttribute("required", "required");
+    document.getElementById("arrow").setAttribute("name", "arrow-down-outline");
   }
 });
 
@@ -85,7 +110,8 @@ document
     let telefono = document.getElementById("number").value.trim();
     let comentarios = document.getElementById("area-form").value.trim();
     // Validación de nombre (no debe estar vacío)
-    if (nombre === "") {
+    let nameRegex = /^[A-Za-z\s\-]+$/;
+    if (nombre === "" || !nameRegex.test(nombre)) {
       return;
     }
     // Llamado de funcion de validacion de email

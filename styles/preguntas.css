@@ -121,7 +121,7 @@ body {
 }
 
 .extra--question--text {
-  background-color: var(--secondary);
+  background-color: #65b5a1;
   padding: 4.8rem 6.4rem 6.4rem 6.4rem;
 }
 
@@ -175,7 +175,8 @@ body {
   color: #aaa;
 }
 
-.extra--question *:focus {
+.extra--question input:focus,
+.extra--question textarea:focus {
   outline: none;
   box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
 }
@@ -217,13 +218,42 @@ body {
   background-color: #fff;
 }
 
+.btn--cellphone {
+  width: 25rem;
+  align-self: center;
+  box-shadow: 5px;
+  text-align: center;
+  padding: 0.5rem 1rem;
+}
+
+.btn--shadow {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2),
+    /* Sombra externa */ inset 1px 1px 3px rgba(255, 255, 255, 0.3); /* Sombra interna */
+  transition: all 0.3s ease;
+  button:active {
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.3),
+      /* Más sombra interna */ none; /* Sin sombra externa */
+  }
+}
+
 .contact--part {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 1.6rem;
+}
+
+.text--cellphone--button {
+  align-self: center;
+}
+
+.textarea--container {
+  margin-bottom: 1.6rem;
 }
 
 #contacto--btn.clicked {
-  background-color: #39b3a2;
+  background-color: var(--secondary);
+  color: #fff;
 }
 
 .number--part {
@@ -235,4 +265,9 @@ body {
   font-size: 1.6rem;
   margin-top: 10px;
   font-family: "Roboto", sans-serif;
+}
+
+.link--color {
+  color: var(--primary);
+  text-decoration: none;
 }

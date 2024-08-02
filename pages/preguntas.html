@@ -14,6 +14,14 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
     <link rel="stylesheet" href="../styles/preguntas.css" />
     <link rel="stylesheet" href="../styles/preguntas-queries.css" />
 
@@ -50,7 +58,7 @@
             </svg>
             <div class="hidden-box">
               <p class="text">
-                SafeDog es una sociedad anonima de responsabilidad limitada bien constituida, inscrita en el registro público del comercio y registrada ante el Servicio de Administración Tributaria de la SHCP con sedes en Guadalajara y Ciudad de México. Es una empresa amigable con el medio ambiente y con enfoque social. Tiene servicios de alta calidad y demanda que garantizan un nivel de satisfación de 5 estrellas. Conoce más aqui.
+                SafeDog es una sociedad anonima de responsabilidad limitada bien constituida, inscrita en el registro público del comercio y registrada ante el Servicio de Administración Tributaria de la SHCP con sedes en Guadalajara y Ciudad de México. Es una empresa amigable con el medio ambiente y con enfoque social. Tiene servicios de alta calidad y demanda que garantizan un nivel de satisfación de 5 estrellas. Conoce más <a class="link--color" href="https://www.ejemplo.com">aquí</a>
               </p>
             </div>
           </div>
@@ -73,7 +81,7 @@
             </svg>
             <div class="hidden-box">
               <p class="text">
-                Ser reconocidos como líderes en el cuidado especializado de perros, comprometidos con la excelencia y la innovación en el servicio. Inspirar confianza y tranquilidad en los dueños, sabiendo que sus mascotas reciben el mejor cuidado posible, contribuyendo así al fortalecimiento del vínculo entre humanos y perros.
+                Ser reconocidos como líderes en el cuidado especializado de perros, comprometidos con la excelencia y la innovación en el servicio. Inspirar confianza y tranquilidad en los dueños, sabiendo que sus mascotas reciben el mejor cuidado posible, contribuyendo así al fortalecimiento del vínculo entre humanos y perros. Más info <a class="link--color" href="https://www.ejemplo.com">aquí</a>.
               </p>
             </div>
           </div>
@@ -144,7 +152,7 @@
             </svg>
             <div class="hidden-box">
               <p class="text">
-                Lorem ipsum.
+                Da click <a class="link--color" href="https://www.ejemplo.com">aquí</a>
               </p>
             </div>
           </div>
@@ -236,7 +244,7 @@
             </svg>
             <div class="hidden-box">
               <p class="text">
-                Proveer un cuidado integral y personalizado a cada perro, asegurando su bienestar físico, emocional y social. Fomentar un ambiente seguro, amoroso y enriquecedor que promueva una vida saludable y feliz para cada mascota.
+                Proveer un cuidado integral y personalizado a cada perro, asegurando su bienestar físico, emocional y social. Fomentar un ambiente seguro, amoroso y enriquecedor que promueva una vida saludable y feliz para cada mascota. Para mayor info, da click <a class="link--color" href="https://www.ejemplo.com">aquí</a>.
               </p>
             </div>
           </div>
@@ -259,7 +267,7 @@
             </svg>
             <div class="hidden-box">
               <p class="text">
-                En SafeDog (no) ofrecemos prestaciones...
+                En SafeDog no ofrecemos prestaciones. SafeDog es una empresa que ofrece una plataforma para cuidadores que serán remunerados a destajo y con previa conveniencia de entre este y el cliente, incluyendo las tarifas fijas por suscripción y comisiones de servicios de la plataforma.
               </p>
             </div>
           </div>
@@ -282,7 +290,7 @@
             </svg>
             <div class="hidden-box">
               <p class="text">
-                Puedes crear tu perfil ingresando al siguiente enlace: 
+                Puedes crear tu perfil <a class="link--color" href="https://www.ejemplo.com">aquí</a>
               </p>
             </div>
           </div>
@@ -305,7 +313,7 @@
             </svg>
             <div class="hidden-box">
               <p class="text">
-                Es muy sencillo, solo tienes que...
+                Es muy sencillo, solo da click <a class="link--color" href="https://www.ejemplo.com">aquí</a>.
               </p>
             </div>
           </div>
@@ -319,10 +327,7 @@
           <h2 class="heading-secondary">¡Contactanos!</h2>
           <div class="exttra-text-container">
             <p class="extra-text">
-              ¿Necesitas ayuda?... ¡Envianos tu duda!
-            </p>
-            <p class="extra-text">
-              Si no encontraste respuesta a tus preguntas, agrega tus datos y te contactaremos.
+              ¿Necesitas ayuda?... ¡Envianos tu duda! Si no encontraste respuesta a tus preguntas, agrega tus datos y te contactaremos.
             </p>
           </div>
         </div>
@@ -338,6 +343,7 @@
                     placeholder="Nombre o Username"
                     required
                   />
+                  <p id="name-feedback" class="input-feedback"></p>
                 </div>
 
                 <div>
@@ -352,33 +358,33 @@
                 </div>
 
                 <div class="contact--part">
-                  <label for="contacto">Gusta comunicarse con nosotros activamente</label>
-                  <button class="btn btn--outline" id="contacto--btn" type="button">Contacto directo</button>
+                  <label class="text--cellphone--button" for="contacto">¿Quieres matener comunicación activa?</label>
+                  <button class="btn btn--outline btn--cellphone btn--shadow" id="contacto--btn" type="button">Contacto activo <ion-icon name="arrow-up-outline" id="arrow"></ion-icon></button>
                 </div>
 
                 <div class="number--part" id="number--div">
-                  <label for="number">Numero telefonico</label>
+                  <label for="number">Número telefónico</label>
                   <input
                     id="number"
                     type="tel"
-                    placeholder="5567893224"
+                    placeholder="55 1234 5678"
                   />
                   <p id="number-feedback" class="input-feedback"></p>
                 </div>
 
-                <div>
-                  <label for="area-form">Pregunta y/o comentarios</label>
-                  <textarea id="area-form" name="area-form" placeholder="Pregunta(s) o comentario(s)" required></textarea>
+                <div class="textarea--container">
+                  <label for="area-form">Pregunta y/o comentario</label>
+                  <textarea id="area-form" name="area-form" placeholder="Escribe tu comentario" required></textarea>
                 </div>
 
-                <button class="btn btn--form" type="submit">Enviar</button>
+                <button class="btn btn--form btn--shadow" type="submit">Enviar</button>
 
               </form>
             </div>
             <div
               class="extra--question-img-box"
               role="img"
-              aria-label="Mujer felicmente con su perro"
+              aria-label="Mujer felizmente con su perro"
             ></div>
           </div>
         </div>
