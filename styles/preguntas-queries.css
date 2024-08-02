@@ -34,14 +34,16 @@
   .list {
     max-width: 40rem;
   }
+
   .extra--question {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    row-gap: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
     background-color: #7f636e;
   }
-  .extra--question--text {
-    grid-column: 1 / 2;
+
+  .extra--question-img-box {
+    height: 50rem;
   }
 }
 
@@ -52,6 +54,14 @@
 
   .heading-primary {
     font-size: 5rem;
+  }
+
+  .extra--question--text {
+    padding: 2.4rem 3.2rem 2.4rem 3.2rem;
+  }
+
+  .extra--question-img-box {
+    height: 45rem;
   }
 }
 
@@ -70,5 +80,13 @@
 
   .item {
     column-gap: 0;
+  }
+
+  .extra--question--text {
+    padding: 1.2rem 1.6rem 1.2rem 1.6rem;
+  }
+
+  .extra--question-img-box {
+    height: 30rem;
   }
 }
