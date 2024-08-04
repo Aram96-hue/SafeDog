@@ -24,10 +24,62 @@
     ></script>
     <link rel="stylesheet" href="../styles/preguntas.css" />
     <link rel="stylesheet" href="../styles/preguntas-queries.css" />
-
+    <!--Librería del menú hamburguesa-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../styles/navBar.css">
+    <link rel="stylesheet" href="../styles/footer.css">
     <title>Preguntas frecuentes</title>
   </head>
   <body>
+   <!--NavBar de safeDog-->
+   <nav class="navbar">
+
+    <div class="navbar--logo">
+        <a href="#" target="_blank"><img src="../assets/SafeDog W (9).png" alt="SafeDog-Logo"></a>
+    </div>
+
+    <div class="nav--container">
+        <ul class="navbar--menu">
+            <li><a href="./acercaDeNosotros.html" target="">Acerca de nosotros</a></li>
+            <li><a href="./nuestrosServicios.html" target="">Nuestros Servicios</a></li>
+            <li><a href="./preguntas.html">Preguntas Frecuentes</a></li>
+        </ul>
+
+        <div class="navbar--botones">
+            <button class="boton--claro" onclick="window.location.href='../pages/serCuidador.html';">Ser
+                cuidador</button>
+            <button class="boton--claro" onclick="window.location.href='../pages/inicioSesion.html';">Inicio de
+                sesión</button>
+            <button class="boton--azul" onclick="window.location.href='../pages/registro.html';">Registro</button>
+        </div>
+    </div>
+    <!--Menu de hamburguesa-->
+    <div class="menu-btn">
+        <i class="fa-solid fa-bars fa-2x"></i>
+    </div>
+
+</nav>
+<!-- Menu desplegable para móviles -->
+<div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-navbar--menu">
+        <li><a href="./acercaDeNosotros.html" target="_blank">Acerca de nosotros</a></li>
+        <li><a href="./nuestrosServicios.html" target="_blank">Nuestros Servicios</a></li>
+        <li><a href="./preguntasFrecuentes.html" target="_blank">Preguntas Frecuentes</a></li>
+    </ul>
+    <div class="mobile-navbar--botones">
+        <button class="boton--claro" onclick="window.location.href='./serCuidador.html';">Ser
+            cuidador</button>
+        <button class="boton--claro" onclick="window.location.href='./inicioSesion';">Inicio de
+            sesión</button>
+        <button class="boton--azul" onclick="window.location.href='./registro.html';">Registro</button>
+    </div>
+</div>
+
+
+
+
     <header>
       <nav class="main-nav-list"></nav>
     </header>
@@ -390,8 +442,37 @@
         </div>
       </section>
     </main>
-    <footer class="footer"></footer>
+   <!--Pie de página de safeDog-->
+   <footer class="footer--safeDog">
+    <div class="iconos">
+        <a href="#"><img src="../assets/correo5.png" alt="" target="_blank"></a>
+        <a href="#"><img src="../assets/fb5.png" alt="" class="logo--fb"></a>
+        <a href="#"><img src="../assets/instagramb.png" alt="" class="logo--insta"></a>
+        <a href="#"><img src="../assets/whatsapp.png" alt=""></a>
+    </div>
+    <div class="footer--logo">
+        <img src="../assets/safedogfooter.png" alt="safeDog Footer">
+    </div>
+    <div class="footer--info">
+        <h4 class="footer--question">¿Quieres formar parte de nuestra comunidad?</h4>
+        <ul class="footer--list">
+            <li><a href="./pagesFooter/serCuidador.html" target="_blank">Ser cuidador</a></li>
+            <li><a href="./pagesFooter/serCuidado.html" target="_blank">Ser cuidado</a></li>
+            <li><a href="./pagesFooter/preguntasFrecuentes.html" target="_blank">Preguntas frecuentes</a></li>
+            <li><a href="./pagesFooter/soporte.html" target="_blank">Soporte</a></li>
+            <li><a href="./pagesFooter/avisoPrivacidad.html" target="_blank">Aviso de privacidad</a></li>
+        </ul>
+    </div>
+    <div class="footer--copy">
+        <h4>© All rights reserved & design by SafeDog</h4>
+    </div>
+</footer>
+
+
     <script src="../scripts/accordion.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
+       <!--Hoja vinculada de JS de NavBar-->
+       <script src="../scripts/NavBar.js"></script>
+       
   </body>
 </html>

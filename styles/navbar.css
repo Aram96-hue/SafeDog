@@ -7,7 +7,7 @@ body {
 }
 
 
-
+/*NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR*/
 .navbar {
     background-color: #44A194;
     color: #FFFFFF;
@@ -192,4 +192,4 @@ body {
     .mobile-menu.active {
         display: block;
     }
-}
+} /*NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR*/

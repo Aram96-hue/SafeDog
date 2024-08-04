@@ -6,72 +6,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NavBarSafeDog</title>
     <!--Librería del menú hamburguesa-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../styles/navBar.css">
     <link rel="stylesheet" href="../styles/footer.css">
-    <link rel="stylesheet" href="../styles/navbar.css">
     <!--FUENTES-->
     <!--Sansita style-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <!--Roboto style-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-   
+
     <!--NavBar de safeDog-->
     <nav class="navbar">
-         
+
         <div class="navbar--logo">
             <a href="#" target="_blank"><img src="../assets/SafeDog W (9).png" alt="SafeDog-Logo"></a>
         </div>
-    
+
         <div class="nav--container">
             <ul class="navbar--menu">
-                <li><a href="../pages/acercaDeNosotros.html" target="_blank">Acerca de nosotros</a></li>
-                <li><a href="../pages/nuestrosServicios.html" target="_blank">Nuestros Servicios</a></li>
-                <li><a href="../pages/preguntasFrecuentes.html" target="_blank">Preguntas Frecuentes</a></li>
+                <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
+                <li><a href="./nuestrosServicios.html">Nuestros Servicios</a></li>
+                <li><a href="./preguntasFrecuentes.html">Preguntas Frecuentes</a></li>
             </ul>
 
             <div class="navbar--botones">
-                <button class="boton--claro" onclick="window.location.href='../pages/serCuidador.html';">Ser cuidador</button>
-                <button class="boton--claro" onclick="window.location.href='../pages/inicioSesion.html';">Inicio de sesión</button>
-                <button class="boton--azul" onclick="window.location.href='../pages/registro.html';">Registro</button>
+                <button class="boton--claro" onclick="window.location.href='./serCuidador.html';">Ser
+                    cuidador</button>
+                <button class="boton--claro" onclick="window.location.href='./inicioSesion.html';">Inicio de
+                    sesión</button>
+                <button class="boton--azul" onclick="window.location.href='./registro.html';">Registro</button>
             </div>
         </div>
-<!--Menu de hamburguesa-->
-<div class="menu-btn">
-    <i class="fa-solid fa-bars fa-2x"></i>
-</div>
+        <!--Menu de hamburguesa-->
+        <div class="menu-btn">
+            <i class="fa-solid fa-bars fa-2x"></i>
+        </div>
 
     </nav>
-      <!-- Menu desplegable para móviles -->
-      <div class="mobile-menu" id="mobileMenu">
+    <!-- Menu desplegable para móviles -->
+    <div class="mobile-menu" id="mobileMenu">
         <ul class="mobile-navbar--menu">
-            <li><a href="../pages/acercaDeNosotros.html" target="_blank">Acerca de nosotros</a></li>
-            <li><a href="../pages/nuestrosServicios.html" target="_blank">Nuestros Servicios</a></li>
-            <li><a href="../pages/preguntasFrecuentes.html" target="_blank">Preguntas Frecuentes</a></li>
+            <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
+            <li><a href="./nuestrosServicios.html">Nuestros Servicios</a></li>
+            <li><a href="./preguntas.html">Preguntas Frecuentes</a></li>
         </ul>
         <div class="mobile-navbar--botones">
-            <button class="boton--claro" onclick="window.location.href='../pages/serCuidador.html';">Ser cuidador</button>
-            <button class="boton--claro" onclick="window.location.href='../pages/inicioSesion';">Inicio de sesión</button>
-            <button class="boton--azul" onclick="window.location.href='../pages/registro.html';">Registro</button>
+            <button class="boton--claro" onclick="window.location.href='./serCuidador.html';">Ser
+                cuidador</button>
+            <button class="boton--claro" onclick="window.location.href='./inicioSesion';">Inicio de
+                sesión</button>
+            <button class="boton--azul" onclick="window.location.href='./pregistro.html';">Registro</button>
         </div>
     </div>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt totam quis, modi harum illum sapiente nemo similique qui laborum dolorem ex aspernatur illo, fugit ipsum accusantium dolorum, omnis reiciendis porro!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt totam quis, modi harum illum sapiente nemo similique qui laborum dolorem ex aspernatur illo, fugit ipsum accusantium dolorum, omnis reiciendis porro!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt totam quis, modi harum illum sapiente nemo similique qui laborum dolorem ex aspernatur illo, fugit ipsum accusantium dolorum, omnis reiciendis porro!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt totam quis, modi harum illum sapiente nemo similique qui laborum dolorem ex aspernatur illo, fugit ipsum accusantium dolorum, omnis reiciendis porro!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt totam quis, modi harum illum sapiente nemo similique qui laborum dolorem ex aspernatur illo, fugit ipsum accusantium dolorum, omnis reiciendis porro!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt totam quis, modi harum illum sapiente nemo similique qui laborum dolorem ex aspernatur illo, fugit ipsum accusantium dolorum, omnis reiciendis porro!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt totam quis, modi harum illum sapiente nemo similique qui laborum dolorem ex aspernatur illo, fugit ipsum accusantium dolorum, omnis reiciendis porro!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt totam quis, modi harum illum sapiente nemo similique qui laborum dolorem ex aspernatur illo, fugit ipsum accusantium dolorum, omnis reiciendis porro!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt totam quis, modi harum illum sapiente nemo similique qui laborum dolorem ex aspernatur illo, fugit ipsum accusantium dolorum, omnis reiciendis porro!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt totam quis, modi harum illum sapiente nemo similique qui laborum dolorem ex aspernatur illo, fugit ipsum accusantium dolorum, omnis reiciendis porro!</p>
-   
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt totam quis, modi harum illum sapiente nemo
+        similique qui laborum dolorem ex aspernatur illo, fugit ipsum accusantium dolorum, omnis reiciendis porro!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt totam quis, modi harum illum sapiente nemo
+        similique qui laborum dolorem ex aspernatur illo, fugit ipsum accusantium dolorum, omnis reiciendis porro!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt totam quis, modi harum illum sapiente nemo
+        similique qui laborum dolorem ex aspernatur illo, fugit ipsum accusantium dolorum, omnis reiciendis porro!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt totam quis, modi harum illum sapiente nemo
+        similique qui laborum dolorem ex aspernatur illo, fugit ipsum accusantium dolorum, omnis reiciendis porro!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt totam quis, modi harum illum sapiente nemo
+        similique qui laborum dolorem ex aspernatur illo, fugit ipsum accusantium dolorum, omnis reiciendis porro!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt totam quis, modi harum illum sapiente nemo
+        similique qui laborum dolorem ex aspernatur illo, fugit ipsum accusantium dolorum, omnis reiciendis porro!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt totam quis, modi harum illum sapiente nemo
+        similique qui laborum dolorem ex aspernatur illo, fugit ipsum accusantium dolorum, omnis reiciendis porro!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt totam quis, modi harum illum sapiente nemo
+        similique qui laborum dolorem ex aspernatur illo, fugit ipsum accusantium dolorum, omnis reiciendis porro!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt totam quis, modi harum illum sapiente nemo
+        similique qui laborum dolorem ex aspernatur illo, fugit ipsum accusantium dolorum, omnis reiciendis porro!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt totam quis, modi harum illum sapiente nemo
+        similique qui laborum dolorem ex aspernatur illo, fugit ipsum accusantium dolorum, omnis reiciendis porro!</p>
+
     </footer>
     <!--Hoja vinculada de JS-->
     <script src="../scripts/NavBar.js"></script>

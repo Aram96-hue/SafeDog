@@ -1,11 +1,14 @@
-body{
+/*body{
     background-color: #FFF8E0;
     font-family: "sansita", "roboto";
     margin: 0;
     padding: 0;
     
 }
+*/
 
+
+/*FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER*/
 
 .footer--safeDog{
     display: flex;
@@ -17,8 +20,6 @@ body{
     flex-wrap: wrap;
     color: #ffffff;
     text-align: center;
-    
-
 }
 
 .footer--info{
@@ -139,7 +140,6 @@ body{
         align-items: center;
     
     }
-}
-
+} /*FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER */
 
 
