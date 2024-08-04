@@ -9,12 +9,13 @@ body {
 
 /*NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR*/
 .navbar {
-    background-color: #44A194;
+    background-color: hsl(172, 41%, 45%);
     color: #FFFFFF;
     padding: 25px;
     display: flex;
     align-items: center;
     justify-content:center; 
+    border: 0px;
     
 }
 
@@ -22,12 +23,15 @@ body {
     display: flex;
     justify-content: center;
     flex-grow: 1;
-    
+    border: 0px;
+    justify-content: center;
+    align-items: center;  
 }
 
 .navbar .navbar--logo a img {
     width: 200px;
     height: auto;
+    margin-right: 20px;
 }
 
 .navbar .navbar--menu {
@@ -63,8 +67,7 @@ body {
     display: flex;
     gap: 10px;
     margin-left: 120px;
-
-   
+     
 }
 
 .navbar .navbar--botones .boton--claro {
@@ -77,6 +80,7 @@ body {
     font-size: larger;
     font-weight: bold;
     cursor: pointer;
+    border: 0px;
 }
 
 .navbar .navbar--botones .boton--azul {
@@ -89,6 +93,7 @@ body {
     font-size: larger;
     font-weight: bold;
     cursor: pointer;
+    border: 0px;
 }
 
 .navbar .navbar--botones .boton--claro:hover {
