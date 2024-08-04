@@ -1,0 +1,273 @@
+/* GENERALES*/
+:root {
+  --background: #fff8e0;
+  --primary: #39b3a2;
+  --secondary: #7f636e;
+  --yellow: #f0bb69;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #444;
+  background-color: var(--background);
+}
+
+.container {
+  /* 1140px */
+  max-width: 120rem;
+  padding: 0 5rem;
+  margin: 0 auto;
+}
+
+.heading-primary,
+.heading-secondary {
+  font-family: "Sansita", sans-serif;
+  font-weight: 800;
+  color: #444;
+}
+
+.heading-primary {
+  font-size: 5rem;
+  line-height: 1.05;
+  margin: 3.2rem 0;
+}
+
+.heading-secondary {
+  font-size: 3.8rem;
+  line-height: 1.2;
+  margin-bottom: 2.6rem;
+}
+
+.list {
+  width: 90rem;
+  margin: 7rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.item {
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 24px;
+  row-gap: 32px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.icon {
+  width: 24px;
+  stroke: var(--primary);
+}
+
+.hidden-box {
+  display: none;
+}
+
+.hidden-box p {
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.open {
+  border-top: 4px solid var(--primary);
+  border-bottom: 4px solid var(--primary);
+}
+
+.open .hidden-box {
+  display: block;
+}
+
+.open .title {
+  color: var(--primary);
+}
+
+.open .text {
+  padding-left: 5rem;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+.section--form--question {
+  padding: 4.8rem 0 12.8rem;
+}
+
+.extra--question {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  border-radius: 11px;
+  overflow: hidden;
+}
+
+.extra--question--text {
+  background-color: #65b5a1;
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+}
+
+.exttra-text-container {
+  margin-bottom: 4.8rem;
+}
+.extra-text {
+  font-size: 2rem;
+  line-height: 1.8;
+}
+
+.extra--question-img-box {
+  background-image: url("../assets/preguntas02.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.extra--question--form {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 2.4rem;
+}
+
+.extra--question--form label {
+  color: #222;
+  display: block;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.extra--question--form input,
+.extra--question--form textarea,
+.extra--question--form select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.extra--question--form textarea {
+  height: 25rem;
+}
+
+.extra--question--form input::placeholder,
+.extra--question--form textarea::placeholder {
+  color: #aaa;
+}
+
+.extra--question input:focus,
+.extra--question textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  /* Only necessary for .btn */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  /* Put transition on original "state" */
+  /* transition: background-color 0.3s; */
+  transition: all 0.3s;
+}
+
+.btn--form {
+  background-color: var(--yellow);
+  color: #555;
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  color: #555;
+  background-color: #fff;
+}
+
+.btn--cellphone {
+  width: 25rem;
+  align-self: center;
+  box-shadow: 5px;
+  text-align: center;
+  padding: 0.5rem 1rem;
+}
+
+.btn--shadow {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2),
+    /* Sombra externa */ inset 1px 1px 3px rgba(255, 255, 255, 0.3); /* Sombra interna */
+  transition: all 0.3s ease;
+  button:active {
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.3),
+      /* Más sombra interna */ none; /* Sin sombra externa */
+  }
+}
+
+.contact--part {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 1.6rem;
+}
+
+.text--cellphone--button {
+  align-self: center;
+}
+
+.textarea--container {
+  margin-bottom: 1.6rem;
+}
+
+#contacto--btn.clicked {
+  background-color: var(--secondary);
+  color: #fff;
+}
+
+.number--part {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.input-feedback {
+  font-size: 1.6rem;
+  margin-top: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+.link--color {
+  color: var(--primary);
+  text-decoration: none;
+}
