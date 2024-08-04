@@ -186,3 +186,87 @@ li, a {
     object-fit: contain;
     margin: 0 auto; /* Centra las imágenes dentro de cada div hijo */
   }
+  
+  /*Carrousel*/
+  
+.imagen {
+    width: 100%;
+    height: 100%;
+}
+
+*{
+     margin: 0;
+     padding: 0;
+    font-family: lato;
+    
+    }
+
+h1{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2rem;   
+}
+.slider-frame {
+    width:100%;
+    height: auto;
+    margin: 50px auto 0;
+    overflow: none;
+
+animation: slide 20s infinite ;
+}
+
+.slider-frame ul {
+    display:flex;
+    padding: 0;
+    width: 500%
+}
+.slider-frame li {
+    list-style: none;
+    width:100%;
+}
+.slider-frame img {
+    width: 100%;
+}
+
+@keyframes slide {
+    0% {margin-left: 0%;}
+    20% {margin-left: 0%;}
+   
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    95% {margin-left: -300%;}
+
+    100% {margin-left: -400%;}
+    120% {margin-left: -400%;}
+
+}
+.contenedorCarrousell{
+
+    position: relative;
+}
+.slider-frame {
+    width:100%;
+    height: auto;
+    margin: 50px auto 0;
+    overflow: none;
+    position: relative;
+
+animation: slide 15s infinite alternate ease-in-out;
+}
+
+.button-container {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1%;
+    max-width: 100%;
+    margin: 0 auto;
+    
+    
+}
