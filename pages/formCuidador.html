@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/form-cuidador.css" />
+    <title>Form - Cuidador</title>
+  </head>
+  <body>
+    <header>
+      <nav></nav>
+    </header>
+
+    <main>
+      <section class="section--form--cuidador">
+        <div class="container">
+          <div class="form--header">
+            <h1 class="heading-primary">Datos Personales</h1>
+            <p class="extra--text">
+              Favor de proporcionarnos los siguientes datos
+            </p>
+          </div>
+          <div class="form--grid">
+            <div>
+              <div class="form--imput--item">
+                <label for="nombre">Nombre</label>
+                <input
+                  id="nombre"
+                  type="nombre"
+                  placeholder="Nombre"
+                  required
+                />
+              </div>
+              <div class="form--imput--item">
+                <label for="apellido">Apellido</label>
+                <input
+                  id="apellido"
+                  type="apellido"
+                  placeholder="Apellidos"
+                  required
+                />
+              </div>
+              <div class="form--imput--item">
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="ejemplo@email.com"
+                  required
+                />
+              </div>
+              <div class="form--imput--item">
+                <label for="edad">Edad</label>
+                <input id="edad" type="edad" placeholder="23" required />
+              </div>
+              <div class="form--imput--item">
+                <label for="anos--exp">Años de Experiencia</label>
+                <input
+                  id="anos--exp"
+                  type="anos--exp"
+                  placeholder="2"
+                  required
+                />
+              </div>
+              <div class="form--imput--item">
+                <label for="ciudad">Ciudad</label>
+              </div>
+
+              <div class="form--imput--textarea">
+                <label for="cuidador--text">Cuentanos mas sobre tí:</label>
+                <textarea
+                  id="cuidador--text"
+                  name="cuidador--text"
+                  placeholder="Cuentanos mas sobre tí"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form--imput--servicios">
+                <label for="servidios">Servicios: </label>
+              </div>
+            </div>
+            <div class="all--up--img">
+              <div class="section--up--img">
+                <div>
+                  <p class="text--title">Adjunta algunas fotos</p>
+                  <p class="text--img">
+                    Puedes proporcionarnos fotos sobre tu trabajo y nosotros las
+                    mostraremos a nuestros usuarios, esto te ayudará a crear
+                    mejores conecciones.
+                  </p>
+                </div>
+                <div>
+                  <p class="text--title">Adjunta tu identificación oficial</p>
+                  <p class="text--img">
+                    Puedes proporcionarnos un scaner por ambos lados de tu
+                    credencial del lector, esto nos ayudará a crear un ambiente
+                    de confianza dentro de nustra comunidad.
+                  </p>
+                </div>
+                <div>
+                  <p class="text--title">Adjunta tu comprobante de domicilio</p>
+                  <p class="text--img">
+                    Puedes proporcionarnos un comprobante de domiciolio no mayor
+                    a tres meses, esto nos ayudará a corrobar que trabajas
+                    dentro de alguna de las ciudades de nuestros usuarios
+                  </p>
+                </div>
+              </div>
+              <div class="button--submit">
+                <button class="btn btn--form btn--shadow" type="submit">
+                  Enviar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

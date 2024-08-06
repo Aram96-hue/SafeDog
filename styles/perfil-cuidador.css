@@ -26,7 +26,7 @@ body {
 
 .container {
   /* 1140px */
-  max-width: 160rem;
+  max-width: 140rem;
   padding: 0 5rem;
   margin: 0 auto;
 }
@@ -44,7 +44,7 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   justify-content: center;
-  column-gap: 8rem;
+  column-gap: 5rem;
   row-gap: 2rem;
   align-items: center;
   margin-bottom: 3rem;
