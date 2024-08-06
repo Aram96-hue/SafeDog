@@ -1,0 +1,41 @@
+:root {
+    /* Color de fondo */
+    --bg-color: #FFF8E0;
+    /* Colores primarios */
+        --color-primary: black;
+        --color-secondary: #44A194;
+        --color-tertiary: #F0BB69;
+        --color-cuarto: #7F636E;
+    
+    /* --------------------------------- */
+    /* Letra */
+    
+    /* Color de letra */
+        --font-color-w: white;
+        --font-color-b: black;
+        
+    /* Tipo de letra */
+        --font-primary: "Sansita", sans-serif;
+        --font-secondary: "Roboto", sans-serif;
+        --font-size-primary: 5rem;
+        --font-size-secondary: 2 rem;
+    }
+
+
+body {
+
+    flex-direction: column;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    font-family:var(--font-secondary);
+}
+
+body h2{
+    font-family:var(--font-primary);
+   }
+   
+.file-upload{
+    position: relative;
+    
+}
