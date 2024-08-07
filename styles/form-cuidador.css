@@ -29,7 +29,7 @@ body {
 }
 
 .container {
-  max-width: 140rem;
+  max-width: 130rem;
   padding: 0 5rem;
   margin: 0 auto;
 }
@@ -41,7 +41,7 @@ body {
 .form--grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  column-gap: 2.4rem;
+  column-gap: 10rem;
 }
 
 .heading-primary {
@@ -99,7 +99,7 @@ body {
 }
 
 .form--imput--item input {
-  max-width: 70rem;
+  max-width: 58rem;
 }
 
 .form--imput--item input,
@@ -115,17 +115,11 @@ body {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-.form--imput--textarea textarea {
-  height: 25rem;
-}
-
-.form--imput--item input::placeholder,
-.form--imput--textarea textarea::placeholder {
+.form--imput--item input::placeholder {
   color: #aaa;
 }
 
-.form--imput--item input:focus,
-.form--imput--textarea textarea:focus {
+.form--imput--item input:focus {
   outline: none;
   box-shadow: 0 0 0 0.8rem var(--yellow);
 }
@@ -133,17 +127,23 @@ body {
 .section--up--img {
   display: flex;
   flex-direction: column;
+  gap: 4rem;
+}
+
+.all--up--img {
+  display: flex;
+  flex-direction: column;
   gap: 8rem;
 }
 
-.all--up--img{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.up--img--container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
 }
 
 .button--submit {
-    align-self: center;
+  align-self: center;
 }
 
 .btn,
@@ -167,11 +167,19 @@ body {
 
 .btn--form {
   background-color: var(--yellow);
-  color: #555;
+  color: #fff;
   align-self: end;
-  padding: 1.2rem;
+  padding: 2rem 5rem;
 }
 
+.btn--save {
+  background-color: var(--secondary);
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1.5rem 2rem;
+}
+
+.btn--save:hover,
 .btn--form:hover {
   background-color: #fff;
   color: #555;

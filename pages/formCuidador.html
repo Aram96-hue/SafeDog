@@ -14,6 +14,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles/form-cuidador.css" />
+    <link rel="stylesheet" href="../styles/form-cuidador-queries.css" />
     <title>Form - Cuidador</title>
   </head>
   <body>
@@ -30,13 +31,14 @@
               Favor de proporcionarnos los siguientes datos
             </p>
           </div>
-          <div class="form--grid">
+          <form class="form--grid" action="#" id="form-cuidador-uno">
             <div>
               <div class="form--imput--item">
                 <label for="nombre">Nombre</label>
                 <input
                   id="nombre"
                   type="nombre"
+                  name="nombre"
                   placeholder="Nombre"
                   required
                 />
@@ -46,6 +48,7 @@
                 <input
                   id="apellido"
                   type="apellido"
+                  name="apellido"
                   placeholder="Apellidos"
                   required
                 />
@@ -55,39 +58,50 @@
                 <input
                   id="email"
                   type="email"
+                  name="email"
                   placeholder="ejemplo@email.com"
                   required
                 />
               </div>
               <div class="form--imput--item">
-                <label for="edad">Edad</label>
-                <input id="edad" type="edad" placeholder="23" required />
-              </div>
-              <div class="form--imput--item">
-                <label for="anos--exp">Años de Experiencia</label>
+                <label for="name-emergency">Contacto emergencia</label>
                 <input
-                  id="anos--exp"
-                  type="anos--exp"
-                  placeholder="2"
+                  id="name-emergency"
+                  type="name-emergency"
+                  name="name-emergency"
+                  placeholder="Ingresa el nombre de tu contacto de emergencia"
                   required
                 />
               </div>
               <div class="form--imput--item">
-                <label for="ciudad">Ciudad</label>
-              </div>
-
-              <div class="form--imput--textarea">
-                <label for="cuidador--text">Cuentanos mas sobre tí:</label>
-                <textarea
-                  id="cuidador--text"
-                  name="cuidador--text"
-                  placeholder="Cuentanos mas sobre tí"
+                <label for="number-emergency"></label>
+                <input
+                  id="number-emergency"
+                  type="number-emergency"
+                  name="number-emergency"
+                  placeholder="Ingresa el número de tu contacto de emergencia"
                   required
-                ></textarea>
+                />
               </div>
-
-              <div class="form--imput--servicios">
-                <label for="servidios">Servicios: </label>
+              <div class="form--imput--item">
+                <label for="email-emergency"></label>
+                <input
+                  id="email-emergency"
+                  type="email-emergency"
+                  name="email-emergency"
+                  placeholder="Ingresa el email de tu contacto de emergencia"
+                  required
+                />
+              </div>
+              <div class="form--imput--item">
+                <label for="fecha-nacimiento">Fecha de nacimiento</label>
+                <input
+                  id="fecha-nacimiento"
+                  type="fecha-nacimiento"
+                  name="fecha-nacimiento"
+                  placeholder="DD/MM/AAAA"
+                  required
+                />
               </div>
             </div>
             <div class="all--up--img">
@@ -99,6 +113,16 @@
                     mostraremos a nuestros usuarios, esto te ayudará a crear
                     mejores conecciones.
                   </p>
+                  <div class="up--img--container">
+                    <img
+                      src="../assets/image 38.png"
+                      alt="Cuidador"
+                      class="img--img"
+                    />
+                    <button class="btn btn--save button--submit" type="button">
+                      Boton guardar
+                    </button>
+                  </div>
                 </div>
                 <div>
                   <p class="text--title">Adjunta tu identificación oficial</p>
@@ -107,25 +131,33 @@
                     credencial del lector, esto nos ayudará a crear un ambiente
                     de confianza dentro de nustra comunidad.
                   </p>
-                </div>
-                <div>
-                  <p class="text--title">Adjunta tu comprobante de domicilio</p>
-                  <p class="text--img">
-                    Puedes proporcionarnos un comprobante de domiciolio no mayor
-                    a tres meses, esto nos ayudará a corrobar que trabajas
-                    dentro de alguna de las ciudades de nuestros usuarios
-                  </p>
+                  <div class="up--img--container">
+                    <img
+                      src="../assets/image 37.png"
+                      alt="Cuidador"
+                      class="img--img"
+                    />
+                    <button class="btn btn--save button--submit" type="button">
+                      Boton guardar
+                    </button>
+                  </div>
                 </div>
               </div>
               <div class="button--submit">
-                <button class="btn btn--form btn--shadow" type="submit">
-                  Enviar
+                <button
+                  class="btn btn--form btn--shadow"
+                  type="submit"
+                  onclick="convertToJson()"
+                >
+                  BOTON SIGUIENTE
                 </button>
               </div>
             </div>
-          </div>
+          </form>
         </div>
+        <div id="jsonOutput"></div>
       </section>
     </main>
+    <script src="../scripts/formCuidador.js"></script>
   </body>
 </html>
