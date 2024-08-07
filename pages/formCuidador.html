@@ -22,7 +22,7 @@
    <nav class="navbar">
 
     <div class="navbar--logo">
-        <a href="#" target="_blank"><img src="../assets/SafeDog W (9).png" alt="SafeDog-Logo"></a>
+        <a href="#" target="_blank"><img src="../assets/iconos/SafeDog W (9).png" alt="SafeDog-Logo"></a>
     </div>
 
     <div class="nav--container">
@@ -189,6 +189,7 @@
                       src="../assets/image 38.png"
                       alt="Cuidador"
                       class="img--img"
+                      id="open-popup-img"
                     />
                     <button class="btn btn--save button--submit" type="button">
                       Boton guardar
@@ -230,22 +231,34 @@
       </section>
     </main>
   </div>
-  /!---------arrastrado de imangenes-------!/
-    <section>
+  <!-------------pop up---------->
+  <div id="popup" class="popup hidden">
+    <div class="popup-content">
+        <span id="popup-close" class="popup-close">&times;</span>
+        <h2>Popup</h2>
+        <p>Contenido del popup aquí.</p>
+        <div id="dropzone" class="dropzone">
+          <p>Arrastra y suelta una imagen aquí</p>
+        </div>
+    </div>
+  </div>
+
+    <script src="formCuidador.html"></script>
+  <!---------arrastrado de imangenes------->
       <div id="dropzone" class="dropzone">
          <p>Arrastra y suelta una imagen aquí</p>
       </div>
-    </section>
+  </section>
     <!--Pie de página de safeDog-->
    <footer class="footer--safeDog">
     <div class="iconos">
-        <a href="#"><img src="../assets/correo5.png" alt="" target="_blank"></a>
-        <a href="#"><img src="../assets/fb5.png" alt="" class="logo--fb"></a>
-        <a href="#"><img src="../assets/instagramb.png" alt="" class="logo--insta"></a>
-        <a href="#"><img src="../assets/whatsapp.png" alt=""></a>
+        <a href="#"><img src="../assets/iconos/correo5.png" alt="" target="_blank"></a>
+        <a href="#"><img src="../assets/iconos/fb5.png" alt="" class="logo--fb"></a>
+        <a href="#"><img src="../assets/iconos/instagramb.png" alt="" class="logo--insta"></a>
+        <a href="#"><img src="../assets/iconos/whatsapp.png" alt=""></a>
     </div>
     <div class="footer--logo">
-        <img src="../assets/safedogfooter.png" alt="safeDog Footer">
+        <img src="../assets/iconos/safedogfooter.png" alt="safeDog Footer">
     </div>
     <div class="footer--info">
         <h4 class="footer--question">¿Quieres formar parte de nuestra comunidad?</h4>

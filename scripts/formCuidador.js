@@ -136,3 +136,29 @@ document.addEventListener('DOMContentLoaded', () => {
       }
   }
 });
+
+//popup//
+document.addEventListener('DOMContentLoaded', () => {
+  const openPopupImg = document.getElementById('open-popup-img');
+  const popup = document.getElementById('popup');
+  const popupImg = document.getElementById('popup-img');
+  const popupClose = document.getElementById('popup-close');
+
+  // Abre el popup y muestra la imagen en el popup
+  openPopupImg.addEventListener('click', () => {
+      popupImg.src = openPopupImg.src;
+      popup.classList.remove('hidden');
+  });
+
+  // Cierra el popup al hacer clic en el botón de cierre
+  popupClose.addEventListener('click', () => {
+      popup.classList.add('hidden');
+  });
+
+  // Cierra el popup si se hace clic fuera del contenido del popup
+  window.addEventListener('click', (event) => {
+      if (event.target === popup) {
+          popup.classList.add('hidden');
+      }
+  });
+});
