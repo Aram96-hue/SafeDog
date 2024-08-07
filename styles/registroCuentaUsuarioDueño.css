@@ -1,0 +1,104 @@
+:root {
+    /* Colores */
+    
+    
+    /* --------------------------------- */
+    /* Color de fondo */
+        --bg-color: #FFF8E0;
+    /* Colores primarios */
+        --color-primary: black;
+        --color-secondary: #44A194;
+        --color-tertiary: #F0BB69;
+        --color-cuarto: #7F636E;
+    
+    /* --------------------------------- */
+    /* Letra */
+    
+    /* Color de letra */
+        --font-color-w: white;
+        --font-color-b: black;
+        
+    /* Tipo de letra */
+        --font-primary--title: "Baskervville", serif;
+        --font-secondary-p: "Baskervville", serif;
+        --font-size-primary: 3rem;
+        --font-size-secondary: 2 rem;
+    
+    
+    /* Fuentes personalizadas*/
+        --font-botones-baskervville-regular: "Baskervville", serif;
+        --font--titulos:"Roboto", sans-serif; 
+        
+    .baskervville-regular {
+      font-family: "Baskervville", serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+    
+    }
+    
+
+    :root {
+        /* Color de fondo */
+        --bg-color: #FFF8E0;
+        /* Colores primarios */
+            --color-primary: black;
+            --color-secondary: #44A194;
+            --color-tertiary: #F0BB69;
+            --color-cuarto: #7F636E;
+        
+        /* --------------------------------- */
+        /* Letra */
+        
+        /* Color de letra */
+            --font-color-w: white;
+            --font-color-b: black;
+            
+        /* Tipo de letra */
+            --font-primary: "Sansita", sans-serif;
+            --font-secondary: "Roboto", sans-serif;
+            --font-size-primary: 5rem;
+            --font-size-secondary: 2 rem;
+        }
+    
+    
+    body {
+    
+        flex-direction: column;
+        background-color: var(--bg-color);
+        margin: 0;
+        padding: 0;
+        font-family:var(--font-secondary);
+    }
+    
+body h2 h1 h3 h4 h5 {
+    font-family: 'Sansita', sans-serif !important;
+    }
+       
+.file-upload{
+    position: relative;
+    
+}
+
+.form-control {
+    font-family: 'Roboto', sans-serif;
+}
+
+.input-group-text{
+    font-family: 'Roboto', sans-serif;
+}
+
+h5 {
+    font-family: 'Sansita', sans-serif;
+    padding: 20px;
+}
+
+h2 {
+    font-family: 'Sansita', sans-serif;
+    padding: 20px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+}

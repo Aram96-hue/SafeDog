@@ -39,3 +39,12 @@ body h2{
     position: relative;
     
 }
+
+h2 {
+    font-family: 'Sansita', sans-serif;
+    padding: 20px;
+}
+
+.button {
+    padding: 20px;
+}
