@@ -105,70 +105,71 @@
 
         <main>
             <!-- Aqui se pone bootstrap (forms)-->
-            <form id="contactForm" class="needs-validation"></form>
-            <section class="container my-2  w-50 p-2">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <h5>Cuéntanos de tí</h5> 
-                        <div class="input-group">
-                            <span class="input-group-text">Nombre(s) y Apellidos</span>
-                            <input type="text" aria-label="First name" class="form-control" required>
-                            <input type="text" aria-label="Last name" class="form-control" required>
+            <form id="myForm" class="needs-validation" novalidate>
+                <section class="container my-2 w-50 p-2">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h5>Cuéntanos de tí</h5>
+                            <div class="input-group">
+                                <span class="input-group-text">Nombre(s) y Apellidos</span>
+                                <input type="text" aria-label="First name" class="form-control" required>
+                                <input type="text" aria-label="Last name" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <h5>¿Tienes teléfono?</h5>
+                            <!-- Telefono -->
+                            <span class="input-group-text">Escríbelo</span>
+                            <input type="text" aria-label="Telefono" class="form-control" required>
                         </div>
                     </div>
-                    <div class="col-sm-12">
-                        <h5>¿Tienes teléfono?</h5>
-                        <!-- Telefono -->
-                        <span class="input-group-text">Escríbelo</span>
-                        <input type="text" aria-label="First name" class="form-control" required>
-                        </div>
-                    </div>
-                
+
                     <div>
-                    <h5>Contacto de emergencia</h5>
-                    <div class="col-sm-12">
-                        <!-- Nombre contacto de emergencia -->
-                        <div class="input-group">
-                            <span class="input-group-text">Nombre(s) y Apellidos</span>
+                        <h5>Contacto de emergencia</h5>
+                        <div class="col-sm-12">
+                            <!-- Nombre contacto de emergencia -->
+                            <div class="input-group">
+                                <span class="input-group-text">Nombre(s) y Apellidos</span>
+                                <input type="text" aria-label="First name" class="form-control" required>
+                                <input type="text" aria-label="Last name" class="form-control" required>
+                            </div>
+                        </div> <br>
+                        <!-- Teléfono de emergencia -->
+                        <div class="col-sm-12">
+                            <span class="input-group-text">Teléfono de emergencia</span>
                             <input type="text" aria-label="First name" class="form-control" required>
-                            <input type="text" aria-label="Last name" class="form-control" required>
                         </div>
-                    </div> <br>
-                    <!-- Teléfono de emergencia -->
-                    <div class="col-sm-12">
-                        <span class="input-group-text">Teléfono de emergencia</span>
-                        <input type="text" aria-label="First name" class="form-control" required>
-                    </div>
-                    <!-- Nombre de tu mascota -->
-                    <div class="col-sm-12">
-                        <h5>Cuentamos sobre tu mascota</h5>
-                        <div class="mb-3">
-                            <label for="formGroupExampleInput" class="form-label">¿Como se llama tu perrito?</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput"
-                                placeholder="Example input placeholder" required>
+                        <!-- Nombre de tu mascota -->
+                        <div class="col-sm-12">
+                            <h5>Cuentamos sobre tu mascota</h5>
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput" class="form-label">¿Como se llama tu perrito?</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre de tu perrito" required>
+                            </div>
                         </div>
+                        <!-- Información de tu mascota, raza, tamaño, edad género -->
+                        <div class="col-sm-12">
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Información de tu mascota, raza tamaño, edad, género</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-sm">Guardar</button>
+                        <!-- Feedback message -->
+                        <div id="formFeedback" class="feedback mt-3"></div>
                     </div>
-                    <!-- Información de tu mascota, raza, tamaño, edad género -->
-                    <div class="col-sm-12"></div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Información de tu mascota, raza
-                            tamaño, edad, género</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-primary btn-sm">Guardar</button>
-                <!--Added by beto-->
-                <div id="formFeedback" class="feedback"></div>
-            </div>
-            </section>
+                </section>
             </form>
         </main>
+    </div>
     
 
     </div>
     <!--Script links added by beto, doesnt work yet tho-->
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="../scripts/tuPerfil.js"></script>
+    <script src="../scripts/registroCUD.js"></script>
 </body>
 
 <footer class="footer--safeDog">
