@@ -11,16 +11,19 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>Tu perfil | Dueño</title>
+   <!-- Aquí conectamos Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+   <!-- Se añade jQuery (para la localización en el mapa) -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
 
     <!-- Hoja de estilos -->
     <link rel="stylesheet" href="../styles/footer.css">
     <link rel="stylesheet" href="../styles/navBar.css">
     <link rel="stylesheet" href="../styles/registroCuentaUsuarioDueño.css">
-
-    <!-- Aquí conectamos Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
 
     <!-- Estilos de fuente -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -94,81 +97,158 @@
     <div>
         <h2>Mi cuenta | Dueño</h2>
         <p>
-            Aquí podrás describirnos a tu mascota
+            Aquí podrás describirnos a tu mascota y a ti
         </p>
 
         <aside>
             <!-- Aqui se pone bootstrap (añadir imagenes)-->
             <!-- Esta sección es el espacio lateral donde estarán las imágenes -->
 
+<form>
+
+<h4>Adjunta tu foto</h4>
+
+  <fieldset class="upload_dropZone text-center mb-3 p-4">
+
+    <legend class="visually-hidden">Image uploader</legend>
+
+    <svg class="upload_svg" width="60" height="60" aria-hidden="true">
+      <use href="#icon-imageUpload"></use>
+    </svg>
+
+    <p class="small my-2">Arrastra y suelta la imagen dentro del recuadro<br><i>ó</i></p>
+
+    <input id="upload_image_background" data-post-name="image_background" data-post-url="https://someplace.com/image/uploads/backgrounds/" class="position-absolute invisible" type="file" multiple accept="image/jpeg, image/png, image/svg+xml" />
+
+    <label class="btn btn-upload mb-3" for="upload_image_background">Selecciónala desde tu computadora</label>
+
+    <div class="upload_gallery d-flex flex-wrap justify-content-center gap-3 mb-0"></div>
+
+  </fieldset>
+
+  <h4>Adjunta la foto de tu mascota</h4>
+
+  <fieldset class="upload_dropZone text-center mb-3 p-4">
+
+    <legend class="visually-hidden">Image uploader</legend>
+
+    <svg class="upload_svg" width="60" height="60" aria-hidden="true">
+      <use href="#icon-imageUpload"></use>
+    </svg>
+
+    <p class="small my-2">Drag &amp; Drop logo image(s) inside dashed region<br><i>or</i></p>
+
+    <input id="upload_image_logo" data-post-name="image_logo" data-post-url="https://someplace.com/image/uploads/logos/" class="position-absolute invisible" type="file" multiple accept="image/jpeg, image/png, image/svg+xml" />
+
+    <label class="btn btn-upload mb-3" for="upload_image_logo">Choose file(s)</label>
+
+    <div class="upload_gallery d-flex flex-wrap justify-content-center gap-3 mb-0"></div>
+
+  </fieldset>
+</form>
+
+
+<!-- Selecciona ubicacion -->
+<h4>Selecciona tu ubicación</h4>
+
+
+<h5>Código de ChatGPT (a revisión)</h5>
+
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header">
+            Selecciona tu ubicación (servirá para mostrarte los cuidadores más cercanos a tu domicilio)
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <input type="text" id="searchInput" class="form-control" placeholder="Ingresa una dirección">
+            </div>
+            <div id="map" style="height: 250px; width: 100%;"></div>
+            <button id="saveLocation" class="btn btn-primary mt-3">Guardar Ubicación</button>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Termina barra lateral -->
         </aside>
 
         <main>
             <!-- Aqui se pone bootstrap (forms)-->
-            <form id="contactForm" class="needs-validation"></form>
-            <section class="container my-2  w-50 p-2">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <h5>Cuéntanos de tí</h5> 
-                        <div class="input-group">
-                            <span class="input-group-text">Nombre(s) y Apellidos</span>
-                            <input type="text" aria-label="First name" class="form-control" required>
-                            <input type="text" aria-label="Last name" class="form-control" required>
+            <form id="myForm" class="needs-validation" novalidate>
+                <section class="container my-2 w-50 p-2">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h5>Cuéntanos de ti</h5>
+                            <div class="row">
+                                <div class="col-12 col-xl-6">
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text">Nombre(s)</span>
+                                        <input type="text" placeholder="Nombres" aria-label="First name" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-xl-6">
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text">Apellidos</span>
+                                        <input type="text" placeholder="Apellidos" aria-label="Last name" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <h5>¿Tienes teléfono?</h5>
+                            <!-- Telefono -->
+                            <span class="input-group-text">Escríbelo</span>
+                            <input type="text" aria-label="Telefono" class="form-control" placeholder="Telefono de contacto" required>
                         </div>
                     </div>
-                    <div class="col-sm-12">
-                        <h5>¿Tienes teléfono?</h5>
-                        <!-- Telefono -->
-                        <span class="input-group-text">Escríbelo</span>
-                        <input type="text" aria-label="First name" class="form-control" required>
-                        </div>
-                    </div>
-                
+
                     <div>
-                    <h5>Contacto de emergencia</h5>
-                    <div class="col-sm-12">
-                        <!-- Nombre contacto de emergencia -->
-                        <div class="input-group">
-                            <span class="input-group-text">Nombre(s) y Apellidos</span>
-                            <input type="text" aria-label="First name" class="form-control" required>
-                            <input type="text" aria-label="Last name" class="form-control" required>
+                        <h5>Contacto de emergencia</h5>
+                        <div class="col-sm-12">
+                            <!-- Nombre contacto de emergencia -->
+                            <div class="input-group">
+                                <span class="input-group-text">Nombre(s) y Apellidos</span>
+                                <input type="text" aria-label="First name" class="form-control" required>
+                                <input type="text" aria-label="Last name" class="form-control" required>
+                            </div>
+                        </div> <br>
+                        <!-- Teléfono de emergencia -->
+                        <div class="col-sm-12">
+                            <span class="input-group-text">Teléfono de emergencia</span>
+                            <input type="text" aria-label="First name" class="form-control" placeholder="Telefono de emergencia" required>
                         </div>
-                    </div> <br>
-                    <!-- Teléfono de emergencia -->
-                    <div class="col-sm-12">
-                        <span class="input-group-text">Teléfono de emergencia</span>
-                        <input type="text" aria-label="First name" class="form-control" required>
-                    </div>
-                    <!-- Nombre de tu mascota -->
-                    <div class="col-sm-12">
-                        <h5>Cuentamos sobre tu mascota</h5>
-                        <div class="mb-3">
-                            <label for="formGroupExampleInput" class="form-label">¿Como se llama tu perrito?</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput"
-                                placeholder="Example input placeholder" required>
+                        <!-- Nombre de tu mascota -->
+                        <div class="col-sm-12">
+                            <h5>Cuentamos sobre tu mascota</h5>
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput" class="form-label">¿Como se llama tu perrito?</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre de tu perrito" required>
+                            </div>
                         </div>
+                        <!-- Información de tu mascota, raza, tamaño, edad género -->
+                        <div class="col-sm-12">
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Información de tu mascota, raza tamaño, edad, género</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-sm">Guardar</button>
+                        <!-- Feedback message -->
+                        <div id="formFeedback" class="feedback mt-3"></div>
                     </div>
-                    <!-- Información de tu mascota, raza, tamaño, edad género -->
-                    <div class="col-sm-12"></div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Información de tu mascota, raza
-                            tamaño, edad, género</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-primary btn-sm">Guardar</button>
-                <!--Added by beto-->
-                <div id="formFeedback" class="feedback"></div>
-            </div>
-            </section>
+                </section>
             </form>
         </main>
+    </div>
     
 
     </div>
     <!--Script links added by beto, doesnt work yet tho-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="../scripts/tuPerfil.js"></script>
+    <script src="../scripts/registroCUD.js"></script>
 </body>
 
 <footer class="footer--safeDog">
@@ -194,6 +274,12 @@
     <div class="footer--copy">
         <h4>© All rights reserved & design by SafeDog</h4>
     </div>
+<script src="../scripts/registroCuentaUsuarioDueño.js"></script>
+
+<!-- Se incluye la API de Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap&libraries=places" async defer></script>
+
+
 </footer>
 
 </html>
