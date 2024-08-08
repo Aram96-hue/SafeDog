@@ -70,6 +70,10 @@ body {
   line-height: 1.2;
 }
 
+.file--enter {
+  background-color: var(--secondary);
+}
+
 .form--imput--item {
   display: flex;
   justify-content: space-between;
@@ -147,9 +151,42 @@ body {
 
 .up--img--container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
   margin-top: 3rem;
 }
+
+.img--img{
+  width: 25rem;
+}
+
+/*
+input[type="file"]::file-selector-button {
+  text-decoration: none;
+  border: none;
+  font-weight: 600;
+  border-radius: 9px;
+  cursor: pointer;
+  background-color: var(--secondary);
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1.5rem 2rem;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+
+input[type="file"]::file-selector-button:hover{
+  background-color: #fff;
+  color: #555;
+}
+
+input[type="file"]::after{
+  content: "Upload File";
+}
+*/
+
+
 
 .button--submit {
   align-self: center;
@@ -159,7 +196,6 @@ body {
 .btn:link,
 .btn:visited {
   display: inline-block;
-
   text-decoration: none;
   font-size: 2.5rem;
   font-weight: 600;
@@ -172,6 +208,7 @@ body {
   /* Put transition on original "state" */
   /* transition: background-color 0.3s; */
   transition: all 0.3s;
+  overflow: hidden;
 }
 
 .btn--form {
