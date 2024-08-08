@@ -18,10 +18,49 @@
     <title>Form - Cuidador</title>
   </head>
   <body>
-    <header>
-      <nav></nav>
-    </header>
+      <!--NavBar de safeDog-->
+   <nav class="navbar">
 
+    <div class="navbar--logo">
+        <a href="#" target="_blank"><img src="../assets/SafeDog W (9).png" alt="SafeDog-Logo"></a>
+    </div>
+
+    <div class="nav--container">
+        <ul class="navbar--menu">
+            <li><a href="./acercaDeNosotros.html" target="">Acerca de nosotros</a></li>
+            <li><a href="./nuestrosServicios.html" target="">Nuestros Servicios</a></li>
+            <li><a href="./preguntas.html">Preguntas Frecuentes</a></li>
+        </ul>
+
+        <div class="navbar--botones">
+            <button class="boton--claro" onclick="window.location.href='../pages/serCuidador.html';">Ser
+                cuidador</button>
+            <button class="boton--claro" onclick="window.location.href='../pages/inicioSesion.html';">Inicio de
+                sesión</button>
+            <button class="boton--azul" onclick="window.location.href='../pages/registro.html';">Registro</button>
+        </div>
+    </div>
+    <!--Menu de hamburguesa-->
+    <div class="menu-btn">
+        <i class="fa-solid fa-bars fa-2x"></i>
+    </div>
+
+</nav>
+<!-- Menu desplegable para móviles -->
+<div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-navbar--menu">
+        <li><a href="./acercaDeNosotros.html" target="_blank">Acerca de nosotros</a></li>
+        <li><a href="./nuestrosServicios.html" target="_blank">Nuestros Servicios</a></li>
+        <li><a href="./preguntasFrecuentes.html" target="_blank">Preguntas Frecuentes</a></li>
+    </ul>
+    <div class="mobile-navbar--botones">
+        <button class="boton--claro" onclick="window.location.href='./serCuidador.html';">Ser
+            cuidador</button>
+        <button class="boton--claro" onclick="window.location.href='./inicioSesion';">Inicio de
+            sesión</button>
+        <button class="boton--azul" onclick="window.location.href='./registro.html';">Registro</button>
+    </div>
+</div>
     <main>
       <section class="section--form--cuidador">
         <div class="container">
@@ -33,75 +72,107 @@
           </div>
           <form class="form--grid" action="#" id="form-cuidador-uno">
             <div>
-              <div class="form--imput--item">
-                <label for="nombre">Nombre</label>
-                <input
-                  id="nombre"
-                  type="nombre"
-                  name="nombre"
-                  placeholder="Nombre"
-                  required
-                />
+              <div class="form--input--container">
+                <div class="form--imput--item">
+                  <label for="nombre">Nombre</label>
+                  <input
+                    id="nombre"
+                    type="nombre"
+                    name="nombre"
+                    placeholder="Nombre"
+                    required
+                  />
+                </div>
+                <div class="form--imput--validation">
+                  <p id="name-feedback" class="input-feedback"></p>
+                </div>
               </div>
-              <div class="form--imput--item">
-                <label for="apellido">Apellido</label>
-                <input
-                  id="apellido"
-                  type="apellido"
-                  name="apellido"
-                  placeholder="Apellidos"
-                  required
-                />
+              <div class="form--input--container">
+                <div class="form--imput--item">
+                  <label for="apellido">Apellido</label>
+                  <input
+                    id="apellido"
+                    type="apellido"
+                    name="apellido"
+                    placeholder="Apellidos"
+                    required
+                  />
+                </div>
+                <div class="form--imput--validation">
+                  <p id="apellido-feedback" class="input-feedback"></p>
+                </div>
               </div>
-              <div class="form--imput--item">
-                <label for="email">Email</label>
-                <input
-                  id="email"
-                  type="email"
-                  name="email"
-                  placeholder="ejemplo@email.com"
-                  required
-                />
+              <div class="form--input--container">
+                <div class="form--imput--item">
+                  <label for="email">Email</label>
+                  <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    placeholder="ejemplo@email.com"
+                    required
+                  />
+                </div>
+                <div class="form--imput--validation">
+                  <p id="email-feedback" class="input-feedback"></p>
+                </div>
               </div>
-              <div class="form--imput--item">
-                <label for="name-emergency">Contacto emergencia</label>
-                <input
-                  id="name-emergency"
-                  type="name-emergency"
-                  name="name-emergency"
-                  placeholder="Ingresa el nombre de tu contacto de emergencia"
-                  required
-                />
+              <div class="form--input--container">
+                <div class="form--imput--item">
+                  <label for="name-emergency">Contacto emergencia</label>
+                  <input
+                    id="name-emergency"
+                    type="name-emergency"
+                    name="name-emergency"
+                    placeholder="Ingresa el nombre de tu contacto de emergencia"
+                    required
+                  />
+                </div>
+                <div class="form--imput--validation">
+                  <p id="name-emergency-feedback" class="input-feedback"></p>
+                </div>
               </div>
-              <div class="form--imput--item">
-                <label for="number-emergency"></label>
-                <input
-                  id="number-emergency"
-                  type="number-emergency"
-                  name="number-emergency"
-                  placeholder="Ingresa el número de tu contacto de emergencia"
-                  required
-                />
+              <div class="form--input--container">
+                <div class="form--imput--item">
+                  <label for="number-emergency"></label>
+                  <input
+                    id="number-emergency"
+                    type="tel"
+                    name="number-emergency"
+                    placeholder="Ingresa el número de tu contacto de emergencia"
+                    required
+                  />
+                </div>
+                <div class="form--imput--validation">
+                  <p id="number-feedback" class="input-feedback"></p>
+                </div>
               </div>
-              <div class="form--imput--item">
-                <label for="email-emergency"></label>
-                <input
-                  id="email-emergency"
-                  type="email-emergency"
-                  name="email-emergency"
-                  placeholder="Ingresa el email de tu contacto de emergencia"
-                  required
-                />
+              <div class="form--input--container">
+                <div class="form--imput--item">
+                  <label for="email-emergency"></label>
+                  <input
+                    id="email-emergency"
+                    type="email"
+                    name="email-emergency"
+                    placeholder="Ingresa el email de tu contacto de emergencia"
+                    required
+                  />
+                </div>
+                <div class="form--imput--validation">
+                  <p id="email-emergency-feedback" class="input-feedback"></p>
+                </div>
               </div>
-              <div class="form--imput--item">
-                <label for="fecha-nacimiento">Fecha de nacimiento</label>
-                <input
-                  id="fecha-nacimiento"
-                  type="fecha-nacimiento"
-                  name="fecha-nacimiento"
-                  placeholder="DD/MM/AAAA"
-                  required
-                />
+              <div class="form--input--container">
+                <div class="form--imput--item">
+                  <label for="fecha-nacimiento">Fecha de nacimiento</label>
+                  <input
+                    id="fecha-nacimiento"
+                    type="date"
+                    name="fecha-nacimiento"
+                    placeholder="DD/MM/AAAA"
+                    required
+                  />
+                </div>
               </div>
             </div>
             <div class="all--up--img">
@@ -158,6 +229,37 @@
         <div id="jsonOutput"></div>
       </section>
     </main>
-    <script src="../scripts/formCuidador.js"></script>
+  </div>
+  /!---------arrastrado de imangenes-------!/
+    <section>
+      <div id="dropzone" class="dropzone">
+         <p>Arrastra y suelta una imagen aquí</p>
+      </div>
+    </section>
+    <!--Pie de página de safeDog-->
+   <footer class="footer--safeDog">
+    <div class="iconos">
+        <a href="#"><img src="../assets/correo5.png" alt="" target="_blank"></a>
+        <a href="#"><img src="../assets/fb5.png" alt="" class="logo--fb"></a>
+        <a href="#"><img src="../assets/instagramb.png" alt="" class="logo--insta"></a>
+        <a href="#"><img src="../assets/whatsapp.png" alt=""></a>
+    </div>
+    <div class="footer--logo">
+        <img src="../assets/safedogfooter.png" alt="safeDog Footer">
+    </div>
+    <div class="footer--info">
+        <h4 class="footer--question">¿Quieres formar parte de nuestra comunidad?</h4>
+        <ul class="footer--list">
+            <li><a href="./pagesFooter/serCuidador.html" target="_blank">Ser cuidador</a></li>
+            <li><a href="./pagesFooter/serCuidado.html" target="_blank">Ser cuidado</a></li>
+            <li><a href="./pagesFooter/preguntasFrecuentes.html" target="_blank">Preguntas frecuentes</a></li>
+            <li><a href="./pagesFooter/soporte.html" target="_blank">Soporte</a></li>
+            <li><a href="./pagesFooter/avisoPrivacidad.html" target="_blank">Aviso de privacidad</a></li>
+        </ul>
+    </div>
+    <div class="footer--copy">
+        <h4>© All rights reserved & design by SafeDog</h4>
+    </div>
+</footer>
   </body>
 </html>

@@ -55,6 +55,10 @@
     flex-direction: column;
     gap: 3rem;
   }
+  .form--imput--validation {
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
 }
 
 @media (max-width: 26rem) {
