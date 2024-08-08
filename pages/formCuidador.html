@@ -186,14 +186,15 @@
                   </p>
                   <div class="up--img--container">
                     <img
-                      src="../assets/image 38.png"
+                      src="../assets/image 37.png"
                       alt="Cuidador"
                       class="img--img"
                       id="open-popup-img"
                     />
-                    <button class="btn btn--save button--submit" type="button">
-                      Boton guardar
-                    </button>
+                    <div>
+                      <button class="btn btn--save btn--shadow" type="button" onclick="document.getElementById('formFileMultipleOne').click();">Subir fotografias</button>
+                      <input type="file" style="display: none;" id="formFileMultipleOne" multiple required>
+                    </div>
                   </div>
                 </div>
                 <div>
@@ -205,13 +206,14 @@
                   </p>
                   <div class="up--img--container">
                     <img
-                      src="../assets/image 37.png"
+                      src="../assets/image 38.png"
                       alt="Cuidador"
                       class="img--img"
                     />
-                    <button class="btn btn--save button--submit" type="button">
-                      Boton guardar
-                    </button>
+                    <div>
+                      <button class="btn btn--save btn--shadow" type="button" onclick="document.getElementById('formFileMultipleTwo').click();">Subir documento</button>
+                      <input type="file" style="display: none;" id="formFileMultipleTwo" multiple required>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -230,25 +232,6 @@
         <div id="jsonOutput"></div>
       </section>
     </main>
-  </div>
-  <!-------------pop up---------->
-  <div id="popup" class="popup hidden">
-    <div class="popup-content">
-        <span id="popup-close" class="popup-close">&times;</span>
-        <h2>Popup</h2>
-        <p>Contenido del popup aquí.</p>
-        <div id="dropzone" class="dropzone">
-          <p>Arrastra y suelta una imagen aquí</p>
-        </div>
-    </div>
-  </div>
-
-    <script src="formCuidador.html"></script>
-  <!---------arrastrado de imangenes------->
-      <div id="dropzone" class="dropzone">
-         <p>Arrastra y suelta una imagen aquí</p>
-      </div>
-  </section>
     <!--Pie de página de safeDog-->
    <footer class="footer--safeDog">
     <div class="iconos">
@@ -273,6 +256,7 @@
     <div class="footer--copy">
         <h4>© All rights reserved & design by SafeDog</h4>
     </div>
-</footer>
+  </footer>
+  <script src="../scripts/formCuidador.js"></script>
   </body>
 </html>
