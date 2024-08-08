@@ -197,14 +197,10 @@ body {
   font-size: 3.5rem;
 }
 
-.btn--shadow {
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2),
-    /* Sombra externa */ inset 1px 1px 3px rgba(255, 255, 255, 0.3); /* Sombra interna */
-  transition: all 0.3s ease;
-  button:active {
-    box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.3),
-      /* Más sombra interna */ none; /* Sin sombra externa */
-  }
+.btn--shadow:active{
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2), 
+  inset 1px 1px 3px rgba(255, 255, 255, 0.3); 
+  transform: translateY(2px); 
 }
 
 .btn--outline:link,
@@ -230,6 +226,93 @@ body {
   /* transition: background-color 0.3s; */
   transition: all 0.3s;
 }
+/*-------------carrusel--------------*/
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.Contenedor-Carrousell{
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+
+.Elemento-lista{
+  list-style: none; /*Quita la viñeta de lista*/
+  border: none;
+}
+
+.Lista-desordenada {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 2) - 16px);
+  gap: 16px;
+  overflow: none;
+}
+.Lista-desordenada {
+
+  animation: slide 10s infinite; 
+  width: 100%;
+  height: auto;
+  margin: 0;
+  overflow: none;
+  position: relative;
+}
+
+.Tarjeta-miembro{
+  background: var(--color-tertiary);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.Tarjeta-miembro img{
+  width: 148 px;
+  height: 148px;
+  border-radius: 100%;
+}
+
+/* ANIMACION CARROUSEL */
+
+
+@keyframes slide {
+  0% {margin-left: 0%;}
+  20% {margin-left: 0%;}
+ 
+  30% {margin-left: -100%;}
+  50% {margin-left: -100%;}
+
+  70% {margin-left: -200%;}
+  90% {margin-left: -200%;}
+
+  110% {margin-left: -300%;}
+  130% {margin-left: -300%;}
+
+  150% {margin-left: -400%;}
+  170% {margin-left: -400%;}
+
+  190% {margin-left: -500%;}
+  210% {margin-left: -500%;}
+ 
+  230% {margin-left: -600%;}
+  250% {margin-left: -600%;}
+ 
+  270% {margin-left: -700%;}
+  290% {margin-left: -700%;}
+ 
+  310% {margin-left: -800%;}
+  330% {margin-left: -800%;}
+ 
+  350% {margin-left: -900%;}
+  370% {margin-left: -900%;}
+}
+
 
 /* ----------- PAGINACION ------------- */
 .container--pagination {
@@ -240,8 +323,8 @@ body {
 .pagination {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-top: 200px;
+  gap: 8px;
+  margin-top: 30px;
 }
 
 .btn--pagination {
