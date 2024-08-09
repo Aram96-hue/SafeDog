@@ -3,11 +3,12 @@ function convertToJson() {
   let formData = {};
   for (let i = 0; i < form.elements.length; i++) {
     let element = form.elements[i];
-    if (element.type !== "submit" && element.type !== "button") {
+    if (element.type !== "submit" && element.type !== "button" && element.type !== "file") {
       formData[element.name] = element.value;
     }
   }
   let jsonData = JSON.stringify(formData);
+  localStorage.setItem('cuidadorDatosGenerales', jsonData);
   console.log(jsonData);
 }
 
@@ -57,6 +58,19 @@ document.getElementById("email").addEventListener("input", function () {
     feedback.style.color = "red";
   } else {
     feedback.textContent = "Correo electrónico válido";
+    feedback.style.color = "green";
+  }
+});
+
+document.getElementById("number").addEventListener("input", function () {
+  let telefono = this.value.trim();
+  let feedback = document.getElementById("number--feedback");
+
+  if (!isPhoneNumberValid(telefono)) {
+    feedback.textContent = "Número telefónico inválido";
+    feedback.style.color = "red";
+  } else {
+    feedback.textContent = "Número telefónico válido";
     feedback.style.color = "green";
   }
 });
