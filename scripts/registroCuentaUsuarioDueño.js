@@ -1,4 +1,4 @@
-/* Bootstrap 5 JS included */
+/* Bootstrap 5 JS included
 
 console.clear();
 ('use strict');
@@ -155,7 +155,7 @@ console.clear();
 })();
 
 
-  /* Selecionar ubicacion */
+   // Selecionar ubicacion 
 
   let map;
   let markers = [];
@@ -217,4 +217,6 @@ console.clear();
       } else {
           alert('Por favor, selecciona una ubicación primero.');
       }
-  });
+  }); 
+
+  */
