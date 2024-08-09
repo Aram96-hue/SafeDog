@@ -1,3 +1,5 @@
+//Funciones de modificacion de json objects basandome en el layout de perfil dueño
+
 function agregarElemento(objeto, clave, valor) {
     objeto[clave] = valor;
     return objeto;
