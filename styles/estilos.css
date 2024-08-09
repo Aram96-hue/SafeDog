@@ -1,0 +1,817 @@
+:root {
+/* Color de fondo */
+--bg-color: #FFF8E0;
+/* Colores primarios */
+    --color-primary: black;
+    --color-secondary: #44A194;
+    --color-tertiary: #F0BB69;
+    --color-cuarto: #7F636E;
+
+/* --------------------------------- */
+/* Letra */
+
+/* Color de letra */
+    --font-color-w: white;
+    --font-color-b: black;
+    
+/* Tipo de letra */
+    --font-primary: "Sansita", sans-serif;
+    --font-secondary: "Roboto", sans-serif;
+    --font-size-primary: 5rem;
+    --font-size-secondary: 2 rem;
+}
+
+
+
+/*NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR*/
+.navbar {
+    background-color: #44A194;
+    color: #FFFFFF;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content:center; 
+    
+}
+
+.navbar .nav--container {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    
+}
+
+.navbar .navbar--logo a img {
+    width: 200px;
+    height: auto;
+}
+
+.navbar .navbar--menu {
+    list-style: none;
+    display: flex;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+    margin-top:70x;
+   
+}
+
+.navbar .navbar--menu li {
+    margin: 0;
+    margin-top: 10px;
+
+}
+
+.navbar .navbar--menu a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size:large;
+    font-weight: bold;
+    margin-right: 20px;
+    gap: 2px;
+}
+
+.navbar .navbar--menu a:hover {
+    color: #F0BB69;
+}
+
+.navbar .navbar--botones {
+    display: flex;
+    gap: 10px;
+    margin-left: 120px;
+
+   
+}
+
+.navbar .navbar--botones .boton--claro {
+    background-color: #65B5A1;
+    color: #FFFFFF;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    border-color: #FFFFFF;
+    font-family: "sansita";
+    font-size: larger;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navbar .navbar--botones .boton--azul {
+    background-color: #124C5F;
+    color: #FFFFFF;
+    border-color: #F0BB69;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    font-family: "sansita";
+    font-size: larger;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navbar .navbar--botones .boton--claro:hover {
+    background-color: #F0BB69;
+}
+
+.navbar .navbar--botones .boton--azul:hover {
+    background-color: #777;
+}
+
+.menu-btn {
+    cursor: pointer;
+    font-size: 24px;
+    display: none;
+    z-index: 21;
+    position: relative;
+    right: 3px;
+}
+
+.mobile-menu {
+    display: none;
+    background-color: #124C5F;
+    color: #FFFFFF;
+    position:absolute; /*se cambió de fixed a absolute para evitar que estubiera fijo el menu al hacer scroll*/
+    top:5%;
+    right: 0;
+    width: 250px; 
+    height: 50%;
+    padding: 20px;
+    z-index: 10;
+   
+}
+
+.mobile-menu ul.mobile-navbar--menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 40px; /*se agrego para bajar ewl texto*/
+    text-align: center;
+}
+
+.mobile-menu ul.mobile-navbar--menu li {
+    margin: 20px 0;
+    
+}
+
+.mobile-menu ul.mobile-navbar--menu a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.mobile-menu ul.mobile-navbar--menu a:hover {
+    color: #F0BB69;
+}
+
+.mobile-menu .mobile-navbar--botones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mobile-menu .mobile-navbar--botones button {
+    background-color: #65B5A1;
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: "sansita";
+    font-size: larger;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.mobile-menu .mobile-navbar--botones .boton--azul {
+    background-color: #124C5F;
+    border-color: #F0BB69;
+}
+
+.mobile-menu .mobile-navbar--botones button:hover {
+    background-color: #F0BB69;
+}
+
+/* Mostrar el botón del menú hamburguesa en pantallas pequeñas */
+@media (max-width: 900px) {
+    .navbar .navbar--menu {
+        display: none; /* Ocultar menú en pantallas pequeñas */
+    }
+    
+    .navbar .navbar--botones {
+        display: none; /* Ocultar botones en pantallas pequeñas */
+    }
+    
+    .menu-btn {
+        display: block; /* Mostrar botón del menú hamburguesa */
+    }
+}
+
+@media (max-width: 900px) {
+    .mobile-menu.active {
+        display: block;
+    }
+} /*NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR*/
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    font-family:var(--font-secondary);
+}
+
+body h2{
+ font-family:var(--font-primary);
+}
+
+
+.fondoCuidamos{
+    background-image:url('../assets/fotosAcercadeNosotros/ImgenAcercaDeSafeDog.jpeg');
+    background-size: cover; 
+    object-fit: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.AcercaDeSafe {
+    padding: 20px;
+    width: 90%;
+    background: linear-gradient( 135deg, #E3E3E3 10%, var(--color-tertiary) 100%);
+    opacity: 80%;
+    margin: 0 20px;
+    border-radius: 30px;
+}
+
+
+#ADSH{
+    font-size: 3em;
+}
+
+#ADSP {
+
+    text-align: justify;
+    line-height: 1.5;
+    font-size:22px;
+    color: var(--color-primary);   
+}
+
+.centrado {
+    text-align:center;
+}
+
+#titulo-seccion{
+    text-align: left;
+    font-size: 30px;
+}
+
+.Tarjeta-miembro span{
+    padding: 0px;
+    margin: 0px;
+}
+#titulo-seccion ul{
+    margin: 0px;
+}
+
+#tituloTarjeta { 
+    color: var(--color-cuarto) ;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    margin:0px;
+}
+.MisionVisionValores{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.card {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 90%;
+    margin: 0 20px;
+}
+
+.stat-block{
+    line-height: 1.5;
+}
+
+.stat-block p{
+    line-height: 1.2;
+    font-size: 20px;
+}
+
+.stat-block ul{
+    line-height: 2.0;
+    list-style: none;
+    font-size: 20px;
+}
+
+.image-div {
+    background-position: center;
+    padding: 5px;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.image-div>img {
+    max-width: 500px;
+    max-height: auto;
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    min-width: 150px;
+    min-height: auto;
+}
+
+.content-area>div {
+    margin: 10px;
+    
+}
+
+.content-area {
+    padding: 15px 15px;
+    text-align: justify;
+}
+
+#señoraPerrije {
+    border-radius: 20px;
+}
+
+#dog{
+    font-size: 50px;
+}
+
+
+@media screen and (max-width: 1480px) {
+    .card {
+        flex-direction: column;
+        max-width: 100%;
+        min-width: 250px;
+    }
+
+    .image-div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .image-div>img {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .content-area {
+        padding: 1rem;
+        width: 100%;
+    }
+    .AcercaDelProyecto {
+        margin-top: 25px;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+}
+
+
+.AcercaDelProyecto {
+    display: flex;
+    background-color: #65B5A1;
+    padding: 60px 60px;
+    width: 100%;
+    box-shadow: 0px 5px 15px rgba(46, 23, 8, 0.5);
+    font-size: 15px;
+    position: relative;
+    text-align: justify;
+    z-index: 0;
+    padding: 50px 0px;
+    margin: 150px 0px 20px 0px;
+    justify-content: center; 
+}
+
+#PerritoBloque {
+    width: 190px;
+    text-align: right;
+    position: absolute;
+    z-index: 2;
+    top: -150px;
+    left:90px;
+}
+
+#acercaDe--cont {
+    text-align: center;
+    display: flex;
+    width: 70%;
+    padding: 0px 0px 0px 10px;
+    font-size: 22px;
+}
+
+.titulo1 {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 1480px){
+    .card {
+        flex-direction: column;
+        max-width: 100%;
+        min-width: 250px;
+    }
+}
+
+.EquipoCarrousell {
+    width: 95%; 
+    overflow: hidden;
+    display: flex;
+    margin: 0px auto;
+    text-align: center;
+    flex-wrap: wrap;   
+}
+
+.Contenedor-Carrousell {
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-bottom: 50px;
+}
+
+.Contenedor-Carrousell {
+ width: 100%;    
+  max-width: 100%;
+  min-width: 320px;
+  margin: auto;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.Lista-desordenada {
+    display: grid;
+    grid-auto-flow: column;
+    overflow: none;
+    animation: slide 20s infinite;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    overflow: none;
+    position: relative;
+    flex: 1;
+    min-width: 250px;
+    background-attachment: fixed;
+}
+
+@media screen and (min-width: 250px) {
+
+    .Lista-desordenada {
+        
+        grid-auto-columns: calc((100% / 1) - 40px);
+        gap: 40px;
+    }
+}
+
+
+@media screen and (min-width: 750px) {
+
+    .Lista-desordenada {
+        
+        grid-auto-columns: calc((100% / 2) - 40px);
+        gap: 40px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    .Lista-desordenada {
+        
+        grid-auto-columns: calc((100% / 3) - 40px);
+        gap: 40px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+
+    .Lista-desordenada {
+        
+        grid-auto-columns: calc((100% / 4) - 40px);
+        gap: 40px;
+    }
+}
+
+@media screen and (min-width: 2500px) {
+
+    .Lista-desordenada {
+        
+        grid-auto-columns: calc((100% / 5) - 40px);
+        gap: 40px;
+    }
+} 
+
+@media screen and (min-width: 3000px) {
+
+    .Lista-desordenada {
+        
+        grid-auto-columns: calc((100% / 10) - 40px);
+        gap: 40px;
+    }
+}
+
+
+.Elemento-lista {
+    display: flex;
+    list-style: none;
+    border: var(--bg-color);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 60px;
+    background-attachment: fixed;
+    padding: 20px;
+}
+
+.Tarjeta-miembro {
+    background: linear-gradient( 135deg, var(--color-tertiary) 10%, #eadc93d1 100%);
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    border-radius: 60px;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-attachment: fixed;
+    font-size: 18px;
+    justify-content: space-between;
+}
+
+.Tarjeta-miembro img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border: #7F636E solid 5px;
+    object-fit: cover;
+}
+
+.Tarjeta-miembro {
+ width: 100%;
+ border-radius: 15px;
+ box-shadow: 0px 3px 5px rgba(15, 15, 15, 0.5);
+overflow: hidden;
+background-position: center;
+}
+
+.botonTarjeta {
+    padding: 14px;
+    color: var(--bg-color);
+    background-color: var(--color-cuarto);
+    border-radius: 0px;
+    border: 0px;
+    border-radius: 15px;
+    font-family: var(--font-secondary);
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 600ms ease;
+}
+
+.botonTarjeta{
+    transition: all 600ms ease;
+}
+
+.botonTarjeta:hover{
+    
+    background: linear-gradient( 135deg, var(--color-cuarto) 10%, #393627d1 100%);
+    border:var(--bg-color--);
+}
+
+  /*ANIMACION CARROUSEL*/
+
+
+ @keyframes slide { 
+    0% {
+        margin-left: 0%;
+    }
+
+    20% {
+        margin-left: 0%;
+    }
+
+    25% {
+        margin-left: -100%;
+    }
+
+    45% {
+        margin-left: -100%;
+    }
+
+    50% {
+        margin-left: -200%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    75% {
+        margin-left: -300%;
+    }
+
+    95% {
+        margin-left: -300%;
+    }
+
+    100% {
+        margin-left: -400%;
+    }
+
+    120% {
+        margin-left: -400%;
+    }
+
+    125% {
+        margin-left: -500%;
+    }
+
+    145% {
+        margin-left: -500%;
+    }
+
+    150% {
+        margin-left: -600%;
+    }
+
+    170% {
+        margin-left: -600%;
+    }
+
+    175% {
+        margin-left: -700%;
+    }
+
+    195% {
+        margin-left: -700%;
+    }
+
+    200% {
+        margin-left: -800%;
+    }
+
+    220% {
+        margin-left: -800%;
+    }
+
+    225% {
+        margin-left: -900%;
+    }
+
+    245% {
+        margin-left: -900%;
+    }
+}
+    
+ /*FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER*/
+
+.footer--safeDog{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #44A194;
+    padding: 20px;
+    margin: 0;
+    flex-wrap: wrap;
+    color: #ffffff;
+    text-align: center;
+}
+
+.footer--info{
+    display: flex;
+    flex-direction:column;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.footer--info .footer--question{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 50px;
+    
+}
+.footer--info ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.footer--info li{
+    margin: 0;
+}
+
+.footer--info a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footer--info .footer--list li a:hover{
+    color: #F0BB69;
+}
+
+.footer--logo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+
+.footer--logo img{
+    height: 200px;
+    width: 150px;
+
+}
+
+
+
+.iconos{
+    display: flex;
+    gap: 20px;
+    
+}
+
+.iconos img{
+    width: 50px;
+    height: 50px;
+}
+.iconos .logo--fb{
+    width: 58px;
+    height: 48px;
+}
+
+.iconos .logo--insta{
+    width: 60px;
+    height: 50px;
+}
+
+
+.footer--copy{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: -10px;
+   
+}
+
+.footer--copy h4{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+ 
+  
+}
+
+
+
+@media(max-width: 600px){
+    .footer--safeDog{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer--logo {
+        margin: 30px 0;
+        text-align: center;
+    }
+
+    .footer--info ul{
+        align-items: center;
+    }
+
+    .footer--copy{
+        margin-top: 10px;
+        text-align: center;
+        align-items: center;
+    
+    }
+} /*FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER */
