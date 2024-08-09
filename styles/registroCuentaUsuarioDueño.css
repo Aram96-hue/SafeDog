@@ -1,0 +1,134 @@
+:root {
+        /* Color de fondo */
+        --bg-color: #FFF8E0;
+        /* Colores primarios */
+            --color-primary: black;
+            --color-secondary: #44A194;
+            --color-tertiary: #F0BB69;
+            --color-cuarto: #7F636E;
+        
+        /* --------------------------------- */
+        /* Letra */
+        
+        /* Color de letra */
+            --font-color-w: white;
+            --font-color-b: black;
+            
+        /* Tipo de letra */
+            --font-primary: "Sansita", sans-serif;
+            --font-secondary: "Roboto", sans-serif;
+            --font-size-primary: 5rem;
+            --font-size-secondary: 2 rem;
+ }
+    
+    
+ body {
+    
+        flex-direction: column;
+        background-color: var(--bg-color);
+        margin: 0;
+        padding: 0;
+        font-family:var(--font-secondary);
+    }
+    
+body h2 h1 h3 h4 h5 {
+    font-family: 'Sansita', sans-serif !important;
+    }
+       
+.file-upload{
+    position: relative;
+    
+}
+
+.form-control {
+    font-family: 'Roboto', sans-serif;
+}
+
+.input-group-text{
+    font-family: 'Roboto', sans-serif;
+}
+
+h5 {
+    font-family: 'Sansita', sans-serif;
+    padding: 20px;
+}
+
+h2 {
+    font-family: 'Sansita', sans-serif;
+    padding: 20px;
+}
+
+h4 {
+    font-family: 'Sansita', sans-serif;
+    padding: 20px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+}
+
+
+/* FIELDSET - barra lateral */
+
+/* Bootstrap 5 CSS and icons included */
+:root {
+    --colorPrimaryNormal: #00b3bb;
+    --colorPrimaryDark: #00979f;
+    --colorPrimaryGlare: #00cdd7;
+    --colorPrimaryHalf: #80d9dd;
+    --colorPrimaryQuarter: #bfecee;
+    --colorPrimaryEighth: #dff5f7;
+    --colorPrimaryPale: #f3f5f7;
+    --colorPrimarySeparator: #f3f5f7;
+    --colorPrimaryOutline: #dff5f7;
+    --colorButtonNormal: #00b3bb;
+    --colorButtonHover: #00cdd7;
+    --colorLinkNormal: #00979f;
+    --colorLinkHover: #00cdd7;
+  }
+  
+  body {
+    margin: 24px;
+  }
+  
+  
+  .upload_dropZone {
+    color: #0f3c4b;
+    background-color: var(--colorPrimaryPale, #c8dadf);
+    outline: 2px dashed var(--colorPrimaryHalf, #c1ddef);
+    outline-offset: -12px;
+    transition:
+      outline-offset 0.2s ease-out,
+      outline-color 0.3s ease-in-out,
+      background-color 0.2s ease-out;
+    width: 25%;
+  }
+  .upload_dropZone.highlight {
+    outline-offset: -4px;
+    outline-color: var(--colorPrimaryNormal, #0576bd);
+    background-color: var(--colorPrimaryEighth, #c8dadf);
+  }
+  .upload_svg {
+    fill: var(--colorPrimaryNormal, #0576bd);
+  }
+  .btn-upload {
+    color: #fff;
+    background-color: var(--colorPrimaryNormal);
+  }
+  .btn-upload:hover,
+  .btn-upload:focus {
+    color: #fff;
+    background-color: var(--colorPrimaryGlare);
+  }
+  .upload_img {
+    width: calc(33.333% - (2rem / 3));
+    object-fit: contain;
+  }
+
+  .form-control{
+    border: none;
+    background-color: var(--bg-color);
+  }
+
+
