@@ -176,3 +176,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }
   });
 });
+
+// JavaScript para circular el carrusel
+const carruselInner = document.querySelector('.carrusel-inner');
+const items = document.querySelectorAll('.item');
+let index = 0;
+
+function mostrarSiguiente() {
+    index = (index + 1) % items.length;
+    carruselInner.style.transform = `translateX(-${index * 300}px)`; // Ajusta el ancho del item
+}
+
+setInterval(mostrarSiguiente, 3000); // Cambia de imagen cada 3 segundos

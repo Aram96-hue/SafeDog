@@ -240,11 +240,13 @@ body {
 }
 
 
-.Elemento-lista{
-  list-style: none; /*Quita la viñeta de lista*/
+/*.Elemento-lista{
+  list-style: none; 
   border: none;
-}
-
+  padding: 0.5rem 1rem;
+  font-size: 3.5rem;
+}   
+*/
 .Lista-desordenada {
   display: grid;
   grid-auto-flow: column;
@@ -267,15 +269,15 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  text-align: center;
-  width: 100%;
-  height: 100%;
+  text-align:start;
+  width: 50%;
+  height: 50%;
 }
 
 .Tarjeta-miembro img{
-  width: 148 px;
-  height: 148px;
-  border-radius: 100%;
+  width: 300px;
+  height: 300px;
+  border-radius: none;
 }
 
 /* ANIMACION CARROUSEL */
