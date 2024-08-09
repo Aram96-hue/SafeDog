@@ -45,6 +45,55 @@ h2 {
     padding: 20px;
 }
 
-.button {
-    padding: 20px;
-}
+
+.form-control:focus{
+    outline: none;
+    border-color: var(--color-tertiary);
+    box-shadow: 0 0 0 0.3rem var(--color-tertiary);
+  }
+
+
+  /*
+  .btn,
+  .btn:link,
+  .btn:visited {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-weight: 400;
+    padding: 1.6rem 3.2rem;
+    border-radius: 9px;
+    /* Only necessary for .btn */
+   /* border: none;
+    cursor: pointer;
+    font-family: inherit;
+    /* Put transition on original "state" */
+    /* transition: background-color 0.3s; */
+ /*   transition: all 0.3s;
+    overflow: hidden;
+    margin: 15px;
+  }*/
+
+
+  .btn--form {
+    background-color: var(--color-tertiary);
+    color: #fff;
+    align-self: end;
+    padding: 2rem 5rem;
+    margin: 2rem;
+  }
+
+  .btn--form:focus{
+    border:none;
+    box-shadow: none;
+  }
+
+  .btn--form:hover {
+    background-color: #fff;
+    color: #555;
+  }
+
+  .button--submit {
+    display: flex;
+    justify-content: flex-end;
+  }

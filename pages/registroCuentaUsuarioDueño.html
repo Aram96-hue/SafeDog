@@ -104,74 +104,45 @@
             <!-- Aqui se pone bootstrap (añadir imagenes)-->
             <!-- Esta sección es el espacio lateral donde estarán las imágenes -->
 
-<form>
-
-<h4>Adjunta tu foto</h4>
-
-  <fieldset class="upload_dropZone text-center mb-3 p-4">
-
-    <legend class="visually-hidden">Image uploader</legend>
-
-    <svg class="upload_svg" width="60" height="60" aria-hidden="true">
-      <use href="#icon-imageUpload"></use>
-    </svg>
-
-    <p class="small my-2">Arrastra y suelta la imagen dentro del recuadro<br><i>ó</i></p>
-
-    <input id="upload_image_background" data-post-name="image_background" data-post-url="https://someplace.com/image/uploads/backgrounds/" class="position-absolute invisible" type="file" multiple accept="image/jpeg, image/png, image/svg+xml" />
-
-    <label class="btn btn-upload mb-3" for="upload_image_background">Selecciónala desde tu computadora</label>
-
-    <div class="upload_gallery d-flex flex-wrap justify-content-center gap-3 mb-0"></div>
-
-  </fieldset>
-
-  <h4>Adjunta la foto de tu mascota</h4>
-
-  <fieldset class="upload_dropZone text-center mb-3 p-4">
-
-    <legend class="visually-hidden">Image uploader</legend>
-
-    <svg class="upload_svg" width="60" height="60" aria-hidden="true">
-      <use href="#icon-imageUpload"></use>
-    </svg>
-
-    <p class="small my-2">Drag &amp; Drop logo image(s) inside dashed region<br><i>or</i></p>
-
-    <input id="upload_image_logo" data-post-name="image_logo" data-post-url="https://someplace.com/image/uploads/logos/" class="position-absolute invisible" type="file" multiple accept="image/jpeg, image/png, image/svg+xml" />
-
-    <label class="btn btn-upload mb-3" for="upload_image_logo">Choose file(s)</label>
-
-    <div class="upload_gallery d-flex flex-wrap justify-content-center gap-3 mb-0"></div>
-
-  </fieldset>
-</form>
-
-
-<!-- Selecciona ubicacion 
-<h4>Selecciona tu ubicación</h4>
-
-
-<h5>Código de ChatGPT (a revisión)</h5>
-
-<div class="container mt-5">
-    <div class="card">
-        <div class="card-header">
-            Selecciona tu ubicación (servirá para mostrarte los cuidadores más cercanos a tu domicilio)
-        </div>
-        <div class="card-body">
-            <div class="form-group">
-                <input type="text" id="searchInput" class="form-control" placeholder="Ingresa una dirección">
-            </div>
-            <div id="map" style="height: 250px; width: 100%;"></div>
-            <button id="saveLocation" class="btn btn-primary mt-3">Guardar Ubicación</button>
-        </div>
-
-    </div>
-</div>
--->
-
 <!-- Termina barra lateral -->
+<div class="section--up--img">
+    <div>
+      <p class="text--title">Adjunta una foto de ti</p>
+      <p class="text--img">
+        Puedes proporcionarnos una foto de ti y nosotros la mostremos a los cuidadores o cuidadoras, esto te ayudará a crear mejores conecciones.
+      </p>
+      <div class="up--img--container">
+        <img
+          src="../assets/image 37.png"
+          alt="Cuidador"
+          class="img--img"
+          id="open-popup-img"
+        />
+        <div>
+          <button class="btn btn--save btn--shadow" type="button" onclick="document.getElementById('formFileMultipleOne').click();">Subir fotografias</button>
+          <input type="file" style="display: none;" id="formFileMultipleOne" multiple required>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p class="text--title">Adjunta una foto de tu mascota</p>
+      <p class="text--img">
+        Puedes proporcionarnos una foto de tu mascota, queremos conocerle !
+      </p>
+      <div class="up--img--container">
+        <img
+          src="../assets/image 38.png"
+          alt="Cuidador"
+          class="img--img"
+        />
+        <div>
+          <button class="btn btn--save btn--shadow" type="button" onclick="document.getElementById('formFileMultipleTwo').click();">Subir documento</button>
+          <input type="file" style="display: none;" id="formFileMultipleTwo" multiple required>
+        </div>
+      </div>
+    </div>
+  </div>
+
         </aside>
 
         <main>
@@ -185,22 +156,20 @@
                                 <div class="col-12 col-xl-6">
                                     <div class="input-group mb-3">
                                         <span class="input-group-text">Nombre(s)</span>
-                                        <input type="text" placeholder="Nombres" aria-label="First name" class="form-control" name="Primer Nombre" value="Carlos" required>
+                                        <input type="text" name="nombreDueño" placeholder="Nombres" aria-label="First name" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="col-12 col-xl-6">
                                     <div class="input-group mb-3">
                                         <span class="input-group-text">Apellidos</span>
-                                        <input type="text" placeholder="Apellidos" aria-label="Last name" class="form-control" required>
+                                        <input type="text" name="apellidoDueño"  placeholder="Apellidos" aria-label="Last name" class="form-control" required>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-12">
-                            <h5>¿Tienes teléfono?</h5>
                             <!-- Telefono -->
-                            <span class="input-group-text">Escríbelo</span>
-                            <input type="text" aria-label="Telefono" class="form-control" placeholder="Telefono de contacto" required>
+                            <input type="text" name="telefonoDueño"  aria-label="Telefono" class="form-control" placeholder="Telefono de contacto" required>
                         </div>
                     </div>
 
@@ -210,14 +179,13 @@
                             <!-- Nombre contacto de emergencia -->
                             <div class="input-group">
                                 <span class="input-group-text">Nombre(s) y Apellidos</span>
-                                <input type="text" aria-label="First name" class="form-control" required>
-                                <input type="text" aria-label="Last name" class="form-control" required>
+                                <input type="text" name="nombreEmergencia" aria-label="First name" class="form-control" required>
+                                <input type="text" name="apellidoEmergencia" aria-label="Last name" class="form-control" required>
                             </div>
                         </div> <br>
                         <!-- Teléfono de emergencia -->
                         <div class="col-sm-12">
-                            <span class="input-group-text">Teléfono de emergencia</span>
-                            <input type="text" aria-label="First name" class="form-control" placeholder="Telefono de emergencia" required>
+                            <input type="text" name="telefonoEmergencia" aria-label="First name" class="form-control" placeholder="Telefono de emergencia" required>
                         </div>
                         <!-- Nombre de tu mascota -->
                         <div class="col-sm-12">
@@ -228,14 +196,68 @@
                             </div>
                         </div>
                         <!-- Información de tu mascota, raza, tamaño, edad género -->
-                        <div class="col-sm-12">
-                            <div class="mb-3">
-                                <label for="exampleFormControlTextarea1" class="form-label">Información de tu mascota, raza tamaño, edad, género</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                        <div class="container mt-5">
+                            <!-- Tamaño -->
+                            <h4>Tamaño de tu perro:</h4>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" id="pequeno" name="tamañoPerro" class="custom-control-input">
+                              <label class="custom-control-label" for="pequeno">Pequeño</label>
                             </div>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" id="mediano" name="tamañoPerro" class="custom-control-input">
+                              <label class="custom-control-label" for="mediano">Mediano</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" id="grande" name="tamañoPerro" class="custom-control-input">
+                              <label class="custom-control-label" for="grande">Grande</label>
+                            </div>
+                          </div>
+
+                        <!-- Raza -->
+
+                        <div class="container mt-5">
+                            <h4>Selecciona la raza de tu perro:</h4>
+                            <div class="dropdown">
+                              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Razas de Perros
+                              </button>
+                              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Labrador</a>
+                                <a class="dropdown-item" href="#">Beagle</a>
+                                <a class="dropdown-item" href="#">Chihuahua</a>
+                                <a class="dropdown-item" href="#">Golden Retriever</a>
+                                <a class="dropdown-item" href="#">Bulldog</a>
+                                <a class="dropdown-item" href="#">Poodle</a>
+                                <a class="dropdown-item" href="#">Rottweiler</a>
+                                <a class="dropdown-item" href="#">Cocker Spaniel</a>
+                                <a class="dropdown-item" href="#">Dachshund</a>
+                                <a class="dropdown-item" href="#">Boxer</a>
+                                <a class="dropdown-item" href="#">Una mezcla de varias</a>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="mb-3">
+                            <h4>Edad de tu perrito </h4>
+
+                            <label for="formGroupExampleInput" class="form-label"></label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="¿Cuantos años tiene tu perrito?" required>
                         </div>
 
-                        <button type="submit" class="btn btn-primary btn-sm">Guardar</button>
+                          <br>
+
+            <div>
+                
+                <h4>Género de tu perrito </h4>
+
+                <input type="radio" id="opcion1" name="generoPerro" value="Hembra">
+            <label for="Option1">Hembra</label>
+            <input type="radio" id="option2" name="generoPerro" value="Macho">
+            <label for="opcion2">Macho</label><br>
+
+            </div>
+
+                        <button type="submit" class="btn btn--form btn--shadow"  onclick="convertToJson()">Guardar</button>
                         <!-- Feedback message -->
                         <div id="formFeedback" class="feedback mt-3"></div>
                     </div>
@@ -274,11 +296,16 @@
     <div class="footer--copy">
         <h4>© All rights reserved & design by SafeDog</h4>
     </div>
-<!--<script src="../scripts/registroCuentaUsuarioDueño.js"></script>-->
-<script src="../scripts/registroCuenta.js"></script></script>
-<!-- Se incluye la API de Google Maps -->
-<script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap&libraries=places" async defer></script>
 
+
+<script src="../scripts/registroCuentaUsuarioDueño.js"></script>
+<script src="../scripts/registroCuenta.js"></script></script>
+
+
+<!-- Para el menú desplegable -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </footer>
 
