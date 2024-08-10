@@ -33,32 +33,12 @@ body h2 h1 h3 h4 h5 {
     font-family: 'Sansita', sans-serif !important;
     }
        
-.file-upload{
-    position: relative;
-    
-}
-
 .form-control .label {
     font-family: 'Roboto', sans-serif;
 }
 
 .input-group-text{
     font-family: 'Roboto', sans-serif;
-}
-
-h5 {
-    font-family: 'Sansita', sans-serif;
-    padding: 20px;
-}
-
-h2 {
-    font-family: 'Sansita', sans-serif;
-    padding: 20px;
-}
-
-h4 {
-    font-family: 'Sansita', sans-serif;
-    padding: 20px;
 }
 
 p {
@@ -86,6 +66,31 @@ p {
     box-shadow: none;
   }
 
+  .btn--save {
+    background-color: var(--secondary);
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1.5rem 2rem;
+  }
+  
+  .btn--save:hover,
+  .btn--form:hover {
+    background-color: #fff;
+    color: #555;
+  }
+  
+  .btn--shadow {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2),
+      /* Sombra externa */ inset 1px 1px 3px rgba(255, 255, 255, 0.3); /* Sombra interna */
+    transition: all 0.3s ease;
+    button:active {
+      box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.3),
+        /* Más sombra interna */ none; /* Sin sombra externa */
+    }
+  }
+  
+
+
   .button--submit {
     display: flex;
     justify-content: flex-end;
@@ -96,8 +101,57 @@ p {
     grid-template-columns: 2fr 1fr;
     column-gap: 10rem;
   }
+
+  #container-Input-Pequeño{
+    width: 20rem;
+}
 /* Formato para el selector de razas de perros */
 
-#contenedoDatosForm{
-    border-color:blue solid;
+.container, .section--up--img{
+    border:blue solid;
 }
+
+
+.section--up--img {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  
+  .all--up--img {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+  }
+  
+  .up--img--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .img--img{
+    width: 25rem;
+  }
+  
+
+.tamañoPerro{
+justify-content: center;
+    display: flex;
+    align-items:center;
+}
+
+.tamañoPerro img{
+    padding: 10px;
+}
+
+.razasDePerros{
+padding: 10px;
+}
+
+.razaPerro{
+    padding: 20px;
+}
+
