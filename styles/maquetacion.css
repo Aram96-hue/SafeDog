@@ -1,0 +1,25 @@
+div {
+    color: white;
+    border: 2px solid white; /* 2px de ancho y color negro */
+    padding: 30px; /* Espacio interno para que el contenido no se superponga al borde */
+}
+
+.flex {
+    display: flex;
+    
+}
+div portada{
+    display:flex;
+}
+
+.imagenFondo {
+    background-image: url('../assets/Cuidadora\ y\ perro\ \(portada\).jpg');
+    background-size:cover; /* Ajusta la imagen para cubrir todo el div */
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; 
+}
+
+.FotoPerfil{
+    border-radius: 50%;
+}

@@ -1,0 +1,103 @@
+:root {
+        /* Color de fondo */
+        --bg-color: #FFF8E0;
+        /* Colores primarios */
+            --color-primary: black;
+            --color-secondary: #44A194;
+            --color-tertiary: #F0BB69;
+            --color-cuarto: #7F636E;
+        
+        /* --------------------------------- */
+        /* Letra */
+        
+        /* Color de letra */
+            --font-color-w: white;
+            --font-color-b: black;
+            
+        /* Tipo de letra */
+            --font-primary: "Sansita", sans-serif;
+            --font-secondary: "Roboto", sans-serif;
+            --font-size-primary: 5rem;
+            --font-size-secondary: 2 rem;
+ }
+    
+    
+ body {
+        background-color: var(--bg-color);
+        margin: 0;
+        padding: 0;
+        font-family:var(--font-secondary);
+}
+    
+body h2 h1 h3 h4 h5 {
+    font-family: 'Sansita', sans-serif !important;
+    }
+       
+.file-upload{
+    position: relative;
+    
+}
+
+.form-control .label {
+    font-family: 'Roboto', sans-serif;
+}
+
+.input-group-text{
+    font-family: 'Roboto', sans-serif;
+}
+
+h5 {
+    font-family: 'Sansita', sans-serif;
+    padding: 20px;
+}
+
+h2 {
+    font-family: 'Sansita', sans-serif;
+    padding: 20px;
+}
+
+h4 {
+    font-family: 'Sansita', sans-serif;
+    padding: 20px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+}
+
+
+.btn--form {
+    background-color: var(--color-tertiary);
+    color: #fff;
+    align-self: end;
+    padding: 2rem 5rem;
+    margin: 2rem;
+  }
+
+.form-control:focus{
+    outline: none;
+    border-color: var(--color-tertiary);
+    box-shadow: 0 0 0 0.3rem var(--color-tertiary);
+  }
+
+  .btn--form:focus{
+    border:none;
+    box-shadow: none;
+  }
+
+  .button--submit {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+.form--grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 10rem;
+  }
+/* Formato para el selector de razas de perros */
+
+#contenedoDatosForm{
+    border-color:blue solid;
+}
