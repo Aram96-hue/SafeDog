@@ -19,31 +19,15 @@
             --font-secondary: "Roboto", sans-serif;
             --font-size-primary: 5rem;
             --font-size-secondary: 2 rem;
-
-            --colorPrimaryNormal: #00b3bb;
-            --colorPrimaryDark: #00979f;
-            --colorPrimaryGlare: #00cdd7;
-            --colorPrimaryHalf: #80d9dd;
-            --colorPrimaryQuarter: #bfecee;
-            --colorPrimaryEighth: #dff5f7;
-            --colorPrimaryPale: #f3f5f7;
-            --colorPrimarySeparator: #f3f5f7;
-            --colorPrimaryOutline: #dff5f7;
-            --colorButtonNormal: #00b3bb;
-            --colorButtonHover: #00cdd7;
-            --colorLinkNormal: #00979f;
-            --colorLinkHover: #00cdd7;
  }
     
     
  body {
-    
-        flex-direction: column;
         background-color: var(--bg-color);
         margin: 0;
         padding: 0;
         font-family:var(--font-secondary);
-    }
+}
     
 body h2 h1 h3 h4 h5 {
     font-family: 'Sansita', sans-serif !important;
@@ -84,25 +68,36 @@ p {
 
 
 .btn--form {
-  background-color: var(--color-tertiary);
-  color: #fff;
-  align-self: end;
-  padding: 2rem 5rem;
-}
+    background-color: var(--color-tertiary);
+    color: #fff;
+    align-self: end;
+    padding: 2rem 5rem;
+    margin: 2rem;
+  }
 
+.form-control:focus{
+    outline: none;
+    border-color: var(--color-tertiary);
+    box-shadow: 0 0 0 0.3rem var(--color-tertiary);
+  }
 
-.form--imput--item input:focus {
-  outline: none;
-  box-shadow: 0 0 0 0.8rem var(--color-tertiary);
-}
+  .btn--form:focus{
+    border:none;
+    box-shadow: none;
+  }
 
+  .button--submit {
+    display: flex;
+    justify-content: flex-end;
+  }
 
+.form--grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 10rem;
+  }
 /* Formato para el selector de razas de perros */
 
-  .custom-radio .custom-control-input:checked ~ .custom-control-label::before {
-    background-color: #007bff;
-    border-color: #007bff;
-  }
-  .custom-radio .custom-control-label::before {
-    border-radius: 50%;
-  }
+#contenedoDatosForm{
+    border-color:blue solid;
+}

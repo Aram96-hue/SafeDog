@@ -52,6 +52,10 @@ h2 {
     box-shadow: 0 0 0 0.3rem var(--color-tertiary);
   }
 
+  .boton-foto{
+    color:var(--bg-color);
+    background-color: var(--color-cuarto);
+  }
 
   /*
   .btn,
@@ -79,8 +83,10 @@ h2 {
     background-color: var(--color-tertiary);
     color: #fff;
     align-self: end;
-    padding: 2rem 5rem;
-    margin: 2rem;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    border-radius: 10px;
+    border: 0px;
   }
 
   .btn--form:focus{
@@ -96,4 +102,19 @@ h2 {
   .button--submit {
     display: flex;
     justify-content: flex-end;
+  }
+
+  .centrar {
+    justify-content: center;
+    text-align: center;
+
+  }
+
+  .justificado-derecha{
+    display: flex;
+align-items:end;
+  }
+
+  @media screen and (min-width:300px) {
+    min-width: 300px;
   }

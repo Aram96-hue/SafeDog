@@ -111,19 +111,18 @@ En los modales va toda la información que si se le va a mostrar a los dueños, 
         <!-- Foto de perfil -->
 
         <!--Beto added id and class for validation function-->
-        <form id="contactForm" class="needs-validation" novalidate>
-            <div class="row mb-3">
-                <label class="form-label">Subir imagen</label>
-                <div class="col-2">
-                    <img class="preview_img" src="../assets/iconoPerfil (2).jpg" width="100px">
-                </div>
-                <div class="col-10">
-                    <div class="file-upload text-secondary">
-                        <input type="file" class="image" name="image" accept="image/*">
-                        <span class="fs-4 fw-2">Escoge un archivo...</span>
-                        <span> o arrastra y coloca un archivo aqui</span>
-                    </div>
-                </div>
+        <form id="contactForm" class="needs-validation " novalidate>
+            <div class="row mb-3 ">
+                <div class="centrar">
+                    <label class="form-label"> <h4>Foto de perfil</h4></label>
+                    <div class="">
+                        <img class="preview_img " src="../assets/iconoPerfil (2).jpg" width="100px">
+                        <div> <br>
+                            <button class="boton-foto centrar btn btn--save btn--shadow" type="button" onclick="document.getElementById('formFileMultipleOne').click();">Subir fotografia</button>
+                            <input type="file" style="display: none;" id="formFileMultipleOne" multiple required>
+                          </div>
+                        </div>
+                        </div>
             </div>
 
 
@@ -165,10 +164,9 @@ En los modales va toda la información que si se le va a mostrar a los dueños, 
                     se le preguntará al dueño</label>
                 <textarea Name="preguntas" class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
             </div>
-            <div class="button--submit">
+            <div class=" justificado-derecha button--submit">
             <button type="submit" class="btn btn--form btn--shadow  btn-lg" onclick="convertToJson()">
-                BOTON SIGUIENTE
-             </button>
+                Siguiente</button>
             </div>
             <!-- Beto added div for validation feedback-->
             <div id="formFeedback" class="feedback"></div>
