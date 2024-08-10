@@ -115,6 +115,6 @@ h2 {
 align-items:end;
   }
 
-  @media screen and (min-width:300px) {
+ /* @media screen and (min-width:300px) {
     min-width: 300px;
-  }
+  }*/
