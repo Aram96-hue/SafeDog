@@ -93,7 +93,7 @@
                 <div class="Instrucciones">
                 <h2>Mi cuenta | Dueño</h2>
                 <p>
-                    Para registrar tus datos y crear tu perfil llena los siguientes datos.
+                    Para registrar y crear tu perfil llena los siguientes datos.
                 </p>
                  </div>
                 <!-- Aqui se pone bootstrap (forms)-->
@@ -192,9 +192,9 @@
 
                             <div class="razasDePerros">
                                 <select name="razasPerros" id="lang" class="form-control">
+                                    <option value="Chihuahua">Chihuahua</option>
                                     <option value="Labrador">Labrador</option>
                                     <option value="Beagle">Beagle</option>
-                                    <option value="Chihuahua">Chihuahua</option>
                                     <option value="Golden">Golden Retriever</option>
                                     <option value="Bulldog">Bulldog</option>
                                     <option value="Poodle">Poodle</option>
@@ -226,30 +226,36 @@
 
                         <div class="mb-3">
                             <h5>Edad de tu perrito </h5>
-                            <input type="number" class="form-control" id="numero" name="numero" min="0" max="100">
+                            <div class="flex">
+                                <input type="number" class="form-control margin" id="numero" name="años" min="0" max="100"> Años
+
+                                <input type="number" class="form-control margin" id="numero" name="meses" min="0" max="12"> Meses
+
+                            </div>
+                            
                         </div>
 
                         <div class="mb-3">
 
                             <h4>Género de tu perrito </h4>
 
-                            <input class="razaPerro" type="radio" id="opcion1" name="generoPerro" value="Hembra">
-                            <label for="Option1">Hembra</label>
-                            <input class="razaPerro" type="radio" id="option2" name="generoPerro" value="Macho">
-                            <label for="opcion2">Macho</label><br>
+                            <input  type="radio" id="opcion1" name="generoPerro" value="Hembra">
+                            <label for="Option1" class="razaPerro"><h6>Hembra</h6></label>
+                            <input type="radio" id="option2" name="generoPerro" value="Macho">
+                            <label for="opcion2" class="razaPerro" ><h6>Macho</h6></label><br>
 
                         </div>
 
                     </div>
                     <div class="section--up--img">
                         <div>
-                            <p class="text--title">Adjunta una foto de ti</p>
+                            <p class="text--title"><h4>Adjunta una foto de ti</h4></p>
                             <p class="text--img">
                                 Puedes proporcionarnos una foto de ti y nosotros la mostremos a los cuidadores o
                                 cuidadoras, esto te ayudará a crear mejores conecciones.
                             </p>
-                            <div class="up--img--container">
-                                <img src="../assets/foto-mascota.png" alt="foto-dueño" class="img--img" id="open-popup-img" />
+                            <div class="up--img--container ">
+                                <img src="../assets/foto-dueño.png" alt="foto-dueño" class="img--img imagenCuidador" id="open-popup-img" />
                                 <div>
                                     <button class="btn btn--save btn--shadow" type="button"
                                         onclick="document.getElementById('formFileMultipleOne').click();">Subir
@@ -260,12 +266,12 @@
                             </div>
                         </div>
                         <div>
-                            <p class="text--title">Adjunta una foto de tu mascota</p>
+                            <p class="text--title"><h4>Adjunta una foto de tu mascota</h4></p>
                             <p class="text--img">
                                 Puedes proporcionarnos una foto de tu mascota, queremos conocerle !
                             </p>
                             <div class="up--img--container">
-                                <img src="../assets/foto-mascota.png" alt="foto-mascota" class="img--img" />
+                                <img src="../assets/foto-mascota.jpg" alt="foto-mascota" class="img--img imagenCuidador" width="100px"/>
                                 <div>
                                     <button class="btn btn--save btn--shadow" type="button"
                                         onclick="document.getElementById('formFileMultipleTwo').click();">Subir

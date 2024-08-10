@@ -29,9 +29,11 @@
         font-family:var(--font-secondary);
 }
     
-body h2 h1 h3 h4 h5 {
+body{
     font-family: 'Sansita', sans-serif !important;
     }
+
+
        
 .form-control .label {
     font-family: 'Roboto', sans-serif;
@@ -55,8 +57,9 @@ p {
     background-color: var(--color-tertiary);
     color: #fff;
     align-self: end;
-    padding: 2rem 5rem;
-    margin: 2rem;
+    padding: 1.5rem 3rem;
+    margin: 1.5rem;
+    font-size: 1.5rem;
   }
 
 
@@ -115,6 +118,16 @@ p {
 /*.container, .section--up--img, .container-Preguntas{
     border:blue solid;
 }*/
+
+.margin{
+    margin: 10px;
+}
+
+.flex {
+    display: flex;
+        align-items: center;
+        
+}
 
 
 .section--up--img {
@@ -198,4 +211,12 @@ justify-content: space-around;
         width: 100%;
     }
     
+}
+
+.imagenCuidador{
+    width: 150px;
+    height: 150px;
+    border-radius: 5%;
+    object-fit: cover;
+
 }
