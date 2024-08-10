@@ -1,31 +1,33 @@
-//validation function using Bootstrap styles, beto added this
-(function () {
-  'use strict'
-  const form = document.getElementById('contactForm');
-  const feedback = document.getElementById('formFeedback');
 
-  form.addEventListener('submit', function (event) {
-      
-      event.preventDefault();
 
-      
-      feedback.textContent = '';
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  let form = event.target;
+  let photoInput = document.getElementById('formFileMultipleOne');
+  let feedback = document.getElementById('formFeedback');
+  
+ 
+  if (photoInput.files.length === 0) {
+      photoInput.setCustomValidity("Invalid");
+      photoInput.nextElementSibling.style.display = 'block';
+  } else {
+      photoInput.setCustomValidity("");
+      photoInput.nextElementSibling.style.display = 'none';
+  }
+  
 
-     
-      if (form.checkValidity()) {
-          feedback.textContent = 'Información enviada con éxito!';
-          feedback.classList.remove('text-danger');
-          feedback.classList.add('text-success');
-      } else {
-          feedback.textContent = 'Favor de llenar el campo faltante.';
-          feedback.classList.remove('text-success');
-          feedback.classList.add('text-danger');
-      }
-
-      
+  if (!form.checkValidity()) {
+      feedback.textContent = "Por favor, completa todos los campos requeridos.";
+      feedback.classList.add('text-danger');
       form.classList.add('was-validated');
-  }, false);
-})();
+  } else {
+      feedback.textContent = "Información enviada con éxito.";
+      feedback.classList.remove('text-danger');
+      feedback.classList.add('text-success');
+  }
+});
+
+
 
 
 function convertToJson() {

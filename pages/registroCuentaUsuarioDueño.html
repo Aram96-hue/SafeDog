@@ -107,20 +107,23 @@
                                     <div class="input-group mb-3">
                                         <span class="input-group-text">Nombre(s)</span>
                                         <input type="text" name="nombreDueño" placeholder="Nombres"
-                                            aria-label="First name" class="form-control" required>
+                                            aria-label="First name" class="form-control" required required pattern="[A-Za-z\s]+" oninput="validateNombre(this)">
+                                        <div class="invalid-feedback">Nombre inválido</div>
                                     </div>
                                 </div>
                                 <div class="col-12 col-xl-6">
                                     <div class="input-group mb-3">
                                         <span class="input-group-text">Apellidos</span>
                                         <input type="text" name="apellidoDueño" placeholder="Apellidos"
-                                            aria-label="Last name" class="form-control" required>
+                                            aria-label="Last name" class="form-control" required required pattern="[A-Za-z\s]+" oninput="validateNombre(this)">
+                                        <div class="invalid-feedback">Apellido inválido</div>
                                     </div>
                                 </div>
                             </div>
                             <!-- Telefono -->
                             <input type="text" name="telefonoDueño" id="container-Input-Pequeño" class="form-control"
-                                placeholder="Telefono de contacto" required>
+                                placeholder="Telefono de contacto" required required pattern="\d{10}" oninput="validateTelefono(this)">
+                            <div class="invalid-feedback">Teléfono inválido</div>
                             <!--Cuentanos de ti termina aqui-->
                         </div>
                         <!-- Nombre contacto de emergencia empieza aqui -->
@@ -132,20 +135,23 @@
                                     <div class="input-group mb-3">
                                         <span class="input-group-text">Nombre(s)</span>
                                         <input type="text" name="nombreEmergencia" aria-label="First name"
-                                            class="form-control" required>
+                                            class="form-control" required required pattern="[A-Za-z\s]+" oninput="validateNombre(this)">
+                                        <div class="invalid-feedback">Nombre inválido</div>
                                     </div>
                                 </div>
                                 <div class="col-12 col-xl-6">
                                     <div class="input-group mb-3">
                                         <span class="input-group-text">Apellidos</span>
                                         <input type="text" name="apellidoEmergencia" aria-label="Last name"
-                                            class="form-control" required>
+                                            class="form-control" required required pattern="[A-Za-z\s]+" oninput="validateNombre(this)">
+                                        <div class="invalid-feedback">Apellido inválido.</div>
                                     </div>
                                 </div>
                             </div>
                             <!-- Teléfono de emergencia -->
                             <input type="text" name="telefonoEmergencia" id="container-Input-Pequeño"
-                                class="form-control" placeholder="Telefono de emergencia" required>
+                                class="form-control" placeholder="Telefono de emergencia" required required pattern="\d{10}" oninput="validateTelefono(this)">
+                            <div class="invalid-feedback">Teléfono inválido</div>
                             <!-- Nombre contacto de emergencia termina aqui -->
                         </div>
 
@@ -191,7 +197,7 @@
                             <h4>Selecciona la raza de tu perrito</h4>
 
                             <div class="razasDePerros">
-                                <select name="razasPerros" id="lang" class="form-control">
+                                <select name="razasPerros" id="lang" class="form-control" required>
                                     <option value="Chihuahua">Chihuahua</option>
                                     <option value="Labrador">Labrador</option>
                                     <option value="Beagle">Beagle</option>
@@ -227,9 +233,9 @@
                         <div class="mb-3">
                             <h5>Edad de tu perrito </h5>
                             <div class="flex">
-                                <input type="number" class="form-control margin" id="numero" name="años" min="0" max="100"> Años
+                                <input type="number" class="form-control margin" id="numero" name="años" min="0" max="100" required> Años
 
-                                <input type="number" class="form-control margin" id="numero" name="meses" min="0" max="12"> Meses
+                                <input type="number" class="form-control margin" id="numero" name="meses" min="0" max="12" required> Meses
 
                             </div>
                             
@@ -262,6 +268,7 @@
                                         fotografias</button>
                                     <input type="file" style="display: none;" id="formFileMultipleOne" multiple
                                         required>
+                                    <div class="invalid-feedback">Por favor, sube una foto de ti.</div>
                                 </div>
                             </div>
                         </div>
@@ -275,9 +282,10 @@
                                 <div>
                                     <button class="btn btn--save btn--shadow" type="button"
                                         onclick="document.getElementById('formFileMultipleTwo').click();">Subir
-                                        documento</button>
+                                        Fotografía</button>
                                     <input type="file" style="display: none;" id="formFileMultipleTwo" multiple
                                         required>
+                                    <div class="invalid-feedback">Por favor, sube una foto de tu mascota.</div>
                                 </div>
                             </div>
                         </div>
@@ -285,6 +293,7 @@
                         <div class="button--submit">
                             <button type="submit" class="btn btn--form btn--shadow"
                                 onclick="convertToJson()">Guardar</button>
+                            <div id="formMessage" class="mt-3"></div>
                         </div>
                     </div>
                 </form>
@@ -329,7 +338,7 @@
 
     <script src="../scripts/registroCuentaUsuarioDueño.js"></script>
     <script src="../scripts/registroCuenta.js"></script>
-    </script>
+    
 
 
     <!-- Para el menú desplegable -->
