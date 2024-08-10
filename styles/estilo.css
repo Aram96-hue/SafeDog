@@ -1,0 +1,253 @@
+:root {
+/* Colores */
+
+
+/* --------------------------------- */
+/* Color de fondo */
+--bg-color: #FFF8E0;
+/* Colores primarios */
+    --color-primary: black;
+    --color-secondary: #44A194;
+    --color-tertiary: #F0BB69;
+    --color-cuarto: #7F636E;
+
+}
+
+body{
+    margin: 0px;
+}
+
+div{
+    border: 5px solid rgb(0, 255, 4);
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+
+.titulo {
+    font-family: 'Sansita';
+    color: antiquewhite;
+    font-size: 3.7vw;
+    text-shadow: 4px 4px 2px black;
+    grid-column: 1 / 3 ;
+}
+
+.divBoton{
+    grid-column: 1 / 3 ;
+    grid-row: 3;
+    text-align: center ;
+    position: relative;
+
+}
+
+.boton {
+    color: var(--font-color-w);
+    background-color: var(--color-tertiary);
+    padding: 1vh;
+    border: none;
+    border-radius: 30px;
+    font-size: 5vh;
+    font-family: 'Sansita';
+    height: 1hv;
+    width: 1hv;
+    position: relative;
+    bottom: -70%;
+    z-index: 2;
+}
+
+.imagenDeFondo {
+    
+    background-image: url('../assets/Cuidadora\ y\ perro\ \(portada\).jpg');
+    background-size:cover; /* Ajusta la imagen para cubrir todo el div */
+    object-fit: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%; 
+    height: 70vh;
+
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    z-index: 0;
+}
+
+.divPerfil{
+    position: relative;
+    text-align: center;
+    bottom: -50%;
+    z-index: 2;
+
+}
+
+.nombreUbicacion{
+  font-family: 'Sansita';
+  color: black;
+  font-size: 2.7vw;
+  z-index: 2;
+}
+
+.imagenDePerfil{
+    border-radius: 50%;
+    border: 0.7vh solid #7F636E;
+    height: 25vh;
+    width: 25vh;
+    box-sizing: border-box;
+    grid-column: 3;
+    grid-row: 3;
+    position: relative;
+    z-index: 2;
+}
+
+.ola{
+  position: absolute;
+  bottom: -30%;
+  z-index: 1;
+  width: 100hv;
+  height: auto;
+  object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Fuentes personalizadas */
+
+    /* Sansita */
+    .sansita-regular {
+        font-family: "Sansita", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    
+    .sansita-bold {
+        font-family: "Sansita", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+    
+    .sansita-extrabold {
+        font-family: "Sansita", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+    }
+    
+    .sansita-black {
+        font-family: "Sansita", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+    }
+    
+    .sansita-regular-italic {
+        font-family: "Sansita", sans-serif;
+        font-weight: 400;
+        font-style: italic;
+    }
+    
+    .sansita-bold-italic {
+        font-family: "Sansita", sans-serif;
+        font-weight: 700;
+        font-style: italic;
+    }
+    
+    .sansita-extrabold-italic {
+        font-family: "Sansita", sans-serif;
+        font-weight: 800;
+        font-style: italic;
+    }
+    
+    .sansita-black-italic {
+        font-family: "Sansita", sans-serif;
+        font-weight: 900;
+        font-style: italic;
+    }
+
+    /* Roboto */
+
+    .roboto-thin {
+        font-family: "Roboto", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+      }
+      
+      .roboto-light {
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+      }
+      
+      .roboto-regular {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      
+      .roboto-medium {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+      
+      .roboto-bold {
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+      
+      .roboto-black {
+        font-family: "Roboto", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+      }
+      
+      .roboto-thin-italic {
+        font-family: "Roboto", sans-serif;
+        font-weight: 100;
+        font-style: italic;
+      }
+      
+      .roboto-light-italic {
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-style: italic;
+      }
+      
+      .roboto-regular-italic {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: italic;
+      }
+      
+      .roboto-medium-italic {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-style: italic;
+      }
+      
+      .roboto-bold-italic {
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-style: italic;
+      }
+      
+      .roboto-black-italic {
+        font-family: "Roboto", sans-serif;
+        font-weight: 900;
+        font-style: italic;
+      }
+      
