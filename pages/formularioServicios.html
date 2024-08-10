@@ -2,211 +2,257 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Servicios</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!--Estilos css-->
-  <link rel="stylesheet" href="./styles/formularioServicios.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios</title>
 
-  <!--Librería del menú hamburguesa-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
-  <!--Sansita style-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
-  <!--Roboto style-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet">
+    <!--Estilos css-->
+    <link rel="stylesheet" href="../styles/formularioServicios.css">
+
+    <!--Librería del menú hamburguesa-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Sansita style-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!--Roboto style-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
+
 <body>
-  <!--NavBar de safeDog-->
-  <nav class="navbar">
+    <!--NavBar de safeDog-->
+    <nav class="navbar">
 
-    <div class="navbar--logo">
-      <a href="#" target="_blank"><img src="../assets/SafeDog W (9).png" alt="SafeDog-Logo"></a>
+        <div class="navbar--logo">
+            <a href="#" target="_blank"><img src="../assets/SafeDog W (9).png" alt="SafeDog-Logo"></a>
+        </div>
+
+        <div class="nav--container">
+            <ul class="navbar--menu">
+                <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
+                <li><a href="./nuestrosServicios.html">Nuestros Servicios</a></li>
+                <li><a href="./preguntasFrecuentes.html">Preguntas Frecuentes</a></li>
+            </ul>
+
+            <div class="navbar--botones">
+                <button class="boton--claro" onclick="window.location.href='./serCuidador.html';">Ser
+                    cuidador</button>
+                <button class="boton--claro" onclick="window.location.href='./inicioSesion.html';">Inicio de
+                    sesión</button>
+                <button class="boton--azul" onclick="window.location.href='./registro.html';">Registro</button>
+            </div>
+        </div>
+        <!--Menu de hamburguesa-->
+        <div class="menu-btn">
+            <i class="fa-solid fa-bars fa-2x"></i>
+        </div>
+
+    </nav>
+    <!-- Menu desplegable para móviles -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-navbar--menu">
+            <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
+            <li><a href="./nuestrosServicios.html">Nuestros Servicios</a></li>
+            <li><a href="./preguntas.html">Preguntas Frecuentes</a></li>
+        </ul>
+        <div class="mobile-navbar--botones">
+            <button class="boton--claro" onclick="window.location.href='./serCuidador.html';">Ser
+                cuidador</button>
+            <button class="boton--claro" onclick="window.location.href='./inicioSesion';">Inicio de
+                sesión</button>
+            <button class="boton--azul" onclick="window.location.href='./pregistro.html';">Registro</button>
+        </div>
     </div>
 
-    <div class="nav--container">
-      <ul class="navbar--menu">
-        <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
-        <li><a href="./nuestrosServicios.html">Nuestros Servicios</a></li>
-        <li><a href="./preguntasFrecuentes.html">Preguntas Frecuentes</a></li>
-      </ul>
+    <!------FORMULARIO SERVICIOS-------------------->
+    <form id="servicesForm" name="formulario" class="form-servicios">
+        <div class="container">
+            <h1 class="titulo-principal">¿Qué servicios ofreces?</h1>
+            <p>Proporciona los servicios que ofreces.
+                Tu información ayudará a los dueños de perritos a encontrar el servicio perfecto para sus amigos
+                peludos,
+                del mismo modo destacará tu profesionalismo y compromiso.
+                Gracias por llenar todos los campos solicitados.
+            <p>
 
-      <div class="navbar--botones">
-        <button class="boton--claro" onclick="window.location.href='./serCuidador.html';">Ser
-          cuidador</button>
-        <button class="boton--claro" onclick="window.location.href='./inicioSesion.html';">Inicio de
-          sesión</button>
-        <button class="boton--azul" onclick="window.location.href='./registro.html';">Registro</button>
-      </div>
-    </div>
-    <!--Menu de hamburguesa-->
-    <div class="menu-btn">
-      <i class="fa-solid fa-bars fa-2x"></i>
-    </div>
+            <div class="div-paseo"> 
+                <h3>Paseo</h3>
+                <hr>
+                <input type="radio" id="sipaseo" name="paseo" value="Si">
+                <label for="sipaseo">Si</label>
+                <input type="radio" id="noPaseo" name="paseo" value="No">
+                <label for="nopaseo">No</label>
+                <p>Asegúrate de estar en buena condición física y de tomar todas las
+                    precauciones necesarias al andar por la calle con nuestros amigos peludos.
+                    Se recomienda realizar paseos de al menos 30 minutos, seguidos de un descanso de 30 minutos en
+                    el parque,
+                    donde
+                    se
+                    fomente la socialización con otros perros y la estimulación mental.
+                    Tu compromiso con estas prácticas garantizará una experiencia segura y enriquecedora para los
+                    perros que
+                    cuidas.</p>
+                <h4>Tarifa de Paseo</h4>
+                <p>Elige un unico precio para tu servicio como paseador, toma en cuenta que los paseos duran 30 minutos
+                    en promedio</p>
+                <div class="dropdown">
+                    <!--<form action="#">-->
+                        <select name="precioPaseo">
+                            <option value="60">$60.00</option>
+                            <option value="70">$70.00</option>
+                            <option value="80">$80.00</option>
+                            <option value="90">$90.00</option>
+                            <option value="100">$100.00</option>
+                        </select>
+                    <!--</form>-->
 
-  </nav>
-  <!-- Menu desplegable para móviles -->
-  <div class="mobile-menu" id="mobileMenu">
-    <ul class="mobile-navbar--menu">
-      <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
-      <li><a href="./nuestrosServicios.html">Nuestros Servicios</a></li>
-      <li><a href="./preguntas.html">Preguntas Frecuentes</a></li>
-    </ul>
-    <div class="mobile-navbar--botones">
-      <button class="boton--claro" onclick="window.location.href='./serCuidador.html';">Ser
-        cuidador</button>
-      <button class="boton--claro" onclick="window.location.href='./inicioSesion';">Inicio de
-        sesión</button>
-      <button class="boton--azul" onclick="window.location.href='./pregistro.html';">Registro</button>
-    </div>
-  </div>
-<!--Pagina que servicios ofreces-->
+                </div>
+            </div>
 
-  <div class="servicios col-md-6">
-    <h1>¿Qué servicios ofreces?</h1>
-    <p>Proporciona los servicios que ofreces. 
-      Tu información ayudará a los dueños de perritos a encontrar el servicio perfecto para sus amigos peludos,
-      del mismo modo destacará tu profesionalismo y compromiso.
-    Gracias por llenar todos los campos solicitados.
-  </p>
-  </div>
-
-  <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-    <label class="form-check-label" for="flexCheckChecked">
-      Paseo
-    </label>
-  </div>
-  <p class="servicio-descripcion col-md-6">Asegúrate de estar en buena condición física y de tomar todas las precauciones necesarias al andar por la calle con nuestros amigos peludos. 
-    Se recomienda realizar paseos de al menos 30 minutos, seguidos de un descanso de 30 minutos en el parque, donde se fomente la socialización con otros perros y la estimulación mental. 
-    Tu compromiso con estas prácticas garantizará una experiencia segura y enriquecedora para los perros que cuidas.</p>
-
-  <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-    <label class="form-check-label" for="flexCheckChecked">
-      Cuidado (hospedaje)
-    </label>
-  </div>
-  <p class="servicio-descripcion col-md-6">Es esencial que proporciones un ambiente hogareño y seguro para las mascotas que hospedes
-    Debes seguir las rutinas de alimentación y  cuidado específicas que los dueños proporcionen, es importante contar con un especificaciones
-    limpio y libre de peligros para los amigos peludos.
-  </p>
-
-  <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-    <label class="form-check-label" for="flexCheckChecked">
-      Guardería
-    </label>
-  </div>
-  <p class="servicio-descripcion col-md-6">Debes adherirte a las rutinas diarias del perrito, incluyendo horarios de alimentación y ejercicios, debes de 
-    mantener una comunicación abierta con el dueño, y ser una persona de entera confianza, informa regularmente sobre el bienestar de su mascota
-    y cualquier incidente relevante.
-  </p>
-
-  <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-    <label class="form-check-label" for="flexCheckChecked">
-      Estética canina (baño)
-    </label>
-  </div>
-  <p class="servicio-descripcion col-md-6">Utiliza productos adecuados y seguros para cada tipo de piel y pelaje, asegurando un trato suave y cuidadoso. siguiendo
-    las instrucciones específicas de los dueños sobre cualquier necesidad especial de sus mascotas, debes tener habilidades para manejar
-    a los perritos de forma segura y minimizar su estrés.
-  </p>
-
-  <br>
-  <h2>Tarifas</h2>
-
-  <div class="input-group mb-3">
-    <span class="input-group-text">$</span>
-
-    <span class="input-group-text">0.00</span>
-    <div><input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
-    </div>
+            <div class="div-hospedaje">
+                <h3>Hospedaje</h3>
+                <hr>
+                <input type="radio" id="sihospedaje" name="hospedaje" value="Si">
+                <label for="sihospedaje">Si</label>
+                <input type="radio" id="nohospedaje" name="hospedaje" value="No">
+                <label for="nohospedaje">No</label>
+                <p>Es esencial que proporciones un ambiente hogareño y seguro para las mascotas
+                    que hospedes
+                    Debes seguir las rutinas de alimentación y cuidado específicas que los dueños proporcionen, es
+                    importante
+                    contar
+                    con
+                    un especificaciones
+                    limpio y libre de peligros para los amigos peludos.</p>
+                    <h4>Tarifa de Hospedaje</h4>
+                    <p>Elige un unico precio para hospedar a un amigo peludo en tu casa, toma en cuenta que el promedio de hospedaje es de 24 horas.
+                        en promedio</p>
+                <div class="dropdown">
+                   <!--<form action="#">-->
+                        <select name="precioHospedaje">
+                            <option value="300">$300.00</option>
+                            <option value="350">$350.00</option>
+                            <option value="400">$400.00</option>
+                            <option value="450">$450.00</option>
+                            <option value="500">$500.00</option>
+                        </select>
+            <!--</form>-->
+                </div>
+            </div>
 
 
-    <div class="form-especi">
-      <H2 class="titulo-especifi">Otras especificaciones</H2>
+            <div class="div-guarderia">
+                <h3>Guarderia</h3>
+                <hr>
+                <input type="radio" id="siguarderia" name="guarderia" value="Si">
+                <label for="siguarderia">Si</label>
+                <input type="radio" id="noguarderia" name="guarderia" value="No">
+                <label for="noguarderia">No</label>
+                <p>Debes adherirte a las rutinas diarias del perrito, incluyendo horarios de
+                    alimentación y ejercicios, debes de
+                    mantener una comunicación abierta con el dueño, y ser una persona de entera confianza, informa
+                    regularmente
+                    sobre el
+                    bienestar de su mascota
+                    y cualquier incidente relevante.</p>
+                    <h4>Tarifa de Guardería</h4>
+                    <p>Elige un único precio para cuidar al mejor amigo del hombre en su domicilio, toma en cuenta que el precio por cuidado tipo guardería es de 24 horas.
+                        en promedio</p>
+                <div class="dropdown">
+                   <!--<form action="#">-->
+                        <select name="precioGuarderia">
+                            <option value="200">$200.00</option>
+                            <option value="250">$250.00</option>
+                            <option value="300">$300.00</option>
+                            <option value="350">$350.00</option>
+                            <option value="400">$400.00</option>
+                        </select>
+                    <!--</form>-->
+                </div>
+            </div>
 
-      <select class="form-select" aria-label="Default select example">
-        <option selected>¿Que tipo de raza cuidarias?</option>
-        <option value="1">Mini 1 Kg - 6 Kg</option>
-        <option value="2">Pequeño 5 Kg - 25 Kg</option>
-        <option value="3">Mediano 14 Kg - 27 Kg</option>
-        <option value="4">Grande 21 kg - en adelante</option>
-      </select>
-      <br>
+            <div class="div-baño">
+                <h3>Baño</h3>
+                <hr>
+                <input type="radio" id="sibaño" name="baño" value="Si">
+                <label for="sibaño">Si</label>
+                <input type="radio" id="nobaño" name="baño" value="No">
+                <label for="nobaño">No</label>
+                <p>Utiliza productos adecuados y seguros para cada tipo de piel y pelaje,
+                    asegurando un trato suave y cuidadoso. siguiendo
+                    las instrucciones específicas de los dueños sobre cualquier necesidad especial de sus mascotas,
+                    debes tener
+                    habilidades para manejar
+                    a los perritos de forma segura y minimizar su estrés.</p>
+                    <h4>Tarifa de Baño</h4>
+                    <p>Elige un unico precio para tu servicio de baño y secado de pelaje por un perrito,
+                         el tiempo promedio que necesitarías es de 1 hora en promedio</p>
+                <div class="dropdown">
 
-      <select class="form-select" aria-label="Default select example">
-        <option selected>¿Cual es tu horario de disponibilidad?</option>
-        <option value="1">Matutino 5:00am-12:00pm</option>
-        <option value="2">Vespertino 12:00pm-5:00pm</option>
-        <option value="3">Nocturno 5:00pm-10:00pm</option>
-        <option value="3">Tiempo completo 5:00am-10:00pm</option>
-        <option value="3">24 horas</option>
-      </select>
-      <br>
+                        <select name="precioBaño">
+                            <option value="100">$100.00</option>
+                            <option value="125">$125.00</option>
+                            <option value="150">$150.00</option>
+                            <option value="175">$175.00</option>
+                            <option value="200">$200.00</option>
+                        </select>
+                </div>
+                </div>
+                
+                <div class="button--submit">
+                    <button type="submit" class="btn btn--form btn--shadow" >Siguiente</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </form>
 
-      <select class="form-select" aria-label="Default select example">
-        <option selected>¿Disponibilidad de servicio?</option>
-        <option value="1">Entre semana</option>
-        <option value="2">Fines de semana</option>
-        <option value="3">Festivos</option>
-        <option value="4">Seleccionados</option>
-    </div>
-  </div>
-  </body>
-</div>
+    <!--------FORMULARIO SERVICIOS------------------->
 
-  <option value="3">Una mañana</option>
-  </select>
-  <br>
+   
 
-  <button type="button" class="btn btn-warning">Finalizar</button>
+    <!--Pie de página de safeDog-->
+    <footer class="footer--safeDog">
+        <div class="iconos">
+            <a href="#"><img src="../assets/correo5.png" alt="" target="_blank"></a>
+            <a href="#"><img src="../assets/fb5.png" alt="" class="logo--fb"></a>
+            <a href="#"><img src="../assets/instagramb.png" alt="" class="logo--insta"></a>
+            <a href="#"><img src="../assets/whatsapp.png" alt=""></a>
+        </div>
+        <div class="footer--logo">
+            <img src="../assets/safedogfooter.png" alt="safeDog Footer">
+        </div>
+        <div class="footer--info">
+            <h4 class="footer--question">¿Quieres formar parte de nuestra comunidad?</h4>
+            <ul class="footer--list">
+                <li><a href="./pagesFooter/serCuidador.html" target="_blank">Ser cuidador</a></li>
+                <li><a href="./pagesFooter/serCuidado.html" target="_blank">Ser cuidado</a></li>
+                <li><a href="./pagesFooter/preguntasFrecuentes.html" target="_blank">Preguntas frecuentes</a></li>
+                <li><a href="./pagesFooter/soporte.html" target="_blank">Soporte</a></li>
+                <li><a href="./pagesFooter/avisoPrivacidad.html" target="_blank">Aviso de privacidad</a></li>
+            </ul>
+        </div>
+        <div class="footer--copy">
+            <h4>© All rights reserved & design by SafeDog</h4>
+        </div>
+        </div>
+        </div>
+    </footer>
 
-</div>
-  <!--Hoja vinculada de JS-->
-  <script src="../scripts/NavBar.js"></script>
+    <!--Hoja vinculada de JS-->
 
-  <!--Pie de página de safeDog-->
-  <footer class="footer--safeDog">
-    <div class="iconos">
-      <a href="#"><img src="../assets/correo5.png" alt="" target="_blank"></a>
-      <a href="#"><img src="../assets/fb5.png" alt="" class="logo--fb"></a>
-      <a href="#"><img src="../assets/instagramb.png" alt="" class="logo--insta"></a>
-      <a href="#"><img src="../assets/whatsapp.png" alt=""></a>
-    </div>
-    <div class="footer--logo">
-      <img src="../assets/safedogfooter.png" alt="safeDog Footer">
-    </div>
-    <div class="footer--info">
-      <h4 class="footer--question">¿Quieres formar parte de nuestra comunidad?</h4>
-      <ul class="footer--list">
-        <li><a href="./pagesFooter/serCuidador.html" target="_blank">Ser cuidador</a></li>
-        <li><a href="./pagesFooter/serCuidado.html" target="_blank">Ser cuidado</a></li>
-        <li><a href="./pagesFooter/preguntasFrecuentes.html" target="_blank">Preguntas frecuentes</a></li>
-        <li><a href="./pagesFooter/soporte.html" target="_blank">Soporte</a></li>
-        <li><a href="./pagesFooter/avisoPrivacidad.html" target="_blank">Aviso de privacidad</a></li>
-      </ul>
-    </div>
-    <div class="footer--copy">
-      <h4>© All rights reserved & design by SafeDog</h4>
-    </div>
-  </div>
-  </footer>
+    <script src="../scripts/formulariosServicios.js"></script>
+
 </body>
 
 </html>
