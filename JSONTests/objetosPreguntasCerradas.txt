@@ -1,0 +1,104 @@
+[
+  {
+  "autoPropio": "Si",
+  "reservasMultiples": "No",
+  "perrosActivos": "Si",
+  "comunicacion": "Si",
+  "cachorros": "No",
+  "hembrasEnCelo": "No",
+  "terceraEdad": "Si",
+  "medicamentos": "Si"
+  },
+  {
+    "autoPropio": "No",
+    "reservasMultiples": "Si",
+    "perrosActivos": "No",
+    "comunicacion": "No",
+    "cachorros": "Si",
+    "hembrasEnCelo": "No",
+    "terceraEdad": "No",
+    "medicamentos": "No"
+  },
+  {
+    "autoPropio": "Si",
+    "reservasMultiples": "No",
+    "perrosActivos": "Si",
+    "comunicacion": "Si",
+    "cachorros": "Si",
+    "hembrasEnCelo": "Si",
+    "terceraEdad": "Si",
+    "medicamentos": "No"
+  },
+  {
+    "autoPropio": "No",
+    "reservasMultiples": "No",
+    "perrosActivos": "No",
+    "comunicacion": "Si",
+    "cachorros": "No",
+    "hembrasEnCelo": "No",
+    "terceraEdad": "No",
+    "medicamentos": "Si"
+  },
+  {
+    "autoPropio": "Si",
+    "reservasMultiples": "Si",
+    "perrosActivos": "No",
+    "comunicacion": "No",
+    "cachorros": "Si",
+    "hembrasEnCelo": "No",
+    "terceraEdad": "No",
+    "medicamentos": "No"
+  },
+  {
+    "autoPropio": "No",
+    "reservasMultiples": "No",
+    "perrosActivos": "Si",
+    "comunicacion": "Si",
+    "cachorros": "Si",
+    "hembrasEnCelo": "No",
+    "terceraEdad": "Si",
+    "medicamentos": "No"
+  },
+  {
+    "autoPropio": "Si",
+    "reservasMultiples": "Si",
+    "perrosActivos": "No",
+    "comunicacion": "No",
+    "cachorros": "No",
+    "hembrasEnCelo": "Si",
+    "terceraEdad": "No",
+    "medicamentos": "Si"
+  },
+  {
+    "autoPropio": "No",
+    "reservasMultiples": "Si",
+    "perrosActivos": "Si",
+    "comunicacion": "Si",
+    "cachorros": "No",
+    "hembrasEnCelo": "No",
+    "terceraEdad": "No",
+    "medicamentos": "No"
+  },
+  {
+    "autoPropio": "Si",
+    "reservasMultiples": "No",
+    "perrosActivos": "No",
+    "comunicacion": "Si",
+    "cachorros": "Si",
+    "hembrasEnCelo": "No",
+    "terceraEdad": "Si",
+    "medicamentos": "Si"
+  },
+  {
+    "autoPropio": "No",
+    "reservasMultiples": "No",
+    "perrosActivos": "Si",
+    "comunicacion": "No",
+    "cachorros": "No",
+    "hembrasEnCelo": "Si",
+    "terceraEdad": "No",
+    "medicamentos": "Si"
+  }
+]
+
+
