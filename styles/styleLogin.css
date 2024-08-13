@@ -82,7 +82,7 @@ a {
     margin: 10px;
 }
 
-/* Tablet (iPad) View */
+
 @media screen and (max-width: 768px) {
     #login-main {
         flex-direction: column;
@@ -100,7 +100,7 @@ a {
     }
 }
 
-/* Large Mobile (iPhone Plus, Android) View */
+
 @media screen and (max-width: 480px) {
     body {
         padding: 20px;
@@ -139,7 +139,7 @@ a {
     }
 }
 
-/* Small Mobile (iPhone SE, smaller Android) View */
+
 @media screen and (max-width: 320px) {
     h1 {
         font-size: 20px;
