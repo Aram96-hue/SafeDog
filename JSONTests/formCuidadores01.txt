@@ -1,0 +1,100 @@
+{
+    "nombre":"Pablo Duarte",
+    "apellido":"Mendez Fernandes",
+    "number":"5547696913",
+    "email":"duarte.pablo@fernandes.com",
+    "name-emergency":"Aitana Luna Avila",
+    "number-emergency":"5554437166",
+    "email-emergency":"ana17@avila.com",
+    "fecha-nacimiento":"1998-07-13"
+}
+{
+    "nombre":"Manuel",
+    "apellido":"Contreras Saraiva",
+    "number":"5503724941",
+    "email":"daniel95@saraiva.net",
+    "name-emergency":"Fernando Nicolas Jimenez",
+    "number-emergency":"9644761834",
+    "email-emergency":"faro.fernando@goncalves.org",
+    "fecha-nacimiento":"1997-10-27"
+}
+{
+    "nombre":"Juan Manuel",
+    "apellido":"Prado Garza",
+    "number":"5538225535",
+    "email":"manuela.prado@ig.com.br",
+    "name-emergency":"Patricia Agustina Mendoza Rios",
+    "number-emergency":"5591324203",
+    "email-emergency":"rios.agustina@gmail.com",
+    "fecha-nacimiento":"1999-05-24"
+}
+{
+    "nombre":"Melissa",
+    "apellido":"Faria Matias",
+    "number":"5536394645",
+    "email":"melissa.faria@matias.net.br",
+    "name-emergency":"Pedro Fidalgo Flores",
+    "number-emergency":"5591013616",
+    "email-emergency":"fidalgo.pedro@flores.com",
+    "fecha-nacimiento":"2001-07-06"
+}
+{
+    "nombre":"Lorena",
+    "apellido":"Castro Neves",
+    "number":"5542079705",
+    "email":"lorena.castro@gmail.com",
+    "name-emergency":"Amanda Gutierrez Santiago",
+    "number-emergency":"5590136126",
+    "email-emergency":"amanda98@santiago.com",
+    "fecha-nacimiento":"1988-01-29"
+}
+{
+    "nombre":"Juan",
+    "apellido":"Lopez Campos",
+    "number":"5596511644",
+    "email":"hdasdores@hotmail.com",
+    "name-emergency":"Samantha Andrea Diaz Lozano",
+    "number-emergency":"5591383512",
+    "email-emergency":"andrea44@uol.com.br",
+    "fecha-nacimiento":"1994-02-16"
+}
+{
+    "nombre":"Juan Pablo",
+    "apellido":"Contreras Ferreira",
+    "number":"5564243547",
+    "email":"ferreira.thalissa@uol.com.br",
+    "name-emergency":"Lorena Paulina Altamirano Ortega",
+    "number-emergency":"5526299009",
+    "email-emergency":"paulina40@goncalves.com.br",
+    "fecha-nacimiento":"2001-08-14"
+}
+{
+    "nombre":"Octavio Ivan",
+    "apellido":"Garcia Mena",
+    "number":"5545996234",
+    "email":"ivan21@r7.com",
+    "name-emergency":"Juan Manuel Pastrana Rodriguez",
+    "number-emergency":"5598494514",
+    "email-emergency":"julian89@r7.com",
+    "fecha-nacimiento":"1987-12-25"
+}
+{
+    "nombre":"Mia Luiza",
+    "apellido":"Galindo Hernandez",
+    "number":"5598940964",
+    "email":"galindo.luzia@ferminiano.br",
+    "name-emergency":"Martin Kevin Castro Davila",
+    "number-emergency":"5595084128",
+    "email-emergency":"kevin.il@davila.com",
+    "fecha-nacimiento":"1993-07-07"
+}
+{
+    "nombre":"Santiago",
+    "apellido":"Salas Rivera",
+    "number":"5597253124",
+    "email":"asalas@correia.com.br",
+    "name-emergency":"Alicia Garza Blancas",
+    "number-emergency":"5524791785",
+    "email-emergency":"abreu.constancia@gusmao.br",
+    "fecha-nacimiento":"2000-08-14"
+}
