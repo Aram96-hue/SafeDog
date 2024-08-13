@@ -1,21 +1,44 @@
-document.getElementById("myForm").addEventListener("submit", function (event) {
+document.getElementById('myForm').addEventListener('submit', function(event) {
     event.preventDefault();
-    
+    let form = event.target;
 
-    let form = document.getElementById("myForm");
-    let isValid = form.checkValidity();
-
-    let feedbackDiv = document.getElementById("formFeedback");
-
-    if (!isValid) {
-        feedbackDiv.textContent = "Por favor, complete los campos requeridos.";
-        feedbackDiv.style.color = "red";
-        form.classList.add("was-validated");
+    if (!form.checkValidity()) {
+        document.getElementById('formMessage').textContent = "Por favor, completa todos los campos requeridos.";
+        form.classList.add('was-validated');
     } else {
-        feedbackDiv.textContent = "Información enviada con éxito.";
-        feedbackDiv.style.color = "green";
+        document.getElementById('formMessage').textContent = "Formulario enviado con éxito.";
     }
 });
+
+function validateNombre(input) {
+    let pattern = /^[A-Za-z\s]+$/;
+    let feedback = input.nextElementSibling;
+
+    if (!pattern.test(input.value)) {
+        input.setCustomValidity("Invalid");
+        feedback.style.display = 'block';
+    } else {
+        input.setCustomValidity("");
+        feedback.style.display = 'none';
+    }
+}
+
+function validateTelefono(input) {
+    let pattern = /^\d{10}$/;
+    let feedback = input.nextElementSibling;
+
+    if (!pattern.test(input.value)) {
+        input.setCustomValidity("Invalid");
+        feedback.style.display = 'block';
+    } else {
+        input.setCustomValidity("");
+        feedback.style.display = 'none';
+    }
+}
+
+
+
+
 
 
 

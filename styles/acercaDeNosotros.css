@@ -470,6 +470,7 @@ body h2{
     flex: 1;
     min-width: 250px;
     background-attachment: fixed;
+    padding: 20px;
 }
 
 @media screen and (min-width: 250px) {
