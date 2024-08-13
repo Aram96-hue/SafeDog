@@ -1,7 +1,7 @@
 :root {
   --background: #fff8e0;
   --primary: #39b3a2;
-  --secondary: #7f636e;
+  --secondary: #8C5637;
   --yellow: #f0bb69;
   --white: #ffffff;
 }
@@ -231,10 +231,10 @@ body {
 
 .tags2-container2 {
   display: flex;
-  flex-direction: row;
+  justify-content: space-around; 
   align-items: center;
   flex-wrap: wrap;
-  gap: 60px; /* Espacio entre las etiquetas */
+  gap: 20px; /* Espacio entre las etiquetas */
   
   
 }
@@ -272,7 +272,8 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 1.2);
   border-radius: 11px;
   margin-top: 60px;
-  align-items: flex-end;
+  display: flex;
+ 
 }
 
 .container-1 h2 {
@@ -297,6 +298,75 @@ label {
   margin-bottom: 5px;
   font-weight: bold;
 }
+/*--------------tarjeta de reseñas----------*/
+
+.review-card {
+  background-color: #8C5637;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .8);
+  width: 300px;
+  overflow: hidden;
+}
+
+.review-card-header {
+  background-color: #8C5637;
+  color: black;
+  padding: 16px;
+  text-align: center;
+}
+
+.review-card-header h2 {
+  margin: 0;
+}
+
+.rating {
+  font-size: 20px;
+  margin-top: 8px;
+}
+
+.review-card-body {
+  padding: 16px;
+}
+
+.review-card-footer {
+  background-color: #8C5637;
+  padding: 16px;
+  text-align: center;
+  font-size: 14px;
+  color: black;
+}
+
+.lista-reseñas {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around; 
+}
+
+.lista-item {
+  background-color: #8C5637;
+  border: none;
+  border-radius: 7px;
+  padding: 10px;
+  margin-bottom: 8px;
+  font-family: Arial, sans-serif;
+}
+
+.lista-item::before {
+  content: "•"; 
+  color: #8C5637; 
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1.3em; 
+  margin-right: 0.5em;
+}
+
+.rating {
+  color: #f2c438;
+}
+
 
 /* ----------- PAGINACION ------------- */
 .container--pagination {
@@ -470,7 +540,7 @@ label {
   display: none;
   background-color: #124C5F;
   color: #FFFFFF;
-  position:absolute; /*se cambió de fixed a absolute para evitar que estubiera fijo el menu al hacer scroll*/
+  position:relative; 
   top:5%;
   right: 0;
   width: 250px; 
