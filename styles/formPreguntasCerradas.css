@@ -62,17 +62,17 @@ body {
 }
 
 .campo {
-    width: 100%
+    width: 100%;
     background-color: #7F636E;
     padding: 30px;
     border: radius 20px;
     margin-bottom: 10px;
     border-color: #f0bb69;
-    font-family:"calibri";
-    font-size: 45px;
-    line-height: 50px;
+    font-family:"Roboto";
+    font-size: 2.5rem;
+    line-height: 40px;
     color: #fff8e0;
-    text-align: :left;
+    text-align:left;
     
 
 }
@@ -97,14 +97,18 @@ font-size: 2rem;
 }
 .botton:hover{
     background-color: rgb(236, 226, 226);
-
 }
+
 .seleccion {
     width: 25%;
     height: 25px;
     background-color: #f0bb69;
     font-size: 20px;
 
+}
+
+.label{
+    padding: 0px 10px 0px 10px;;
 }
 
 .opciones {
