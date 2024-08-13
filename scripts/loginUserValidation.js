@@ -13,44 +13,11 @@ document
      */
 
     // Abajo la función de crear un usaurio dentro de localStorage para test
-    createUserJsonTest();
-    //createUsersJsonTest();
-
-    // Para un único usaurio
-    let userTest = JSON.parse(localStorage.getItem("userTest"));
-    console.log(userTest);
-
-    if (
-      userTest.username === username.value &&
-      userTest.password === password.value
-    ) {
-      // Aquí va el código referente a enviar al usuario con el resto de la página, se agrega un alert personalizado para ver que funciona esta parte
-      Swal.fire({
-        icon: "success",
-        title: "Bienvenido",
-        text: "Usario y Contraseña validos",
-        confirmButtonText: "Aceptar",
-        confirmButtonColor: "#7f636e",
-        timer: 1500,
-      });
-      return;
-    } else {
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text:
-          userTest.username === username.value
-            ? "Contraseña incorrecta, favor de introducir nuevamente tu contraseña"
-            : "Usario y contraseña incorrectos, favor de intentar nuevamente",
-        confirmButtonText: "Aceptar",
-        confirmButtonColor: "#7f636e",
-      });
-    }
-
-    /*
+    createUsersJsonTest();
     // Para multiples usuarios
     let usersTest = JSON.parse(localStorage.getItem("usersTest"));
     let existUser = false;
+    let userIncorrect = true;
     usersTest.forEach((user) => {
       console.log(user.username);
       console.log(user.password);
@@ -63,6 +30,7 @@ document
         user.password === password.value
       ) {
         // Aquí va el código referente a enviar al usuario con el resto de la página, se agrega un alert personalizado para ver que funciona esta parte
+        userIncorrect = false;
         Swal.fire({
           icon: "success",
           title: "Bienvenido",
@@ -76,7 +44,7 @@ document
         existUser = true;
       }
     });
-    if (existUser) {
+    if (userIncorrect) {
       Swal.fire({
         icon: "error",
         title: "Oops...",
@@ -87,19 +55,9 @@ document
         confirmButtonColor: "#7f636e"
       });
     }
-    */
   });
 
-// Creacion de un solo usuario
-function createUserJsonTest() {
-  let userJsonTest = {
-    username: "duarte.pablo@fernandes.com",
-    password: "VnwXqEDlnE1H3kO",
-  };
-  localStorage.setItem("userTest", JSON.stringify(userJsonTest));
-}
-
-// Creación de multiples usuarios
+// Creación de multiples usuarios en el localStorage
 function createUsersJsonTest() {
   let usersJsonTest = [
     {
