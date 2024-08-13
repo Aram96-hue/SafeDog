@@ -124,6 +124,7 @@ En los modales va toda la información que si se le va a mostrar a los dueños, 
                         <div> <br>
                             <button class="boton-foto centrar btn btn--save btn--shadow" type="button" onclick="document.getElementById('formFileMultipleOne').click();">Subir fotografia</button>
                             <input type="file" style="display: none;" id="formFileMultipleOne" multiple required>
+                            <div class="invalid-feedback">Por favor, sube una foto de perfil.</div>
                           </div>
                         </div>
                         </div>
@@ -132,34 +133,29 @@ En los modales va toda la información que si se le va a mostrar a los dueños, 
 
             <!-- Frase de cuidador -->
 
-        <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Presentación (cuéntale a los demás sobre ti)</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required name="presentacion"></textarea>
-        </div>
-
-        <!-- Insertar información sobre su experiencia -->
-        <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Experiencia cuidando mascotas</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required name="experiencia"></textarea>
-        </div>
-        <!-- Insertar PDF o enlace (Carta de presentación)-->
-        <div class="mb-3">
-            <label for="formFile" class="form-label">Inserta tus certificaciones (opcional)</label>
-            <input class="form-control" type="file" id="formFile" required>
-        </div>
-        <!-- Insertar PDF o enlace (Certificaciones) -->
-        <div class="mb-3">
-            <label for="basic-url" class="form-label">Comparte tus redes sociales</label>
-            <div class="input-group">
-                <span class="input-group-text" id="basic-addon3">https://wwww.instagram.com/</span>
-                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4" required>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Presentación (cuéntale a los demás sobre
+                    ti)</label>
+                <textarea Name="presentacion" class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                <div class="invalid-feedback">Por favor, completa este campo.</div>
             </div>
-            <div class="form-text" id="basic-addon4"> <!--Más descripción opcional--> </div>
-        </div>
+
+            <!-- Insertar información sobre su experiencia -->
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Experiencia cuidando mascotas</label>
+                <textarea Name="experiencia" class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                <div class="invalid-feedback">Por favor, completa este campo.</div>
+            </div>
+            <!-- Insertar PDF o enlace (Carta de presentación)-->
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Inserta tus certificaciones (opcional)</label>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+            <!-- Insertar PDF o enlace (Certificaciones) -->
 
             <div class="mb-3">
                 <label for="formFileMultiple" class="form-label">Carta de presentación (opcional)</label>
-                <input class="form-control" type="file" id="formFileMultiple" multiple required>
+                <input class="form-control" type="file" id="formFileMultiple" multiple>
             </div>
 
             <!-- Insertar PDF (Referencias laborales o personales) -->
@@ -167,19 +163,25 @@ En los modales va toda la información que si se le va a mostrar a los dueños, 
                 <label for="formFileMultiple" class="form-label">Inserta aquí tus referencias laborales o personales
                 </label>
                 <input class="form-control" type="file" id="formFileMultiple" multiple required>
+                <div class="invalid-feedback">Por favor, sube tus referencias.</div>
+                
             </div>
 
-        <!-- Cuadro de textos para ingresar preguntas -->
-        <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Preguntas/especificaciones o información que se
-                le preguntará al dueño</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required name="preguntas"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary"> Guardar </button>
-        <!-- Beto added div for validation feedback-->
-        <div id="formFeedback" class="feedback"></div>
-        </form>       
-    
+            <!-- Cuadro de textos para ingresar preguntas -->
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Preguntas/especificaciones o información que
+                    se le preguntará al dueño</label>
+                <textarea Name="preguntas" class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                <div class="invalid-feedback">Por favor, completa este campo.</div>
+            </div>
+            <div class=" justificado-derecha button--submit">
+            <button type="submit" class="btn btn--form btn--shadow  btn-lg" onclick="convertToJson()">
+                Siguiente</button>
+            </div>
+            <!-- Beto added div for validation feedback-->
+            <div id="formFeedback" class="feedback"></div>
+        </form>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

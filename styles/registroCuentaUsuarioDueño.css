@@ -78,7 +78,7 @@ p {
     background-color: var(--color-cuarto);
     color: #fff;
     font-size: 1rem;
-    padding: 1.5rem 2rem;
+    padding: .5rem 2rem;
   }
   
   .btn--save:hover,
