@@ -34,7 +34,7 @@ body {
 .cuidador--card {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.8);
   border-radius: 11px;
   overflow: hidden;
 }
@@ -198,8 +198,8 @@ body {
 }
 
 .btn--shadow:active{
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2), 
-  inset 1px 1px 3px rgba(255, 255, 255, 0.3); 
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8), 
+  inset 1px 1px 3px rgba(255, 255, 255, 0.8); 
   transform: translateY(2px); 
 }
 
@@ -226,95 +226,77 @@ body {
   /* transition: background-color 0.3s; */
   transition: all 0.3s;
 }
-/*-------------carrusel--------------*/
-
-*{
-  margin: 0;
-  padding: 0;
-}
-
-.Contenedor-Carrousell{
-  position: relative;
-  overflow: hidden;
-  box-sizing: border-box;
-}
+/*---------tags-----------*/
 
 
-/*.Elemento-lista{
-  list-style: none; 
-  border: none;
-  padding: 0.5rem 1rem;
-  font-size: 3.5rem;
-}   
-*/
-.Lista-desordenada {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: calc((100% / 2) - 16px);
-  gap: 16px;
-  overflow: none;
-}
-.Lista-desordenada {
-
-  animation: slide 10s infinite; 
-  width: 100%;
-  height: auto;
-  margin: 0;
-  overflow: none;
-  position: relative;
-}
-
-.Tarjeta-miembro{
-  background: var(--color-tertiary);
+.tags2-container2 {
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align:start;
-  width: 50%;
-  height: 50%;
+  flex-wrap: wrap;
+  gap: 60px; /* Espacio entre las etiquetas */
+  
+  
 }
 
-.Tarjeta-miembro img{
-  width: 300px;
-  height: 300px;
-  border-radius: none;
+.tag2 {
+  background-color: #f0bb69;
+  color: (--primary);
+  border-radius: 8.5px;
+  padding: 15px 50px;
+  font-size: 20px;
+  white-space: nowrap;
+  display: inline-flex;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8), 
+  inset 1px 1px 3px rgba(158, 158, 158, 0.8); 
+  transform: translateY(2px); 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-/* ANIMACION CARROUSEL */
-
-
-@keyframes slide {
-  0% {margin-left: 0%;}
-  20% {margin-left: 0%;}
- 
-  30% {margin-left: -100%;}
-  50% {margin-left: -100%;}
-
-  70% {margin-left: -200%;}
-  90% {margin-left: -200%;}
-
-  110% {margin-left: -300%;}
-  130% {margin-left: -300%;}
-
-  150% {margin-left: -400%;}
-  170% {margin-left: -400%;}
-
-  190% {margin-left: -500%;}
-  210% {margin-left: -500%;}
- 
-  230% {margin-left: -600%;}
-  250% {margin-left: -600%;}
- 
-  270% {margin-left: -700%;}
-  290% {margin-left: -700%;}
- 
-  310% {margin-left: -800%;}
-  330% {margin-left: -800%;}
- 
-  350% {margin-left: -900%;}
-  370% {margin-left: -900%;}
+.tag2 i {
+  margin-right: 8px;
 }
 
+
+/*---------cuadro descripcion----*/
+
+.container-1{
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 30px;
+  max-width: 1290px;
+  margin: 20px auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 1.2);
+  border-radius: 11px;
+  margin-top: 60px;
+  align-items: flex-end;
+}
+
+.container-1 h2 {
+  margin-top: 0;
+  color: black;
+  font-size: 3rem;
+}
+
+.container-1 p {
+  color: black;
+  line-height: 1.9;
+  font-size: 2rem;
+  text-align: justify;
+}
+
+form {
+  margin: 2;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
 
 /* ----------- PAGINACION ------------- */
 .container--pagination {
@@ -326,7 +308,8 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-top: 30px;
+  margin-top: 60px;
+  
 }
 
 .btn--pagination {
@@ -377,6 +360,7 @@ body {
 }
 
 /*NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR*/
+
 .navbar {
   background-color: hsl(172, 41%, 45%);
   color: #FFFFFF;
