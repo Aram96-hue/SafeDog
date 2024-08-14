@@ -35,11 +35,14 @@ h1, h2 {
 
 .input {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    gap: .6rem;
+    align-items: center;
     padding: 15px;
     width: 100%;
     box-sizing: border-box;
-}
+  }
+  
 
 .input2 {
     display: flex;
@@ -155,3 +158,8 @@ a {
         font-size: 0.8rem;
     }
 }
+
+title{
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
