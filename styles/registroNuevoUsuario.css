@@ -27,16 +27,48 @@
         padding: 0;
         display: block;
         
+        
     }
 
-    .container{
-        background-color: var(--color-cuarto);
+    .container {
+        background-color: rgba(127, 99, 110, 0.70); 
         width: 40%;
-        height: 700px;
+        height: 120%;
         margin-top: 50px;
-        display:flex;
-        position:relative;
+        display: flex;
+        position: relative;
+        border-radius: 5%;
+
     }
+
+    .container .button--submit{
+        display: flex;
+        align-items: center;
+
+    }
+
+    .button--submit{
+        padding: 0;
+        margin: 0;
+        width: 200px;
+        color: var(--bg-color);
+        background-color: #F0BB69;
+        border-radius: 0px;
+        border: 0px;
+        border-radius: 10px;
+        font-family: var(--font-secondary);
+        font-size: 30px;
+        text-align: center;
+        transition: all 600ms ease;
+        align-items: center;
+        
+    
+        }
+        .button--submit:hover{
+            background: linear-gradient( 135deg, var(--color-cuarto) 10%, hsla(0, 0%, 98%, 0.973) 100%);
+            border:var(--bg-color--);
+    
+        }
 
     .linkTerminosyCondiciones{
     
