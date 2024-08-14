@@ -15,11 +15,14 @@
     
     body{
         margin: 0px;
+        background-color: #FFF8E0;
     }
-    
+    /*     
     div{
         border: 5px solid rgb(0, 255, 4);
-    }
+        padding: 0px;
+    } 
+    */
     
     .flex {
         display: flex;
@@ -34,31 +37,67 @@
     .titulo {
         font-family: 'Sansita';
         color: antiquewhite;
-        font-size: 3.7vw;
-        text-shadow: 4px 4px 2px black;
-        grid-column: 1 / 3 ;
+        font-size: 4vw;
+        text-shadow: 2px 3px 2px black;
+        width: 50%;
+        padding: 5px;
     }
     
     .divBoton{
-        grid-column: 1 / 3 ;
-        grid-row: 3;
+        position: absolute;
+        bottom: 20%;
+        left: 16%;
         text-align: center ;
-        position: relative;
+        
     
     }
     
     .boton {
         color: var(--font-color-w);
         background-color: var(--color-tertiary);
-        padding: 1vh;
+        padding: 00.5rem 1rem 0.5rem 1rem;
         border: none;
         border-radius: 30px;
-        font-size: 5vh;
+        font-size: 2.5vh;
         font-family: 'Sansita';
-        height: 1hv;
-        width: 1hv;
+        /* height: 3rem;
+        width: 3rem; */
         position: relative;
-        bottom: -70%;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+    }
+    
+    .divPerfil{
+        position: absolute;
+        bottom: 63%;
+        right: 20px;
+        text-align: center;
+        z-index: 2;
+        
+    }
+    
+    .nombre{
+        font-family: 'Sansita';
+        color: black;
+        font-size: 2rem;
+        z-index: 2;
+    }
+    
+    .ubicacion{
+        font-family: 'Sansita';
+        color: black;
+        font-size: 1.3rem;
+        z-index: 2;
+    }
+
+
+    .imagenDePerfil{
+        border-radius: 50%;
+        border: 0.7vh solid #7F636E;
+        /* border-image:linear-gradient(45deg, red,lime,blue); */
+        height: 15vh;
+        width: auto;
         z-index: 2;
     }
     
@@ -70,61 +109,36 @@
         background-position: center center;
         background-repeat: no-repeat;
         width: 100%; 
-        height: 70vh;
-    
+        height: 40vh;
+
+        overflow: hidden;
         position: relative;
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: repeat(3,1fr);
         z-index: 0;
     }
     
-    .divPerfil{
-        position: relative;
-        text-align: center;
-        bottom: -50%;
-        z-index: 2;
-    
-    }
-    
-    .nombreUbicacion{
-      font-family: 'Sansita';
-      color: black;
-      font-size: 2.7vw;
-      z-index: 2;
-    }
-    
-    .imagenDePerfil{
-        border-radius: 50%;
-        border: 0.7vh solid #7F636E;
-        height: 25vh;
-        width: 25vh;
-        box-sizing: border-box;
-        grid-column: 3;
-        grid-row: 3;
-        position: relative;
-        z-index: 2;
-    }
-    
     .ola{
-      position: absolute;
-      bottom: -30%;
-      z-index: 1;
-      width: 100hv;
-      height: auto;
-      object-fit: cover;
+     
+        /* background-position: bottom; */
+        object-fit: fill;
+        object-position: left left;
+        background-repeat:repeat-y;
+        width: 100%; 
+        height: 60%;
+        /* min-height: 70px; */
+        /* max-height: 260px;        */
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        display: flex;
+        z-index: 1;
+        
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+   
+.nombreYUbicacion{
+    position: relative;
+    text-align: right;
+    padding: 20px;
+}
     
     /* Fuentes personalizadas */
     
