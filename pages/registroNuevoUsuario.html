@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/SafeDogWhite.png">
     <!--Librería del menú hamburguesa-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
@@ -30,15 +31,15 @@
             <ul class="navbar--menu">
                 <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
                 <li><a href="./nuestrosServicios.html">Nuestros Servicios</a></li>
-                <li><a href="./preguntas.html">Preguntas Frecuentes</a></li>
+                <li><a href="./preguntasFrecuentesContactanos.html">Preguntas Frecuentes</a></li>
             </ul>
 
             <div class="navbar--botones">
-                <button class="boton--claro" onclick="window.location.href='./serCuidador.html';">Ser
+                <button class="boton--claro" onclick="window.location.href='./formCuidador.html';">Ser
                     cuidador</button>
-                <button class="boton--claro" onclick="window.location.href='./inicioSesion.html';">Inicio de
+                <button class="boton--claro" onclick="window.location.href='./mainLogin.html';">Inicio de
                     sesión</button>
-                <button class="boton--azul" onclick="window.location.href='./registro.html';">Registro</button>
+                <button class="boton--azul" onclick="window.location.href='./registroNuevoUsuario.html';">Registro</button>
             </div>
         </div>
         <!--Menu de hamburguesa-->
@@ -55,11 +56,11 @@
             <li><a href="./preguntas.html">Preguntas Frecuentes</a></li>
         </ul>
         <div class="mobile-navbar--botones">
-            <button class="boton--claro" onclick="window.location.href='./serCuidador.html';">Ser
+            <button class="boton--claro" onclick="window.location.href='./formCuidador.html';">Ser
                 cuidador</button>
-            <button class="boton--claro" onclick="window.location.href='./inicioSesion';">Inicio de
+            <button class="boton--claro" onclick="window.location.href='./mainLogin.html';">Inicio de
                 sesión</button>
-            <button class="boton--azul" onclick="window.location.href='./pregistro.html';">Registro</button>
+            <button class="boton--azul" onclick="window.location.href='./registroNuevoUsuario.html';">Registro</button>
         </div>
     </div>
 
@@ -71,7 +72,7 @@
 
     <div class="container d-flex justify-content-center align-items-center">
 
-        <form class="needs-validation" id="myForm" novalidate>
+        <form class="needs-validation" id="myForm2" novalidate>
             <h1>Regístrate en SafeDog</h1>
             
             <div class="mb-3">
@@ -85,8 +86,8 @@
       
 
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+              <label for="exampleInputEmail1" class="form-label" >Correo electrónico</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  placeholder="Ingresa tu correo electrónico" required oninput="validateCorreo(this)">
               <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
               <div class="invalid-feedback">Por favor, ingresa un correo electrónico válido.</div>
               <div class="valid-feedback">Correo electrónico válido.</div>
@@ -101,18 +102,25 @@
       
 
 
-      
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" required>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingresa una contraseña" required>
             </div>
       
     
     <div class="mb-3">
         <label for="exampleInputPassword2" class="form-label">Confirmar Contraseña</label>
-        <input type="password" class="form-control" id="exampleInputPassword2" required>
+        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Vuelve a ingresar tu contraseña" required>
         <div class="invalid-feedback">Las contraseñas no coinciden.</div>
     </div>
+   
+<ul id="requirements">
+    <li id="req1">Debe tener al menos 8 caracteres</li>
+    <li id="req2">Debe tener al menos un número</li>
+    <li id="req3">Debe tener al menos una letra minúscula</li>
+    <li id="req4">Debe tener al menos un carácter especial</li>
+    <li id="req5">Debe tener al menos una letra mayúscula</li>
+</ul>
 
             <a href="./terminosyCondiciones.html" target="_blank" class="linkTerminosyCondiciones">Términos y condiciones</a>
             
@@ -146,9 +154,9 @@
         <div class="footer--info">
             <h4 class="footer--question">¿Quieres formar parte de nuestra comunidad?</h4>
             <ul class="footer--list">
-                <li><a href="./serCuidador.html" target="_blank">Ser cuidador</a></li>
+                <li><a href="./formCuidador.html" target="_blank">Ser cuidador</a></li>
                 <li><a href="./serCuidado.html" target="_blank">Ser cuidado</a></li>
-                <li><a href="./preguntasFrecuentes.html" target="_blank">Preguntas frecuentes</a></li>
+                <li><a href="./preguntasFrecuentesContactanos.html" target="_blank">Preguntas frecuentes</a></li>
                 <li><a href="./soporte.html" target="_blank">Soporte</a></li>
                 <li><a href="./avisoPrivacidad.html" target="_blank">Aviso de privacidad</a></li>
             </ul>
