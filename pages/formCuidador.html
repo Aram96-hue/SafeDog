@@ -18,49 +18,97 @@
     <title>Form - Cuidador</title>
   </head>
   <body>
-      <!--NavBar de safeDog-->
-   <nav class="navbar">
+    <!--NavBar de safeDog-->
+    <nav class="navbar">
+      <div class="navbar--logo">
+        <a href="#" target="_blank"
+          ><img src="../assets/iconos/SafeDog W (9).png" alt="SafeDog-Logo"
+        /></a>
+      </div>
 
-    <div class="navbar--logo">
-        <a href="#" target="_blank"><img src="../assets/iconos/SafeDog W (9).png" alt="SafeDog-Logo"></a>
-    </div>
-
-    <div class="nav--container">
+      <div class="nav--container">
         <ul class="navbar--menu">
-            <li><a href="./acercaDeNosotros.html" target="">Acerca de nosotros</a></li>
-            <li><a href="./nuestrosServicios.html" target="">Nuestros Servicios</a></li>
-            <li><a href="./preguntas.html">Preguntas Frecuentes</a></li>
+          <li>
+            <a href="./acercaDeNosotros.html" target="">Acerca de nosotros</a>
+          </li>
+          <li>
+            <a href="./nuestrosServicios.html" target="">Nuestros Servicios</a>
+          </li>
+          <li><a href="./preguntas.html">Preguntas Frecuentes</a></li>
         </ul>
 
         <div class="navbar--botones">
-            <button class="boton--claro" onclick="window.location.href='../pages/serCuidador.html';">Ser
-                cuidador</button>
-            <button class="boton--claro" onclick="window.location.href='../pages/inicioSesion.html';">Inicio de
-                sesión</button>
-            <button class="boton--azul" onclick="window.location.href='../pages/registro.html';">Registro</button>
+          <button
+            type="button"
+            class="boton--claro"
+            onclick="window.location.href='../pages/serCuidador.html';"
+          >
+            Ser cuidador
+          </button>
+          <button
+            type="button"
+            class="boton--claro"
+            onclick="window.location.href='../pages/inicioSesion.html';"
+          >
+            Inicio de sesión
+          </button>
+          <button
+            type="button"
+            class="boton--azul"
+            onclick="window.location.href='../pages/registro.html';"
+          >
+            Registro
+          </button>
         </div>
-    </div>
-    <!--Menu de hamburguesa-->
-    <div class="menu-btn">
+      </div>
+      <!--Menu de hamburguesa-->
+      <div class="menu-btn">
         <i class="fa-solid fa-bars fa-2x"></i>
+      </div>
+    </nav>
+    <!-- Menu desplegable para móviles -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul class="mobile-navbar--menu">
+        <li>
+          <a href="./acercaDeNosotros.html" target="_blank"
+            >Acerca de nosotros</a
+          >
+        </li>
+        <li>
+          <a href="./nuestrosServicios.html" target="_blank"
+            >Nuestros Servicios</a
+          >
+        </li>
+        <li>
+          <a href="./preguntasFrecuentes.html" target="_blank"
+            >Preguntas Frecuentes</a
+          >
+        </li>
+      </ul>
+      <div class="mobile-navbar--botones">
+        <button
+          type="button"
+          class="boton--claro"
+          onclick="window.location.href='./serCuidador.html';"
+        >
+          Ser cuidador
+        </button>
+        <button
+          type="button"
+          class="boton--claro"
+          onclick="window.location.href='./inicioSesion';"
+        >
+          Inicio de sesión
+        </button>
+        <button
+          type="button"
+          class="boton--azul"
+          onclick="window.location.href='./registro.html';"
+        >
+          Registro
+        </button>
+      </div>
     </div>
-
-</nav>
-<!-- Menu desplegable para móviles -->
-<div class="mobile-menu" id="mobileMenu">
-    <ul class="mobile-navbar--menu">
-        <li><a href="./acercaDeNosotros.html" target="_blank">Acerca de nosotros</a></li>
-        <li><a href="./nuestrosServicios.html" target="_blank">Nuestros Servicios</a></li>
-        <li><a href="./preguntasFrecuentes.html" target="_blank">Preguntas Frecuentes</a></li>
-    </ul>
-    <div class="mobile-navbar--botones">
-        <button class="boton--claro" onclick="window.location.href='./serCuidador.html';">Ser
-            cuidador</button>
-        <button class="boton--claro" onclick="window.location.href='./inicioSesion';">Inicio de
-            sesión</button>
-        <button class="boton--azul" onclick="window.location.href='./registro.html';">Registro</button>
-    </div>
-</div>
     <main>
       <section class="section--form--cuidador">
         <div class="container">
@@ -130,6 +178,31 @@
                 </div>
                 <div class="form--imput--validation">
                   <p id="email-feedback" class="input-feedback"></p>
+                </div>
+              </div>
+              <div class="form--input--container">
+                <div class="form--imput--city">
+                  <label class="label--title">Ciudad</label>
+                  <div class="form--imput--field">
+                    <div class="form--imput-radio">
+                      <input
+                        type="radio"
+                        id="ciudadCDMX"
+                        name="ciudad"
+                        value="CDMX"
+                      />
+                      <label for="ciudadCDMX">Ciudad de México</label>
+                    </div>
+                    <div class="form--imput-radio">
+                      <input
+                        type="radio"
+                        id="ciudadGDL"
+                        name="ciudad"
+                        value="GDL, JC"
+                      />
+                      <label for="ciudadGDL">Guadalajara, Jalisco</label>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="form--input--container">
@@ -207,8 +280,19 @@
                       id="open-popup-img"
                     />
                     <div>
-                      <button class="btn btn--save btn--shadow" type="button" onclick="document.getElementById('formFileMultipleOne').click();">Subir fotografias</button>
-                      <input type="file" style="display: none;" id="formFileMultipleOne" multiple required>
+                      <button
+                        class="btn btn--save btn--shadow"
+                        type="button"
+                        onclick="document.getElementById('formFileMultipleOne').click();"
+                      >
+                        Subir fotografias
+                      </button>
+                      <input
+                        type="file"
+                        style="display: none"
+                        id="formFileMultipleOne"
+                        multiple
+                      />
                     </div>
                   </div>
                 </div>
@@ -226,18 +310,25 @@
                       class="img--img"
                     />
                     <div>
-                      <button class="btn btn--save btn--shadow" type="button" onclick="document.getElementById('formFileMultipleTwo').click();">Subir documento</button>
-                      <input type="file" style="display: none;" id="formFileMultipleTwo" multiple required>
+                      <button
+                        class="btn btn--save btn--shadow"
+                        type="button"
+                        onclick="document.getElementById('formFileMultipleTwo').click();"
+                      >
+                        Subir documento
+                      </button>
+                      <input
+                        type="file"
+                        style="display: none"
+                        id="formFileMultipleTwo"
+                        multiple
+                      />
                     </div>
                   </div>
                 </div>
               </div>
               <div class="button--submit">
-                <button
-                  class="btn btn--form btn--shadow"
-                  type="submit"
-                  onclick="convertToJson()"
-                >
+                <button class="btn btn--form btn--shadow" type="submit">
                   BOTON SIGUIENTE
                 </button>
               </div>
@@ -248,30 +339,59 @@
       </section>
     </main>
     <!--Pie de página de safeDog-->
-   <footer class="footer--safeDog">
-    <div class="iconos">
-        <a href="#"><img src="../assets/iconos/correo5.png" alt="" target="_blank"></a>
-        <a href="#"><img src="../assets/iconos/fb5.png" alt="" class="logo--fb"></a>
-        <a href="#"><img src="../assets/iconos/instagramb.png" alt="" class="logo--insta"></a>
-        <a href="#"><img src="../assets/iconos/whatsapp.png" alt=""></a>
-    </div>
-    <div class="footer--logo">
-        <img src="../assets/iconos/safedogfooter.png" alt="safeDog Footer">
-    </div>
-    <div class="footer--info">
-        <h4 class="footer--question">¿Quieres formar parte de nuestra comunidad?</h4>
+    <footer class="footer--safeDog">
+      <div class="iconos">
+        <a href="#"
+          ><img src="../assets/iconos/correo5.png" alt="" target="_blank"
+        /></a>
+        <a href="#"
+          ><img src="../assets/iconos/fb5.png" alt="" class="logo--fb"
+        /></a>
+        <a href="#"
+          ><img
+            src="../assets/iconos/instagramb.png"
+            alt=""
+            class="logo--insta"
+        /></a>
+        <a href="#"><img src="../assets/iconos/whatsapp.png" alt="" /></a>
+      </div>
+      <div class="footer--logo">
+        <img src="../assets/iconos/safedogfooter.png" alt="safeDog Footer" />
+      </div>
+      <div class="footer--info">
+        <h4 class="footer--question">
+          ¿Quieres formar parte de nuestra comunidad?
+        </h4>
         <ul class="footer--list">
-            <li><a href="./pagesFooter/serCuidador.html" target="_blank">Ser cuidador</a></li>
-            <li><a href="./pagesFooter/serCuidado.html" target="_blank">Ser cuidado</a></li>
-            <li><a href="./pagesFooter/preguntasFrecuentes.html" target="_blank">Preguntas frecuentes</a></li>
-            <li><a href="./pagesFooter/soporte.html" target="_blank">Soporte</a></li>
-            <li><a href="./pagesFooter/avisoPrivacidad.html" target="_blank">Aviso de privacidad</a></li>
+          <li>
+            <a href="./pagesFooter/serCuidador.html" target="_blank"
+              >Ser cuidador</a
+            >
+          </li>
+          <li>
+            <a href="./pagesFooter/serCuidado.html" target="_blank"
+              >Ser cuidado</a
+            >
+          </li>
+          <li>
+            <a href="./pagesFooter/preguntasFrecuentes.html" target="_blank"
+              >Preguntas frecuentes</a
+            >
+          </li>
+          <li>
+            <a href="./pagesFooter/soporte.html" target="_blank">Soporte</a>
+          </li>
+          <li>
+            <a href="./pagesFooter/avisoPrivacidad.html" target="_blank"
+              >Aviso de privacidad</a
+            >
+          </li>
         </ul>
-    </div>
-    <div class="footer--copy">
+      </div>
+      <div class="footer--copy">
         <h4>© All rights reserved & design by SafeDog</h4>
-    </div>
-  </footer>
-  <script src="../scripts/formCuidador.js"></script>
+      </div>
+    </footer>
+    <script src="../scripts/formCuidador.js"></script>
   </body>
 </html>

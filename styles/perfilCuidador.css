@@ -1,0 +1,213 @@
+:root {
+  --background: #fff8e0;
+  --primary: #39b3a2;
+  --secondary: #8c5637;
+  --yellow: #f0bb69;
+  --white: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #000;
+  background-color: var(--background);
+}
+
+.container {
+  /* 1140px */
+  max-width: 140rem;
+  padding: 0 5rem;
+  margin: 0 auto;
+}
+
+.section--cuidador--contacto {
+  padding: 4.8rem 0 8rem;
+}
+
+.cuidador--card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.8);
+  border-radius: 11px;
+  overflow: hidden;
+}
+
+.cuidador--foto {
+  background-image: url("../assets/istockphoto-1457916748-612x612.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.cuidador--text {
+  background-color: var(--secondary);
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+}
+
+.heading-secundary {
+  font-size: 5rem;
+  line-height: 1.2;
+  margin-bottom: 2.6rem;
+}
+
+.heading-tertiary {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-top: 4rem;
+  margin-bottom: 1.6rem;
+}
+
+.tarifas--titel {
+  margin-bottom: 2.5rem;
+}
+
+.cuidador--info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.text--info {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.star--content {
+  display: flex;
+}
+
+.star-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: #f2c438;
+}
+
+.tarifas--cont {
+  margin-bottom: 3rem;
+}
+
+.cuidador--servicios {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+
+.text {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.servicios_profile {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.tarifa {
+  display: flex;
+  flex-direction: column;
+  justify-items: left;
+}
+
+.align-guide {
+  text-align: right;
+  justify-self: left;
+}
+
+.cont--btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.btn:hover .btn-icon {
+  stroke: #39b3a2;
+}
+
+.btn:hover {
+  color: #ffffff; /* Nuevo color de texto */
+  background-color: var(--primary); /* Nuevo color de fondo */
+}
+
+.btn--cellphone {
+  width: 45rem;
+  align-self: center;
+  box-shadow: 5px;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-size: 3.5rem;
+}
+
+.btn--shadow:active {
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8),
+    inset 1px 1px 3px rgba(255, 255, 255, 0.8);
+  transform: translateY(2px);
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  color: #555555;
+  background-color: #39b3a2;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+
+  text-decoration: none;
+  font-weight: 600;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  /* Only necessary for .btn */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  /* Put transition on original "state" */
+  /* transition: background-color 0.3s; */
+  transition: all 0.3s;
+}
+
+.section--cuidador--tags {
+  margin-bottom: 12.5rem;
+}
+
+.tags--container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.text--tag {
+  display: flex;
+  gap: 3rem;
+  font-size: 2.4rem;
+  font-weight: 400;
+  background-color: var(--primary);
+  padding: 2rem 3rem;
+  border-radius: 9px;
+  border: none;
+}
+
+.section--cuidador--resumen {
+  padding: 4.8rem 0 12.5rem;
+}
+
+.experience--container {
+  background-color: var(--yellow);
+  padding: 2.4rem 6.4rem 6.4rem 6.4rem;
+  border-radius: 9px;
+  border: none;
+}

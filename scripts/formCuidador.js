@@ -3,8 +3,15 @@ function convertToJson() {
   let formData = {};
   for (let i = 0; i < form.elements.length; i++) {
     let element = form.elements[i];
+    
     if (element.type !== "submit" && element.type !== "button" && element.type !== "file") {
-      formData[element.name] = element.value;
+      if(element.type === "radio"){
+        if(element.checked){
+          formData[element.name] = element.value;
+        }
+      } else {
+        formData[element.name] = element.value;
+      }
     }
   }
   let jsonData = JSON.stringify(formData);
@@ -110,6 +117,34 @@ document.getElementById("email-emergency").addEventListener("input", function ()
     feedback.textContent = "Correo electrónico válido";
     feedback.style.color = "green";
   }
+});
+
+document.getElementById("form-cuidador-uno").addEventListener("submit", function (event) {
+  event.preventDefault();
+  let nombre = document.getElementById("nombre").value;
+  let apellido = document.getElementById("apellido").value;
+  let numero = document.getElementById("number").value;
+  let email = document.getElementById("email").value;
+  
+  let radios = document.querySelectorAll('input[name="ciudad"]');
+  let isChecked = Array.from(radios).some(radio => radio.checked);
+
+  let nombreContacto = document.getElementById("name-emergency").value;
+  let numeroContacto = document.getElementById("number-emergency").value;
+  let emailContacto = document.getElementById("email-emergency").value;
+
+  if(!isNameValid(nombre)) return;
+  if(!isNameValid(apellido)) return;
+  if(!isPhoneNumberValid(numero)) return;
+  if(!isEmailValid(email)) return;
+
+  if(!isChecked) return;
+
+  if(!isNameValid(nombreContacto)) return;
+  if(!isPhoneNumberValid(numeroContacto)) return;
+  if(!isEmailValid(emailContacto)) return;
+
+  convertToJson();
 });
 
 // imagenesdropzone //
