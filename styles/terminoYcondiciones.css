@@ -1,139 +1,13 @@
-:root {
-    /* Color de fondo */
-    --bg-color: #FFF8E0;
-    /* Colores primarios */
-        --color-primary: black;
-        --color-secondary: #44A194;
-        --color-tertiary: #F0BB69;
-        --color-cuarto: #7F636E;
+body {
+    background-color: #FFF8E0;
+    font-family: "sansita", "roboto";
+    margin: 0;
+    padding: 0;
     
-    /* --------------------------------- */
-    /* Letra */
-    
-    /* Color de letra */
-        --font-color-w: white;
-        --font-color-b: black;
-        
-    /* Tipo de letra */
-        --font-primary: "Sansita", sans-serif;
-        --font-secondary: "Roboto", sans-serif;
-        --font-size-primary: 8rem;
-        --font-size-secondary: 4 rem;
-    }
-
-    h1{
-        font-family: var(--font-secondary);
-    }
-
-
-    body{
-        background-color: #FFF8E0;
-        font-family: "sansita", "roboto";
-        margin: 0;
-        padding: 0;
-        display: block;
-        
-    }
-
-    .needs-validation {
-        margin-top: auto;
-        padding: 5%;
-        font-family: var(--font-primary);
-        
-    }
-    
-
-    .container {
-        background-color: rgba(127, 99, 110, 0.70); 
-        width: 40%;
-        height: 120%;
-        margin-top: 50px;
-        display: flex;
-        position: relative;
-        border-radius: 5%;
-        padding: 10px;
-    }
-
-    .container .button--submit{
-        display: flex;
-        align-items: center;
-
-    }
-
-
-    .button--submit{
-        padding: 0;
-        margin: 0;
-        width: 150px;
-        color: var(--bg-color);
-        background-color: #F0BB69;
-        border: 0px;
-        border-radius: 5px;
-        font-family: var(--font-secondary);
-        font-size: 40px;
-        text-align: center;
-        transition: all 600ms ease;
-        justify-content: center;
-
-        
-    
-        }
-        .button--submit:hover{
-            background-color: #FFF8E0;
-            color: #555;
-            background: linear-gradient( 135deg, var(--color-cuarto) 10%, #fff8e0);
-            border:var(--bg-color--);
-        }
-
-    .linkTerminosyCondiciones {
-        color: #000000;
-        font-size:large;
-        font-weight: bold;
-    }
-
-    .invalid-feedback{
-        font-family: var(--font-primary);
-        font-size: 17px;
-    }
-    
-    .valid-feedback{
-        font-family: var(--font-primary);
-        font-size: 17px;
-        color: green;
-    }
-
-    .form-text{
-        font-family: var(--font-primary);
-        font-size: 10px;
-    }
-    
-    #success-message {
-        background-color:rgba(127, 99, 110, 0.05); 
-        border: none; 
-        padding: 0;
-        display: none; 
-        text-align: center;
-        font-size: 25px;
-    }
-
-    .hidden {
-        display: none;
-    }
-    #requirements{
-        color: black;
-        list-style-type: none;
-    }
-
-
-@media (max-width: 576px) {
-    .container{
-        width: 300px;
-    }
 }
 
 
-
-    /*NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR*/
+/*NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR*/
 .navbar {
     background-color: hsl(172, 41%, 45%);
     color: #FFFFFF;
@@ -167,7 +41,6 @@
     margin: 0;
     padding: 0;
     margin-top:70x;
-    
    
 }
 
@@ -183,7 +56,6 @@
     font-weight: bold;
     margin-right: 20px;
     gap: 2px;
-    text-decoration: none;
 }
 
 .navbar .navbar--menu a:hover {
@@ -305,6 +177,8 @@
     background-color: #F0BB69;
 }
 
+
+
 /* Mostrar el botón del menú hamburguesa en pantallas pequeñas */
 @media (max-width: 900px) {
     .navbar .navbar--menu {
@@ -326,6 +200,36 @@
     }
 } /*NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR*/
 
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #fff8e0;
+    text-align: center;
+}
+
+.
+.Texto-termino .cuadro{
+    padding: 20%;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgb(var--black/.87);
+    align-self: center;
+    text-align: center;
+    line-height: 1.5;
+    letter-spacing: 5px;
+    text-transform:lowercase;
+
+}
+
+
+/*body{
+    background-color: #FFF8E0;
+    font-family: "sansita", "roboto";
+    margin: 0;
+    padding: 0;
+    
+}
+*/
 
 
 /*FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER*/
@@ -336,7 +240,7 @@
     align-items: center;
     background-color: #44A194;
     padding: 20px;
-    margin-top: 100px;
+    margin: 0;
     flex-wrap: wrap;
     color: #ffffff;
     text-align: center;
@@ -359,7 +263,6 @@
     padding: 0;
     margin: 0;
     margin-top: 50px;
-    font-size: large;
     
 }
 .footer--info ul{
@@ -462,5 +365,3 @@
     
     }
 } /*FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER */
-
-

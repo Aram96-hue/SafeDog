@@ -24,13 +24,13 @@
     <nav class="navbar">
 
         <div class="navbar--logo">
-            <a href="#" target="_blank"><img src="../assets/SafeDog W (9).png" alt="SafeDog-Logo"></a>
+            <a href="../index.html" target="_blank"><img src="../assets/SafeDog W (9).png" alt="SafeDog-Logo"></a>
         </div>
 
         <div class="nav--container">
             <ul class="navbar--menu">
                 <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
-                <li><a href="./nuestrosServicios.html">Nuestros Servicios</a></li>
+               <li><a href="./nuestrosServicios.html">Nuestros Servicios</a></li>
                 <li><a href="./preguntasFrecuentesContactanos.html">Preguntas Frecuentes</a></li>
             </ul>
 
@@ -56,11 +56,11 @@
             <li><a href="./preguntas.html">Preguntas Frecuentes</a></li>
         </ul>
         <div class="mobile-navbar--botones">
-            <button class="boton--claro" onclick="window.location.href='./formCuidador.html';">Ser
+            <button class="boton--claro" onclick="window.location.href='./serCuidador.html';">Ser
                 cuidador</button>
-            <button class="boton--claro" onclick="window.location.href='./mainLogin.html';">Inicio de
+            <button class="boton--claro" onclick="window.location.href='./inicioSesion';">Inicio de
                 sesión</button>
-            <button class="boton--azul" onclick="window.location.href='./registroNuevoUsuario.html';">Registro</button>
+            <button class="boton--azul" onclick="window.location.href='./pregistro.html';">Registro</button>
         </div>
     </div>
 
@@ -77,44 +77,46 @@
             
             <div class="mb-3">
               <div class="form-group">
-                <label for="nombre">Nombre</label>
-                <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre" required pattern="[A-Za-z\s]+" oninput="validateNombre(this)">
-                <div class="invalid-feedback">Por favor, ingresa un nombre válido.</div>
-                <div class="valid-feedback">Nombre válido.</div>
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre completo" required pattern="[A-Za-z\s]+" oninput="validateNombre(this)">
+                <div class="invalid-feedback"></div>
+               <div class="valid-feedback"></div>
               </div>
             </div>
+
+
+            <div class="mb-3">
+                <label for="telefono">Número de Teléfono</label>
+                <input type="tel" class="form-control" id="telefono" placeholder="Ingresa tu número de teléfono" required pattern="\d{10}" oninput="validateTelefono(this)">
+               <div class="invalid-feedback"></div>
+                <div class="valid-feedback"></div>
+              </div>
+        
       
 
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label" >Correo electrónico</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  placeholder="Ingresa tu correo electrónico" required oninput="validateCorreo(this)">
               <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
-              <div class="invalid-feedback">Por favor, ingresa un correo electrónico válido.</div>
-              <div class="valid-feedback">Correo electrónico válido.</div>
+              <div class="invalid-feedback"></div>
+              <div class="valid-feedback"></div>
+            </div>
+            
+        
+
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingresa una contraseña" required>
             </div>
             
             <div class="mb-3">
-              <label for="telefono">Número de Teléfono</label>
-              <input type="tel" class="form-control" id="telefono" placeholder="Ingresa tu número de teléfono" required pattern="\d{10}" oninput="validateTelefono(this)">
-              <div class="invalid-feedback">Por favor, ingresa un número de teléfono válido.</div>
-              <div class="valid-feedback">Número de teléfono válido.</div>
+                <label for="exampleInputPassword2" class="form-label">Confirmar Contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Vuelve a ingresar tu contraseña" required>
+                <div class="invalid-feedback">Las contraseñas no coinciden.</div>
             </div>
-      
+            
 
-
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingresa una contraseña" required>
-            </div>
-      
-    
-    <div class="mb-3">
-        <label for="exampleInputPassword2" class="form-label">Confirmar Contraseña</label>
-        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Vuelve a ingresar tu contraseña" required>
-        <div class="invalid-feedback">Las contraseñas no coinciden.</div>
-    </div>
-   
-<ul id="requirements">
+<ul id="requirements" class="hidden">
     <li id="req1">Debe tener al menos 8 caracteres</li>
     <li id="req2">Debe tener al menos un número</li>
     <li id="req3">Debe tener al menos una letra minúscula</li>
@@ -122,7 +124,7 @@
     <li id="req5">Debe tener al menos una letra mayúscula</li>
 </ul>
 
-            <a href="./terminosyCondiciones.html" target="_blank" class="linkTerminosyCondiciones">Términos y condiciones</a>
+            <a href="../pages/terminoYcondiciones.html" target="_blank" class="linkTerminosyCondiciones">Términos y condiciones</a>
             
             <div class="mb-3 form-check">
               <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
@@ -131,10 +133,12 @@
             </div>
            
             <div class="button--submit">
-                <button type="submit" class="btn btn--primary">Registrarme</button>
+                <button type="submit" class="btn btn--primary" onclick="window.location.href='./registroCuentaUsuarioDueño.html';">Registrarme</button>
                
             </div>
-            <div id="formMessage" class="mt-3"></div>
+           <!---- <div id="formMessage" class="mt-3"></div>-->
+            <div id="success-message" class="alert alert-success" style="display: none;"></div>
+
           </form>
     </div>
 
@@ -155,7 +159,7 @@
             <h4 class="footer--question">¿Quieres formar parte de nuestra comunidad?</h4>
             <ul class="footer--list">
                 <li><a href="./formCuidador.html" target="_blank">Ser cuidador</a></li>
-                <li><a href="./serCuidado.html" target="_blank">Ser cuidado</a></li>
+                <li><a href="./registroNuevoUsuario.html" target="_blank">Ser cuidado</a></li>
                 <li><a href="./preguntasFrecuentesContactanos.html" target="_blank">Preguntas frecuentes</a></li>
                 <li><a href="./soporte.html" target="_blank">Soporte</a></li>
                 <li><a href="./avisoPrivacidad.html" target="_blank">Aviso de privacidad</a></li>
