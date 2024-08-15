@@ -19,3 +19,81 @@ const options = {
   
   navigator.geolocation.getCurrentPosition(success, error, options);
   
+  //Testimonial Data
+const testimonials = [
+  {
+      nameTestimonial:"Felipe Mejia",
+      locationTestimonial:"Guadalajara - Jalisco",
+      imageTestimonial: "Cubone.jpg",
+      reviewTestimonial: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quasi adipisci eius exercitationem ratione ex quod. Libero impedit et quos est qui neque deleniti veniam?",
+  },
+  {
+      nameTestimonial:"Carlos Alberto",
+      locationTestimonial:"Ciudad de México- Buenavista",
+      imageTestimonial: "Cubone.jpg",
+      reviewTestimonial: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quasi adipisci eius exercitationem ratione ex quod. Libero impedit et quos est qui neque deleniti veniam?",
+  },
+  {
+      nameTestimonial:"Mitzi Martinez",
+      locationTestimonial:"Ciudad de México - Tláhuac",
+      imageTestimonial: "Cubone.jpg",
+      reviewTestimonial: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quasi adipisci eius exercitationem ratione ex quod. Libero impedit et quos est qui neque deleniti veniam?",
+  },
+  {
+      nameTestimonial:"Johana Frias",
+      locationTestimonial:"Ciudad de México - Ajusco",
+      imageTestimonial: "Cubone.jpg",
+      reviewTestimonial: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident a ipsam earum quasi ducimus repellat tempora id quas minima iste unde neque sed quidem, dolore fugiat eligendi itaque laborum blanditiis et ea culpa. Ea, fugiat."},
+];
+
+//Current slide
+let i = 0;
+//Total slide
+let j = testimonials.length;
+
+let nextBtn = document.getElementById("next");
+let prevBtn = document.getElementById("prev");
+
+
+nextBtn.addEventListener("click", () => {
+  i = (j + i + 2) % j; // Move forward by two for the next pair
+  displayTestimonials(i);
+});
+
+prevBtn.addEventListener("click", () => {
+  i = (j + i - 2) % j; // Move backward by two for the previous pair
+  displayTestimonials(i);
+});
+
+let displayTestimonials = (index) => {
+  // Card One Elements
+  const cardOne = document.getElementById("Card-one");
+  const nameElementOne = cardOne.querySelector('#testimonialName');
+  const locationElementOne = cardOne.querySelector('#testimonialLocation');
+  const reviewElementOne = cardOne.querySelector('#testimonialReview');
+  const imageElementOne = cardOne.querySelector('#imageTestimonial');
+
+  // Card Two Elements
+  const cardTwo = document.getElementById("Card-two");
+  const nameElementTwo = cardTwo.querySelector('#testimonialName');
+  const locationElementTwo = cardTwo.querySelector('#testimonialLocation');
+  const reviewElementTwo = cardTwo.querySelector('#testimonialReview');
+  const imageElementTwo = cardTwo.querySelector('#imageTestimonial');
+
+  // Display data in Card One
+  nameElementOne.innerText = testimonials[index].nameTestimonial;
+  locationElementOne.innerText = testimonials[index].locationTestimonial;
+  reviewElementOne.innerText = testimonials[index].reviewTestimonial;
+  imageElementOne.src = testimonials[index].imageTestimonial;
+
+  // Display data in Card Two (Next Testimonial)
+  let nextIndex = (index + 1) % j;
+  nameElementTwo.innerText = testimonials[nextIndex].nameTestimonial;
+  locationElementTwo.innerText = testimonials[nextIndex].locationTestimonial;
+  reviewElementTwo.innerText = testimonials[nextIndex].reviewTestimonial;
+  imageElementTwo.src = testimonials[nextIndex].imageTestimonial;
+};
+
+window.addEventListener('DOMContentLoaded', () => {
+  displayTestimonials(i);
+});
