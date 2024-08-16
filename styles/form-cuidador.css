@@ -80,6 +80,25 @@ body {
   align-items: center;
 }
 
+.form--imput--city{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form--imput--field{
+  width: 58rem;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.form--imput-radio {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .form--imput--validation{
   display: flex;
   justify-content: right;
@@ -102,6 +121,8 @@ body {
   margin-bottom: 2rem;
 }
 
+.form--imput--city label,
+.form--imput--field label,
 .form--imput--servicios label,
 .form--imput--textarea label,
 .form--imput--item label {
@@ -191,7 +212,6 @@ input[type="file"]::after{
 .button--submit {
   align-self: center;
 }
-
 
 .btn,
 .btn:link,
