@@ -81,11 +81,17 @@ function isEmailValid(email) {
             confirmButtonText: "Aceptar",
             confirmButtonColor: "#7f636e",
             timer: 1500,
+          
+          }).then(() => {
+
+            window.location.href = "../index.html";
+            //location.replace("tuPerfil.html");
           });
           return;
         } else if (user.username === username) {
           existUser = true;
         }
+
       });
       if (userIncorrect) {
         Swal.fire({
@@ -146,3 +152,4 @@ function isEmailValid(email) {
     ];
     localStorage.setItem("usersTest", JSON.stringify(usersJsonTest));
   };
+
