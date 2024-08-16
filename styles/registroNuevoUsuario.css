@@ -17,9 +17,15 @@
     /* Tipo de letra */
         --font-primary: "Sansita", sans-serif;
         --font-secondary: "Roboto", sans-serif;
-        --font-size-primary: 5rem;
-        --font-size-secondary: 2 rem;
+        --font-size-primary: 8rem;
+        --font-size-secondary: 4 rem;
     }
+
+    h1{
+        font-family: var(--font-secondary);
+    }
+
+
     body{
         background-color: #FFF8E0;
         font-family: "sansita", "roboto";
@@ -29,21 +35,95 @@
         
     }
 
-    .container{
-        background-color: var(--color-cuarto);
+    .needs-validation {
+        margin-top: auto;
+        padding: 5%;
+        font-family: var(--font-primary);
+        
+    }
+    
+
+    .container {
+        background-color: rgba(127, 99, 110, 0.70); 
         width: 40%;
-        height: 700px;
+        height: 120%;
         margin-top: 50px;
-        display:flex;
-        position:relative;
+        display: flex;
+        position: relative;
+        border-radius: 5%;
+        padding: 10px;
     }
 
-    .linkTerminosyCondiciones{
+    .container .button--submit{
+        display: flex;
+        align-items: center;
+
+    }
+
+
+    .button--submit{
+        padding: 0;
+        margin: 0;
+        width: 150px;
+        color: var(--bg-color);
+        background-color: #F0BB69;
+        border: 0px;
+        border-radius: 5px;
+        font-family: var(--font-secondary);
+        font-size: 40px;
+        text-align: center;
+        transition: all 600ms ease;
+        justify-content: center;
+
+        
     
+        }
+        .button--submit:hover{
+            background-color: #FFF8E0;
+            color: #555;
+            background: linear-gradient( 135deg, var(--color-cuarto) 10%, #fff8e0);
+            border:var(--bg-color--);
+        }
+
+    .linkTerminosyCondiciones {
         color: #000000;
         font-size:large;
         font-weight: bold;
     }
+
+    .invalid-feedback{
+        font-family: var(--font-primary);
+        font-size: 17px;
+    }
+    
+    .valid-feedback{
+        font-family: var(--font-primary);
+        font-size: 17px;
+        color: green;
+    }
+
+    .form-text{
+        font-family: var(--font-primary);
+        font-size: 10px;
+    }
+    
+    #success-message {
+        background-color:rgba(127, 99, 110, 0.05); 
+        border: none; 
+        padding: 0;
+        display: none; 
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .hidden {
+        display: none;
+    }
+    #requirements{
+        color: black;
+        list-style-type: none;
+    }
+
 
 @media (max-width: 576px) {
     .container{
@@ -103,6 +183,7 @@
     font-weight: bold;
     margin-right: 20px;
     gap: 2px;
+    text-decoration: none;
 }
 
 .navbar .navbar--menu a:hover {
