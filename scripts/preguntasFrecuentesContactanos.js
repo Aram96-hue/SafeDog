@@ -12,7 +12,7 @@ function isEmailValid(email) {
   return correoRegex.test(email);
 }
 
-//Funcion de validacion de correo
+//Funcion de validacion de telefono
 function isPhoneNumberValid(phone) {
   let telefonoRegex = /^\d{10}$/;
   return telefonoRegex.test(phone);
@@ -65,10 +65,10 @@ document.getElementById("email").addEventListener("input", function () {
   let feedback = document.getElementById("email-feedback");
 
   if (!isEmailValid(correo)) {
-    feedback.textContent = "Correo electrónico inválido ._.";
+    feedback.textContent = "❌ Correo electrónico inválido";
     feedback.style.color = "red";
   } else {
-    feedback.textContent = "Correo electrónico válido UwU";
+    feedback.textContent = "✅ Correo electrónico válido";
     feedback.style.color = "white";
   }
 });

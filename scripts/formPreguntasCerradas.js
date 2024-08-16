@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('respuestasFormulario', JSON.stringify(respuestas));
 
         // Mostrar un mensaje de confirmación
-        alert('Respuestas guardadas con éxito!');
-        window.location.href = './siguientePagina.html'; // Cambia a la siguiente página si es necesario
+        /*alert('Respuestas guardadas con éxito!');*/
     });
 });
