@@ -153,7 +153,6 @@ a:hover {
 
 /*---Card box----*/
 .boxesContainer{
-    border: blue solid;
     display: flex;
    flex-direction: row;
    flex-wrap: wrap;
@@ -323,7 +322,6 @@ a:hover {
 /* <!------------------- Review Cards ------------------->*/
 
 .reviews {
-    border: rgb(46, 43, 227) solid;
     display: flex;
     justify-content: center;
     margin-top: 5em;
@@ -332,7 +330,7 @@ a:hover {
 }
 
 .wrapper {
-    border: hwb(271 17% 11%) solid;
+    border: n;
     justify-content: center;
     position: relative;
     display: flex;
@@ -347,7 +345,7 @@ a:hover {
 }
 
 .Card-review {
-    background-color: orange;
+    background-color: #82bfb8;
     width: 50vw;
     max-width: 40em;
     border-radius: 0.6em;
@@ -360,7 +358,7 @@ a:hover {
 }
 
 .testimonial-container {
-    border: #2d3d67 solid;
+    border: none;
     width: 90%;
     height: auto;
     /* Allow height to adjust based on content */

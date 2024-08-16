@@ -24,25 +24,25 @@ const testimonials = [
   {
       nameTestimonial:"Felipe Mejia",
       locationTestimonial:"Guadalajara - Jalisco",
-      imageTestimonial: "Cubone.jpg",
+      imageTestimonial: "../assets/fotosAcercadeNosotros/Felipe.png",
       reviewTestimonial: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quasi adipisci eius exercitationem ratione ex quod. Libero impedit et quos est qui neque deleniti veniam?",
   },
   {
       nameTestimonial:"Carlos Alberto",
       locationTestimonial:"Ciudad de México- Buenavista",
-      imageTestimonial: "Cubone.jpg",
+      imageTestimonial: "../assets/fotosAcercadeNosotros/Carlos.png",
       reviewTestimonial: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quasi adipisci eius exercitationem ratione ex quod. Libero impedit et quos est qui neque deleniti veniam?",
   },
   {
       nameTestimonial:"Mitzi Martinez",
       locationTestimonial:"Ciudad de México - Tláhuac",
-      imageTestimonial: "Cubone.jpg",
+      imageTestimonial: "../assets/fotosAcercadeNosotros/Mitzi.png",
       reviewTestimonial: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quasi adipisci eius exercitationem ratione ex quod. Libero impedit et quos est qui neque deleniti veniam?",
   },
   {
       nameTestimonial:"Johana Frias",
       locationTestimonial:"Ciudad de México - Ajusco",
-      imageTestimonial: "Cubone.jpg",
+      imageTestimonial: "../assets/fotosAcercadeNosotros/Johana.png",
       reviewTestimonial: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident a ipsam earum quasi ducimus repellat tempora id quas minima iste unde neque sed quidem, dolore fugiat eligendi itaque laborum blanditiis et ea culpa. Ea, fugiat."},
 ];
 
