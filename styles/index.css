@@ -1,0 +1,272 @@
+/* Variables para modificar */
+
+:root {
+    /* Colores */
+    
+    
+    /* --------------------------------- */
+    /* Color de fondo */
+        --bg-color: #FFF8E0;
+    /* Colores primarios */
+        --color-primary: black;
+        --color-secondary: #44A194;
+        --color-tertiary: #F0BB69;
+        --color-cuarto: #7F636E;
+    
+    /* --------------------------------- */
+    /* Letra */
+    
+    /* Color de letra */
+        --font-color-w: white;
+        --font-color-b: black;
+        
+    /* Tipo de letra */
+        --font-primary--title: "Baskervville", serif;
+        --font-secondary-p: "Baskervville", serif;
+        --font-size-primary: 3rem;
+        --font-size-secondary: 2 rem;
+    
+    
+    /* Fuentes personalizadas*/
+        --font-botones-baskervville-regular: "Baskervville", serif;
+        --font--titulos:"Roboto", sans-serif; 
+        
+    .baskervville-regular {
+      font-family: "Baskervville", serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+    
+    }
+    
+    
+    
+    /* Tamaño de letra */
+     
+    
+    body{
+        /* Mando a llamar la variable correspondiente al color guardado */
+        background-color:var(--bg-color);
+        color:var(--font-color);
+        font-family: var(--font-primary--title);
+        margin: 0;
+    }
+    
+    
+    h1 {
+        color:var(--font-color-b); 
+        font-family:var(--font--titulos);
+        font-size: var(--font-size-primary);
+        text-align: center;
+        }
+    
+    /*Agregar fuentes externas*/
+    
+    h2 {
+        color: var(--color-secondary);
+        font-family: var(--font--titulos);
+        font-size: 30px;
+    }
+    
+    /*Cambiar las propiedades de las viñetas y listas*/
+    
+    /* */
+    
+    li, a {
+        color: cadetblue;
+        background-color: azure;
+    }
+    
+    /* Clases (.) y Id (#) */
+    .navbar {
+        background-color: var(--color-secondary);
+        color: var(--font-color-b);
+        font-family: var(--font-secondary);
+        margin: 0;
+        display:block; /*Aquí esta el lugar donde se modifican los logos  */
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;  
+    }
+    
+    .buttons-navbar{
+        display: none;
+        flex-direction: row;
+        margin-left: auto;
+        border-color: var(--color-cuarto);
+        border: 2px;
+    }
+    
+    .footer {
+        background-color: var(--color-secondary);
+        color: var(--font-color-b);
+        font-family: var(--font-secondary);
+        
+        justify-content: center;
+        display: flex;
+        padding: 20px;
+    }
+    
+    .main {
+        background-color:rgb(73, 52, 23);
+    }
+    
+    
+    .button {
+        color: var(--font-color-w);
+        background-color: var(--color-tertiary);
+        padding: 20px;
+        border: none;
+        border-radius: 30px;
+        font-size: 30px;
+        font-family: var;
+    
+    }
+    
+    .ContactoCuidador{
+        display: flex;
+        justify-content: flex-end; /* Alinea los elementos hijos a la derecha */
+        margin: 10px 50px;
+    }
+    .FotoPerfil{
+        border-radius: 50%;
+    }
+    
+    /* Botones servicios */
+    
+    .button-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 1%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .pet-service-button {
+        background-color: var(--color-tertiary);
+        border: none;
+        border-radius: 20px;
+        color: black;
+        padding: 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: var(--font-size-secondary);
+        font-family: var(--font-primary--title);
+        margin: 4px 2px;
+        cursor: pointer;
+        width: 150px;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .pet-service-button img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .Estelares {
+        display: flex;
+        justify-content: center; /* Centra horizontalmente los elementos hijos */
+        align-items: center; /* Centra verticalmente los elementos hijos */
+        gap: 30px; /* Espacio entre los div hijos */
+        
+    }
+    
+    .Estelares div {
+        text-align: center; 
+    }/* Centra el contenido de cada div hijo */
+    
+    .Estelares img {
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+        object-fit: contain;
+        margin: 0 auto; /* Centra las imágenes dentro de cada div hijo */
+      }
+      
+      /*Carrousel*/
+      
+    .imagen {
+        width: 100%;
+        height: 100%;
+    }
+    
+    *{
+         margin: 0;
+         padding: 0;
+        font-family: lato;
+        
+        }
+    
+    h1{
+        text-align: center;
+        margin-top: 50px;
+        font-size: 2rem;   
+    }
+    .slider-frame {
+        width:100%;
+        height: auto;
+        margin: 50px auto 0;
+        overflow: none;
+    
+    animation: slide 20s infinite ;
+    }
+    
+    .slider-frame ul {
+        display:flex;
+        padding: 0;
+        width: 500%
+    }
+    .slider-frame li {
+        list-style: none;
+        width:100%;
+    }
+    .slider-frame img {
+        width: 100%;
+    }
+    
+    @keyframes slide {
+        0% {margin-left: 0%;}
+        20% {margin-left: 0%;}
+       
+        25% {margin-left: -100%;}
+        45% {margin-left: -100%;}
+    
+        50% {margin-left: -200%;}
+        70% {margin-left: -200%;}
+    
+        75% {margin-left: -300%;}
+        95% {margin-left: -300%;}
+    
+        100% {margin-left: -400%;}
+        120% {margin-left: -400%;}
+    
+    }
+    .contenedorCarrousell{
+    
+        position: relative;
+    }
+    .slider-frame {
+        width:100%;
+        height: auto;
+        margin: 50px auto 0;
+        overflow: none;
+        position: relative;
+    
+    animation: slide 15s infinite alternate ease-in-out;
+    }
+    
+    .button-container {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 1%;
+        max-width: 100%;
+        margin: 0 auto;
+        
+        
+    }
