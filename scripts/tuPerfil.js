@@ -35,17 +35,15 @@ document.getElementById('contactForm').addEventListener('submit', function(event
           let jsonData = JSON.stringify(formData);
           localStorage.setItem('cuidadorDatosGenerales', jsonData);
           // Redirigir o mostrar un mensaje de confirmación
-          alert('Respuestas guardadas con éxito!');
+          /*alert('Respuestas guardadas con éxito!');*/
           console.log(jsonData);
       }
 
       // Llama la funcion Json cuando se cumplio la validación
       convertToJson();
+      window.location.href = '../pages/formPreguntasCerradas.html';
   }
 });
-
-
-
 
 /*function convertToJson() {
     let form = document.getElementById("contactForm");
