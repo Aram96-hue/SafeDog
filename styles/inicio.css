@@ -395,7 +395,7 @@ a:hover {
 }
 
 #testimonialReview {
-    color: #8C8C90;
+    color: var(--color-primary);
     text-align: center;
     font-size: 0.9em;
     line-height: 2em;
@@ -410,21 +410,21 @@ a:hover {
     top: -4em;
     left: 2em;
     overflow: hidden;
-    border: orange solid;
+    border: var(--color-cuarto);
 
 }
 
 #testimonialName {
-    color: #2d3d67;
+    color: var(--color-primary);
     font-size: 1em;
     text-align: right;
 }
 
 #testimonialLocation {
-    color: #6889e2;
+    color: #06257a;
     font-size: 0.9em;
     letter-spacing: 0.03em;
-    font-weight: 400;
+    font-weight: bolder;
     text-align: right;
 }
 
@@ -434,8 +434,8 @@ a:hover {
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 1em;
-    background-color: orange;
-    border: 2px solid #edde0a;
+    background-color: var(--color-tertiary);
+    border: 2px solid var(--color-cuarto);
     color: #ffffff;
     text-align: center;
     cursor: pointer;
@@ -446,8 +446,8 @@ a:hover {
 }
 
 #leerMas:hover {
-    background-color: #ff9800;
-    border-color: #ffc107;
+    background-color: #ffffff;
+    border-color: var(--color-cuarto);
 }
 
 
