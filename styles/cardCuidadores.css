@@ -1,5 +1,5 @@
 :root{
-
+    
     --bg-color: #FFF8E0;
     /* Colores primarios */
         --color-primary: black;
@@ -11,6 +11,8 @@
 body{
 background-color: var(--bg-color);
 display: block;
+margin: 0;
+padding: 0;
 
 }
 
@@ -212,14 +214,66 @@ display: block;
 /*CARD CUIDADORES CARD CUIDADORES CARD CUIDADORES*/
 
 .card-container{
-    margin-bottom: 70px;
-    margin-left: 10px;
+    
 }
 
 
 
 
+
+
 /*CARD CUIDADORES CARD CUIDADORES CARD CUIDADORES*/
+
+
+
+
+
+
+
+
+/*listPage*/
+
+.listPage{
+    padding: 10px;
+    text-align: center;
+    list-style: none;
+    border: #22a445 solid;
+}
+
+.listPage li{
+    background-color: #ffffffBD;
+    padding: 20px;
+    display:inline-block;
+    margin:0 10px;
+    cursor: pointer;
+    border: #124C5F solid; 
+}
+
+.listPage .active{
+    background-color: #B192EF;
+    color: #ffffff;
+    border: #d01cb8 solid;
+
+}
+
+.pagina{
+    display: inline-block;
+    text-align: center ;
+    padding: 20px;
+    cursor: pointer;
+    border: #22a445 solid;
+    
+} 
+
+
+
+
+
+
+
+
+
+
 
 
 
