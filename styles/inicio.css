@@ -38,7 +38,7 @@ body {
 .titulo {
     font-family: 'Sansita';
     color: antiquewhite;
-    font-size: 4vw;
+    font-size: 3vw;
     text-shadow: 2px 3px 2px black;
     width: 50%;
     padding: 5px;
@@ -47,7 +47,7 @@ body {
 .divBoton {
     position: absolute;
     bottom: 20%;
-    left: 16%;
+    left: 25%;
     text-align: center;
 
 
@@ -56,10 +56,10 @@ body {
 .boton {
     color: var(--font-color-w);
     background-color: var(--color-tertiary);
-    padding: 00.5rem 1rem 0.5rem 1rem;
+    padding: 1rem 1.5rem 1rem 1.5rem;
     border: none;
     border-radius: 30px;
-    font-size: 2.5vh;
+    font-size: 3vh;
     font-family: 'Sansita';
     /* height: 3rem;
         width: 3rem; */
@@ -67,11 +67,15 @@ body {
     left: 0;
     bottom: 0;
     z-index: 2;
+
+}
+.centrar{
+    text-align: center;
 }
 
 .divPerfil {
     position: absolute;
-    bottom: 63%;
+    bottom: 55%;
     right: 20px;
     text-align: center;
     z-index: 2;
@@ -97,7 +101,7 @@ body {
     border-radius: 50%;
     border: 0.7vh solid #7F636E;
     /* border-image:linear-gradient(45deg, red,lime,blue); */
-    height: 15vh;
+    height: 20vh;
     width: auto;
     z-index: 2;
 }
