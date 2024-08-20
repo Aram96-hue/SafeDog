@@ -11,7 +11,7 @@ body {
 .navbar {
     background-color: hsl(172, 41%, 45%);
     color: #FFFFFF;
-    padding: 25px;
+    padding: 9px;
     display: flex;
     align-items: center;
     justify-content:center; 
@@ -20,12 +20,17 @@ body {
 }
 
 .navbar .nav--container {
-    display: flex;
-    justify-content: center;
-    flex-grow: 1;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* flex-grow: 1;
     border: 0px;
     justify-content: center;
-    align-items: center;  
+    align-items: center;   */
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center;
+    flex-grow: 1;
+    border: 0px;
 }
 
 .navbar .navbar--logo a img {
@@ -35,13 +40,20 @@ body {
 }
 
 .navbar .navbar--menu {
+    /* list-style: none;
+    justify-content: center; 
+    display: flex; */
+    /* gap: 5px;
+    margin: 0;
+    padding: 0;
+    margin-top:70x; */
     list-style: none;
     display: flex;
+    justify-content: center; /* Asegura que los ítems del menú se centren */
     gap: 5px;
     margin: 0;
     padding: 0;
-    margin-top:70x;
-   
+    flex-grow: 1;
 }
 
 .navbar .navbar--menu li {
@@ -66,18 +78,18 @@ body {
 .navbar .navbar--botones {
     display: flex;
     gap: 10px;
-    margin-left: 120px;
+    margin-left: auto;
      
 }
 
 .navbar .navbar--botones .boton--claro {
     background-color: #65B5A1;
     color: #FFFFFF;
-    padding: 10px 10px 10px 10px;
+    padding: 8px 30px;
     border-radius: 10px;
     border-color: #FFFFFF;
     font-family: "sansita";
-    font-size: larger;
+    font-size: medium;
     font-weight: bold;
     cursor: pointer;
     border: 0px;
@@ -87,10 +99,10 @@ body {
     background-color: #124C5F;
     color: #FFFFFF;
     border-color: #F0BB69;
-    padding: 10px 10px 10px 10px;
+    padding: 8px 30px;
     border-radius: 10px;
     font-family: "sansita";
-    font-size: larger;
+    font-size: medium;
     font-weight: bold;
     cursor: pointer;
     border: 0px;

@@ -48,26 +48,29 @@ body {
   font-family: "Sansita", sans-serif;
   font-weight: 800;
   color: #444;
-  font-size: 5rem;
+  font-size: 40px;
   line-height: 1.05;
   margin: 3.2rem 0;
 }
 
 .extra--text {
-  font-size: 2rem;
+  font-size: 25px;
   line-height: 1.8;
+  font-family: "Roboto";
 }
 
 .text--title {
-  font-size: 2rem;
+  font-size: 30px;
   font-weight: 600;
   line-height: 1.8;
   margin-bottom: 1.5rem;
+  font-family: "Roboto";
 }
 
 .text--img {
-  font-size: 1.6rem;
+  font-size: 25px;
   line-height: 1.2;
+  font-family: "Roboto";
 }
 
 .file--enter {
@@ -107,6 +110,8 @@ body {
 
 .form--input--container {
   margin-bottom: 3.5rem;
+  font-family: "Roboto";
+  font-size: 25px;
 }
 
 .form--imput--servicios {
@@ -142,7 +147,7 @@ body {
   width: 100%;
   padding: 1.2rem;
   font-size: 1.8rem;
-  font-family: inherit;
+  font-family: "Roboto";
   color: inherit;
   border: none;
   border-radius: 9px;

@@ -218,6 +218,7 @@ body {
     /*width: 80%;*/
     min-height: 100vh;
     padding: 2% 20% 20% 20%;
+
 }
 
 
@@ -228,16 +229,19 @@ body {
 }
 
 .container h1 {
-    font-size: 50px;
+    font-size: 40px;
+    font-family: "Sansita";
     
 }
 
 .container p{
     font-size: 22px;
+    font-family: "Sansita";
 }
 
 .container h3{
-    font-size: 40px;
+    font-size: 30px;
+    font-family: "Sansita";
 }
 
 .container label{
@@ -245,7 +249,8 @@ body {
 }
 
 .container h4{
-    font-size: 25px;
+    font-size: 30px;
+    font-family: "Sansita";
 }
 
 .dropdown select {
@@ -288,7 +293,12 @@ body {
 /*FORMULARIO SERVICIOS FORMULARIO SERVICIOS FORMULARIO SERVICIOS*/
 
 
+.parrafo{
+    font-size: 20px; /*A cambiar*/
+    font-family:'Roboto';
+    
 
+}
 
 
 /*FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER*/

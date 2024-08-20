@@ -154,7 +154,27 @@ p {
   }
   
 
-  
+h2{
+  font-family: "Sansita";
+  font-size: 40px;
+}
+.Instrucciones{
+  font-size: 25px;
+  font-family: "Roboto";
+}
+
+h5{
+  font-size: 25px;
+  font-family: "Roboto";
+}
+h4{
+  font-size: 35px;
+  font-family: "Roboto";
+}
+.text--img{
+  font-size: 25px;
+  font-family: "Roboto";
+}
 
 .tamañoPerro{
 justify-content: space-around;
