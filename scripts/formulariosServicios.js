@@ -75,8 +75,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const datosGuardados = JSON.parse(localStorage.getItem('serviciosForm'));
         console.log('Datos guardados en localStorage:', datosGuardados);
 
-        alert('Los servicios fueron guardados correctamente!');
-        window.location.href = './siguientePagina.html';
+        /*alert('Los servicios fueron guardados correctamente!');*/
+        window.location.href = '../inicio.html';
     });
 
     function capitalizeFirstLetter(string) {

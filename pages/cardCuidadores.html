@@ -10,11 +10,11 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-  <!--Estilos css-->
-  <link rel="stylesheet" href="./styles/cardCuidadores.css">
-
-  <!--Librería del menú hamburguesa-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    <!--Estilos css-->
+    <link rel="stylesheet" href="../styles/cardCuidadores.css">
+    
+    <!--Librería del menú hamburguesa-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="../styles/navBar.css">
@@ -77,14 +77,35 @@
 </div>
 
 <div class="clearfix"></div>
-<br><br><br><br><br><br>
+
+<div class="dropdown1">
+  <label for="ciudad">Selecciona tu ciudad</label>
+  <select class="ciudad" id="ciudad">
+    <option class="cdmx">Ciudad de Mexico</option>
+    <option class="guadalajara">Guadalajara</option>
+
+  </select>
+</div>
+
+<div class="dropdown2">
+  <label for="Servicios">Selecciona tu servicio</label>
+  <select class="Servicio" id="Servicios">
+    <option class="cdmx">Paseo</option>
+    <option class="guarderia">guardería</option>
+    <option class="hospedaje">Hospedaje</option>
+    <option class="estetica">Estética</option>
+  </select>
+</div>
 
 <!--Página  de card cuidadores del poderoso SafeDiorg-->
-<div class="card-container">
+
+
+
+<div class="card-container my-5">
   <div class="row d-flex justify-content-center">
-    <div class="col-md-5 mb-2">
+    <div class="col-md-4 mb-4 d-flex justify-content-center">
       <div class="card" style="width: 23rem;">
-        <img src="./assets/cuidador-card-3.jpg" class="card-img-top" alt="card de cuidadores 1">
+        <img src="../assets/cuidador-card-2.jpg" class="card-img-top" alt="card de cuidadores 1">
         <div class="card-body">
           <h5 class="card-title">Susana y Roxana</h5>
           <p class="card-text">Somos dos hermanas muy amorosas, que nos encanta pasar el tiempo con los perritos, estaremos encantadas de brindarles nuestro servicio de paseo y guardería.</p>
@@ -94,11 +115,11 @@
     </div>
 
 
-    <div class="col-md-4 mb-2">
-      <div class="card" style="width: 23rem;">
-        <img src="./assets/cuidador-car2.webp" class="card-img-top" alt="card de cuidadores 2">
-        <div class="card-body">
-          <h5 class="card-title">Lorena Sheinbaum</h5>
+    <div class="col-md-4 mb-4 d-flex justify-content-center">
+      <div class="card" style="width: 23rem;" >
+        <img src="../assets/cuidador-card-3.jpg" class="card-img-top" alt="card de cuidadores 2">
+        <div class="card-body"> 
+          <h5 class="card-title">Lorena Sheinbaum</h5> 
           <p class="card-text">Los perros me han acompañado durante toda mi vida, me han dado todo su amor y cariño, es por eso que ahora les ofrezco a ustedes mi servicio de hospedaje. Contáctame</p>
           <a href="#" class="btn btn-primary">Ir al perfil</a>
         </div>
@@ -107,7 +128,125 @@
   </div>
 </div>
 
-<br><br><br><br><br><br>
+<div class="card-container my-5">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-4 mb-4 d-flex justify-content-center">
+      <div class="card" style="width: 23rem;">
+        <img src="../assets/cuidador-card-2.jpg" class="card-img-top" alt="card de cuidadores 1">
+        <div class="card-body">
+          <h5 class="card-title">Diego Rivas</h5>
+          <p class="card-text">Somos dos hermanas muy amorosas, que nos encanta pasar el tiempo con los perritos, estaremos encantadas de brindarles nuestro servicio de paseo y guardería.</p>
+          <a href="#" class="btn btn-primary">Ir al perfil</a>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="col-md-4 mb-4 d-flex justify-content-center">
+      <div class="card" style="width: 23rem;">
+        <img src="../assets/cuidador-card-3.jpg" class="card-img-top" alt="card de cuidadores 2">
+        <div class="card-body"> 
+          <h5 class="card-title">Andrea Galeana</h5> 
+          <p class="card-text">Los perros me han acompañado durante toda mi vida, me han dado todo su amor y cariño, es por eso que ahora les ofrezco a ustedes mi servicio de hospedaje. Contáctame</p>
+          <a href="#" class="btn btn-primary">Ir al perfil</a>
+        </div>
+      </div>
+    </div> 
+  </div>
+</div>
+
+<div class="card-container my-5">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-4 mb-4 d-flex justify-content-center">
+      <div class="card" style="width: 23rem;">
+        <img src="../assets/cuidador-card-2.jpg" class="card-img-top" alt="card de cuidadores 1">
+        <div class="card-body">
+          <h5 class="card-title">Felipe</h5>
+          <p class="card-text">Somos dos hermanas muy amorosas, que nos encanta pasar el tiempo con los perritos, estaremos encantadas de brindarles nuestro servicio de paseo y guardería.</p>
+          <a href="#" class="btn btn-primary">Ir al perfil</a> 
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="col-md-4 mb-4 d-flex justify-content-center">
+      <div class="card" style="width: 23rem;">
+        <img src="../assets/cuidador-card-3.jpg" class="card-img-top" alt="card de cuidadores 2">
+        <div class="card-body"> 
+          <h5 class="card-title">Mitzy Martine</h5> 
+          <p class="card-text">Los perros me han acompañado durante toda mi vida, me han dado todo su amor y cariño, es por eso que ahora les ofrezco a ustedes mi servicio de hospedaje. Contáctame</p>
+          <a href="#" class="btn btn-primary">Ir al perfil</a>
+        </div>
+      </div>
+    </div> 
+  </div>
+</div>
+
+<div class="card-container my-5">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-4 mb-4 d-flex justify-content-center">
+      <div class="card" style="width: 23rem;">
+        <img src="../assets/cuidador-card-2.jpg" class="card-img-top" alt="card de cuidadores 1">
+        <div class="card-body">
+          <h5 class="card-title">Gru de mi villano favorito</h5>
+          <p class="card-text">Somos dos hermanas muy amorosas, que nos encanta pasar el tiempo con los perritos, estaremos encantadas de brindarles nuestro servicio de paseo y guardería.</p>
+          <a href="#" class="btn btn-primary">Ir al perfil</a>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="col-md-4 mb-4 d-flex justify-content-center">
+      <div class="card" style="width: 23rem;">
+        <img src="../assets/cuidador-card-3.jpg" class="card-img-top" alt="card de cuidadores 2">
+        <div class="card-body"> 
+          <h5 class="card-title">Shrek 5</h5> 
+          <p class="card-text">Los perros me han acompañado durante toda mi vida, me han dado todo su amor y cariño, es por eso que ahora les ofrezco a ustedes mi servicio de hospedaje. Contáctame</p>
+          <a href="#" class="btn btn-primary">Ir al perfil</a>
+        </div>
+      </div>
+    </div> 
+  </div>
+</div>
+
+<div class="card-container my-5">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-4 mb-4 d-flex justify-content-center">
+      <div class="card" style="width: 23rem;">
+        <img src="../assets/cuidador-card-2.jpg" class="card-img-top" alt="card de cuidadores 1">
+        <div class="card-body">
+          <h5 class="card-title">los pinguinos de madagascar</h5>
+          <p class="card-text">Somos dos hermanas muy amorosas, que nos encanta pasar el tiempo con los perritos, estaremos encantadas de brindarles nuestro servicio de paseo y guardería.</p>
+          <a href="#" class="btn btn-primary">Ir al perfil</a>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="col-md-4 mb-4 d-flex justify-content-center">
+      <div class="card" style="width: 23rem;">
+        <img src="../assets/cuidador-card-3.jpg" class="card-img-top" alt="card de cuidadores 2">
+        <div class="card-body"> 
+          <h5 class="card-title">Friedrich Nietzsche</h5> 
+          <p class="card-text">Los perros me han acompañado durante toda mi vida, me han dado todo su amor y cariño, es por eso que ahora les ofrezco a ustedes mi servicio de hospedaje. Contáctame</p>
+          <a href="#" class="btn btn-primary">Ir al perfil</a>
+        </div>
+      </div>
+    </div> 
+  </div>
+</div>
+
+<!-------------- Paginacion ------------------------>
+<div class="pagina"> 
+<ul id="listpage">
+<li class="active">1</li>
+<li>2</li>
+<li>3</li>
+</ul>
+</div>
+
+
+<!-- <br><br><br><br><br><br> -->
 
 
 
@@ -145,7 +284,7 @@
 <!--Hoja vinculada de JS-->
 <script src="../scripts/NavBar.js"></script>
 
-
+<script src="../scripts/cardCuidadores.js"></script>
 </body>
 
 </html>

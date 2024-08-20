@@ -211,6 +211,13 @@
 } /*NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR*/
 
 
+
+/*{
+    margin: 0;
+    padding: 0; 
+}*/
+
+
 body {
     display: flex;
     flex-direction: column;
@@ -566,7 +573,6 @@ body h2{
     border: #7F636E solid 5px;
     object-fit: cover;
 }
-
 .Tarjeta-miembro {
  width: 100%;
  border-radius: 15px;
