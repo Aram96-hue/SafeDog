@@ -233,40 +233,24 @@ padding: 0;
 
 /*listPage*/
 
-.listPage{
-    padding: 10px;
-    text-align: center;
-    list-style: none;
-    border: #22a445 solid;
+
+.pagination{
+    justify-content: center;
+    align-items: center;
 }
 
-.listPage li{
+.pagination .page-item{
+    background-color: #44A194;
+    color: #ffffff;
+}
+
+.paginacion li{
     background-color: #ffffffBD;
+    cursor: pointer;
     padding: 20px;
     display:inline-block;
     margin:0 10px;
-    cursor: pointer;
-    border: #124C5F solid; 
 }
-
-.listPage .active{
-    background-color: #B192EF;
-    color: #ffffff;
-    border: #d01cb8 solid;
-
-}
-
-.pagina{
-    display: inline-block;
-    text-align: center ;
-    padding: 20px;
-    cursor: pointer;
-    border: #22a445 solid;
-    
-} 
-
-
-
 
 
 
