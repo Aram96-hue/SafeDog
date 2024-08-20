@@ -26,7 +26,7 @@
           <div class="cuidador--card">
             <div class="cuidador--foto" role="img" aria-label="Cuidador"></div>
             <div class="cuidador--text">
-              <h2 class="heading-secundary">Erick Eduardo Rodríguez Campos</h2>
+              <h2 class="heading-secundary" id="cuidadorName">Erick Eduardo Rodríguez Campos</h2>
               <div class="cuidador--info">
                 <p class="text--info">Correo Electróncio:</p>
                 <p class="text--info">3rgu3z@gmail.com</p>
@@ -87,7 +87,10 @@
                 </div>
               </div>
               <div class="cont--btn">
-                <button class="btn btn--outline btn--cellphone btn--shadow">
+                <button
+                  class="btn btn--outline btn--cellphone btn--shadow"
+                  type="button"
+                >
                   Contactar
                 </button>
               </div>
@@ -118,21 +121,21 @@
 
       <section class="section--cuidador--resumen">
         <div class="container">
-            <div class="experience--container">
-                <h3 class="heading-tertiary">Experiencia</h3>
-          <p class="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nostrum
-            aut obcaecati dolores, quos quo laudantium, quaerat doloremque sunt
-            eaque rerum perferendis maiores repellendus. Necessitatibus iste
-            dolorum mollitia harum fugiat.
-          </p>
-          <p class="text">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum,
-            omnis qui nulla corrupti quod aspernatur molestias quas,
-            consequuntur possimus placeat sit delectus inventore alias unde
-            ipsum? Eos illum commodi nulla?
-          </p>
-            </div>
+          <div class="experience--container">
+            <h3 class="heading-tertiary">Experiencia</h3>
+            <p class="text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+              nostrum aut obcaecati dolores, quos quo laudantium, quaerat
+              doloremque sunt eaque rerum perferendis maiores repellendus.
+              Necessitatibus iste dolorum mollitia harum fugiat.
+            </p>
+            <p class="text">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum,
+              omnis qui nulla corrupti quod aspernatur molestias quas,
+              consequuntur possimus placeat sit delectus inventore alias unde
+              ipsum? Eos illum commodi nulla?
+            </p>
+          </div>
         </div>
       </section>
 
@@ -141,7 +144,47 @@
       </section>
 
       <section class="section--cuidador--reseña">
-        <div class="container"></div>
+        <div class="container">
+          <h2 class="heading-tertiary">
+            Escribenos tu reseña de este cuidador
+          </h2>
+          <form class="review-container container--review" action="#" id="form-cont-review">
+            <div class="img--review">
+              <div class="user--picture"></div>
+            </div>
+            <div>
+              <h3 class="heading-four" id="userName">Nombre Completo Usuario</h3>
+              <div class="review-calification">
+                <p class="review--text">Calificacion:</p>
+                <span class="star-rating">
+                  <input type="radio" name="stars" value="1" /><i></i>
+                  <input type="radio" name="stars" value="2" /><i></i>
+                  <input type="radio" name="stars" value="3" /><i></i>
+                  <input type="radio" name="stars" value="4" /><i></i>
+                  <input type="radio" name="stars" value="5" /><i></i>
+                </span>
+              </div>
+              <div class="review-coment">
+                <label for="review-text" class="review--text text--space"
+                  >Escribenos tu reseña:
+                </label>
+                <textarea
+                  name="review-text"
+                  name="review"
+                  placeholder="Reseña"
+                  id="review-text"
+                  required
+                ></textarea>
+              </div>
+              <button
+                class="btn btn--form btn--shadow button-container"
+                type="submit"
+              >
+                Enviar
+              </button>
+            </div>
+          </form>
+        </div>
       </section>
     </main>
     <script
@@ -152,5 +195,6 @@
       nomodule=""
       src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
     ></script>
+    <script src="../scripts/perfilCuidador.js"></script>
   </body>
 </html>
