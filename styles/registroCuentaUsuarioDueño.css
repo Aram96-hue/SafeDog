@@ -156,10 +156,10 @@ p {
 
 h2{
   font-family: "Sansita";
-  font-size: 40px;
+  font-size: 45px;
 }
 .Instrucciones{
-  font-size: 25px;
+  font-size: 20px;
   font-family: "Roboto";
 }
 
@@ -169,13 +169,16 @@ h5{
 }
 h4{
   font-size: 35px;
-  font-family: "Roboto";
+  font-family: "Sansita";
 }
 .text--img{
-  font-size: 25px;
+  font-size: 18px;
   font-family: "Roboto";
 }
-
+.nombre{
+  font-family:"Roboto";
+  font-size: 16px;
+}
 .tamañoPerro{
 justify-content: space-around;
     display: flex;

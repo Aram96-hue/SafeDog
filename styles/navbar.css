@@ -125,33 +125,35 @@ body {
     right: 3px;
 }
 
+/* Estilos para el menú desplegable en dispositivos móviles */
 .mobile-menu {
-    display: none;
-    background-color: #124C5F;
+    display: none; /* Oculta el menú por defecto */
+    background-color: #124C5F; /* Color de fondo del menú móvil */
     color: #FFFFFF;
-    position:absolute; /*se cambió de fixed a absolute para evitar que estubiera fijo el menu al hacer scroll*/
-    top:5%;
+    position: absolute; /* Posición absoluta para que se pueda mostrar sobre otros contenidos */
+    top: 5%;
     right: 0;
     width: 250px; 
     height: 50%;
     padding: 20px;
-    z-index: 10;
-   
+    z-index: 10; /* Asegura que el menú esté por encima de otros elementos */
 }
 
+/* Estilos para el ul dentro del menú móvil */
 .mobile-menu ul.mobile-navbar--menu {
     list-style: none;
     padding: 0;
     margin: 0;
-    margin-top: 40px; /*se agrego para bajar ewl texto*/
+    margin-top: 40px; /* Espacio superior para separar del borde del contenedor */
     text-align: center;
 }
 
+/* Estilos para los elementos de la lista dentro del menú móvil */
 .mobile-menu ul.mobile-navbar--menu li {
-    margin: 20px 0;
-    
+    margin: 20px 0; /* Espacio entre elementos de la lista */
 }
 
+/* Estilos para los enlaces dentro del menú móvil */
 .mobile-menu ul.mobile-navbar--menu a {
     text-decoration: none;
     color: #FFFFFF;
@@ -159,18 +161,21 @@ body {
     font-weight: bold;
 }
 
+/* Hover en los enlaces del menú móvil */
 .mobile-menu ul.mobile-navbar--menu a:hover {
     color: #F0BB69;
 }
 
+/* Estilos para los botones dentro del menú móvil */
 .mobile-menu .mobile-navbar--botones {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
+/* Estilos para los botones en el menú móvil */
 .mobile-menu .mobile-navbar--botones button {
-    background-color: #65B5A1;
+    background-color: #65B5A1; /* Color de fondo de los botones claros */
     color: #FFFFFF;
     border-color: #FFFFFF;
     padding: 10px;
@@ -179,34 +184,32 @@ body {
     font-size: larger;
     font-weight: bold;
     cursor: pointer;
+    border: none; /* Asegura que no haya bordes visibles */
 }
 
+/* Estilo para el botón azul dentro del menú móvil */
 .mobile-menu .mobile-navbar--botones .boton--azul {
-    background-color: #124C5F;
+    background-color: #124C5F; /* Color de fondo del botón azul */
     border-color: #F0BB69;
 }
 
+/* Hover en los botones del menú móvil */
 .mobile-menu .mobile-navbar--botones button:hover {
-    background-color: #F0BB69;
+    background-color: #F0BB69; /* Color de fondo al pasar el cursor sobre los botones */
 }
 
-/* Mostrar el botón del menú hamburguesa en pantallas pequeñas */
+/* Mostrar el menú móvil cuando está activo */
 @media (max-width: 900px) {
-    .navbar .navbar--menu {
-        display: none; /* Ocultar menú en pantallas pequeñas */
-    }
-    
+    .navbar .navbar--menu,
     .navbar .navbar--botones {
-        display: none; /* Ocultar botones en pantallas pequeñas */
+        display: none; /* Ocultar menú y botones en pantallas pequeñas */
     }
     
     .menu-btn {
-        display: block; /* Mostrar botón del menú hamburguesa */
+        display: block; /* Mostrar botón del menú hamburguesa en pantallas pequeñas */
+    }
+    
+    .mobile-menu.active {
+        display: block; /* Mostrar menú móvil cuando está activo */
     }
 }
-
-@media (max-width: 900px) {
-    .mobile-menu.active {
-        display: block;
-    }
-} /*NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR*/
