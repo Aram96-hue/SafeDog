@@ -254,43 +254,24 @@ padding: 0;
 
 /*listPage*/
 
-.listPage{
+.pagination{
     padding: 10px;
     text-align: center;
     list-style: none;
-
+    justify-content: center;
+ 
 }
 
-.listPage li{
-    background-color: #ffffffBD;
-    padding: 20px;
+.pagination li{
+    background-color: #1bb1c4bd;
     display:inline-block;
-    margin:0 10px;
     cursor: pointer;
-   
 }
 
-.listPage .active{
+.pagination .page-item{
     background-color: #B192EF;
-    color: #ffffff;
-  
-
+    color: #bd1d1d;
 }
-
-.pagina{
-    display: inline-block;
-    text-align: center ;
-    padding: 20px;
-    cursor: pointer;
-    border: #d615f0 solid;
-    list-style: none;
-
-} 
-
-
-
-
-
 
 
 
