@@ -78,23 +78,29 @@
 
 <div class="clearfix"></div>
 
+<!--Dropdowns-->
+<div class="contenedor-dropdown">
+  
 <div class="dropdown1">
   <label for="ciudad">Selecciona tu ciudad</label>
   <select class="ciudad" id="ciudad">
-    <option class="cdmx">Ciudad de Mexico</option>
-    <option class="guadalajara">Guadalajara</option>
-
+    <option class="ciudades" value="ciudadesAll">Todas las ciudades</option>
+    <option class="cdmx" value="cdmx">Ciudad de Mexico</option>
+    <option class="guadalajara" value="guadalajara">Guadalajara</option>
+ 
   </select>
 </div>
 
 <div class="dropdown2">
   <label for="Servicios">Selecciona tu servicio</label>
   <select class="Servicio" id="Servicios">
-    <option class="cdmx">Paseo</option>
-    <option class="guarderia">guardería</option>
-    <option class="hospedaje">Hospedaje</option>
-    <option class="estetica">Estética</option>
+    <option class="servicios" value="serviciosAll">Todos los servicios</option>
+    <option class="paseo" value="paseo">Paseo</option>
+    <option class="guarderia" value="guarderia">Guardería</option>
+    <option class="hospedaje" value="hospedaje">Hospedaje</option>
+    <option class="estetica" value="estetica">Estética(Baño)</option>
   </select>
+</div>
 </div>
 
 <!--Página  de card cuidadores del poderoso SafeDiorg-->
@@ -103,7 +109,7 @@
 
 <div class="card-container my-5">
   <div class="row d-flex justify-content-center">
-    <div class="col-md-4 mb-4 d-flex justify-content-center">
+    <div class="col-md-4 mb-4 d-flex justify-content-center" id="cdmx" >
       <div class="card" style="width: 23rem;">
         <img src="../assets/cuidador-card-2.jpg" class="card-img-top" alt="card de cuidadores 1">
         <div class="card-body">
