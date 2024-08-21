@@ -20,6 +20,8 @@ const url = `../json/cardsCuidadores.json`;
             const cuidadores = await obtenerData();
             const container = document.getElementById('cuidadoresCards');
 
+            container.innerHTML = ''; 
+
             cuidadores.forEach(item => {
                 const div = document.createElement('div');
                 div.classList.add('item');
@@ -32,6 +34,10 @@ const url = `../json/cardsCuidadores.json`;
                 `;
                 container.appendChild(div);
             });
+
+            // Cargar los ítems iniciales
+            loadItem();
+            updatePagination();
         }
 
         // Ejecutar la función al cargar la página
@@ -40,11 +46,12 @@ const url = `../json/cardsCuidadores.json`;
         /******** PAGINACIÓN *********/
 let actualPage = 1;
 const limitNumberProducts = 6; // Número de cards a mostrar por página
+let cardContainers = [];
 
-const cardContainers = document.querySelectorAll('.card-container .card');
-const paginationContainer = document.querySelector('.pagination');
 
 function loadItem() {
+    cardContainers = document.querySelectorAll('#cuidadoresCards .item');
+
     let beginIndex = limitNumberProducts * (actualPage - 1);
     let endIndex = limitNumberProducts * actualPage;
 
@@ -55,14 +62,13 @@ function loadItem() {
             card.style.display = 'none';
         }
     });
-
-    updatePagination();
 }
 
 function updatePagination() {
     const numberOfPages = Math.ceil(cardContainers.length / limitNumberProducts);
     
     // Limpiar paginación existente.
+    const paginationContainer = document.querySelector('.pagination');
     paginationContainer.innerHTML = ''; // Modificación
 
     // Botón "Previous"
@@ -118,63 +124,7 @@ function updatePagination() {
 function changePage(pageNumber) {
     actualPage = pageNumber;
     loadItem();
+    updatePagination();
 }
 
-// Cargar los ítems iniciales
-loadItem();
 
-
-
-/*PAGINACION PAGINACION*/
-/*let actualPage = 1;
-let limitNumberProducts = 6;
-let listPagination = document.querySelectorAll('.list .item');
-
-function loadItem(){
-    let beginGet = limit * (actualPage -1);
-    let endGet = limit * actualPage-1;
-    listPagination.forEach((item, key)=>{
-        if(key >= beginGet && key <= endGet){
-            item.style.display = 'block';
-        } else{
-            item.style.display = 'none';
-        }
-    })
-    listPage();
-}
-
-loadItem();
-
-function listPage(){
-    let numberOfPages = Math.ceil(list.length/limit);
-    document.querySelector('.listPage').innerHTML='';
-
-    if(actualPage !=1){
-        let prev = document.createElement('li');
-        prev.innerText = 'PREV';
-        prev.setAttribute('onclick', "changePage("+(actualPage-1)+")");
-        document.querySelector('.actualPage').appendChild(prev);
-    }
-
-    for(i=1; i<numberOfPages; i++){
-        let newPage = document.createElement('li')
-        newPage.innerText = i;
-        if(i == actualPage){
-            newPage.classList.add('active'); 
-        }
-        newPage.setAttribute('onclick', "changePage(" + i +")"); 
-        document.querySelector('.actualPage').appendChild(newPage); 
-    }
-
-    if( actualPage !=count){
-        let next= document.createElement('li');
-        next.innerText = 'NEXT';
-        next.setAttribute('onclick', "changePage("+(actualPage-1)+")");
-        document.querySelector('.actualPage').appendChild(next);
-    }
-}
-
-function changePage(i){
-    actualPage = i;
-    loadItem();
-}*/
