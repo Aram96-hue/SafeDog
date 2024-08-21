@@ -1,4 +1,4 @@
-:root{
+root{
     
     --bg-color: #FFF8E0;
     /* Colores primarios */
@@ -213,8 +213,49 @@ padding: 0;
 
 /*CARD CUIDADORES CARD CUIDADORES CARD CUIDADORES*/
 
-.card-container{
+/*.card-container{
     
+}*/
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    background-color: #ffffff;
+    margin: 0 auto; /* Centra el contenedor en la página */
+    padding: 0 20px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#cuidadoresCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0px 20px 20px 20px;
+    max-width: 100%;
+}
+
+.item {
+    background-color: #FCFBFA;
+    border: 1px solid #ddd;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    width: 317px;
+    height: 488px;
+}
+
+.item:hover {
+    transform: scale(1.05); /* Efecto de agrandamiento al pasar el mouse */
+}
+
+.item img {
+    max-width: 239.5px;
+    height: 302px;
+    margin-bottom: 15px;
 }
 
 
