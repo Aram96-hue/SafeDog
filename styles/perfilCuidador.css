@@ -219,6 +219,49 @@ body {
   border: none;
 }
 
+/* Pagination */
+.calification--review {
+  display: flex;
+  gap: 3rem;
+  align-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.star--content--review {
+  display: flex;
+  align-items: center;
+}
+
+.reviews--container {
+  max-width: 87rem;
+  padding: 0 5rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  border-radius: 11px;
+  overflow: hidden;
+  background-color: #65b5a1;
+}
+
+.review--all {
+  font-size: 2rem;
+  line-height: 1.8;
+  margin-bottom: 6rem;
+}
+
+.review--pagination {
+  margin-top: 3rem;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.button--pag {
+  background-color: violet;
+  color: #555;
+}
+
 /* Review input*/
 .section--cuidador--reseña {
   padding: 4.8rem 0 12.8rem;
@@ -230,7 +273,7 @@ body {
   margin: 0 auto;
 }
 
-.review-container{
+.review-container {
   margin-top: 2rem;
   display: grid;
   grid-template-columns: 2fr 8fr;
@@ -240,7 +283,7 @@ body {
   background-color: #65b5a1;
 }
 
-.img--review{
+.img--review {
   display: flex;
   justify-content: leff;
   margin-top: 2rem;
@@ -254,7 +297,7 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-image: url('https://via.placeholder.com/200x200');
+  background-image: url("https://via.placeholder.com/200x200");
 }
 
 .review-calification {
@@ -264,25 +307,25 @@ body {
   align-items: center;
 }
 
-.review--text{
+.review--text {
   font-size: 2rem;
   line-height: 1.8;
 }
 
-.text--space{
+.text--space {
   margin-bottom: 2rem;
 }
 
 .star-rating {
- font-size: 0;
- white-space: nowrap;
- display: inline-block;
- width: 15rem;
- height: 3rem;
- overflow: hidden;
- position: relative;
- background: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjREREREREIiBwb2ludHM9IjEwLDAgMTMuMDksNi41ODMgMjAsNy42MzkgMTUsMTIuNzY0IDE2LjE4LDIwIDEwLDE2LjU4MyAzLjgyLDIwIDUsMTIuNzY0IDAsNy42MzkgNi45MSw2LjU4MyAiLz48L3N2Zz4=');
- background-size: contain;
+  font-size: 0;
+  white-space: nowrap;
+  display: inline-block;
+  width: 15rem;
+  height: 3rem;
+  overflow: hidden;
+  position: relative;
+  background: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjREREREREIiBwb2ludHM9IjEwLDAgMTMuMDksNi41ODMgMjAsNy42MzkgMTUsMTIuNzY0IDE2LjE4LDIwIDEwLDE2LjU4MyAzLjgyLDIwIDUsMTIuNzY0IDAsNy42MzkgNi45MSw2LjU4MyAiLz48L3N2Zz4=");
+  background-size: contain;
 }
 
 .star-rating i {
@@ -293,7 +336,7 @@ body {
   height: 100%;
   width: 20%;
   z-index: 1;
-  background: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjRkZERjg4IiBwb2ludHM9IjEwLDAgMTMuMDksNi41ODMgMjAsNy42MzkgMTUsMTIuNzY0IDE2LjE4LDIwIDEwLDE2LjU4MyAzLjgyLDIwIDUsMTIuNzY0IDAsNy42MzkgNi45MSw2LjU4MyAiLz48L3N2Zz4=');
+  background: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjRkZERjg4IiBwb2ludHM9IjEwLDAgMTMuMDksNi41ODMgMjAsNy42MzkgMTUsMTIuNzY0IDE2LjE4LDIwIDEwLDE2LjU4MyAzLjgyLDIwIDUsMTIuNzY0IDAsNy42MzkgNi45MSw2LjU4MyAiLz48L3N2Zz4=");
   background-size: contain;
 }
 
@@ -370,11 +413,12 @@ body {
   margin-bottom: 4rem;
 }
 
+.btn--form:disabled,
 .btn--form:hover {
   background-color: #fff;
   color: #555;
 }
 
-.button-container{
+.button-container {
   margin-left: 48.5rem;
 }

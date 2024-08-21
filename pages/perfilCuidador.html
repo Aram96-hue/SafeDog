@@ -26,7 +26,9 @@
           <div class="cuidador--card">
             <div class="cuidador--foto" role="img" aria-label="Cuidador"></div>
             <div class="cuidador--text">
-              <h2 class="heading-secundary" id="cuidadorName">Erick Eduardo Rodríguez Campos</h2>
+              <h2 class="heading-secundary" id="cuidadorName">
+                Erick Eduardo Rodríguez Campos
+              </h2>
               <div class="cuidador--info">
                 <p class="text--info">Correo Electróncio:</p>
                 <p class="text--info">3rgu3z@gmail.com</p>
@@ -139,8 +141,14 @@
         </div>
       </section>
 
-      <section class="section--cuidador--reseñas">
-        <div class="container"></div>
+      <section class="section--cuidador--reseña">
+        <div class="container">
+          <h2 class="heading-tertiary">
+            Reseñas del cuidador por otros dueños de perros:
+          </h2>
+          <div class="review--list" id="reviews-list"></div>
+          <div class="review--pagination" id="review-pagination"></div>
+        </div>
       </section>
 
       <section class="section--cuidador--reseña">
@@ -148,12 +156,18 @@
           <h2 class="heading-tertiary">
             Escribenos tu reseña de este cuidador
           </h2>
-          <form class="review-container container--review" action="#" id="form-cont-review">
+          <form
+            class="review-container container--review"
+            action="#"
+            id="form-cont-review"
+          >
             <div class="img--review">
               <div class="user--picture"></div>
             </div>
             <div>
-              <h3 class="heading-four" id="userName">Nombre Completo Usuario</h3>
+              <h3 class="heading-four" id="userName">
+                Nombre Completo Usuario
+              </h3>
               <div class="review-calification">
                 <p class="review--text">Calificacion:</p>
                 <span class="star-rating">
@@ -169,7 +183,6 @@
                   >Escribenos tu reseña:
                 </label>
                 <textarea
-                  name="review-text"
                   name="review"
                   placeholder="Reseña"
                   id="review-text"

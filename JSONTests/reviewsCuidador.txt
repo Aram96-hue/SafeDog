@@ -1,13 +1,59 @@
 {
-    {"cuidadorName":"Erick Eduardo Rodríguez Campos",
-     "userName":""},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
+    {
+        "cuidadorName":"Erick Eduardo Rodríguez Campos",
+        "userName"": "Ana María López García",
+        "stars":"4",
+        "review": "Es increíble con los perros. Siempre cuida de mi labrador como si fuera suyo. Muy confiable y atenta."
+    },
+    {
+        "cuidadorName":"Erick Eduardo Rodríguez Campos",
+        "userName":""Carlos Alberto Pérez Martínez",
+        "stars":"3",
+        "review": "Tiene una gran conexión con los perros. Mi Beagle siempre vuelve cansado y feliz después de sus paseos con él."
+    },
+    {
+        "cuidadorName":"Erick Eduardo Rodríguez Campos",
+        "userName":"María José Fernández Gómez",
+        "stars":"3",
+        "review":"Es una profesional dedicada. Mi perro tiene necesidades especiales y ella se encarga de ellas perfectamente."
+    },
+    {
+
+    },
+    {
+        "cuidadorName":"Erick Eduardo Rodríguez Campos",
+        "userName":"Luis Miguel Martínez Rodríguez",
+        "stars":"5",
+        "review":"Es puntual y muy cariñoso con los perros. Mi perro siempre está ansioso por verlo."
+    },
+    {
+        "cuidadorName":"Erick Eduardo Rodríguez Campos",
+        "userName":"Laura Isabel Gómez Morales",
+        "stars":"2",
+        "review":""
+    },
+    {
+        "cuidadorName":"Erick Eduardo Rodríguez Campos",
+        "userName":"Javier Alejandro Torres López",
+        "stars":"4",
+        "review":"Es fantástica con los perros. Se nota que le encanta lo que hace, y mi perro siempre se divierte mucho."
+    },
+    {
+        "cuidadorName":"Erick Eduardo Rodríguez Campos",
+        "userName":"Sofía Carolina Ramírez Suárez",
+        "stars":"5",
+        "review":"Cuida de mi cachorro como si fuera su propio perro. Siempre le da mucho amor y atención."
+    },
+    {
+        "cuidadorName":"Erick Eduardo Rodríguez Campos",
+        "userName":"Roberto Andrés Ruiz Mendoza",
+        "stars":"3",
+        "review":"Es excelente. Mi perro tiene mucha energía y él sabe cómo manejarlo. Totalmente recomendado."
+    },
+    {
+        "cuidadorName":"Erick Eduardo Rodríguez Campos",
+        "userName":"Claudia Patricia Morales Castaño",
+        "stars":"4",
+        "review":"Es fantástica con los perros. Se nota que le encanta lo que hace, y mi perro siempre se divierte mucho."
+    },
 }
