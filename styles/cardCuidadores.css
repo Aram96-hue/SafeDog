@@ -1,18 +1,10 @@
-root{
-    
-    --bg-color: #FFF8E0;
-    /* Colores primarios */
-        --color-primary: black;
-        --color-secondary: #44A194;
-        --color-tertiary: #F0BB69;
-        --color-cuarto: #7F636E;
-}
 
 body{
 background-color: var(--bg-color);
 display: block;
 margin: 0;
 padding: 0;
+background-color: #FFF8E0;
 
 }
 
@@ -217,59 +209,101 @@ padding: 0;
     
 }*/
 
+.dropdown1{
+    margin: 30px 0px 30px 30px;
+    font-size: x-large;
+} 
+
+#ciudad{
+    width: 220px;
+    border-radius: 5px;
+    height: 50px;
+}
+
 .container {
     display: flex;
     align-items: center;
     justify-content: center; /* Centra el contenido horizontalmente */
-    background-color: #ffffff;
-    margin: 0 auto; /* Centra el contenedor en la página */
+    background-color: var(--bg-color);
+    margin-top: 1.5em;
     padding: 0 20px;
     max-width: 100%;
     max-height: 100%;
+   
 }
 
 #cuidadoresCards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    font-size: 24px;
-    font-weight: bold;
+    gap: 25px;
+    font-family: var(--font-primary);
+    align-content: center;
     padding: 0px 20px 20px 20px;
     max-width: 100%;
+
 }
 
 .item {
-    background-color: #FCFBFA;
-    border: 1px solid #ddd;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: #FFF8E0 solid;
+    padding: 1.5em 1.5em 0 1.5em;
+    border-radius: 1em;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
-    width: 317px;
-    height: 488px;
+    width: 300px;
+    height: 400px;
+    background-color: #F0BB69;
 }
 
 .item:hover {
     transform: scale(1.05); /* Efecto de agrandamiento al pasar el mouse */
 }
 
-.item img {
-    max-width: 239.5px;
-    height: 302px;
-    margin-bottom: 15px;
+.image-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15em;
+    height: 10em;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 1em;
 }
 
 
+.image-container > img{  
+    width: 100%; /* Ajusta el ancho para llenar el contenedor */
+    height: 100%; /* Ajusta la altura para llenar el contenedor */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor mientras mantiene la proporción de aspecto */
+    display: block; /* Elimina cualquier espacio adicional debajo de la imagen */
+    border-radius: 0.25em;
+} 
 
 
+#cuidadoresCards .item a {
+    text-decoration: none; 
+    color: inherit; 
+}
 
 
-/*CARD CUIDADORES CARD CUIDADORES CARD CUIDADORES*/
+.Nombre{
+    margin-top: 0.50em;
+    font-size: 1em;
+    text-align: left;
+    
+}
 
+.Ciudad{
+    font-size: 0.80em;
+    text-align: left;
+}
 
-
-
-
-
+.Descripcion{
+    font-family:"Roboto", sans-serif;
+    font-size: 0.75em;
+    margin-top: 1em;
+    text-align: left;
+   
+}
 
 
 /*listPage*/
@@ -279,20 +313,49 @@ padding: 0;
     text-align: center;
     list-style: none;
     justify-content: center;
- 
 }
 
 .pagination li{
     background-color: #1bb1c4bd;
     display:inline-block;
     cursor: pointer;
+
+
+
 }
 
 .pagination .page-item{
     background-color: #2bc992;
-    color: #bd1d1d;
 }
 
+.page-link {
+    color: #12110f; /*Color del texto*/
+    background-color: #f1f1f1;;
+}
+
+.page-item.active .page-link {
+    background-color: #7F636E; /* Cambia el color de fondo */
+    border-color: #F0BB69; /* Cambia el color del borde */
+    color: rgb(233, 233, 233); /* Cambia el color del texto */
+}
+
+.page-link:hover {
+    background-color:  #44A194; /* Cambia el color de fondo al pasar el ratón */
+    color: white; /* Cambia el color del texto */
+}
+
+
+@media (max-width: 1024px){
+    #cuidadoresCards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px){
+    #cuidadoresCards{
+        grid-template-columns: 1fr;
+    }
+}
 
 /*FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER*/
 
