@@ -16,8 +16,8 @@ body {
     
   }
 .container {
-    max-width: 250rem;
-    padding: 0 5rem;
+    
+    padding: 0 1rem;
     margin: 0 auto;
     display: flexbox;
 
@@ -168,7 +168,7 @@ margin-bottom: 3rem;
     .container{
         flex-basis: 100%;
     
-        padding:2rem;
+        padding:1rem;
     }
 
 }

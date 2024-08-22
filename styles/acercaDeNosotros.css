@@ -65,7 +65,11 @@ body h2{
     text-align: center;
 }
 
-
+/* .valores {
+    font-family:"Sansita";
+    font-size: 30px;
+    text-align: center;
+} */
 #ADSH{
     font-size: 3em;
 }
@@ -105,6 +109,7 @@ body h2{
 }
 #titulo-seccion ul{
     margin: 0px;
+    
 }
 
 #tituloTarjeta { 
@@ -143,6 +148,7 @@ body h2{
     line-height: 2.0;
     list-style: none;
     font-size: 20px;
+    font-family: "Roboto";
 }
 
 .image-div {
@@ -190,6 +196,7 @@ body h2{
 h2{
     font-family: "Sansita";
     font-size: 40px;
+    text-align: center;
 }
 .AcercaDelProyecto{
     font-family:"Roboto";

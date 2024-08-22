@@ -52,6 +52,7 @@ body {
 .container h3{
     font-size: 30px;
     font-family: "Sansita";
+    text-align: center;
 }
 
 .container label{

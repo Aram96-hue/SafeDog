@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeDog-tuPerfil</title>
+    <link rel="icon" href="../assets/SafeDogWhite.png">
     <!--Librería del menú hamburguesa-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
@@ -45,49 +47,42 @@
 
 
 <!-- Aquí se inserta la navbar -->
-<nav class="navbar">
-
-    <div class="navbar--logo">
-        <a href="#" target="_blank"><img src="../assets/SafeDog W (9).png" alt="SafeDog-Logo"></a>
-    </div>
-
-    <div class="nav--container">
+<nav>
+    <!-- Empieza Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <a href="../../inicio.html" target="_blank"><img src="../assets/SafeDog W (9).png" alt="SafeDog-Logo"></a>
+        </div>
         <ul class="navbar--menu">
             <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
-            <li><a href="./nuestrosServicios.html">Nuestros Servicios</a></li>
-            <li><a href="./preguntas.html">Preguntas Frecuentes</a></li>
+            <li><a href="./preguntasFrecuentesContactanos.html">Preguntas Frecuentes</a></li>
         </ul>
-
         <div class="navbar--botones">
-            <button class="boton--claro" onclick="window.location.href='./serCuidador.html';">Ser cuidador</button>
-            <button class="boton--claro" onclick="window.location.href='./inicioSesion.html';">Inicio de sesión</button>
-            <button class="boton--azul" onclick="window.location.href='./registro.html';">Registro</button>
+            <button class="boton--claro" onclick="window.location.href='./registroCuentaUsuarioDueño.html';">Ser cuidador</button>
+            <button class="boton--claro" onclick="window.location.href='./mainLogin.html';">Iniciar sesión</button>
+            <button class="boton--azul" onclick="window.location.href='./registroCuentaUsuarioDueño.html';">Registrarse</button>
+        </div>
+        <div class="menu-icon" id="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
     </div>
-
-    <!--Menu de hamburguesa-->
-    <div class="menu-btn">
-        <i class="fa-solid fa-bars fa-2x"></i>
+    
+    <div class="dropdown-menu" id="dropdown-menu">
+        <div class="letras"></div>
+        <ul>
+            <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
+            <li><a href="./preguntasFrecuentesContactanos.html">Preguntas Frecuentes</a></li>
+            <li><a href="./registroCuentaUsuarioDueño.html">Ser cuidador</a></li>
+            <li><a href="./mainLogin.html">Inicio de sesión</a></li>
+            <li><a href="./registroCuentaUsuarioDueño.html">Registrarse</a></li>
+        </ul>
     </div>
-
-</nav>
-
-<!--Menú desplegable mobile-->
-
-<div class="mobile-menu" id="mobileMenu">
-    <ul class="mobile-navbar--menu">
-        <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
-        <li><a href="./nuestrosServicios.html">Nuestros Servicios</a></li>
-        <li><a href="./preguntas.html">Preguntas Frecuentes</a></li>
-    </ul>
-    <div class="mobile-navbar--botones">
-        <button class="boton--claro" onclick="window.location.href='./serCuidador.html';">Ser
-            cuidador</button>
-        <button class="boton--claro" onclick="window.location.href='./inicioSesion';">Inicio de
-            sesión</button>
-        <button class="boton--azul" onclick="window.location.href='./pregistro.html';">Registro</button>
     </div>
-</div>
+    <!-- termina navbar -->
+    
+    </nav> 
 
 
 <body>
@@ -106,10 +101,11 @@ En los modales va toda la información que si se le va a mostrar a los dueños, 
         <div class="text-dark">
         <p class=".text-dark">
 
-            Instrucciones:
+            Elabora un perfil atractivo que te ayude a destacar entre los demás. 
+            Asegúrate de rellenar todos los campos y de incluir una foto de perfil llamativa. 
+            Recuerda que cuantas más certificaciones tengas, mayores serán tus posibilidades de recibir contactos.
+            ¡No dudes en mostrar lo mejor de ti!
 
-            Crea tu perfil de una manera atractiva, busca destacar sobre los demás rellenando todos los campos, ten una
-            foto de perfil llamativa, entre más certificaciones tengas más probabilidades de contacto tendrás.
         </p>
     </div>
         <!-- Inician los formularios -->
