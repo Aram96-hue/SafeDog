@@ -97,6 +97,7 @@ function createPagination(data) {
     prevButton.classList.add("btn");
     prevButton.classList.add("btn--form");
     prevButton.classList.add("btn--shadow");
+    prevButton.classList.add("btn--help");
     prevButton.innerText = "Anterior";
     prevButton.disabled = currentPage === 1;
     prevButton.addEventListener("click", () => {
@@ -116,6 +117,7 @@ function createPagination(data) {
       button.classList.add("btn");
       button.classList.add("btn--form");
       button.classList.add("btn--shadow");
+      button.classList.add("btn--help");
       button.innerText = i;
       button.disabled = i === currentPage;
       button.addEventListener("click", () => {
@@ -130,6 +132,7 @@ function createPagination(data) {
     nextButton.classList.add("btn");
     nextButton.classList.add("btn--form");
     nextButton.classList.add("btn--shadow");
+    nextButton.classList.add("btn--help");
     nextButton.innerText = "Siguiente";
     nextButton.disabled = currentPage === totalPages;
     nextButton.addEventListener("click", () => {
