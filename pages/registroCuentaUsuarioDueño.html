@@ -169,21 +169,27 @@
                                 <!-- Tamaño -->
                                 <div class="custom-control custom-radio">
                                     <input type="radio" id="pequeno" name="tamañoPerro" class="custom-control-input">
+                                    <div class="perro">
                                     <label class="tamañosPerro" for="pequeno">Pequeño</label>
+                                    </div>
                                     <div class="image-container">
                                         <img src="../assets/iconos/Raza pequeña icono.png" alt="icono Raza pequeña">
                                     </div>
                                 </div>
                                 <div class="custom-control custom-radio">
                                     <input type="radio" id="mediano" name="tamañoPerro" class="custom-control-input">
+                                    <div class="perro">
                                     <label class="tamañosPerro" for="mediano">Mediano</label>
+                                    </div>
                                     <div class="image-container">
                                         <img src="../assets/iconos/Raza mediana icono.png" alt="icono Raza mediana">
                                     </div>
                                 </div>
                                 <div class="custom-control custom-radio">
                                     <input type="radio" id="grande" name="tamañoPerro" class="custom-control-input">
+                                    <div class="perro">
                                     <label class="tamañosPerro" for="grande">Grande</label>
+                                    </div>
                                     <div class="image-container">
                                         <img src="../assets/iconos/Raza grande icono.png" alt="icono Raza Grande">
                                     </div>
@@ -233,10 +239,12 @@
                         <div class="mb-3">
                             <h5>Edad de tu perrito </h5>
                             <div class="flex">
+                                <div class="perro">
                                 <input type="number" class="form-control margin" id="numero" name="años" min="0" max="100" required> Años
-
+                            </div>
+                            <div class="perro">
                                 <input type="number" class="form-control margin" id="numero" name="meses" min="0" max="12" required> Meses
-
+                                </div>
                             </div>
                             
                         </div>
@@ -244,15 +252,19 @@
                         <div class="mb-3">
 
                             <h5>Género de tu perrito </h5>
-
+                            <div class="perro">
                             <input  type="radio" id="opcion1" name="generoPerro" value="Hembra">
-                            <label for="Option1" class="razaPerro"><h6>Hembra</h6></label>
+                           <label for="Option1" class="razaPerro"><h6>Hembra</h6></label>
+                            </div> 
+                           <div class="perro">
                             <input type="radio" id="option2" name="generoPerro" value="Macho">
                             <label for="opcion2" class="razaPerro" ><h6>Macho</h6></label><br>
-
+                            </div>
                         </div>
-
+                        
                     </div>
+
+                    
                     <div class="section--up--img">
                         <div>
                             <p class="text--title"><h4>Adjunta una foto de ti</h4></p>
@@ -262,7 +274,7 @@
                             </p>
                             <div class="up--img--container ">
                                 <img src="../assets/foto-dueño.png" alt="foto-dueño" class="img--img imagenCuidador" id="open-popup-img" />
-                                <div>
+                            <div>
                                     <button class="btn btn--save btn--shadow" type="button"
                                         onclick="document.getElementById('formFileMultipleOne').click();">Subir
                                         fotografias</button>
@@ -272,6 +284,7 @@
                                 </div>
                             </div>
                         </div>
+                    
                         <div>
                             <p class="text--title"><h4>Adjunta una foto de tu mascota</h4></p>
                             <p class="text--img">
@@ -296,6 +309,7 @@
                             <div id="formMessage" class="mt-3"></div>
                         </div>
                     </div>
+                
                 </form>
             </div>
         </main>

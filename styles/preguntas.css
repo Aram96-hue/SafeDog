@@ -12,6 +12,13 @@
   box-sizing: border-box;
 }
 
+
+h5{
+  font-style: italic;
+  color: #123934;
+}
+
+
 html {
   font-size: 62.5%;
 }
@@ -148,11 +155,11 @@ body {
 .exttra-text-container {
   margin-bottom: 4.8rem;
 }
+.letra{
+  font-family: "Roboto";
+  font-size: 20px;
+}
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 77515c02d9a1401a974713f9cb7329c7d805d90a
 .extra-text {
   font-size: 2rem;
   line-height: 1.8;
@@ -240,11 +247,7 @@ body {
 .btn--outline:link,
 .btn--outline:visited {
   color: #555;
-<<<<<<< HEAD
-  background-color: #fff;
-=======
   background-color: #39b3a2;
->>>>>>> 77515c02d9a1401a974713f9cb7329c7d805d90a
 }
 
 .btn--cellphone {

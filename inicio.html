@@ -41,53 +41,38 @@
 
       </head>
 
-
-<nav class="navbar">
-  
-  <!-- Aquí va la navbar -->
-
-  <div class="navbar--logo">
-      <a href="#" target="_blank"><img src="../assets/SafeDog W (9).png" alt="SafeDog-Logo"></a>
-  </div>
-
-  <div class="nav--container">
-      <ul class="navbar--menu">
-          <li><a href="./pages/acercaDeNosotros.html" target="_blank">Acerca de nosotros</a></li>
-          <li><a href="./pages/preguntasFrecuentesContactanos.html" target="_blank">Preguntas Frecuentes</a></li>
-      </ul>
-
-      <div class="navbar--botones">
-          <button class="boton--claro" onclick="window.location.href='./pages/formCuidador.html';">Ser
-              cuidador</button>
-          <button class="boton--claro" onclick="window.location.href='./pages/inicioSesion.html';">Inicio de
-              sesión</button>
-          <button class="boton--azul" onclick="window.location.href='./pages/registro.html';">Registro</button>
-      </div>
-  </div>
-  <!--Menu de hamburguesa-->
-  <div class="menu-btn">
-      <i class="fa-solid fa-bars fa-2x"></i>
-
-  </div>
-
-<!-- Menu desplegable para móviles -->
-<div class="mobile-menu" id="mobileMenu">
-  <ul class="mobile-navbar--menu">
-      <li><a href="./pages/acercaDeNosotros.html" target="_blank">Acerca de nosotros</a></li>
-      <li><a href="./pages/preguntasFrecuentesContactanos.html" target="_blank">Preguntas Frecuentes</a></li>
-  </ul>
-  <div class="mobile-navbar--botones">
-      <button class="boton--claro" onclick="window.location.href='./pages/formCuidador.html';">Ser
-          cuidador</button>
-      <button class="boton--claro" onclick="window.location.href='./pages/inicioSesion';">Inicio de
-          sesión</button>
-      <button class="boton--azul" onclick="window.location.href='./pages/registro.html';">Registro</button>
-  </div>
+<body>
+  <div class="navbar">
+    <div class="logo">
+        <a href="../../inicio.html" target="_blank"><img src="../assets/SafeDog W (9).png" alt="SafeDog-Logo"></a>
+    </div>
+    <ul class="navbar--menu">
+        <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
+        <li><a href="./preguntasFrecuentesContactanos.html">Preguntas Frecuentes</a></li>
+    </ul>
+    <div class="navbar--botones">
+        <button class="boton--claro" onclick="window.location.href='./registroCuentaUsuarioDueño.html';">Ser cuidador</button>
+        <button class="boton--claro" onclick="window.location.href='./mainLogin.html';">Iniciar sesión</button>
+        <button class="boton--azul" onclick="window.location.href='./registroCuentaUsuarioDueño.html';">Registrarse</button>
+    </div>
+    <div class="menu-icon" id="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
 </div>
 
-</nav>
-
-<body>
+<div class="dropdown-menu" id="dropdown-menu">
+    <div class="letras"></div>
+    <ul>
+        <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
+        <li><a href="./preguntasFrecuentesContactanos.html">Preguntas Frecuentes</a></li>
+        <li><a href="./registroCuentaUsuarioDueño.html">Ser cuidador</a></li>
+        <li><a href="./mainLogin.html">Inicio de sesión</a></li>
+        <li><a href="./registroCuentaUsuarioDueño.html">Registrarse</a></li>
+    </ul>
+</div>
+</div>
 <div class="portada">
 
     <div class="imagenDeFondo">
@@ -142,7 +127,7 @@
       <div class="card">
         <div class="front">
           <h3 class="titulosTarjeta">Paseo</h3>
-          <img src="./assets/iconos/Paseo (2).png" alt="Paseo" >
+          <img src="./assets/iconos/Paseo (2).png" height="100px" alt="Paseo" >
         </div>
         <div class="back">
           <p>"Ofrecemos paseos personalizados para tu mascota, garantizando ejercicio y diversión con atención profesional y cuidadosa."</p>
@@ -182,11 +167,11 @@
 <div class="Estelares">
     <div>
         <h2>El perro más travieso del mes</h2>
-        <img class="imagenPortada" src="./assets/Travesura.png" height="300px">
+        <img class="imagenPortada" src="./assets/Travesura.png" >
     </div>
     <div>
         <h2>Cuidador del mes</h2>
-        <img class="imagenPortada" src="./assets/CuidadorMes.png" height="300px">
+        <img class="imagenPortada" src="./assets/CuidadorMes.png" >
     </div>
 </div>
 

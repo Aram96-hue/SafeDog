@@ -42,10 +42,22 @@ body h2{
 
 h2 {
     font-family: 'Sansita', sans-serif;
-    padding: 20px;
+    padding: 40px;
+    text-align: center;
 }
-
-
+.text-dark{
+  font-size: 20px;
+  font-family: "Roboto";
+}
+h4{
+  font-family: 'Sansita', sans-serif;
+  padding: 45px;
+  text-align: center;
+}
+.mb-3{
+  font-size: 20px;
+  font-family: "Roboto";
+}
 .form-control:focus{
     outline: none;
     border-color: var(--color-tertiary);

@@ -70,13 +70,14 @@ body {
     bottom: 0;
     z-index: 2;
     cursor: pointer;
-    transform: translateY(-50%);
+    transform: translateY(-40%);
+    /* transition: background-color 0.7s, border-color 0.7s; */
 }
 .boton:hover {
-    background: linear-gradient( 135deg, #7F636E 10%, #42390bd1 100%);    border-color: var(--color-tertiary);
-    color: var(--bg-color);
+    background: linear-gradient( 135deg, #7F636E 10%, #3f2705d1 90%);    
     
-    transition: background-color 0.7s, border-color 0.7s;
+    border-color: var(--color-tertiary);
+    color: var(--bg-color);
 }
 
 .centrar{
@@ -119,9 +120,13 @@ body {
 }
 
 .imagenPortada{
-border: #7F636E 0px solid;
+
 padding: 0px;
+border-radius: 20px;
+border: #fff9d1 8px solid;
+height: 250px;
 }
+
 
 .imagenDeFondo {
 
@@ -166,11 +171,11 @@ padding: 0px;
 
 /* <!------------------- Cards ------------------->*/
 
-a:hover {
+/* a:hover {
     background: #fff;
     color: #333;
     text-shadow: 0 0 1px #333;
-}
+} */
 
 /*---Card box----*/
 .boxesContainer{
@@ -178,6 +183,8 @@ a:hover {
    flex-direction: row;
    flex-wrap: wrap;
    justify-content: center;
+   margin: 20px;
+   padding: 20px;
 }
 .cardBox {
    /* float: left;*/
@@ -432,7 +439,7 @@ a:hover {
     top: -4em;
     left: 2em;
     overflow: hidden;
-    border: var(--color-cuarto);
+    border: 5px solid var(--color-cuarto);
 
 }
 

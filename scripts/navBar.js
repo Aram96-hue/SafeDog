@@ -1,8 +1,6 @@
 // Navbar
 
-window.addEventListener("load", () => {
-    document.querySelector(".menu-btn").addEventListener("click", () => {
-        document.querySelector(".mobile-menu").classList.toggle("active");
-    });
-});
-
+document.getElementById('menu-icon').addEventListener('click', function() {
+    const menu = document.getElementById('dropdown-menu');
+    menu.classList.toggle('show-menu');
+})
