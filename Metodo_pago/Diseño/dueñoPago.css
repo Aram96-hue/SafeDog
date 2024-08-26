@@ -1,0 +1,97 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1;
+    color: black;
+    background-color: #FFF8E0;
+    justify-content: center;
+    align-items: center;
+}
+
+.nombre-dueño-registrado {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.3rem;
+    text-align: center;
+    margin: 3rem;
+}
+
+.container-alinearr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.container-monto {
+    border:solid;
+    border-radius: 0.5rem;
+    width: 700px; 
+    height: 16rem;
+    text-align: center;
+    margin: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-tipo-tarjeta {
+    background-color: #8b6438;
+    max-width: 20rem;
+    margin: 0 auto;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    justify-content: center; 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    flex-direction: row; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    width: 400%;
+}
+
+.form-tipo-tarjeta label {
+    display: block;
+    margin: none;
+}    
+
+.form-tipo-tarjeta input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-tipo-tarjeta input[type="submit"] {
+    background-color: peru;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+}
+
+
+.form-tipo-tarjeta input[type="submit"]:hover {
+    background-color: #44A194;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+
+}
+
+.paypalpago {
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: small;
+    margin: 4rem;
+}
+
+.tyc {
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: small;
+    margin: 4rem;
+}

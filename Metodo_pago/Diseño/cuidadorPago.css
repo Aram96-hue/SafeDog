@@ -1,0 +1,271 @@
+/* Resetear algunos estilos por defecto del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para el cuerpo de la página */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: black;
+    background-color: #FFF8E0;
+    justify-content: center;
+    align-items: center;
+}
+/*titulo*/
+.titulo {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 5rem;
+    text-align: center;
+    margin: 3rem;
+}
+
+.pago-periodico-contenedor1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem; 
+    justify-content: center; 
+    padding: 20px;
+    cursor: pointer; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease; 
+}
+/*tarjetas de precios*/
+.tarjeta-M {
+    background-color: #44A194;
+    border: none;
+    border-radius: .5rem; 
+    padding: 1rem;
+    width: 30rem; 
+    height: 30rem;
+    text-align: center;
+    margin: 0;
+    color: black;
+}
+
+.tarjeta-M:hover {
+    transform: translateY(-20px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 1); 
+}
+
+/*Botones de tipo de pago*/
+.tipo-pago-contenedor2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; 
+    justify-content: center; 
+    padding: 20px;
+}
+
+.alinear-cont2-2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*texto entre sectiones*/
+
+.subtitulo {
+    font-size: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+/*Formularios de pago*/
+
+.formulario-contenedor2 {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: 100vh;      
+    display: flex;
+    flex-wrap: wrap;  
+    justify-content: center;
+}
+
+.formularios-pagos-contenedor2-1 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15rem; 
+    width: 20rem; 
+    max-width: 20rem;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; 
+}
+
+.form-tarjeta {
+    background-color: #8b6438;
+    max-width: 30rem;
+    margin: 0 auto;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    justify-content: center; 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    width: 30rem;
+}
+
+.form-tarjeta-hidden {
+    display: hidden;
+}
+
+.form-tarjeta label {
+    display: block;
+    margin: none;
+}    
+
+.form-tarjeta input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    
+}
+
+.form-tarjeta input[type="submit"] {
+    background-color: peru;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+}
+
+.form-tarjeta input[type="submit"]:hover {
+    background-color: #44A194;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+}
+
+/*otros medios de pago*/
+
+.otros-medios-pago {
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: small;
+    margin: 3rem;
+}
+
+/*terminos y condiciones*/
+.disclaimer {
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: small;
+    margin: 4rem;
+}
+
+
+/* Media Queries */
+
+/* Dispositivos móviles (hasta 600px) */
+@media (max-width: 600px) {
+    .titulo {
+        font-size: 3rem;
+        margin: 1.5rem;
+    }
+
+    .pago-periodico-contenedor1 {
+        gap: 2rem;
+    }
+
+    .tarjeta-M {
+        width: 100%;
+        height: auto;
+        margin: 1rem 0;
+    }
+
+    .subtitulo {
+        font-size: 2rem;
+    }
+
+    .formularios-pagos-contenedor2-1 {
+        gap: 5rem;
+        width: 100%;
+        max-width: none;
+    }
+
+    .form-tarjeta {
+        max-width: 100%;
+    }
+
+    .otros-medios-pago, .disclaimer {
+        font-size: small;
+        margin: 1rem;
+    }
+}
+
+/* Dispositivos de tamaño tablet (601px a 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .titulo {
+        font-size: 4rem;
+        margin: 2rem;
+    }
+
+    .pago-periodico-contenedor1 {
+        gap: 3rem;
+    }
+
+    .tarjeta-M {
+        width: 45%;
+        height: auto;
+    }
+
+    .subtitulo {
+        font-size: 2.5rem;
+    }
+
+    .formularios-pagos-contenedor2-1 {
+        gap: 10rem;
+    }
+
+    .form-tarjeta {
+        max-width: 100%;
+    }
+
+    .otros-medios-pago, .disclaimer {
+        font-size: medium;
+        margin: 2rem;
+    }
+}
+
+/* Dispositivos grandes (900px y más) */
+@media (min-width: 901px) {
+    .titulo {
+        font-size: 5rem;
+        margin: 3rem;
+    }
+
+    .pago-periodico-contenedor1 {
+        gap: 4rem;
+    }
+
+    .tarjeta-M {
+        width: 30rem;
+        height: 30rem;
+    }
+
+    .subtitulo {
+        font-size: 3rem;
+    }
+
+    .formularios-pagos-contenedor2-1 {
+        gap: 15rem;
+    }
+
+    .form-tarjeta {
+        max-width: 20rem;
+    }
+
+    .otros-medios-pago, .disclaimer {
+        font-size: small;
+        margin: 3rem;
+    }
+}

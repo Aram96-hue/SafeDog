@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método de pago Dueño</title>
+    <link rel="stylesheet" href="../Diseño/dueñoPago.css">
+</head>
+<body>
+    <section>
+        <div class="nombre-dueño-registrado">
+            <h1>ARAM PATLAN</h1>
+        </div>
+    </section>
+    <section>
+        <div class="container-alinearr"></div>
+            <div class="container-monto">
+                <h3>Monto a pagar:</h3>
+                <h2>$450</h2>
+            </div>    
+        </div>
+    </section>
+    <section>
+        <div class="container-form">
+            <form class="form-tipo-tarjeta" action="procesador de pago" method="post">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="tarjeta">Número de tarjeta:</label>
+                <input type="text" id="tarjeta" name="tarjeta" pattern="\d{16}" placeholder="xxxx xxxx xxxx xxxx" required>
+
+                <label for="expiracion">Fecha de vencimiento:</label>
+                <input type="text" id="expiracion" name="expiracion" pattern="\d{2}/\d{2}" placeholder="MM/AA" required>
+
+                <label for="cvv">Código de seguridad (CVV):</label>
+                <input type="text" id="cvv" name="cvv" pattern="\d{3}" placeholder="xxx" required>
+
+                <label for="direccion">Dirección de facturación:</label>
+                <input type="text" id="direccion" name="direccion" required>
+
+                <input type="submit" value="Pagar">
+            </form>    
+        </div>
+    </section>
+    <section>
+        <div class="paypalpago">
+            <h3>Otros medios de pago:</h3>
+        </div>
+    </section>
+    <section>
+        <div class="tyc">
+            <h3>Acepto los Terminos y Condiciones previamente leidos.</h3>
+        </div>
+    </section>
+    
+</body>
+</html>
