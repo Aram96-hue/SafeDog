@@ -1,0 +1,69 @@
+body {
+    background-color: #FFF8E0 !important;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+h3 {
+    font-family: 'Sansita', sans-serif;
+}
+
+h5 {
+    font-family: 'Sansita', sans-serif;
+}
+
+.card {
+    padding: 40px;
+    background-color: #F0BB69;
+}
+
+.custom-padding {
+    padding: 20px;
+}
+
+.btn-custom {
+    background-color: #44A194;
+}
+
+.btn-custom:hover {
+    background-color: #7F636E;
+}
+
+.custom-list-group .list-group-item {
+    background-color: #44A194;
+}
+
+.custom-list-group .list-group-item.active {
+    background-color: #7F636E;
+}
+
+.custom-list-group .list-group-item:hover {
+    background-color: #F0BB69;
+}
+
+.custom-label {
+    font-size: 16px;
+}
+
+.custom-paragraph {
+    font-size: 16px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+  }
+
+.custom-body {
+    font-size: 16px;
+}
+
+.custom-header {
+    font-size: 16px;
+}
+
+p {
+    font-size: 16px;
+}
+
