@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SafeDog-tuPerfil</title>
+    <title>SafeDog - Tu perfil</title>
     <link rel="icon" href="../assets/SafeDogWhite.png">
     <!--Librería del menú hamburguesa-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -38,11 +38,11 @@
         href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
-      <!--Librería del menú hamburguesa-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
+    <!--Librería del menú hamburguesa-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 
@@ -58,9 +58,11 @@
             <li><a href="./preguntasFrecuentesContactanos.html">Preguntas Frecuentes</a></li>
         </ul>
         <div class="navbar--botones">
-            <button class="boton--claro" onclick="window.location.href='./registroCuentaUsuarioDueño.html';">Ser cuidador</button>
+            <button class="boton--claro" onclick="window.location.href='./registroCuentaUsuarioDueño.html';">Ser
+                cuidador</button>
             <button class="boton--claro" onclick="window.location.href='./mainLogin.html';">Iniciar sesión</button>
-            <button class="boton--azul" onclick="window.location.href='./registroCuentaUsuarioDueño.html';">Registrarse</button>
+            <button class="boton--azul"
+                onclick="window.location.href='./registroCuentaUsuarioDueño.html';">Registrarse</button>
         </div>
         <div class="menu-icon" id="menu-icon">
             <div class="bar"></div>
@@ -68,7 +70,7 @@
             <div class="bar"></div>
         </div>
     </div>
-    
+
     <div class="dropdown-menu" id="dropdown-menu">
         <div class="letras"></div>
         <ul>
@@ -81,8 +83,8 @@
     </div>
     </div>
     <!-- termina navbar -->
-    
-    </nav> 
+
+</nav>
 
 
 <body>
@@ -99,15 +101,15 @@ En los modales va toda la información que si se le va a mostrar a los dueños, 
         -->
 
         <div class="text-dark">
-        <p class=".text-dark">
+            <p class=".text-dark">
 
-            Elabora un perfil atractivo que te ayude a destacar entre los demás. 
-            Asegúrate de rellenar todos los campos y de incluir una foto de perfil llamativa. 
-            Recuerda que cuantas más certificaciones tengas, mayores serán tus posibilidades de recibir contactos.
-            ¡No dudes en mostrar lo mejor de ti!
+                Elabora un perfil atractivo que te ayude a destacar entre los demás.
+                Asegúrate de rellenar todos los campos y de incluir una foto de perfil llamativa.
+                Recuerda que cuantas más certificaciones tengas, mayores serán tus posibilidades de recibir contactos.
+                ¡No dudes en mostrar lo mejor de ti!
 
-        </p>
-    </div>
+            </p>
+        </div>
         <!-- Inician los formularios -->
         <!-- Foto de perfil -->
 
@@ -115,68 +117,106 @@ En los modales va toda la información que si se le va a mostrar a los dueños, 
         <form id="contactForm" class="needs-validation " novalidate>
             <div class="row mb-3 ">
                 <div class="centrar">
-                    <label class="form-label"> <h4>Foto de perfil</h4></label>
+                    <label class="form-label ">
+                        <h4>Foto de perfil</h4>
+                    </label>
                     <div class="">
-                        <img class="preview_img " src="../assets/iconoPerfil (2).jpg" width="100px">
-                        <div> <br>
-                          <button class="boton-foto centrar btn btn--save btn--shadow" type="button"  onclick="document.getElementById('formFileMultipleOne').click();">Subir fotografia</button>
-                            <input type="file" style="display: none;" id="formFileMultipleOne" multiple required> 
-                            <div class="invalid-feedback">Por favor, sube una foto de perfil.</div>
-                          </div>
+                        
+                            <img class="preview_img fotoPerfil" src="../assets/iconoPerfil (2).jpg" width="200px">
+                            <div> <br>
+
+                                <div class="input-group mb-3">
+                                    <input type="text" id="imageUrlInput" class="form-control"
+                                        placeholder="Introduce la URL de la imagen" required> <br>
+                                    <button class="boton-foto centrar btn btn--save btn--shadow" type="button"
+                                        onclick="loadImageFromUrl()">Comprobar URL de la imagen</button>
+                                   <!-- <input type="file"  id="formFileMultipleOne" multiple>-->
+                                    <div class="invalid-feedback">Por favor, escribe una URL válida para tu foto de perfil.</div>
+                                </div>
+
+                            </div>
+                        
+                    </div>
+
+                </div>
+
+
+                    <!-- Frase de cuidador -->
+
+                    <div class="mb-3"> <br>
+                        <label for="exampleFormControlTextarea1" class="form-label">Presentación (cuéntale a los demás
+                            sobre
+                            ti)</label>
+                        <textarea Name="presentacion" class="form-control" id="exampleFormControlTextarea1" rows="3"
+                            required></textarea>
+                        <div class="invalid-feedback">Por favor, completa este campo.</div>
+                    </div>
+
+                    <!-- Insertar información sobre su experiencia -->
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Experiencia cuidando
+                            mascotas</label>
+                        <textarea Name="experiencia" class="form-control" id="exampleFormControlTextarea1" rows="3"
+                            required></textarea>
+                        <div class="invalid-feedback">Por favor, completa este campo.</div>
+                    </div>
+                    <!-- Insertar PDF o enlace (Carta de presentación)-->
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">Inserta tus certificaciones (opcional)</label>
+                        <!-- <input class="form-control" type="file" id="formFile">
+            </div> -->
+                        <div class="input-group mb-3">
+                            <span class="input-group-text " id="inputGroup-sizing-default">Certificacion</span>
+                            <input type="text" class="form-control"
+                                placeholder="Ingresa aquí la URL de tu certificación" aria-label="Sizing example input"
+                                aria-describedby="inputGroup-sizing-default">
                         </div>
+
+                    </div>
+                    <!-- Insertar PDF o enlace (Certificaciones) -->
+
+                    <div class="mb-3">
+                        <label for="formFileMultiple" class="form-label">Carta de presentación (opcional)</label>
+                        <!-- <input class="form-control" type="file" id="formFileMultiple" multiple> -->
+                        <div class="input-group mb-3">
+                            <span class="input-group-text " id="inputGroup-sizing-default">Carta de presentación</span>
+                            <input type="text" class="form-control"
+                                placeholder="Ingresa aquí la URL de tu carta de presentación"
+                                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                         </div>
-            </div>
+                    </div>
 
+                    <!-- Insertar PDF (Referencias laborales o personales) -->
+                    <div class="mb-3">
+                        <label for="formFileMultiple" class="form-label">Inserta aquí tus referencias laborales o
+                            personales (opcional)
+                        </label>
+                        <!-- <input class="form-control" type="file" id="formFileMultiple" multiple required> -->
+                        <div class="input-group mb-3">
+                            <span class="input-group-text " id="inputGroup-sizing-default">Referencias</span>
+                            <input type="text" class="form-control"
+                                placeholder="Ingresa aquí la URL de tus referencias laborales"
+                                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                        <div class="invalid-feedback">Por favor, sube tus referencias.</div>
 
-            <!-- Frase de cuidador -->
+                    </div>
 
-            <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Presentación (cuéntale a los demás sobre
-                    ti)</label>
-                <textarea Name="presentacion" class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
-                <div class="invalid-feedback">Por favor, completa este campo.</div>
-            </div>
-
-            <!-- Insertar información sobre su experiencia -->
-            <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Experiencia cuidando mascotas</label>
-                <textarea Name="experiencia" class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
-                <div class="invalid-feedback">Por favor, completa este campo.</div>
-            </div>
-            <!-- Insertar PDF o enlace (Carta de presentación)-->
-            <div class="mb-3">
-                <label for="formFile" class="form-label">Inserta tus certificaciones (opcional)</label>
-                <input class="form-control" type="file" id="formFile">
-            </div>
-            <!-- Insertar PDF o enlace (Certificaciones) -->
-
-            <div class="mb-3">
-                <label for="formFileMultiple" class="form-label">Carta de presentación (opcional)</label>
-                <input class="form-control" type="file" id="formFileMultiple" multiple>
-            </div>
-
-            <!-- Insertar PDF (Referencias laborales o personales) -->
-            <div class="mb-3">
-                <label for="formFileMultiple" class="form-label">Inserta aquí tus referencias laborales o personales
-                </label>
-                <input class="form-control" type="file" id="formFileMultiple" multiple required>
-                <div class="invalid-feedback">Por favor, sube tus referencias.</div>
-                
-            </div>
-
-            <!-- Cuadro de textos para ingresar preguntas -->
-            <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Preguntas/especificaciones o información que
-                    se le preguntará al dueño</label>
-                <textarea Name="preguntas" class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
-                <div class="invalid-feedback">Por favor, completa este campo.</div>
-            </div>
-            <div class=" justificado-derecha button--submit">
-            <button type="submit" class="btn btn--form btn--shadow  btn-lg">
-                Siguiente</button>
-            </div>
-            <!-- Beto added div for validation feedback-->
-            <div id="formFeedback" class="feedback"></div>
+                    <!-- Cuadro de textos para ingresar preguntas -->
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Preguntas/especificaciones o
+                            información que
+                            se le preguntará al dueño</label>
+                        <textarea Name="preguntas" class="form-control" id="exampleFormControlTextarea1" rows="3"
+                            required></textarea>
+                        <div class="invalid-feedback">Por favor, completa este campo.</div>
+                    </div>
+                    <div class=" justificado-derecha button--submit">
+                        <button type="submit" class="btn btn--form btn--shadow  btn-lg">
+                            Siguiente</button>
+                    </div>
+                    <!-- Beto added div for validation feedback-->
+                    <div id="formFeedback" class="feedback"></div>
         </form>
 
     </div>
@@ -187,6 +227,8 @@ En los modales va toda la información que si se le va a mostrar a los dueños, 
     <script src="../scripts/tuPerfil.js"></script>
     <script src="../scripts/NavBar.js"></script>
 </body>
+
+</div>
 
 <footer class="footer--safeDog">
     <div class="iconos">

@@ -16,7 +16,7 @@
     
 /* Tipo de letra */
     --font-primary: "Sansita", sans-serif;
-    --font-secondary: "Roboto", sans-serif;
+    --font-secondary: "Sansita", sans-serif;
     --font-size-primary: 5rem;
     --font-size-secondary: 2 rem;
 }
@@ -141,7 +141,7 @@ body h2{
 .stat-block p{
     line-height: 1.2;
     font-size: 20px;
-    font-family: "Roboto";
+    font-family: "Sansita";
 }
 
 .stat-block ul{

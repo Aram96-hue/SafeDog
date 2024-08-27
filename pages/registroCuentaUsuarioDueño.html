@@ -243,14 +243,14 @@
 
                         <div class="mb-3">
 
-                            <h5>Género de tu perrito </h5>
+                            <h5>Sexo de tu perrito </h5>
                             <div class="perro">
-                            <input  type="radio" id="opcion1" name="generoPerro" value="Hembra">
-                           <label for="Option1" class="razaPerro"><h6>Hembra</h6></label>
+                            <input type="radio" id="opcion1" name="generoPerro" value="Hembra">
+                           <label for="Option1" class="sexoPerro"><h6>Hembra</h6></label>
                             </div> 
                            <div class="perro">
                             <input type="radio" id="option2" name="generoPerro" value="Macho">
-                            <label for="opcion2" class="razaPerro" ><h6>Macho</h6></label><br>
+                            <label for="opcion2" class="sexoPerro" ><h6>Macho</h6></label><br>
                             </div>
                         </div>
                         
@@ -268,19 +268,22 @@
                                 cuidadoras, esto te ayudará a crear mejores conecciones. -->
                             </p>
                             <div class="up--img--container ">
-                                <img src="../assets/foto-dueño.png" alt="foto-dueño" class="img--img imagenCuidador" id="open-popup-img" />
-                            <div>
-                                    <button class="btn btn--save btn--shadow" type="button"
-                                        onclick="document.getElementById('formFileMultipleOne').click();">Subir
-                                        fotografias</button>
-                                    <input type="file" style="display: none;" id="formFileMultipleOne" multiple
-                                        required>
+                                <img src="../assets/foto-dueño.png" alt="foto-dueño" class="img--img imagenCuidador imagenDueño" id="open-popup-img" />
+                                  
+                                            
+                                        <div class="input-group mb-3">
+                                            <input type="text" id="imagenDueño" name="imagenDueño" placeholder="Copia aquí la URL de tu foto de perfil"
+                                                aria-label="First name" class="form-control" required>
+                                            <button class="boton-foto centrar btn btn--save btn--shadow" type="button"
+                                            onclick="loadImageFromUrldueño()">🔄 Actualizar</button>   
+                                            <div class="invalid-feedback">Favor de proporcionar una URL</div>
+                                        </div>
+                                    
+
                                     <div class="invalid-feedback">Por favor, sube una foto de ti.</div>
-                                </div>
                             </div>
-                        </div>
-                    
-                        <div>
+
+                            
                             <p class="text--title"><h4>Adjunta una foto de tu mascota</h4></p>
                             <p class="text--img">
                                 Te invitamos a compartir una foto de tu mascota para describirla mejor. 
@@ -291,15 +294,19 @@
                                 <!-- Puedes proporcionarnos una foto de tu mascota, queremos conocerle ! -->
                             </p>
                             <div class="up--img--container">
-                                <img src="../assets/foto-mascota.jpg" alt="foto-mascota" class="img--img imagenCuidador" width="100px"/>
-                                <div>
-                                    <button class="btn btn--save btn--shadow" type="button"
-                                        onclick="document.getElementById('formFileMultipleTwo').click();">Subir
-                                        Fotografía</button>
-                                    <input type="file" style="display: none;" id="formFileMultipleTwo" multiple
-                                        required>
-                                    <div class="invalid-feedback">Por favor, sube una foto de tu mascota.</div>
-                                </div>
+                                <img src="../assets/foto-mascota.jpg" alt="foto-mascota" class="img--img imagenCuidador imagenPerro" width="100px"/>
+                                
+                                
+                                    <div class="input-group mb-3">
+                                        <input type="text" id="imagenPerro" name="imagenMascota" placeholder="Copia aquí la URL de la foto de tu mascota"
+                                            aria-label="First name" class="form-control" required>
+                                        <button class="boton-foto centrar btn btn--save btn--shadow" type="button"
+                                            onclick="loadImageFromUrlperro()">🔄 Actualizar</button>
+                                        <div class="invalid-feedback">Favor de proporcionar una URL</div>
+                                    </div>
+                                
+                                <div class="invalid-feedback">Por favor, sube una foto de tu mascota.</div>
+                                
                             </div>
                         </div>
 

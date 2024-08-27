@@ -45,13 +45,24 @@ h2 {
     padding: 40px;
     text-align: center;
 }
+
+.form-label{
+  text-align: left;
+
+}
+
+.perro input[type="radio"] {
+  transform: scale(1.8);
+  cursor: pointer;
+}
+
 .text-dark{
   font-size: 20px;
   font-family: "Roboto";
 }
 h4{
   font-family: 'Sansita', sans-serif;
-  padding: 45px;
+  padding: 20px;
   text-align: center;
 }
 .mb-3{
@@ -90,7 +101,9 @@ h4{
     margin: 15px;
   }*/
 
-
+.fotoPerfil{
+  border-radius: 50%;
+}
   .btn--form {
     background-color: var(--color-tertiary);
     color: #fff;

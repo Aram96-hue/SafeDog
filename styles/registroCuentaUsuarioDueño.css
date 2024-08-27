@@ -198,12 +198,6 @@ justify-content: space-around;
     padding: 10px;
 }
 
-.razaPerro{
-    padding: 20px;
-    font-size: 20px;
-}
-
-
 .image-container{
     display: flex;
     align-items: center;
@@ -227,23 +221,34 @@ justify-content: space-around;
   font-family: "Roboto";
   font-size: 20px;
 }
-.form-control{
+.form-control {
   font-family: "Roboto";
   font-size: 20px;
 }
-.perro .mb-3{
-  font-size: 25px;
+
+.form-control-margin{
+  font-family: "Roboto";
+  font-size: 20px;
+}
+
+.sexoPerro, .tamañosPerro{
+  font-size: 18px;
   font-family: "Roboto";
 }
+
 #numero{
     color: #495057;
     background-color: #fff;
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
     width: 5rem;
+    font-family: "Roboto";
 }
-
-@media (max-width: 820px) {
+.flex{
+  font-size: 18px;
+  font-family: "Roboto";
+}
+@media (max-width: 1440px) {
     .form--grid {
         grid-template-columns:  1fr; 
         column-gap: 0; 
