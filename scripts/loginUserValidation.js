@@ -84,7 +84,7 @@ function isEmailValid(email) {
           
           }).then(() => {
 
-            window.location.href = "../index.html";
+            window.location.href = "../inicio.html";
             //location.replace("tuPerfil.html");
           });
           return;
