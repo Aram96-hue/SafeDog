@@ -1,5 +1,3 @@
-
-
 body {
     background-color: #FFF8E0;
     font-family: "Roboto", sans-serif;
@@ -29,20 +27,20 @@ h1, h2 {
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     width: 90%;
-    max-width: 900px;
+    max-width: 600px;
     flex-wrap: wrap;
+    box-sizing: border-box;
 }
 
 .input {
     display: flex;
     flex-direction: column;
-    gap: .6rem;
+    gap: 0.6rem;
     align-items: center;
     padding: 15px;
     width: 100%;
     box-sizing: border-box;
-  }
-  
+}
 
 .input2 {
     display: flex;
@@ -79,17 +77,18 @@ a {
 
 #access, #register {
     flex: 1;
-    max-width: 400px;
+    max-width: 300px;
     min-width: 200px;
     text-align: center;
     margin: 10px;
 }
 
-
+/* Responsiveness for tablets */
 @media screen and (max-width: 768px) {
     #login-main {
         flex-direction: column;
         padding: 20px;
+        max-width: 90%;
     }
 
     #access, #register {
@@ -103,7 +102,7 @@ a {
     }
 }
 
-
+/* Responsiveness for mobile */
 @media screen and (max-width: 480px) {
     body {
         padding: 20px;
@@ -115,10 +114,11 @@ a {
 
     #login-main {
         padding: 15px;
-        margin: 0;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 100%;
         box-shadow: none;
         border-radius: 10px;
-        width: 100%;
     }
 
     #access, #register {
@@ -142,24 +142,24 @@ a {
     }
 }
 
+/* For smaller devices like iPhones */
+@media screen and (max-width: 375px) {
+    body {
+        padding: 10px;
+    }
 
-@media screen and (max-width: 320px) {
     h1 {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     #login-main {
         padding: 10px;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 320px;
+        box-shadow: none;
+        border-radius: 10px;
     }
 
-    .input-border, #ingresar {
-        max-width: 100%;
-        padding: 5px;
-        font-size: 0.8rem;
-    }
-}
-
-title{
-    margin-bottom: 2.5rem;
-    text-align: center;
-  }
+    #access, #register {
+        max-width: none;
