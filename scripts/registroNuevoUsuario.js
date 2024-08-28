@@ -242,6 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -295,3 +296,5 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });*/
+=======
+>>>>>>> equipoMiel

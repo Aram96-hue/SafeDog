@@ -2,17 +2,17 @@
 document.getElementById('contactForm').addEventListener('submit', function(event) {
   event.preventDefault();
   let form = event.target;
-  let photoInput = document.getElementById('formFileMultipleOne');
-  let feedback = document.getElementById('formFeedback');
+//  let photoInput = document.getElementById('formFileMultipleOne');
+let feedback = document.getElementById('formFeedback');
   
   
-  if (photoInput.files.length === 0) {
-      photoInput.setCustomValidity("Invalid");
-      photoInput.nextElementSibling.style.display = 'block';
-  } else {
-      photoInput.setCustomValidity("");
-      photoInput.nextElementSibling.style.display = 'none';
-  }
+  // if (photoInput.files.length === 0) {
+  //     photoInput.setCustomValidity("Invalid");
+  //     photoInput.nextElementSibling.style.display = 'block';
+  // } else {
+  //     photoInput.setCustomValidity("");
+  //     photoInput.nextElementSibling.style.display = 'none';
+  // }
 
   
   if (!form.checkValidity()) {
@@ -28,7 +28,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
           let formData = {};
           for (let i = 0; i < form.elements.length; i++) {
               let element = form.elements[i];
-              if (element.type !== "submit" && element.type !== "button" && element.type !== "file") {
+              if (element.type !== "submit" && element.type !== "button") {
                   formData[element.name] = element.value;
               }
           }
@@ -61,3 +61,35 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     console.log(jsonData);
   }
 */
+
+function loadImageFromUrl() {
+  const imageUrl = document.getElementById('imageUrlInput').value;
+  const previewImg = document.querySelector('.preview_img');
+  
+  if (imageUrl) {
+      previewImg.src = imageUrl;
+      previewImg.onerror = function() {
+          alert('No se pudo cargar la imagen. Por favor, verifica la URL.');
+          // feedback.textContent = "Por favor, completa todos los campos requeridos.";
+          // feedback.classList.add('text-danger');
+
+          previewImg.src = '../assets/iconoPerfil (2).jpg'; // Restaura la imagen por defecto
+      };
+  } else {
+    feedback.classList.add('text-danger');
+  }
+}
+
+
+/*
+// Mantén la funcionalidad existente para cargar imágenes desde el dispositivo
+document.getElementById('formFileMultipleOne').addEventListener('change', function(event) {
+  const file = event.target.files[0];
+  if (file) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+          document.querySelector('.preview_img').src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+  }
+});*/

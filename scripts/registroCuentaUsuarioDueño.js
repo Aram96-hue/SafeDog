@@ -14,3 +14,37 @@ function convertToJson() {
   console.log(jsonData);
 }
 
+
+function loadImageFromUrldueño() {
+  const imageUrl = document.getElementById('imagenDueño').value;
+  const previewImg = document.querySelector('.imagenDueño');
+
+  if (imageUrl) {
+      previewImg.src = imageUrl;
+      previewImg.onerror = function() {
+          alert('No se pudo cargar la imagen. Por favor, verifica la URL.');   
+          previewImg.src = '../assets/foto-dueño.png'; // Restaura la imagen por defecto
+      };
+  } else {
+    feedback.classList.add('text-danger');
+  }
+}
+
+
+
+function loadImageFromUrlperro() {
+  const imageUrl = document.getElementById('imagenPerro').value;
+  const previewImg = document.querySelector('.imagenPerro');
+  
+  if (imageUrl) {
+      previewImg.src = imageUrl;
+      previewImg.onerror = function() {
+          alert('No se pudo cargar la imagen. Por favor, verifica la URL.');
+          previewImg.src = '../assets/foto-mascota.jpg'; // Restaura la imagen por defecto
+      };
+  } else {
+    feedback.classList.add('text-danger');
+  }
+}
+
+

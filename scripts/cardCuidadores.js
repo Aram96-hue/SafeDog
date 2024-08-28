@@ -157,4 +157,8 @@ function changePage(pageNumber) {
     actualPage = pageNumber;
     loadItem();
     updatePagination();
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> equipoMiel

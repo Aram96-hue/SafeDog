@@ -1,0 +1,123 @@
+
+[
+  {
+    "nombresDueño": "Juan",
+    "apellidosDueño": "Pérez",
+    "telefonoDueño": "33 1234 5678",
+    "nombresEmergenciaDueño": "Ana",
+    "apellidosEmergenciaDueño": "Gómez",
+    "nombrePerro": "Chuletas",
+    "tamañoPerro": "Grande",
+    "razamPerro": "Labrador",
+    "edadPerro": 5,
+    "generoPerro": "Macho"
+  },
+  {
+    "nombresDueño": "María",
+    "apellidosDueño": "López",
+    "telefonoDueño": "55 5678 1234",
+    "nombresEmergenciaDueño": "Martin",
+    "apellidosEmergenciaDueño": "Martínez",
+    "nombrePerro": "Milaneso",
+    "tamañoPerro": "Mediano",
+    "razamPerro": "Beagle",
+    "edadPerro": 3,
+    "generoPerro": "Macho"
+  },
+  {
+    "nombresDueño": "Pedro",
+    "apellidosDueño": "García",
+    "telefonoDueño": "33 8765 4321",
+    "nombresEmergenciaDueño": "Laura",
+    "apellidosEmergenciaDueño": "Fernández",
+    "nombrePerro": "Solovino",
+    "tamañoPerro": "Pequeño",
+    "razamPerro": "Chihuahua",
+    "edadPerro": 2,
+    "generoPerro": "Macho"
+  },
+  {
+    "nombresDueño": "Lucía",
+    "apellidosDueño": "Rodríguez",
+    "telefonoDueño": "55 4321 8765",
+    "nombresEmergenciaDueño": "Miguel",
+    "apellidosEmergenciaDueño": "Sánchez",
+    "nombrePerro": "Doña pulgas",
+    "tamañoPerro": "Grande",
+    "razamPerro": "Golden Retriever",
+    "edadPerro": 4,
+    "generoPerro": "Hembra"
+  },
+  {
+    "nombresDueño": "Hernán",
+    "apellidosDueño": "Hernández",
+    "telefonoDueño": "33 6789 1234",
+    "nombresEmergenciaDueño": "Sofía",
+    "apellidosEmergenciaDueño": "Ramírez",
+    "nombrePerro": "Firulais",
+    "tamañoPerro": "Mediano",
+    "razamPerro": "Bulldog",
+    "edadPerro": 6,
+    "generoPerro": "Macho"
+  },
+  {
+    "nombresDueño": "Ana",
+    "apellidosDueño": "Martínez",
+    "telefonoDueño": "55 9876 5432",
+    "nombresEmergenciaDueño": "José",
+    "apellidosEmergenciaDueño": "Torres",
+    "nombrePerro": "Molly Mollete",
+    "tamañoPerro": "Pequeño",
+    "razamPerro": "Poodle",
+    "edadPerro": 1,
+    "generoPerro": "Hembra"
+  },
+  {
+    "nombresDueño": "Miguel",
+    "apellidosDueño": "Gómez",
+    "telefonoDueño": "33 3456 7890",
+    "nombresEmergenciaDueño": "Elena",
+    "apellidosEmergenciaDueño": "Vargas",
+    "nombrePerro": "Lomito",
+    "tamañoPerro": "Grande",
+    "razamPerro": "Rottweiler",
+    "edadPerro": 7,
+    "generoPerro": "Macho"
+  },
+  {
+    "nombresDueño": "Laura",
+    "apellidosDueño": "Fernández",
+    "telefonoDueño": "55 6543 2109",
+    "nombresEmergenciaDueño": "Luis",
+    "apellidosEmergenciaDueño": "Castro",
+    "nombrePerro": "Cheems",
+    "tamañoPerro": "Mediano",
+    "razamPerro": "Shiba",
+    "edadPerro": 3,
+    "generoPerro": "Macho"
+  },
+  {
+    "nombresDueño": "José",
+    "apellidosDueño": "Sánchez",
+    "telefonoDueño": "33 7890 1234",
+    "nombresEmergenciaDueño": "María",
+    "apellidosEmergenciaDueño": "Ortiz",
+    "nombrePerro": "Pancrasia",
+    "tamañoPerro": "Pequeño",
+    "razamPerro": "Dachshund",
+    "edadPerro": 2,
+    "generoPerro": "Hembra"
+  },
+  {
+    "nombresDueño": "Sofía",
+    "apellidosDueño": "Ramírez",
+    "telefonoDueño": "55 0123 4567",
+    "nombresEmergenciaDueño": "Pedro",
+    "apellidosEmergenciaDueño": "García",
+    "nombrePerro": "Lola",
+    "tamañoPerro": "Grande",
+    "razamPerro": "Boxer",
+    "edadPerro": 5,
+    "generoPerro": "Hembra"
+  }
+]

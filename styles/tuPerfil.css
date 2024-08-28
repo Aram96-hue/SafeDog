@@ -42,10 +42,33 @@ body h2{
 
 h2 {
     font-family: 'Sansita', sans-serif;
-    padding: 20px;
+    padding: 40px;
+    text-align: center;
 }
 
+.form-label{
+  text-align: left;
 
+}
+
+.perro input[type="radio"] {
+  transform: scale(1.8);
+  cursor: pointer;
+}
+
+.text-dark{
+  font-size: 20px;
+  font-family: "Roboto";
+}
+h4{
+  font-family: 'Sansita', sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+.mb-3{
+  font-size: 20px;
+  font-family: "Roboto";
+}
 .form-control:focus{
     outline: none;
     border-color: var(--color-tertiary);
@@ -78,7 +101,9 @@ h2 {
     margin: 15px;
   }*/
 
-
+.fotoPerfil{
+  border-radius: 50%;
+}
   .btn--form {
     background-color: var(--color-tertiary);
     color: #fff;

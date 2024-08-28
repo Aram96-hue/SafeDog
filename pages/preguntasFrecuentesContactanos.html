@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <title>SafeDog -PreguntasFrecuentes</title>
+    <link rel="icon" href="../assets/SafeDogWhite.png">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -32,57 +33,51 @@
     <link rel="stylesheet" href="../styles/footer.css">
     <title>Preguntas frecuentes</title>
   </head>
-  <body>
-   <!--NavBar de safeDog-->
-   <nav class="navbar">
-
-    <div class="navbar--logo">
-        <a href="#" target="_blank"><img src="../assets/SafeDog W (9).png" alt="SafeDog-Logo"></a>
-
-    </div>
-
-    <div class="nav--container">
+  <nav>
+    <!-- Empieza Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <a href="../../inicio.html" target="_blank"><img src="../assets/SafeDog W (9).png" alt="SafeDog-Logo"></a>
+        </div>
         <ul class="navbar--menu">
-            <li><a href="/pages/acercaDeNosotros.html" target="">Acerca de nosotros</a></li>
-            <li><a href="./nuestrosServicios.html" target="">Nuestros Servicios</a></li>
+            <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
             <li><a href="./preguntasFrecuentesContactanos.html">Preguntas Frecuentes</a></li>
         </ul>
-
         <div class="navbar--botones">
-            <button class="boton--claro" onclick="window.location.href='./pages/formCuidador.html';">Ser
-                cuidador</button>
-            <button class="boton--claro" onclick="window.location.href='./pages/inicioSesion.html';">Inicio de
-                sesión</button>
-            <button class="boton--azul" onclick="window.location.href='../pages/registro.html';">Registro</button>
+            <button class="boton--claro" onclick="window.location.href='./registroCuentaUsuarioDueño.html';">Ser cuidador</button>
+            <button class="boton--claro" onclick="window.location.href='./mainLogin.html';">Iniciar sesión</button>
+            <button class="boton--azul" onclick="window.location.href='./registroCuentaUsuarioDueño.html';">Registrarse</button>
+        </div>
+        <div class="menu-icon" id="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
     </div>
-    <!--Menu de hamburguesa-->
-    <div class="menu-btn">
-        <i class="fa-solid fa-bars fa-2x"></i>
+    
+    <div class="dropdown-menu" id="dropdown-menu">
+        <div class="letras"></div>
+        <ul>
+            <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
+            <li><a href="./preguntasFrecuentesContactanos.html">Preguntas Frecuentes</a></li>
+            <li><a href="./registroCuentaUsuarioDueño.html">Ser cuidador</a></li>
+            <li><a href="./mainLogin.html">Inicio de sesión</a></li>
+            <li><a href="./registroCuentaUsuarioDueño.html">Registrarse</a></li>
+        </ul>
     </div>
-
-</nav>
-<!-- Menu desplegable para móviles -->
-<div class="mobile-menu" id="mobileMenu">
-    <ul class="mobile-navbar--menu">
-        <li><a href="./acercaDeNosotros.html" target="_blank">Acerca de nosotros</a></li>
-        <li><a href="./nuestrosServicios.html" target="_blank">Nuestros Servicios</a></li>
-        <li><a href="./preguntas.html" target="_blank">Preguntas Frecuentes</a></li>
-    </ul>
-    <div class="mobile-navbar--botones">
-        <button class="boton--claro" onclick="window.location.href='./serCuidador.html';">Ser
-            cuidador</button>
-        <button class="boton--claro" onclick="window.location.href='./inicioSesion';">Inicio de
-            sesión</button>
-        <button class="boton--azul" onclick="window.location.href='./registro.html';">Registro</button>
     </div>
-</div>
-    </header>
+    <!-- termina navbar -->
+    
+    </nav> 
+  <body>
+ 
     <main>
       <section class="section--search">
         <div class="container">
-          <h1 class="heading-primary">Preguntas frecuentes</h1>
+          <div class="heading-primary">
+        <h1 class"heading-primary">Preguntas frecuentes</h1> 
         </div>
+      </div>
       </section>
 
       <section class="section--questions">
@@ -374,7 +369,9 @@
           <h2 class="heading-secondary">¡Contactanos!</h2>
           <div class="exttra-text-container">
             <p class="extra-text">
-              ¿Necesitas ayuda?... ¡Envianos tu duda! Si no encontraste respuesta a tus preguntas, agrega tus datos y te contactaremos.
+              ¿Necesitas ayuda?
+              <br>
+              ¡Envianos tu duda! Si no encontraste respuesta a tus preguntas, agrega tus datos y te contactaremos.
             </p>
           </div>
         </div>
@@ -383,7 +380,9 @@
             <div class="extra--question--text">
               <form class="extra--question--form" action="#" id="form-cont">
                 <div>
+                  <div class="letra">
                   <label for="full-name">Nombre</label>
+                  </div>
                   <input
                     id="full-name"
                     type="text"
@@ -394,7 +393,9 @@
                 </div>
 
                 <div>
+                  <div class="letra">
                   <label for="email">Correo electrónico</label>
+                  </div>
                   <input
                     id="email"
                     type="email"
@@ -405,12 +406,17 @@
                 </div>
 
                 <div class="contact--part">
-                  <label class="text--cellphone--button" for="contacto">¿Quieres matener comunicación activa?</label>
+                  <div class="letra">
+                  <label class="text--cellphone--button" for="contacto">¿Te gustaría proporcionar tu teléfono? <br> <br>
+                    <h5>Para mantener una comunicación activa</h5></label>
+                  </div>
                   <button class="btn btn--outline btn--cellphone btn--shadow" id="contacto--btn" type="button">Contacto activo <ion-icon name="arrow-up-outline" id="arrow"></ion-icon></button>
                 </div>
 
                 <div class="number--part" id="number--div">
+                  <div class="letra">
                   <label for="number">Número telefónico</label>
+                  </div>
                   <input
                     id="number"
                     type="tel"
@@ -420,7 +426,9 @@
                 </div>
 
                 <div class="textarea--container">
+                  <div class="letra">
                   <label for="area-form">Pregunta y/o comentario</label>
+                  </div>
                   <textarea id="area-form" name="area-form" placeholder="Escribe tu comentario" required></textarea>
                 </div>
 
@@ -437,16 +445,16 @@
         </div>
       </section>
     </main>
-    <!--Pie de página de safeDog-->
-   <footer class="footer--safeDog">
+  <!--Pie de página de safeDog-->
+  <footer class="footer--safeDog">
     <div class="iconos">
-        <a href="#"><img src="../assets/iconos/correo5.png" alt="" target="_blank"></a>
-        <a href="#"><img src="../assets/iconos/fb5.png" alt="" class="logo--fb"></a>
-        <a href="#"><img src="../assets/iconos/instagramb.png" alt="" class="logo--insta"></a>
-        <a href="#"><img src="../assets/iconos/whatsapp.png" alt=""></a>
+        <a href="#"><img src="../assets/correo5.png" alt="" target="_blank"></a>
+        <a href="#"><img src="../assets/fb5.png" alt="" ></a>
+        <a href="#"><img src="../assets/instagramb.png" alt="" ></a>
+        <a href="#"><img src="../assets/whatsapp.png" alt=""></a>
     </div>
     <div class="footer--logo">
-        <img src="../assets/iconos/safedogfooter.png" alt="safeDog Footer">
+        <img src="../assets/safedogfooter.png" alt="safeDog Footer">
     </div>
     <div class="footer--info">
         <h4 class="footer--question">¿Quieres formar parte de nuestra comunidad?</h4>
@@ -459,7 +467,7 @@
         </ul>
     </div>
     <div class="footer--copy">
-        <h4>© All rights reserved & design by SafeDog</h4>
+        <h4>© All rights reserved & design by SafeDog <br> Hecho con ♥ en GDL y CDMX</h4>
     </div>
 </footer>
     <script src="../scripts/preguntasFrecuentesContactanos.js"></script>

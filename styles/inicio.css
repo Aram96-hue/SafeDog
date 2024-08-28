@@ -46,19 +46,21 @@ body {
 
 .divBoton {
     position: absolute;
-    bottom: 20%;
-    left: 25%;
+    bottom: -20%;
+    left: 21%;
     text-align: center;
+    
+    padding: 30px;
 
 
 }
 
 .boton {
     color: var(--font-color-w);
-    background-color: var(--color-tertiary);
-    padding: 1rem 1.5rem 1rem 1.5rem;
+    background: linear-gradient( -135deg, var(--color-tertiary) 10%, #eadc93d1 100%);
+    padding: 1.5rem 2rem 1.5rem 2rem;
     border: none;
-    border-radius: 30px;
+    border-radius: 40px;
     font-size: 3vh;
     font-family: 'Sansita';
     /* height: 3rem;
@@ -67,15 +69,24 @@ body {
     left: 0;
     bottom: 0;
     z-index: 2;
-
+    cursor: pointer;
+    transform: translateY(-40%);
+    /* transition: background-color 0.7s, border-color 0.7s; */
 }
+.boton:hover {
+    background: linear-gradient( 135deg, #7F636E 10%, #3f2705d1 90%);    
+    
+    border-color: var(--color-tertiary);
+    color: var(--bg-color);
+}
+
 .centrar{
     text-align: center;
 }
 
 .divPerfil {
     position: absolute;
-    bottom: 55%;
+    bottom: 60%;
     right: 20px;
     text-align: center;
     z-index: 2;
@@ -85,8 +96,9 @@ body {
 .nombre {
     font-family: 'Sansita';
     color: black;
-    font-size: 2rem;
+    font-size: 3rem;
     z-index: 2;
+    padding: 20px;
 }
 
 .ubicacion {
@@ -94,6 +106,7 @@ body {
     color: black;
     font-size: 1.3rem;
     z-index: 2;
+    padding: 20px;
 }
 
 
@@ -105,6 +118,15 @@ body {
     width: auto;
     z-index: 2;
 }
+
+.imagenPortada{
+
+padding: 0px;
+border-radius: 20px;
+border: #fff9d1 8px solid;
+height: 250px;
+}
+
 
 .imagenDeFondo {
 
@@ -149,11 +171,11 @@ body {
 
 /* <!------------------- Cards ------------------->*/
 
-a:hover {
+/* a:hover {
     background: #fff;
     color: #333;
     text-shadow: 0 0 1px #333;
-}
+} */
 
 /*---Card box----*/
 .boxesContainer{
@@ -161,6 +183,8 @@ a:hover {
    flex-direction: row;
    flex-wrap: wrap;
    justify-content: center;
+   margin: 20px;
+   padding: 20px;
 }
 .cardBox {
    /* float: left;*/
@@ -169,6 +193,7 @@ a:hover {
     perspective: 800px;
     transition: all 0.3s ease 0s;
     width: 23.7%;
+    border-radius: 5%;
 }
 
 /*---Rotacion de card al pasar el cursor---*/
@@ -178,7 +203,7 @@ a:hover {
 
 /*----Diseño 3D de la tarjeta y giro---*/
 .card {
-    background: #F0BB69;
+    background: linear-gradient( 135deg, var(--color-tertiary) 10%, #eadc93d1 100%);
     align-items: center;
     justify-items: center;
     cursor: default;
@@ -197,7 +222,7 @@ a:hover {
     box-sizing: border-box;
     color: rgb(0, 0, 0);/*color de texto*/
     display: block;
-    border: solid orange;
+    border:0px solid orange;
     border-radius: 10%;
     font-size: 1.2em;
     height: 100%;
@@ -379,7 +404,7 @@ a:hover {
     background-color: #ffffff;
     margin: auto;
     border: none;
-    color: #0a69ed;
+    color: #244f1c;
     box-shadow: 0 0 1em rgba(1, 17, 39, 0.25);
     cursor: pointer;
     border-radius: 50%;
@@ -401,8 +426,8 @@ a:hover {
 #testimonialReview {
     color: var(--color-primary);
     text-align: center;
-    font-size: 0.9em;
-    line-height: 2em;
+    font-size: 1.1em;
+    line-height: 1.5em;
     letter-spacing: 0.05em;
 }
 
@@ -414,19 +439,19 @@ a:hover {
     top: -4em;
     left: 2em;
     overflow: hidden;
-    border: var(--color-cuarto);
+    border: 5px solid var(--color-cuarto);
 
 }
 
 #testimonialName {
     color: var(--color-primary);
-    font-size: 1em;
+    font-size: 1.8em;
     text-align: right;
 }
 
 #testimonialLocation {
-    color: #06257a;
-    font-size: 0.9em;
+    color: #000000;
+    font-size: 1.2em;
     letter-spacing: 0.03em;
     font-weight: bolder;
     text-align: right;
@@ -435,11 +460,11 @@ a:hover {
 #leerMas {
     position: absolute;
     display: inline-block;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 15px 30px 15px 30px;
+    border-radius: 10px;
     font-size: 1em;
-    background-color: var(--color-tertiary);
-    border: 2px solid var(--color-cuarto);
+    background-color: var(--color-cuarto);
+    border: 0px solid var(--color-cuarto);
     color: #ffffff;
     text-align: center;
     cursor: pointer;
@@ -447,32 +472,34 @@ a:hover {
     transition: background-color 0.3s, border-color 0.3s;
     bottom: -1.2em;
     align-self: flex-end;
+    margin: 0px;
 }
 
 #leerMas:hover {
     background-color: #ffffff;
     border-color: var(--color-cuarto);
+    color: var(--color-cuarto);
 }
 
 
 
 /*---Medias Queries---*/
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 400px) {
 
     .cardBox {
-        margin-left: 2.8%;
-        margin-top: 3%;
+        margin: 5%;
         width: calc(50% - 1em);
     }
 
     .card {
         font-size: 3vw;
         height: 285px;
+        
     }
 
     .cardBox:last-child {
-        margin-bottom: 3%;
+        margin: 5%;
     }
 
     img {
