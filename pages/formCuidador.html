@@ -15,100 +15,72 @@
     />
     <link rel="stylesheet" href="../styles/form-cuidador.css" />
     <link rel="stylesheet" href="../styles/form-cuidador-queries.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/navbar.css" />
     <title>Form - Cuidador</title>
   </head>
-  <body>
-    <!--NavBar de safeDog-->
-    <nav class="navbar">
-      <div class="navbar--logo">
-        <a href="#" target="_blank"
-          ><img src="../assets/iconos/SafeDog W (9).png" alt="SafeDog-Logo"
+
+  <!-- Empieza Navbar -->
+  <nav>
+    <div class="navbar">
+      <div class="logo">
+        <a href="../../inicio.html" target="_blank"
+          ><img src="../assets/SafeDog W (9).png" alt="SafeDog-Logo"
         /></a>
       </div>
-
-      <div class="nav--container">
-        <ul class="navbar--menu">
-          <li>
-            <a href="./acercaDeNosotros.html" target="">Acerca de nosotros</a>
-          </li>
-          <li>
-            <a href="./nuestrosServicios.html" target="">Nuestros Servicios</a>
-          </li>
-          <li><a href="./preguntas.html">Preguntas Frecuentes</a></li>
-        </ul>
-
-        <div class="navbar--botones">
-          <button
-            type="button"
-            class="boton--claro"
-            onclick="window.location.href='../pages/serCuidador.html';"
-          >
-            Ser cuidador
-          </button>
-          <button
-            type="button"
-            class="boton--claro"
-            onclick="window.location.href='../pages/inicioSesion.html';"
-          >
-            Inicio de sesión
-          </button>
-          <button
-            type="button"
-            class="boton--azul"
-            onclick="window.location.href='../pages/registro.html';"
-          >
-            Registro
-          </button>
-        </div>
-      </div>
-      <!--Menu de hamburguesa-->
-      <div class="menu-btn">
-        <i class="fa-solid fa-bars fa-2x"></i>
-      </div>
-    </nav>
-    <!-- Menu desplegable para móviles -->
-    <div class="mobile-menu" id="mobileMenu">
-      <ul class="mobile-navbar--menu">
+      <ul class="navbar--menu">
+        <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
         <li>
-          <a href="./acercaDeNosotros.html" target="_blank"
-            >Acerca de nosotros</a
-          >
-        </li>
-        <li>
-          <a href="./nuestrosServicios.html" target="_blank"
-            >Nuestros Servicios</a
-          >
-        </li>
-        <li>
-          <a href="./preguntasFrecuentes.html" target="_blank"
+          <a href="./preguntasFrecuentesContactanos.html"
             >Preguntas Frecuentes</a
           >
         </li>
       </ul>
-      <div class="mobile-navbar--botones">
+      <div class="navbar--botones">
         <button
-          type="button"
           class="boton--claro"
-          onclick="window.location.href='./serCuidador.html';"
+          onclick="window.location.href='./registroCuentaUsuarioDueño.html';"
         >
           Ser cuidador
         </button>
         <button
-          type="button"
           class="boton--claro"
-          onclick="window.location.href='./inicioSesion';"
+          onclick="window.location.href='./mainLogin.html';"
         >
-          Inicio de sesión
+          Iniciar sesión
         </button>
         <button
-          type="button"
           class="boton--azul"
-          onclick="window.location.href='./registro.html';"
+          onclick="window.location.href='./registroCuentaUsuarioDueño.html';"
         >
-          Registro
+          Registrarse
         </button>
       </div>
+      <div class="menu-icon" id="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
     </div>
+
+    <div class="dropdown-menu" id="dropdown-menu">
+      <div class="letras"></div>
+      <ul>
+        <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
+        <li>
+          <a href="./preguntasFrecuentesContactanos.html"
+            >Preguntas Frecuentes</a
+          >
+        </li>
+        <li><a href="./registroCuentaUsuarioDueño.html">Ser cuidador</a></li>
+        <li><a href="./mainLogin.html">Inicio de sesión</a></li>
+        <li><a href="./registroCuentaUsuarioDueño.html">Registrarse</a></li>
+      </ul>
+    </div>
+    <!-- termina navbar -->
+  </nav>
+
+  <body>
     <main>
       <section class="section--form--cuidador">
         <div class="container">
@@ -277,22 +249,19 @@
                       src="../assets/image 37.png"
                       alt="Cuidador"
                       class="img--img"
-                      id="open-popup-img"
+                      id="open-popup-img-feedback"
                     />
-                    <div>
-                      <button
-                        class="btn btn--save btn--shadow"
-                        type="button"
-                        onclick="document.getElementById('formFileMultipleOne').click();"
-                      >
-                        Subir fotografias
-                      </button>
+                    <div class="img--url--input">
                       <input
-                        type="file"
-                        style="display: none"
-                        id="formFileMultipleOne"
-                        multiple
+                        type="url"
+                        name="url-img"
+                        id="url-img"
+                        placeholder="https://www.ejemplo.com"
+                        required
                       />
+                      <div class="form--imput--validation">
+                        <p id="url-img-feedback" class="input-feedback"></p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -309,20 +278,17 @@
                       alt="Cuidador"
                       class="img--img"
                     />
-                    <div>
-                      <button
-                        class="btn btn--save btn--shadow"
-                        type="button"
-                        onclick="document.getElementById('formFileMultipleTwo').click();"
-                      >
-                        Subir documento
-                      </button>
+                    <div class="img--url--input">
                       <input
-                        type="file"
-                        style="display: none"
-                        id="formFileMultipleTwo"
-                        multiple
+                        type="url"
+                        name="url-ine"
+                        id="url-ine"
+                        placeholder="https://www.ejemplo.com"
+                        required
                       />
+                      <div class="form--imput--validation">
+                        <p id="url-ine-feedback" class="input-feedback"></p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -335,28 +301,20 @@
             </div>
           </form>
         </div>
-        <div id="jsonOutput"></div>
       </section>
     </main>
     <!--Pie de página de safeDog-->
     <footer class="footer--safeDog">
       <div class="iconos">
         <a href="#"
-          ><img src="../assets/iconos/correo5.png" alt="" target="_blank"
+          ><img src="../assets/correo5.png" alt="" target="_blank"
         /></a>
-        <a href="#"
-          ><img src="../assets/iconos/fb5.png" alt="" class="logo--fb"
-        /></a>
-        <a href="#"
-          ><img
-            src="../assets/iconos/instagramb.png"
-            alt=""
-            class="logo--insta"
-        /></a>
-        <a href="#"><img src="../assets/iconos/whatsapp.png" alt="" /></a>
+        <a href="#"><img src="../assets/fb5.png" alt="" /></a>
+        <a href="#"><img src="../assets/instagramb.png" alt="" /></a>
+        <a href="#"><img src="../assets/whatsapp.png" alt="" /></a>
       </div>
       <div class="footer--logo">
-        <img src="../assets/iconos/safedogfooter.png" alt="safeDog Footer" />
+        <img src="../assets/safedogfooter.png" alt="safeDog Footer" />
       </div>
       <div class="footer--info">
         <h4 class="footer--question">
@@ -389,9 +347,13 @@
         </ul>
       </div>
       <div class="footer--copy">
-        <h4>© All rights reserved & design by SafeDog</h4>
+        <h4>
+          © All rights reserved & design by SafeDog <br />
+          Hecho con ♥ en GDL y CDMX
+        </h4>
       </div>
     </footer>
     <script src="../scripts/formCuidador.js"></script>
+    <script src="../scripts/navBar.js"></script>
   </body>
 </html>

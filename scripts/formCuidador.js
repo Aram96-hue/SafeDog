@@ -3,10 +3,14 @@ function convertToJson() {
   let formData = {};
   for (let i = 0; i < form.elements.length; i++) {
     let element = form.elements[i];
-    
-    if (element.type !== "submit" && element.type !== "button" && element.type !== "file") {
-      if(element.type === "radio"){
-        if(element.checked){
+
+    if (
+      element.type !== "submit" &&
+      element.type !== "button" &&
+      element.type !== "file"
+    ) {
+      if (element.type === "radio") {
+        if (element.checked) {
           formData[element.name] = element.value;
         }
       } else {
@@ -15,7 +19,7 @@ function convertToJson() {
     }
   }
   let jsonData = JSON.stringify(formData);
-  localStorage.setItem('cuidadorDatosGenerales', jsonData);
+  localStorage.setItem("cuidadorDatosGenerales", jsonData);
   console.log(jsonData);
 }
 
@@ -32,6 +36,15 @@ function isEmailValid(email) {
 function isPhoneNumberValid(phone) {
   let telefonoRegex = /^\d{10}$/;
   return telefonoRegex.test(phone);
+}
+
+function isURLValid(url) {
+  try {
+    new URL(url);
+    return true;
+  } catch (_) {
+    return false;
+  }
 }
 
 document.getElementById("nombre").addEventListener("input", function () {
@@ -82,133 +95,107 @@ document.getElementById("number").addEventListener("input", function () {
   }
 });
 
-document.getElementById("name-emergency").addEventListener("input", function () {
-  let nombre = document.getElementById("name-emergency").value.trim();
-  let nameError = document.getElementById("name-emergency-feedback");
-  if (!isNameValid(nombre)) {
-    nameError.textContent = "Caracter inválido";
-    nameError.style.color = "red";
-  } else {
-    nameError.textContent = "";
-  }
-});
+document
+  .getElementById("name-emergency")
+  .addEventListener("input", function () {
+    let nombre = document.getElementById("name-emergency").value.trim();
+    let nameError = document.getElementById("name-emergency-feedback");
+    if (!isNameValid(nombre)) {
+      nameError.textContent = "Caracter inválido";
+      nameError.style.color = "red";
+    } else {
+      nameError.textContent = "";
+    }
+  });
 
-document.getElementById("number-emergency").addEventListener("input", function () {
-  let telefono = this.value.trim();
-  let feedback = document.getElementById("number-feedback");
+document
+  .getElementById("number-emergency")
+  .addEventListener("input", function () {
+    let telefono = this.value.trim();
+    let feedback = document.getElementById("number-feedback");
 
-  if (!isPhoneNumberValid(telefono)) {
-    feedback.textContent = "Número telefónico inválido";
-    feedback.style.color = "red";
-  } else {
-    feedback.textContent = "Número telefónico válido";
+    if (!isPhoneNumberValid(telefono)) {
+      feedback.textContent = "Número telefónico inválido";
+      feedback.style.color = "red";
+    } else {
+      feedback.textContent = "Número telefónico válido";
+      feedback.style.color = "green";
+    }
+  });
+
+document
+  .getElementById("email-emergency")
+  .addEventListener("input", function () {
+    let correo = this.value.trim();
+    let feedback = document.getElementById("email-emergency-feedback");
+
+    if (!isEmailValid(correo)) {
+      feedback.textContent = "Correo electrónico inválido";
+      feedback.style.color = "red";
+    } else {
+      feedback.textContent = "Correo electrónico válido";
+      feedback.style.color = "green";
+    }
+  });
+
+document.getElementById("url-img").addEventListener("input", function () {
+  let url = this.value.trim();
+  let feedback = document.getElementById("url-img-feedback");
+  if (isURLValid(url)) {
+    feedback.textContent = "URL valido";
     feedback.style.color = "green";
-  }
-});
-
-document.getElementById("email-emergency").addEventListener("input", function () {
-  let correo = this.value.trim();
-  let feedback = document.getElementById("email-emergency-feedback");
-
-  if (!isEmailValid(correo)) {
-    feedback.textContent = "Correo electrónico inválido";
-    feedback.style.color = "red";
   } else {
-    feedback.textContent = "Correo electrónico válido";
+    feedback.textContent = "URL invalido";
+    feedback.style.color = "red";
+  }
+});
+
+document.getElementById("url-ine").addEventListener("input", function () {
+  let url = this.value.trim();
+  let feedback = document.getElementById("url-ine-feedback");
+  if (isURLValid(url)) {
+    feedback.textContent = "URL valido";
     feedback.style.color = "green";
+  } else {
+    feedback.textContent = "URL invalido";
+    feedback.style.color = "red";
   }
 });
 
-document.getElementById("form-cuidador-uno").addEventListener("submit", function (event) {
-  event.preventDefault();
-  let nombre = document.getElementById("nombre").value;
-  let apellido = document.getElementById("apellido").value;
-  let numero = document.getElementById("number").value;
-  let email = document.getElementById("email").value;
-  
-  let radios = document.querySelectorAll('input[name="ciudad"]');
-  let isChecked = Array.from(radios).some(radio => radio.checked);
+document
+  .getElementById("form-cuidador-uno")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    let nombre = document.getElementById("nombre").value;
+    let apellido = document.getElementById("apellido").value;
+    let numero = document.getElementById("number").value;
+    let email = document.getElementById("email").value;
 
-  let nombreContacto = document.getElementById("name-emergency").value;
-  let numeroContacto = document.getElementById("number-emergency").value;
-  let emailContacto = document.getElementById("email-emergency").value;
+    let radios = document.querySelectorAll('input[name="ciudad"]');
+    let isChecked = Array.from(radios).some((radio) => radio.checked);
 
-  if(!isNameValid(nombre)) return;
-  if(!isNameValid(apellido)) return;
-  if(!isPhoneNumberValid(numero)) return;
-  if(!isEmailValid(email)) return;
+    let nombreContacto = document.getElementById("name-emergency").value;
+    let numeroContacto = document.getElementById("number-emergency").value;
+    let emailContacto = document.getElementById("email-emergency").value;
 
-  if(!isChecked) return;
+    let imgInput = document.getElementById("url-img").value;
+    let imgINE = document.getElementById("url-ine").value;
 
-  if(!isNameValid(nombreContacto)) return;
-  if(!isPhoneNumberValid(numeroContacto)) return;
-  if(!isEmailValid(emailContacto)) return;
+    if (!isNameValid(nombre)) return;
+    if (!isNameValid(apellido)) return;
+    if (!isPhoneNumberValid(numero)) return;
+    if (!isEmailValid(email)) return;
 
-  convertToJson();
-});
+    if (!isChecked) return;
 
-// imagenesdropzone //
-document.addEventListener('DOMContentLoaded', () => {
-  const dropzone = document.getElementById('dropzone');
+    if (!isNameValid(nombreContacto)) return;
+    if (!isPhoneNumberValid(numeroContacto)) return;
+    if (!isEmailValid(emailContacto)) return;
 
-  dropzone.addEventListener('dragover', (event) => {
-      event.preventDefault();
-      dropzone.classList.add('dragover');
+    console.log("Arre!!!");
+    if (!isURLValid(imgInput)) return;
+    if (!isURLValid(imgINE)) return;
+    console.log("Arre!!!");
+
+    convertToJson();
   });
-
-  dropzone.addEventListener('dragleave', () => {
-      dropzone.classList.remove('dragover');
-  });
-
-  dropzone.addEventListener('drop', (event) => {
-      event.preventDefault();
-      dropzone.classList.remove('dragover');
-      
-      const files = event.dataTransfer.files;
-      if (files.length > 0) {
-          handleFiles(files);
-      }
-  });
-
-  function handleFiles(files) {
-      for (const file of files) {
-          if (file.type.startsWith('image/')) {
-              const img = document.createElement('img');
-              img.src = URL.createObjectURL(file);
-              img.style.maxWidth = '100%';
-              img.style.maxHeight = '400px';
-              dropzone.innerHTML = ''; // Limpiar el área de caída
-              dropzone.appendChild(img);
-          } else {
-              alert('Por favor, arrastra y suelta solo imágenes.');
-          }
-      }
-  }
-});
-
-//popup//
-document.addEventListener('DOMContentLoaded', () => {
-  const openPopupImg = document.getElementById('open-popup-img');
-  const popup = document.getElementById('popup');
-  const popupImg = document.getElementById('popup-img');
-  const popupClose = document.getElementById('popup-close');
-
-  // Abre el popup y muestra la imagen en el popup
-  openPopupImg.addEventListener('click', () => {
-      popupImg.src = openPopupImg.src;
-      popup.classList.remove('hidden');
-  });
-
-  // Cierra el popup al hacer clic en el botón de cierre
-  popupClose.addEventListener('click', () => {
-      popup.classList.add('hidden');
-  });
-
-  // Cierra el popup si se hace clic fuera del contenido del popup
-  window.addEventListener('click', (event) => {
-      if (event.target === popup) {
-          popup.classList.add('hidden');
-      }
-  });
-});
-
