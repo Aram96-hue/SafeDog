@@ -1,3 +1,18 @@
+:root {
+    --background: #fff8e0;
+    --primary: #39b3a2;
+    --secondary: #7f636e;
+    --yellow: #f0bb69;
+    --white: #ffffff;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 1;
@@ -11,27 +26,35 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 2.3rem;
     text-align: center;
-    margin: 3rem;
+    margin: .5rem;
+    padding: 0.5rem;
 }
 
 .container-alinearr {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
 }
 
 .container-monto {
-    border:solid;
+    border:none;
     border-radius: 0.5rem;
-    width: 700px; 
+    width: 500px; 
     height: 16rem;
     text-align: center;
-    margin: 4rem;
+    gap: 1rem;
+    margin: 3rem;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
+    font-size: larger;
+    background-color: #44A194;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+}
+
+.container-form{
+    margin: 5rem;
 }
 
 .form-tipo-tarjeta {
@@ -48,7 +71,7 @@ body {
     align-items: center;
     flex-direction: row; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
-    width: 400%;
+    width: 20rem;
 }
 
 .form-tipo-tarjeta label {
@@ -65,18 +88,19 @@ body {
 }
 
 .form-tipo-tarjeta input[type="submit"] {
-    background-color: peru;
+    background-color: #ffffff;
     color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
     color: black;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 
 .form-tipo-tarjeta input[type="submit"]:hover {
-    background-color: #44A194;
+    background-color: #f0bb69;
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
 
@@ -86,12 +110,360 @@ body {
     text-align: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: small;
-    margin: 4rem;
+    margin: 5rem;
 }
 
 .tyc {
     text-align: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: small;
-    margin: 4rem;
+    margin: 3rem;
+}
+
+
+/*estilos de header*/
+
+.navbar {
+    background-color: #44A194; /* Color del fondo del menú */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Estilos para el logo */
+.logo img {
+    width: 200px; /* Reducido para hacer el logo más pequeño */
+    height: auto; /* Ajusta automáticamente la altura proporcionalmente */
+}   
+
+/* Menú de navegación */
+.navbar--menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+    
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.navbar--menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+}
+.letras{
+    font-size:25px;
+    text-align: right;
+    
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+/* Botones de la barra de navegación */
+.navbar--botones {
+    display: flex;
+    gap: 10px;
+    border: 0px;
+}
+
+.boton--azul {
+    padding: 8px 20px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+ 
+}
+
+.boton--claro {
+    background-color: #65B5A1;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 10px;
+    font-family: "Sansita";
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+   
+}
+
+.boton--azul {
+    background-color: #124C5F;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 10px;
+    font-family: "Sansita";
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+  
+}
+
+/* Estilo del ícono del menú hamburguesa */
+.menu-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: none; /* Oculto por defecto, se muestra en móviles */
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.menu-icon .bar {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* Menú desplegable */
+.dropdown-menu {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: #2B4453;
+    position: absolute;
+    top: 88px;
+    padding:10px;
+    right: 20px;
+    width: 250px;
+    display: none;
+    border-radius: 10px;
+    z-index: 1000; /* Asegura que el menú se muestre encima */
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+}
+
+.dropdown-menu ul li {
+    margin: 10px 5px 10PX 5px;
+    justify-content: center;
+   
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+
+
+.dropdown-menu ul li a {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #357D7E;
+    text-align: center;
+}
+
+.dropdown-menu ul li a:hover {
+    background-color: #4AA09A;
+}
+
+/* Mostrar el menú desplegable cuando esté activo */
+.show-menu {
+    display: block;
+    
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+a{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding:5px;
+}
+
+#dropdown-nenu{
+    
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+
+
+/* Estilo para "Acerca de nosotros" y "Preguntas Frecuentes" como texto simple */
+.dropdown-menu ul li:nth-child(1) a,
+.dropdown-menu ul li:nth-child(2) a {
+    background-color: transparent;
+    padding: 0;
+    text-align: left;
+}
+
+/* Medios responsive */
+@media (max-width: 900px) {
+    .navbar--menu,
+    .navbar--botones {
+        display: none; /* Oculta el menú y botones en pantallas pequeñas */
+    }
+    
+    .menu-icon {
+        display: flex; /* Muestra el ícono del menú hamburguesa */
+    }
+    
+    .dropdown-menu.active {
+        display: block; /* Muestra el menú desplegable cuando esté activo */
+    }
+}
+
+/*estilos de footer*/
+
+
+
+
+/*medias queries*/
+
+/* Mobile (menor a 576px) */
+/*@media (max-width: 575.98px) {
+    .nombre-dueño-registrado {
+        font-size: 1.5rem;
+        margin: 0.5rem;
+        padding: 0.3rem;
+    }
+
+    .container-alinearr {
+        flex-direction: column;
+    }
+
+    .container-monto {
+        width: 100%;
+        height: auto;
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .form-tipo-tarjeta {
+        width: 100%;
+        max-width: 100%;
+        padding: 0.5rem;
+    }
+
+    .paypalpago, .tyc {
+        margin: 2rem;
+        font-size: x-small;
+    }
+}
+
+/* Tablets (576px - 768px) */
+/*@media (min-width: 576px) and (max-width: 767.98px) {
+    .nombre-dueño-registrado {
+        font-size: 1.8rem;
+    }
+
+    .container-monto {
+        width: 80%;
+        height: auto;
+        margin: 2rem;
+    }
+
+    .form-tipo-tarjeta {
+        width: 90%;
+        max-width: 90%;
+        padding: 1rem;
+    }
+
+    .paypalpago, .tyc {
+        margin: 3rem;
+        font-size: small;
+    }
+}
+
+/* Tablets grandes y desktops pequeños (768px - 992px) */
+/*@media (min-width: 768px) and (max-width: 991.98px) {
+    .nombre-dueño-registrado {
+        font-size: 2rem;
+    }
+
+    .container-monto {
+        width: 70%;
+        height: auto;
+        margin: 3rem;
+    }
+
+    .form-tipo-tarjeta {
+        width: 80%;
+        max-width: 80%;
+        padding: 1.5rem;
+    }
+
+    .paypalpago, .tyc {
+        margin: 4rem;
+        font-size: medium;
+    }
+}
+
+/* Desktops medianos (992px - 1200px) */
+/*@media (min-width: 992px) and (max-width: 1199.98px) {
+    .nombre-dueño-registrado {
+        font-size: 2.2rem;
+    }
+
+    .container-monto {
+        width: 60%;
+        height: auto;
+        margin: 4rem;
+    }
+
+    .form-tipo-tarjeta {
+        width: 70%;
+        max-width: 70%;
+        padding: 2rem;
+    }
+
+    .paypalpago, .tyc {
+        margin: 4rem;
+        font-size: medium;
+    }
+}
+
+/* Desktops grandes (mayor a 1200px) */
+/*@media (min-width: 1200px) {
+    .nombre-dueño-registrado {
+        font-size: 2.3rem;
+    }
+
+    .container-monto {
+        width: 50%;
+        height: auto;
+        margin: 5rem;
+    }
+
+    .form-tipo-tarjeta {
+        width: 60%;
+        max-width: 60%;
+        padding: 2rem;
+    }
+
+    .paypalpago, .tyc {
+        margin: 5rem;
+        font-size: medium;
+    }
 }
