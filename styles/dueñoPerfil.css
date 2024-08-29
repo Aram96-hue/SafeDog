@@ -1,14 +1,10 @@
+
 body {
     background-color: #FFF8E0 !important;
     font-family: 'Roboto', sans-serif;
-    
 }
 
-h3 {
-    font-family: 'Sansita', sans-serif;
-}
-
-h5 {
+h3, h5 {
     font-family: 'Sansita', sans-serif;
 }
 
@@ -41,11 +37,7 @@ h5 {
     background-color: #F0BB69;
 }
 
-.custom-label {
-    font-size: 16px;
-}
-
-.custom-paragraph {
+.custom-label, .custom-paragraph, .custom-body, .custom-header, p, .form-control {
     font-size: 16px;
 }
 
@@ -53,17 +45,23 @@ h5 {
     width: 100%;
     height: 200px; /* Fixed height */
     object-fit: cover; /* Ensures the image covers the area without distortion */
-  }
-
-.custom-body {
-    font-size: 16px;
 }
 
-.custom-header {
-    font-size: 16px;
-}
+/* Media queries for small screens (phones) */
+@media (max-width: 576px) {
+    .custom-label, .custom-paragraph, .custom-body, .custom-header, p {
+        font-size: 18px; /* Increase font size for better readability */
+    }
 
-p {
-    font-size: 16px;
-}
+    .form-control {
+        font-size: 18px; /* Larger input text */
+    }
 
+    .card {
+        padding: 20px; /* Reduce padding for small screens */
+    }
+
+    .btn-custom {
+        font-size: 18px; /* Increase button font size */
+    }
+}

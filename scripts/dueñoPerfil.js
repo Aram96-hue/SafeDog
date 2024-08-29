@@ -1,29 +1,82 @@
-/*$('#myList a').on('click', function (e) {
-    e.preventDefault()
-    $(this).tab('show')
-  })
-  
-$('#myList a[href="#profile"]').tab('show') // Select tab by name
-$('#myList a:first-child').tab('show') // Select first tab
-$('#myList a:last-child').tab('show') // Select last tab
-$('#myList a:nth-child(3)').tab('show') // Select third tab
 
-$(function () {
-    $('#myList a:last-child').tab('show')
-  })
 
-$('#someListItem').tab('show')
-*/
-
-document.getElementById("modifyBtn").addEventListener("click", function() {
+// Toggle form fields
+document.getElementById("modifyBtn").addEventListener("click", function () {
   const formElements = document.querySelectorAll("#userForm input, #userForm select");
-  formElements.forEach(function(element) {
+  formElements.forEach(function (element) {
     element.disabled = !element.disabled; // Toggle the disabled state
   });
 });
 
-document.getElementById("saveBtn").addEventListener("click", function(event) {
+// Function to display error messages
+function showError(inputId, message) {
+  let errorElement = document.getElementById(inputId + "-error");
+
+  if (!errorElement) {
+    errorElement = document.createElement("div");
+    errorElement.id = inputId + "-error";
+    errorElement.style.color = "red";
+    errorElement.style.fontSize = "12px";
+    errorElement.className = "error-message";
+    document.getElementById(inputId).parentNode.appendChild(errorElement);
+  }
+
+  errorElement.textContent = message;
+}
+
+// Function to clear error messages
+function clearErrors() {
+  const errorMessages = document.querySelectorAll(".error-message");
+  errorMessages.forEach(function (error) {
+    error.textContent = "";
+  });
+}
+
+// Validation function
+function validateForm() {
+  let isValid = true;
+  clearErrors(); // Clear previous errors
+
+  // Validate name fields (only letters allowed)
+  const nameFields = [
+    { id: "firstName", label: "Nombre" },
+    { id: "lastName", label: "Apellido" },
+    { id: "petName", label: "Nombre de Mascota" }
+  ];
+
+  nameFields.forEach(field => {
+    const value = document.getElementById(field.id).value;
+    if (value && !/^[a-zA-Z\s]+$/.test(value)) {
+      isValid = false;
+      showError(field.id, `El campo ${field.label} solo debe contener letras.`);
+    }
+  });
+
+  // Validate phone fields (only numbers, max 10 digits)
+  const phoneFields = [
+    { id: "phoneNumber1", label: "Teléfono" },
+    { id: "phoneNumber2", label: "Teléfono de Emergencia" }
+  ];
+
+  phoneFields.forEach(field => {
+    const value = document.getElementById(field.id).value;
+    if (value && !/^\d{1,10}$/.test(value)) {
+      isValid = false;
+      showError(field.id, `El campo ${field.label} solo debe contener números y un máximo de 10 dígitos.`);
+    }
+  });
+
+  return isValid;
+}
+
+// Save data with validations
+document.getElementById("saveBtn").addEventListener("click", function (event) {
   event.preventDefault(); // Prevent form from submitting the default way
+
+  // Check form validity
+  if (!validateForm()) {
+    return;
+  }
 
   // Collect updated data from the form
   const updatedData = {
@@ -40,19 +93,20 @@ document.getElementById("saveBtn").addEventListener("click", function(event) {
     edadMeses: parseInt(document.getElementById('months').value),
     genero: document.querySelector('input[name="gender"]:checked').id,
   };
+
   console.log("Updated Data:", updatedData);
 
   // Here you could send `updatedData` back to a server, or save it locally
   // For demonstration, we just log it to the console
   alert("Data saved successfully!");
-  
+
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+// Load data from JSON
+document.addEventListener('DOMContentLoaded', function () {
   fetch('../data/userProfile.json')
     .then(response => response.json())
     .then(data => {
-      
       document.getElementById('username').textContent = data.nombre;
       document.getElementById('petUser').textContent = data.nombrePerro;
       document.getElementById('firstName').value = data.nombre;
@@ -70,7 +124,6 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .catch(error => console.error('Error fetching the JSON:', error));
 });
-
 
 
 
