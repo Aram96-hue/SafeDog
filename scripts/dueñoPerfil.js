@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
       document.getElementById(data.tamanoPerro).checked = true;
       document.getElementById('years').value = data.edadAños;
       document.getElementById('months').value = data.edadMeses;
-      document.getElementById('petName').value = data.nombrePerro;
+      document.getElementById('petUser').value = data.nombrePerro;
       document.getElementById('breed').value = data.raza;
     })
     .catch(error => console.error('Error fetching the JSON:', error));
