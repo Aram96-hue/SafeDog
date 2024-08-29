@@ -1,4 +1,156 @@
-function convertToJson() {
+function validateNombre(input) {
+  let pattern = /^[A-Za-z\s]+$/;
+  let feedback = input.nextElementSibling;
+
+  if (!pattern.test(input.value)) {
+      input.setCustomValidity("Invalid");
+      feedback.textContent = "El nombre solo debe contener letras y espacios.";
+      feedback.classList.remove('valid-feedback');
+      feedback.classList.add('invalid-feedback');
+      feedback.style.display = 'block';
+  } else {
+      input.setCustomValidity("");
+      feedback.textContent = "Nombre válido.";
+      feedback.classList.remove('invalid-feedback');
+      feedback.classList.add('valid-feedback');
+      feedback.style.display = 'block';
+  }
+}
+
+function validateNumTarjeta(input) {
+  let pattern = /^\d{16}$/;
+  let feedback = input.nextElementSibling;
+
+  if (!pattern.test(input.value) || input.value.length !== 16) {
+      input.setCustomValidity("Invalid");
+      feedback.textContent = "Número de tarjeta invalido.";
+      feedback.classList.remove('valid-feedback');
+      feedback.classList.add('invalid-feedback');
+      feedback.style.display = 'block';
+  } else {
+      input.setCustomValidity("");
+      feedback.textContent = "Número de tarjeta válido.";
+      feedback.classList.remove('invalid-feedback');
+      feedback.classList.add('valid-feedback');
+      feedback.style.display = 'block';
+  }
+}
+
+function validateFechaVencimiento(input) {
+  let pattern = /^\d{4}$/;
+  let feedback = input.nextElementSibling;
+
+  if (!pattern.test(input.value) || input.value.length !== 4) {
+      input.setCustomValidity("Invalid");
+      feedback.textContent = "Formato de fecha no válido.";
+      feedback.classList.remove('valid-feedback');
+      feedback.classList.add('invalid-feedback');
+      feedback.style.display = 'block';
+  } else {
+      input.setCustomValidity("");
+      feedback.textContent = "Formato de fecha válido.";
+      feedback.classList.remove('invalid-feedback');
+      feedback.classList.add('valid-feedback');
+      feedback.style.display = 'block';
+  }
+}
+
+function validateCodigoVerificacion(input) {
+  let pattern = /^\d{3}$/;
+  let feedback = input.nextElementSibling;
+
+  if (!pattern.test(input.value) || input.value.length !== 3) {
+      input.setCustomValidity("Invalid");
+      feedback.textContent = "Código no válido.";
+      feedback.classList.remove('valid-feedback');
+      feedback.classList.add('invalid-feedback');
+      feedback.style.display = 'block';
+  } else {
+      input.setCustomValidity("");
+      feedback.textContent = "Código válido.";
+      feedback.classList.remove('invalid-feedback');
+      feedback.classList.add('valid-feedback');
+      feedback.style.display = 'block';
+  }
+}
+
+function validateDomicilio(input) {
+  let pattern = /^\d{3}$/;
+  let feedback = input.nextElementSibling;
+
+  if (!pattern.test(input.value) || input.value.length !== 3) {
+      input.setCustomValidity("Invalid");
+      feedback.textContent = "Entrada no válida.";
+      feedback.classList.remove('valid-feedback');
+      feedback.classList.add('invalid-feedback');
+      feedback.style.display = 'block';
+  } else {
+      input.setCustomValidity("");
+      feedback.textContent = "Entrada válida.";
+      feedback.classList.remove('invalid-feedback');
+      feedback.classList.add('valid-feedback');
+      feedback.style.display = 'block';
+  }
+}
+
+// Add event listeners
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector('.form-tipo-tarjeta');
+
+  form.addEventListener('input', event => {
+      const target = event.target;
+
+      if (target.id === 'nombre') {
+          validateNombre(target);
+      } else if (target.id === 'tarjeta') {
+          validateNumTarjeta(target);
+      } else if (target.id === 'exampleInputEmail1') {
+          validateCorreo(target);
+      } else if (target.id === 'exampleInputPassword1') {
+          validatePassword(target);
+      } else if (target.id === 'exampleInputPassword2') {
+          validatePasswordConfirm(target);
+      }
+  }, false);
+
+  form.addEventListener('submit', event => {
+      event.preventDefault();
+      event.stopPropagation();
+
+      if (form.checkValidity()) {
+          form.classList.add('was-validated');
+          document.getElementById('success-message').textContent = "Registro exitoso!";
+          document.getElementById('success-message').style.display = 'block';
+          
+          const username = form.querySelector('#nombre').value;
+          const correo = form.querySelector('#exampleInputEmail1').value;
+          const telefono = form.querySelector('#telefono').value;
+          const password2 = form.querySelector('#exampleInputPassword1').value;
+
+          const newUser = {
+              username,
+              correo,
+              telefono,
+              password2
+          };
+
+          let users = JSON.parse(localStorage.getItem('myForm2')) || [];
+          users.push(newUser);
+          localStorage.setItem('myForm2', JSON.stringify(users));
+          
+          console.log('Formulario enviado');
+      } else {
+          form.classList.add('was-validated');
+      }
+  }, false);
+});
+
+
+
+
+
+
+/*function convertToJson() {
     let form = document.getElementById("form-tarjeta");
     let formData = {};
     for (let i = 0; i < form.elements.length; i++) {
@@ -58,7 +210,7 @@ function convertToJson() {
   document.getElementById("tarjeta").addEventListener("input", function () {
     let nombre = document.getElementById("apellido").value.trim();
     let nameError = document.getElementById("apellido-feedback");
-    if (!isNameValid(nombre)) {
+    if (!isNumerotarjetaValid(numerotarjeta)) {
       nameError.textContent = "Caracter inválido";
       nameError.style.color = "red";
     } else {
@@ -70,7 +222,7 @@ function convertToJson() {
     let correo = this.value.trim();
     let feedback = document.getElementById("email-feedback");
   
-    if (!isEmailValid(correo)) {
+    if (!isEmailValid(expiracion)) {
       feedback.textContent = "Correo electrónico inválido";
       feedback.style.color = "red";
     } else {
@@ -83,7 +235,7 @@ function convertToJson() {
     let telefono = this.value.trim();
     let feedback = document.getElementById("number--feedback");
   
-    if (!isPhoneNumberValid(telefono)) {
+    if (!isPhoneNumberValid(cvv)) {
       feedback.textContent = "Número telefónico inválido";
       feedback.style.color = "red";
     } else {
@@ -95,7 +247,7 @@ function convertToJson() {
   document.getElementById("direccion").addEventListener("input", function () {
     let nombre = document.getElementById("name-emergency").value.trim();
     let nameError = document.getElementById("name-emergency-feedback");
-    if (!isNameValid(nombre)) {
+    if (!isNameValid(direccion)) {
       nameError.textContent = "Caracter inválido";
       nameError.style.color = "red";
     } else {
@@ -107,10 +259,9 @@ function convertToJson() {
   document.getElementById("form-cuidador-uno").addEventListener("submit", function (event) {
     event.preventDefault();
     let nombre = document.getElementById("nombre").value;
-    let apellido = document.getElementById("apellido").value;
-    let numero = document.getElementById("number").value;
-    let email = document.getElementById("email").value;
-    
+    let tarjeta = document.getElementById("apellido").value;
+    let expiracion = document.getElementById("number").value;
+    let cvv = document.getElementById("cvv").value;
     let radios = document.querySelectorAll('input[name="ciudad"]');
     let isChecked = Array.from(radios).some(radio => radio.checked);
   
@@ -130,7 +281,11 @@ function convertToJson() {
     if(!isEmailValid(emailContacto)) return;
   
     convertToJson();
-  });
+  });*/
+
+
+/****************************************/
+
 
   /*document.querySelector('.form-tarjeta').addEventListener('submit', function(event) {
     let isValid = true;

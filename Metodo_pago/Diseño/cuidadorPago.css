@@ -26,7 +26,8 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 2.3rem;
     text-align: center;
-    margin: 1rem;
+    margin: .5rem;
+    height: 1rem;
 }
 
 .pago-periodico-contenedor1 {
@@ -51,7 +52,12 @@ body {
     margin: 0;
     color: black;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
-    
+    background: linear-gradient(135deg, #44A194, #3a8a74 40%, #44A194 60%);
+    background-size: 200% 200%;
+    border: 1px solid #2f6d5a;
+    border-radius: 8px;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 255, 255, 0.7);
+        
 }
 
 .tarjeta-M:hover {
@@ -92,16 +98,16 @@ body {
 /*texto entre sectiones*/
 
 .subtitulo {
-    font-size: 3rem;
+    font-size: 2rem;
     display: flex;
     text-align: center;
     flex-direction: column;
 }
 
-/*Formularios de pago*/
+/************Formularios de pago**************/
 
 .formularios-pagos-contenedor-principal{
-    margin: 5rem;
+    margin: 3rem;
 }
 
 .form-tarjeta {
@@ -109,7 +115,6 @@ body {
     max-width: 20rem;
     margin: 0 auto;
     padding: 1rem;
-    border: none;
     border-radius: 8px;
     justify-content: center; 
     display: flex;
@@ -119,6 +124,11 @@ body {
     align-items: center;; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
     width: 20rem;
+    background: linear-gradient(135deg, #8b6438, #a17f49 30%, #8b6438 70%);
+    background-size: 200% 200%;
+    border: 1px solid #6f4f28;
+    border-radius: 8px;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 255, 255, 0.7);
 }
 
 .form-tarjeta-hidden {
@@ -146,14 +156,33 @@ body {
     padding: 10px;
     cursor: pointer;
     color: black;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(145deg, #ffffff, #ffffff);
+    border-radius: 4px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3), -4px -4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+        
 }
 
 .form-tarjeta input[type="submit"]:hover {
     background-color: #f0bb69;
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    background: linear-gradient(145deg, #f0bb69, #f0bb69);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3),-4px -4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-4px);
+    
+}
+
+.form-tarjeta input[type="submit"]:active {
+    background: linear-gradient(145deg, #f0bb69, #f0bb69);
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.3), inset -4px -4px 8px rgba(255, 255, 255, 0.4);
+    transform: translateY(2px);   
 }
 
 .form--imput--validation{
@@ -162,13 +191,62 @@ body {
     align-items: center;
   }
 
-/*otros medios de pago*/
+/********otros medios de pago********/
 
-.otros-medios-pago {
+.iconos-pago-cuidador {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center; 
+    align-items: center;   
+    height: 15vh;      
+}
+
+.contenedor-principal-iconos-cuidador{
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: 1rem;
+    gap: none;
+}
+
+.otros-medios-pago-cuidador-p {
     text-align: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: small;
-    margin: 5rem;
+    margin: 2rem;
+    height: 5vh; 
+}
+
+.otros-medios-pago-cuidador-i {
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    width: 20rem;
+    height: 20vh; 
+    gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.tamaño-de-iconos-cuidador-primarios {
+    max-width: 7%;
+    size: 1rem;
+
+}
+
+.tamaño-de-iconos-cuidador-secundarios {
+    max-width: 25%;
+    size: 1rem;
+    width: 3.125rem;
+
 }
 
 /*terminos y condiciones*/
@@ -176,10 +254,10 @@ body {
     text-align: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: small;
-    margin: 3rem;
+    margin: 4rem;
 }
 
-/*estilos de header*/
+/***************************************estilos de header****************************************/
 
 .navbar {
     background-color: #44A194; /* Color del fondo del menú */
@@ -392,9 +470,141 @@ a{
     }
 }
 
+/**************************estilos de footer************************/
+
+.footer--safeDog{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #44A194;
+    padding: 20px;
+    margin: 0;
+    flex-wrap: wrap;
+    color: #ffffff;
+    text-align: center;
+}
+
+.footer--info{
+    display: flex;
+    flex-direction:column;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.footer--info .footer--question{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 50px;
+    
+}
+.footer--info ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.footer--info li{
+    margin: 0;
+}
+
+.footer--info a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footer--info .footer--list li a:hover{
+    color: #F0BB69;
+}
+
+.footer--logo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+
+.footer--logo img{
+    height: 200px;
+    width: 150px;
+
+}
 
 
-/*medias queries*/
+
+.iconos img {
+    width: 100px; /* Ajusta el tamaño según lo necesites */
+    height: 100px; /* Ajusta el tamaño según lo necesites */
+    object-fit: contain; /* Asegura que la imagen mantenga su proporción */
+}
+
+.iconos img{
+    width: 50px;
+    height: 50px;
+}
+.iconos .logo--fb{
+    width: 58px;
+    height: 48px;
+}
+
+.iconos .logo--insta{
+    width: 60px;
+    height: 50px;
+}
+
+
+.footer--copy{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: -10px;
+   
+}
+
+.footer--copy h4{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+ 
+  
+}
+
+
+
+@media(max-width: 600px){
+    .footer--safeDog{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer--logo {
+        margin: 30px 0;
+        text-align: center;
+    }
+
+    .footer--info ul{
+        align-items: center;
+    }
+
+    .footer--copy{
+        margin-top: 10px;
+        text-align: center;
+        align-items: center;
+    
+    }
+} /*FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER */
+
+/**********medias queries************/
 
 
 /*Mobile (menor a 576px) */
