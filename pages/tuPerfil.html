@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeDog - Tu perfil</title>
+    <link rel="icon" href="../assets/SafeDogWhite.png">
+    <!--Librería del menú hamburguesa-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Tu perfil | Cuidador</title>
+
+    <!-- Aquí conectamos Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="../styles/tuPerfil.css">
+    <link rel="stylesheet" href="../styles/navBar.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+
+
+    <!-- Estilos de fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- ROBOTO-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- SANSITA -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!--Librería del menú hamburguesa-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+
+<!-- Aquí se inserta la navbar -->
+<nav>
+    <!-- Empieza Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <a href="../../inicio.html" target="_blank"><img src="../assets/SafeDog W (9).png" alt="SafeDog-Logo"></a>
+        </div>
+        <ul class="navbar--menu">
+            <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
+            <li><a href="./preguntasFrecuentesContactanos.html">Preguntas Frecuentes</a></li>
+        </ul>
+        <div class="navbar--botones">
+            <button class="boton--claro" onclick="window.location.href='./formCuidador.html';">Ser
+                cuidador</button>
+            <button class="boton--claro" onclick="window.location.href='./mainLogin.html';">Iniciar sesión</button>
+            <button class="boton--azul"
+                onclick="window.location.href='./registroNuevoUsuario.html';">Registrarse</button>
+        </div>
+        <div class="menu-icon" id="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <div class="dropdown-menu" id="dropdown-menu">
+        <div class="letras"></div>
+        <ul>
+            <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
+            <li><a href="./preguntasFrecuentesContactanos.html">Preguntas Frecuentes</a></li>
+            <li><a href="./formCuidador.html">Ser cuidador</a></li>
+            <li><a href="./mainLogin.html">Inicio de sesión</a></li>
+            <li><a href="./registroNuevoUsuario.html">Registrarse</a></li>
+        </ul>
+    </div>
+    </div>
+    <!-- termina navbar -->
+
+</nav>
+
+
+<body>
+
+
+    <div class="container">
+
+
+        <h2>Tu perfil</h2>
+
+
+        <!-- Aqui va una foto de perfil agradable (con un perrito etc) 
+En los modales va toda la información que si se le va a mostrar a los dueños, aqui el cuidador puede linkear  certificaciones,  referencias, un Sobre mi, preguntas que le haría al dueño, ejemplo: ¿tu perrito puede convivir con otros perritos?
+        -->
+
+        <div class="text-dark">
+            <p class=".text-dark">
+
+                Elabora un perfil atractivo que te ayude a destacar entre los demás.
+                Asegúrate de rellenar todos los campos y de incluir una foto de perfil llamativa.
+                Recuerda que cuantas más certificaciones tengas, mayores serán tus posibilidades de recibir contactos.
+                ¡No dudes en mostrar lo mejor de ti!
+
+            </p>
+        </div>
+        <!-- Inician los formularios -->
+        <!-- Foto de perfil -->
+
+        <!--Beto added id and class for validation function-->
+        <form id="contactForm" class="needs-validation " novalidate>
+            <div class="row mb-3 ">
+                <div class="centrar">
+                    <label class="form-label ">
+                        <h4>Foto de perfil</h4>
+                    </label>
+                    <div class="">
+                        
+                            <img class="preview_img fotoPerfil" src="../assets/iconoPerfil (2).jpg" width="200px">
+                            <div> <br>
+
+                                <div class="input-group mb-3">
+                                    <input type="text" id="imageUrlInput" class="form-control"
+                                        placeholder="Introduce la URL de la imagen" required> <br>
+                                    <button class="boton-foto centrar btn btn--save btn--shadow" type="button"
+                                        onclick="loadImageFromUrl()">Comprobar URL de la imagen</button>
+                                   <!-- <input type="file"  id="formFileMultipleOne" multiple>-->
+                                    <div class="invalid-feedback">Por favor, escribe una URL válida para tu foto de perfil.</div>
+                                </div>
+
+                            </div>
+                        
+                    </div>
+
+                </div>
+
+
+                    <!-- Frase de cuidador -->
+
+                    <div class="mb-3"> <br>
+                        <label for="exampleFormControlTextarea1" class="form-label">Presentación (cuéntale a los demás
+                            sobre
+                            ti)</label>
+                        <textarea Name="presentacion" class="form-control" id="exampleFormControlTextarea1" rows="3"
+                            required></textarea>
+                        <div class="invalid-feedback">Por favor, completa este campo.</div>
+                    </div>
+
+                    <!-- Insertar información sobre su experiencia -->
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Experiencia cuidando
+                            mascotas</label>
+                        <textarea Name="experiencia" class="form-control" id="exampleFormControlTextarea1" rows="3"
+                            required></textarea>
+                        <div class="invalid-feedback">Por favor, completa este campo.</div>
+                    </div>
+                    <!-- Insertar PDF o enlace (Carta de presentación)-->
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">Inserta tus certificaciones (opcional)</label>
+                        <!-- <input class="form-control" type="file" id="formFile">
+            </div> -->
+                        <div class="input-group mb-3">
+                            <span class="input-group-text " id="inputGroup-sizing-default">Certificacion</span>
+                            <input type="text" class="form-control"
+                                placeholder="Ingresa aquí la URL de tu certificación" aria-label="Sizing example input"
+                                aria-describedby="inputGroup-sizing-default">
+                        </div>
+
+                    </div>
+                    <!-- Insertar PDF o enlace (Certificaciones) -->
+
+                    <div class="mb-3">
+                        <label for="formFileMultiple" class="form-label">Carta de presentación (opcional)</label>
+                        <!-- <input class="form-control" type="file" id="formFileMultiple" multiple> -->
+                        <div class="input-group mb-3">
+                            <span class="input-group-text " id="inputGroup-sizing-default">Carta de presentación</span>
+                            <input type="text" class="form-control"
+                                placeholder="Ingresa aquí la URL de tu carta de presentación"
+                                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                    </div>
+
+                    <!-- Insertar PDF (Referencias laborales o personales) -->
+                    <div class="mb-3">
+                        <label for="formFileMultiple" class="form-label">Inserta aquí tus referencias laborales o
+                            personales (opcional)
+                        </label>
+                        <!-- <input class="form-control" type="file" id="formFileMultiple" multiple required> -->
+                        <div class="input-group mb-3">
+                            <span class="input-group-text " id="inputGroup-sizing-default">Referencias</span>
+                            <input type="text" class="form-control"
+                                placeholder="Ingresa aquí la URL de tus referencias laborales"
+                                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                        <div class="invalid-feedback">Por favor, sube tus referencias.</div>
+
+                    </div>
+
+                    <!-- Cuadro de textos para ingresar preguntas -->
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Preguntas/especificaciones o
+                            información que
+                            se le preguntará al dueño</label>
+                        <textarea Name="preguntas" class="form-control" id="exampleFormControlTextarea1" rows="3"
+                            required></textarea>
+                        <div class="invalid-feedback">Por favor, completa este campo.</div>
+                    </div>
+                    <div class=" justificado-derecha button--submit">
+                        <button type="submit" class="btn btn--form btn--shadow  btn-lg">
+                            Siguiente</button>
+                    </div>
+                    <!-- Beto added div for validation feedback-->
+                    <div id="formFeedback" class="feedback"></div>
+        </form>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="../scripts/tuPerfil.js"></script>
+    <script src="../scripts/NavBar.js"></script>
+</body>
+
+</div>
+
+<footer class="footer--safeDog">
+    <div class="iconos">
+        <a href="#"><img src="../assets/correo5.png" alt="" target="_blank"></a>
+        <a href="#"><img src="../assets/fb5.png" alt="" class="logo--fb"></a>
+        <a href="#"><img src="../assets/instagramb.png" alt="" class="logo--insta"></a>
+        <a href="#"><img src="../assets/whatsapp.png" alt=""></a>
+    </div>
+    <div class="footer--logo">
+        <img src="../assets/safedogfooter.png" alt="safeDog Footer">
+    </div>
+    <div class="footer--info">
+        <h4 class="footer--question">¿Quieres formar parte de nuestra comunidad?</h4>
+        <ul class="footer--list">
+            <li><a href="../pages/formCuidador.html" target="_blank">Ser cuidador</a></li>
+            <li><a href="../pages/cardCuidadores.html" target="_blank">Ser cuidado</a></li>
+            <li><a href="../pages/preguntasFrecuentesContactanos.html" target="_blank">Preguntas frecuentes</a></li>
+            <li><a href="../pages/preguntasFrecuentesContactanos.html" target="_blank">Soporte</a></li>
+            <li><a href="../pages/terminoYcondiciones.html" target="_blank">Aviso de privacidad</a></li>
+        </ul>
+    </div>
+    <div class="footer--copy">
+        <h4>© All rights reserved & design by SafeDog</h4>
+    </div>
+</footer>
+
+</html>

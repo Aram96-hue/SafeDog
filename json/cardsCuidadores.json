@@ -1,0 +1,77 @@
+{
+    "cardsCuidadores":[                       
+        {
+          "id": "1",
+         "profile_photo":"https://i.ibb.co/X5q85M3/Jorge.jpg",
+         "nombre": "Jorge Montes", 
+         "description":"Paseador experimentado en controlar grupos grandes, ideal para aquellos que buscan socialización durante los paseos.",
+         "ciudad":"Guadalajara"
+        },
+        {
+          "id": "2",
+          "profile_photo":"https://i.ibb.co/KVh0KcV/Paulina.jpg",
+          "nombre": "Mariana del Valle ", 
+          "description":"Joven dedicada con especial atención a las necesidades de perros mayores y con requerimientos especiales." ,
+          "ciudad": "Colonia del Valle, Ciudad de Mexico"
+        },
+        {
+          "id": "3",
+          "profile_photo":"https://i.ibb.co/kHxN7n1/Laura.webp",
+          "nombre": "Laura Ortiz", 
+          "description":"Ofrece un entorno hogareño lleno de afecto, perfecta para perros que necesitan compañía constante." ,
+          "ciudad":"Guadalajara"
+        },
+        {
+          "id": "4",
+             "profile_photo":"https://i.ibb.co/CMLYfYF/Claudia.webp",
+             "nombre": "Claudia Flores", 
+         "description":"Cuidadora con un enfoque en la socialización y el bienestar emocional de los perros bajo su cuidado.",
+        "ciudad": "Ciudad de Mexico"
+        },
+        
+       {
+        "id": "5",
+     "profile_photo":"https://i.ibb.co/QNStLqg/Luis.jpg",
+     "nombre": "Luis Silva",
+         "description":"Paseador con enfoque en ejercicio físico, asegurando que tu perro se mantenga en forma y saludable.",
+        "ciudad":"Guadalajara"
+        },
+    {   
+      "id": "6",
+      "profile_photo":"https://i.ibb.co/rH4dSP6/Rodrigo.jpg",
+      "nombre": "Rodrigo Soto", 
+      "description":"Cuenta con experiencia en cuidado y paseo de razas grandes",
+      "ciudad": "Ciudad de Mexico"
+    },
+    {
+      "id": "7",
+       "profile_photo":"https://i.ibb.co/QQ42C22/Julia.jpg",
+       "nombre": "Julia Leon", 
+       "description":"Cuidadora que ofrece atencion 24/7, ideal para dueños que necesiten una estancia prolongada para su mascota ",
+       "ciudad":"Guadalajara"
+    },
+    {
+      "id": "8",
+         "profile_photo":"https://i.ibb.co/k1T8M4d/Mary.jpg",
+         "nombre": "Mary Campos", 
+         "description":"Cuidadora ha trabajado en refugios de animales, brinda mucho amor a cada mascota.",
+         "ciudad": "Ciudad de Mexico"
+        },
+    {
+      "id": "9",
+         "profile_photo":" https://i.ibb.co/xzMM5b8/Hugo.jpg",
+         "nombre": "Hugo Salazar", 
+         "description":"Ofrece servicio completo, incluye baño, cepillado y mucho cariño para tu perrito",
+        "ciudad":"Guadalajara"
+        
+      },
+    {
+      "id": "10",
+        "profile_photo":"https://i.ibb.co/TkxLzXm/Andres.jpg",
+        "nombre": "Andrés Navarro", 
+         "description":"Paseador confiable con conocimiento en psicología canina, ayudando a manejar perros con ansiedad.",
+      "ciudad": "Ciudad de Mexico"
+        }
+    ]
+    }
+    

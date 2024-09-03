@@ -1,0 +1,276 @@
+:root {
+        /* Color de fondo */
+        --bg-color: #FFF8E0;
+        /* Colores primarios */
+            --color-primary: black;
+            --color-secondary: #44A194;
+            --color-tertiary: #F0BB69;
+            --color-cuarto: #7F636E;
+        
+        /* --------------------------------- */
+        /* Letra */
+        
+        /* Color de letra */
+            --font-color-w: white;
+            --font-color-b: black;
+            
+        /* Tipo de letra */
+            --font-primary: "Sansita", sans-serif;
+            --font-secondary: "Roboto", sans-serif;
+            --font-size-primary: 5rem;
+            --font-size-secondary: 2 rem;
+ }
+    
+    
+ body {
+        background-color: var(--bg-color);
+        margin: 0;
+        padding: 0;
+        font-family:var(--font-secondary);
+}
+    
+body{
+    font-family: 'Sansita', sans-serif !important;
+    }
+
+
+       
+.form-control .label {
+    font-family: 'Roboto', sans-serif;
+}
+
+.input-group-text{
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.General{
+    align-items: center;
+    margin:5rem;
+    /* display: flex; */
+  }
+
+.btn--form {
+    background-color: var(--color-tertiary);
+    color: #fff;
+    align-self: end;
+    padding: 1.5rem 3rem;
+    margin: 1.5rem;
+    font-size: 1.5rem;
+    border-radius: 20px;
+  }
+
+
+.form-control:focus{
+    outline: none;
+    border-color: var(--color-tertiary);
+    box-shadow: 0 0 0 0.3rem var(--color-tertiary);
+  }
+
+  .btn--form:focus{
+    border:none;
+    box-shadow: none;
+  }
+
+  .btn--save {
+    background-color: var(--color-cuarto);
+    color: #fff;
+    font-size: 1rem;
+    padding: .5rem 2rem;
+    border-radius: 15px;
+  }
+  
+  .btn--save:hover,
+  .btn--form:hover {
+    background-color: #fff;
+    color: #555;
+  }
+  
+  .btn--shadow {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2),
+      /* Sombra externa */ inset 1px 1px 3px rgba(255, 255, 255, 0.3); /* Sombra interna */
+    transition: all 0.3s ease;
+    button:active {
+      box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.3),
+        /* Más sombra interna */ none; /* Sin sombra externa */
+    }
+  }
+  
+
+
+  .button--submit {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+.form--grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 5rem;
+  }
+
+  #container-Input-Pequeño, #lang{
+    width: 20rem;
+}
+/* Formato para el selector de razas de perros */
+
+/*.container, .section--up--img, .container-Preguntas{
+    border:blue solid;
+}*/
+
+.margin{
+    margin: 10px;
+}
+
+.flex {
+    display: flex;
+        align-items: center;
+        
+}
+
+
+.section--up--img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding: 12px;;
+  }
+  
+  .all--up--img {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+  }
+  
+  .up--img--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  
+
+h2{
+  font-family: "Sansita";
+  font-size: 45px;
+}
+.Instrucciones{
+  font-size: 20px;
+  font-family: "Roboto";
+}
+
+h5{
+  font-size: 25px;
+  font-family: "Roboto";
+}
+h4{
+  font-size: 20px;
+  font-family: "Sansita";
+}
+
+/*h6{
+  font-size: "Roboto";
+  font-family: 25px;
+}*/
+
+.text--img{
+  font-size: 18px;
+  font-family: "Roboto";
+}
+.nombre{
+  font-family:"Roboto";
+  font-size: 16px;
+}
+.tamañoPerro{
+justify-content: space-around;
+    display: flex;
+    align-items:center;
+}
+
+.tamañoPerro img{
+    padding: 10px;
+}
+
+.image-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 80px;
+    overflow: hidden;
+}
+
+.image-container>img{
+     width: 90%;
+     height: auto;
+     object-fit:cover;
+    
+}
+.tamañosperro{
+  font-family: "Roboto";
+  font-size: 20px;
+}
+.razasDePerros{
+  font-family: "Roboto";
+  font-size: 20px;
+}
+.form-control {
+  font-family: "Roboto";
+  font-size: 20px;
+}
+
+.form-control-margin{
+  font-family: "Roboto";
+  font-size: 20px;
+}
+
+.sexoPerro, .tamañosPerro{
+  font-size: 18px;
+  font-family: "Roboto";
+}
+
+#numero{
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    width: 5rem;
+    font-family: "Roboto";
+}
+.flex{
+  font-size: 18px;
+  font-family: "Roboto";
+}
+@media (max-width: 1440px) {
+    .form--grid {
+        grid-template-columns:  1fr; 
+        column-gap: 0; 
+    }
+    .General{
+    margin:2rem;
+    }
+
+    body {
+        overflow-x: hidden; /* Evita el desplazamiento horizontal */
+    }
+
+    #container-Input-Pequeño, #lang{
+        width: 100%;
+    }
+    
+}
+
+.imagenCuidador{
+    width: 150px;
+    height: 150px;
+    border-radius: 5%;
+    object-fit: cover;
+
+}

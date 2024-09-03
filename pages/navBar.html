@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card cuidadores</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    
+    <!--Librería del menú hamburguesa-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../styles/navBar.css">
+  <link rel="stylesheet" href="../styles/footer.css">
+  <!--Sansita style-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <!--Roboto style-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+    
+  <!--Estilos css-->
+  <link rel="stylesheet" href="../styles/cardCuidadores.css">
+
+</head>
+<!--NavBar de safeDog-->
+<nav class="navbar">
+
+  <div class="navbar--logo">
+    <a href="#" target="_blank"><img src="../assets/SafeDog W (9).png" alt="SafeDog-Logo"></a>
+  </div>
+
+  <div class="nav--container">
+    <ul class="navbar--menu">
+      <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
+      <li><a href="./nuestrosServicios.html">Nuestros Servicios</a></li>
+      <li><a href="./preguntasFrecuentes.html">Preguntas Frecuentes</a></li>
+    </ul>
+
+    <div class="navbar--botones">
+      <button class="boton--claro" onclick="window.location.href='./formCuidador.html';">Ser
+        cuidador</button>
+      <button class="boton--claro" onclick="window.location.href='./inicioSesion.html';">Inicio de
+        sesión</button>
+      <button class="boton--azul" onclick="window.location.href='./registroNuevoUsuario.html';">Registro</button>
+    </div>
+  </div>
+  <!--Menu de hamburguesa-->
+  <div class="menu-btn">
+    <i class="fa-solid fa-bars fa-2x"></i>
+  </div>
+
+</nav>
+<!-- Menu desplegable para móviles -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul class="mobile-navbar--menu">
+    <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
+    <li><a href="./nuestrosServicios.html">Nuestros Servicios</a></li>
+    <li><a href="./preguntasFrecuentesContactanos.html">Preguntas Frecuentes</a></li>
+  </ul>
+  <div class="mobile-navbar--botones">
+    <button class="boton--claro" onclick="window.location.href='./formCuidador.html';">Ser
+      cuidador</button>
+    <button class="boton--claro" onclick="window.location.href='./inicioSesion';">Inicio de
+      sesión</button>
+    <button class="boton--azul" onclick="window.location.href='./registroNuevoUsuario.html';">Registro</button>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="dropdown1">
+  <label for="ciudad">Selecciona tu ciudad</label>
+  <select class="ciudad" id="ciudad">
+    <option class="todas" value="Todas" >Todas las ciudades</option>
+    <option class="cdmx" value="Ciudad de Mexico" >Ciudad de Mexico</option>
+    <option class="guadalajara" value="Guadalajara">Guadalajara</option>
+
+  </select>
+</div>
+
+<!--Página  de card cuidadores del poderoso SafeDiorg-->
+
+<!-- json  -->
+<div class="container"> 
+  <div id="cuidadoresCards" >
+  </div>
+</div>
+
+
+<!-------------- Paginacion ------------------------>
+
+    <ul class="pagination">
+   
+    </ul>
+
+<!-- <br><br><br><br><br><br> -->
+
+<div class="clearfix"></div>
+
+<!--Pie de página de safeDog-->
+<footer class="footer--safeDog">
+  <div class="iconos">
+    <a href="#"><img src="../assets/correo5.png" alt="" target="_blank"></a>
+    <a href="#"><img src="../assets/fb5.png" alt="" class="logo--fb"></a>
+    <a href="#"><img src="../assets/instagramb.png" alt="" class="logo--insta"></a>
+    <a href="#"><img src="../assets/whatsapp.png" alt=""></a>
+  </div>
+  <div class="footer--logo">
+    <img src="../assets/safedogfooter.png" alt="safeDog Footer">
+  </div>
+  <div class="footer--info">
+    <h4 class="footer--question">¿Quieres formar parte de nuestra comunidad?</h4>
+    <ul class="footer--list">
+      <li><a href="./pagesFooter/serCuidador.html" target="_blank">Ser cuidador</a></li>
+      <li><a href="./pagesFooter/serCuidado.html" target="_blank">Ser cuidado</a></li>
+      <li><a href="./pagesFooter/preguntasFrecuentes.html" target="_blank">Preguntas frecuentes</a></li>
+      <li><a href="./pagesFooter/soporte.html" target="_blank">Soporte</a></li>
+      <li><a href="./pagesFooter/avisoPrivacidad.html" target="_blank">Aviso de privacidad</a></li>
+    </ul>
+  </div>
+  <div class="footer--copy">
+    <h4>© All rights reserved & design by SafeDog</h4>
+  </div>
+  </div>
+</footer>
+
+<!--Hoja vinculada de JS-->
+<script src="../scripts/NavBar.js"></script>
+
+<script src="../scripts/cardCuidadores.js"></script>
+</body>
+
+</html>

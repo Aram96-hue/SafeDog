@@ -1,0 +1,480 @@
+body {
+    background-color: #FFF8E0;
+    font-family: "sansita", "roboto";
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+/*NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR*/
+.navbar {
+    background-color: hsl(172, 41%, 45%);
+    color: #FFFFFF;
+    padding: 25px;
+    display: flex;
+    /* align-items: center;
+    justify-content:center;  */
+    border: 0px;
+    
+}
+
+.navbar .nav--container {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    border: 0px;
+    justify-content: center;
+    align-items: center;  
+}
+
+.navbar .navbar--logo a img {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.navbar .navbar--menu {
+    list-style: none;
+    display: flex;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+    margin-top:70x;
+   
+}
+
+.navbar .navbar--menu li {
+    margin: 0;
+    margin-top: 10px;
+
+}
+
+.navbar .navbar--menu a {
+    color: #FFFFFF;
+    font-size:large;
+    font-weight: bold;
+    margin-right: 20px;
+    gap: 2px;
+}
+
+.navbar .navbar--menu a:hover {
+    color: #F0BB69;
+}
+
+.navbar .navbar--botones {
+    display: flex;
+    gap: 10px;
+    margin-left: 120px;
+     
+}
+
+.navbar .navbar--botones .boton--claro {
+    background-color: #65B5A1;
+    color: #FFFFFF;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    border-color: #FFFFFF;
+    font-family: "sansita";
+    font-size: larger;
+    font-weight: bold;
+    cursor: pointer;
+    border: 0px;
+}
+
+.navbar .navbar--botones .boton--azul {
+    background-color: #124C5F;
+    color: #FFFFFF;
+    border-color: #F0BB69;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    font-family: "sansita";
+    font-size: larger;
+    font-weight: bold;
+    cursor: pointer;
+    border: 0px;
+}
+
+.navbar .navbar--botones .boton--claro:hover {
+    background-color: #F0BB69;
+}
+
+.navbar .navbar--botones .boton--azul:hover {
+    background-color: #777;
+}
+
+.menu-btn {
+    cursor: pointer;
+    font-size: 24px;
+    display: none;
+    z-index: 21;
+    position: relative;
+    right: 3px;
+}
+
+.mobile-menu {
+    display: none;
+    background-color: #124C5F;
+    color: #FFFFFF;
+    position:absolute; /*se cambió de fixed a absolute para evitar que estubiera fijo el menu al hacer scroll*/
+    top:5%;
+    right: 0;
+    width: 250px; 
+    height: 50%;
+    padding: 20px;
+    z-index: 10;
+   
+}
+
+.mobile-menu ul.mobile-navbar--menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 40px; /*se agrego para bajar ewl texto*/
+    text-align: center;
+}
+
+.mobile-menu ul.mobile-navbar--menu li {
+    margin: 20px 0;
+    
+}
+
+.mobile-menu ul.mobile-navbar--menu a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.mobile-menu ul.mobile-navbar--menu a:hover {
+    color: #F0BB69;
+}
+
+.mobile-menu .mobile-navbar--botones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mobile-menu .mobile-navbar--botones button {
+    background-color: #65B5A1;
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: "sansita";
+    font-size: larger;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.mobile-menu .mobile-navbar--botones .boton--azul {
+    background-color: #124C5F;
+    border-color: #F0BB69;
+}
+
+.mobile-menu .mobile-navbar--botones button:hover {
+    background-color: #F0BB69;
+}
+
+
+
+/* Mostrar el botón del menú hamburguesa en pantallas pequeñas */
+@media (max-width: 900px) {
+    .navbar .navbar--menu {
+        display: none; /* Ocultar menú en pantallas pequeñas */
+    }
+    
+    .navbar .navbar--botones {
+        display: none; /* Ocultar botones en pantallas pequeñas */
+    }
+    
+    .menu-btn {
+        display: block; /* Mostrar botón del menú hamburguesa */
+    }
+}
+
+@media (max-width: 900px) {
+    .mobile-menu.active {
+        display: block;
+    }
+} /*NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR*/
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #fff8e0;
+    /* text-align: center; */
+}
+
+.Texto-termino .cuadro{
+    padding: 20%;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgb(var--black/.87);
+    align-self: center;
+    text-align: center;
+    line-height: 1.5;
+    letter-spacing: 5px;
+    text-transform:lowercase;
+
+}
+
+
+/*body{
+    background-color: #FFF8E0;
+    font-family: "sansita", "roboto";
+    margin: 0;
+    padding: 0;
+    
+}
+*/
+
+/* Estilo general para el contenedor principal */
+.cuadro {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Estilo para el título principal */
+.Texto-termino h1 {
+    font-size: 2em;
+    color: #0056b3;
+    margin-bottom: 20px;
+}
+
+/* Estilo para los párrafos y texto general */
+.Texto-termino {
+    font-family: 'Roboto';
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.Texto-termino h1 {
+font-family: 'Sansita';
+}
+
+
+/* Estilo para las secciones de encabezado dentro del contenido */
+.Texto-termino h2 {
+    font-size: 1.5em;
+    font-family: "Sansita";
+    color: #124C5F;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 5px;
+}
+
+/* Estilo para las listas */
+.Texto-termino ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+/* Estilo para los elementos de las listas */
+.Texto-termino ul li {
+    margin-bottom: 10px;
+}
+
+/* Estilo para los enlaces */
+.Texto-termino a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.Texto-termino a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para las secciones destacadas */
+.Texto-termino .highlight {
+    background-color: #e9ecef;
+    border-left: 5px solid #0056b3;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+/* Estilo para el texto en negrita */
+.Texto-termino b {
+    font-weight: bold;
+}
+
+/* Estilo para los bloques de código */
+.Texto-termino code {
+    background-color: #f1f1f1;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: Consolas, monospace;
+}
+
+/* Estilo para los cuadros de información */
+.Texto-termino .info-box {
+    border: 1px solid #007bff;
+    background-color: #e7f0ff;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+/* Estilo para las secciones con formato de tabla */
+.Texto-termino table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.Texto-termino table, .Texto-termino th, .Texto-termino td {
+    border: 1px solid #ddd;
+}
+
+.Texto-termino th, .Texto-termino td {
+    padding: 10px;
+    text-align: left;
+}
+
+.Texto-termino th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+
+/*FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER*/
+
+.footer--safeDog{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #44A194;
+    padding: 20px;
+    margin: 0;
+    flex-wrap: wrap;
+    color: #ffffff;
+    text-align: center;
+}
+
+.footer--info{
+    display: flex;
+    flex-direction:column;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.footer--info .footer--question{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 50px;
+    
+}
+.footer--info ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.footer--info li{
+    margin: 0;
+}
+
+.footer--info a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footer--info .footer--list li a:hover{
+    color: #F0BB69;
+}
+
+.footer--logo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+
+.footer--logo img{
+    height: 200px;
+    width: 150px;
+
+}
+
+
+
+.iconos{
+    display: flex;
+    gap: 20px;
+    
+}
+
+.iconos img{
+    width: 50px;
+    height: 50px;
+}
+.iconos .logo--fb{
+    width: 58px;
+    height: 48px;
+}
+
+.iconos .logo--insta{
+    width: 60px;
+    height: 50px;
+}
+
+
+.footer--copy{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: -10px;
+   
+}
+
+.footer--copy h4{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+ 
+  
+}
+
+
+
+@media(max-width: 600px){
+    .footer--safeDog{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer--logo {
+        margin: 30px 0;
+        text-align: center;
+    }
+
+    .footer--info ul{
+        align-items: center;
+    }
+
+    .footer--copy{
+        margin-top: 10px;
+        text-align: center;
+        align-items: center;
+    
+    }
+} /*FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER */

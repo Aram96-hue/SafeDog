@@ -1,0 +1,254 @@
+:root {
+  --background: #fff8e0;
+  --primary: #39b3a2;
+  --secondary: #7f636e;
+  --yellow: #f0bb69;
+  --white: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #000;
+  background-color: var(--background);
+}
+
+.section--form--cuidador {
+  padding: 4.8rem 0 12.8rem;
+}
+
+.container {
+  max-width: 130rem;
+  padding: 0 5rem;
+  margin: 0 auto;
+}
+
+.form--header {
+  margin-bottom: 8rem;
+}
+
+.form--grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 10rem;
+}
+
+.heading-primary {
+  font-family: "Sansita", sans-serif;
+  font-weight: 800;
+  color: #444;
+  font-size: 5rem;
+  line-height: 1.05;
+  margin: 3.2rem 0;
+}
+
+.extra--text {
+  font-size: 2rem;
+  line-height: 1.8;
+}
+
+.text--title {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.text--img {
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+
+.file--enter {
+  background-color: var(--secondary);
+}
+
+.form--imput--item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form--imput--city {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form--imput--field {
+  width: 58rem;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.form--imput-radio {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form--imput--validation {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.form--input--container {
+  margin-bottom: 3.5rem;
+}
+
+.form--imput--servicios {
+  margin-bottom: 3.5rem;
+}
+
+.form--imput--textarea {
+  margin-bottom: 3.5rem;
+}
+
+.form--imput--textarea label {
+  margin-bottom: 2rem;
+}
+
+.form--imput--city label,
+.form--imput--field label,
+.form--imput--servicios label,
+.form--imput--textarea label,
+.form--imput--item label {
+  color: #222;
+  display: block;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.form--imput--item input {
+  max-width: 58rem;
+}
+
+.form--imput--item input,
+.form--imput--textarea textarea,
+.form--imput--item select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.form--imput--item input::placeholder {
+  color: #aaa;
+}
+
+.form--imput--item input:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem var(--yellow);
+}
+
+.section--up--img {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.all--up--img {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+.up--img--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.img--img {
+  width: 25rem;
+}
+
+.button--submit {
+  align-self: center;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2.5rem;
+  font-weight: 600;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  /* Only necessary for .btn */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  /* Put transition on original "state" */
+  /* transition: background-color 0.3s; */
+  transition: all 0.3s;
+  overflow: hidden;
+}
+
+.btn--form {
+  background-color: var(--yellow);
+  color: #fff;
+  align-self: end;
+  padding: 2rem 5rem;
+}
+
+.btn--shadow {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2),
+    /* Sombra externa */ inset 1px 1px 3px rgba(255, 255, 255, 0.3); /* Sombra interna */
+  transition: all 0.3s ease;
+  button:active {
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.3),
+      /* Más sombra interna */ none; /* Sin sombra externa */
+  }
+}
+
+.input-feedback {
+  font-size: 1.6rem;
+  margin-top: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+.img--url--input {
+  width: 100%;
+}
+
+.img--url--input input {
+  margin-bottom: 2rem;
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.img--url--input input::placeholder {
+  color: #aaa;
+}
+
+.img--url--input input:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem var(--yellow);
+}

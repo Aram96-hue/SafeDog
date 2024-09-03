@@ -1,0 +1,145 @@
+:root {
+    /* Color de fondo */
+    --bg-color: #FFF8E0;
+    /* Colores primarios */
+        --color-primary: black;
+        --color-secondary: #44A194;
+        --color-tertiary: #F0BB69;
+        --color-cuarto: #7F636E;
+    
+    /* --------------------------------- */
+    /* Letra */
+    
+    /* Color de letra */
+        --font-color-w: white;
+        --font-color-b: black;
+        
+    /* Tipo de letra */
+        --font-primary: "Sansita", sans-serif;
+        --font-secondary: "Roboto", sans-serif;
+        --font-size-primary: 5rem;
+        --font-size-secondary: 2 rem;
+    }
+
+
+body {
+
+    flex-direction: column;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    font-family:var(--font-secondary);
+}
+
+body h2{
+    font-family:var(--font-primary);
+   }
+   
+.file-upload{
+    position: relative;
+    
+}
+
+h2 {
+    font-family: 'Sansita', sans-serif;
+    padding: 40px;
+    text-align: center;
+}
+
+.form-label{
+  text-align: left;
+
+}
+
+.perro input[type="radio"] {
+  transform: scale(1.8);
+  cursor: pointer;
+}
+
+.text-dark{
+  font-size: 20px;
+  font-family: "Roboto";
+}
+h4{
+  font-family: 'Sansita', sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+.mb-3{
+  font-size: 20px;
+  font-family: "Roboto";
+}
+.form-control:focus{
+    outline: none;
+    border-color: var(--color-tertiary);
+    box-shadow: 0 0 0 0.3rem var(--color-tertiary);
+  }
+
+  .boton-foto{
+    color:var(--bg-color);
+    background-color: var(--color-cuarto);
+  }
+
+  /*
+  .btn,
+  .btn:link,
+  .btn:visited {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-weight: 400;
+    padding: 1.6rem 3.2rem;
+    border-radius: 9px;
+    /* Only necessary for .btn */
+   /* border: none;
+    cursor: pointer;
+    font-family: inherit;
+    /* Put transition on original "state" */
+    /* transition: background-color 0.3s; */
+ /*   transition: all 0.3s;
+    overflow: hidden;
+    margin: 15px;
+  }*/
+
+.fotoPerfil{
+  border-radius: 50%;
+}
+  .btn--form {
+    background-color: var(--color-tertiary);
+    color: #fff;
+    align-self: end;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    border-radius: 10px;
+    border: 0px;
+  }
+
+  .btn--form:focus{
+    border:none;
+    box-shadow: none;
+  }
+
+  .btn--form:hover {
+    background-color: #fff;
+    color: #555;
+  }
+
+  .button--submit {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .centrar {
+    justify-content: center;
+    text-align: center;
+
+  }
+
+  .justificado-derecha{
+    display: flex;
+align-items:end;
+  }
+
+ /* @media screen and (min-width:300px) {
+    min-width: 300px;
+  }*/

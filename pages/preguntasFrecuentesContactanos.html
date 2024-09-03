@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="stylesheet" href="../styles/preguntasFrecuentesContactanos.css" />
+    <link rel="stylesheet" href="../styles/preguntasFrecuentesContactanos-queries.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/navbar.css" />
+
+    <title>Preguntas frecuentes</title>
+  </head>
+  <body>
+    <!-- Empieza Navbar -->
+    <nav style="font-size: 160.5%">
+      <div class="navbar">
+        <div class="logo">
+          <a href="../../inicio.html" target="_blank"
+            ><img src="../assets/SafeDog W (9).png" alt="SafeDog-Logo"
+          /></a>
+        </div>
+        <ul class="navbar--menu">
+          <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
+          <li>
+            <a href="./preguntasFrecuentesContactanos.html"
+              >Preguntas Frecuentes</a
+            >
+          </li>
+        </ul>
+        <div class="navbar--botones">
+          <button
+            class="boton--claro"
+            onclick="window.location.href='./formCuidador.html';"
+          >
+            Ser cuidador
+          </button>
+          <button
+            class="boton--claro"
+            onclick="window.location.href='./mainLogin.html';"
+          >
+            Iniciar sesión
+          </button>
+          <button
+            class="boton--azul"
+            onclick="window.location.href='./registroNuevoUsuario.html';"
+          >
+            Registrarse
+          </button>
+        </div>
+        <div class="menu-icon" id="menu-icon">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+
+      <div class="dropdown-menu" id="dropdown-menu">
+        <div class="letras"></div>
+        <ul>
+          <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
+          <li>
+            <a href="./preguntasFrecuentesContactanos.html"
+              >Preguntas Frecuentes</a
+            >
+          </li>
+          <li><a href="./formCuidador.html">Ser cuidador</a></li>
+          <li><a href="./mainLogin.html">Inicio de sesión</a></li>
+          <li><a href="./registroNuevoUsuario.html">Registrarse</a></li>
+        </ul>
+      </div>
+      <!-- termina navbar -->
+    </nav>
+    <main>
+      <section class="section--search">
+        <div class="container">
+          <h1 class="heading-primary">Preguntas frecuentes</h1>
+        </div>
+      </section>
+
+      <section class="section--questions">
+        <div class="list">
+          <div class="item">
+            <p class="title">¿Qué es SafeDog?</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+            <div class="hidden-box">
+              <p class="text">
+                SafeDog es una sociedad anonima de responsabilidad limitada bien
+                constituida, inscrita en el registro público del comercio y
+                registrada ante el Servicio de Administración Tributaria de la
+                SHCP con sedes en Guadalajara y Ciudad de México. Es una empresa
+                amigable con el medio ambiente y con enfoque social. Tiene
+                servicios de alta calidad y demanda que garantizan un nivel de
+                satisfación de 5 estrellas. Conoce más
+                <a class="link--color" href="https://www.ejemplo.com">aquí</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="item">
+            <p class="title">¿Cúal es la visión de SafeDog?</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+            <div class="hidden-box">
+              <p class="text">
+                Ser reconocidos como líderes en el cuidado especializado de
+                perros, comprometidos con la excelencia y la innovación en el
+                servicio. Inspirar confianza y tranquilidad en los dueños,
+                sabiendo que sus mascotas reciben el mejor cuidado posible,
+                contribuyendo así al fortalecimiento del vínculo entre humanos y
+                perros. Más info
+                <a class="link--color" href="https://www.ejemplo.com">aquí</a>.
+              </p>
+            </div>
+          </div>
+
+          <div class="item">
+            <p class="title">¿Cómo califico al cuidador?</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+            <div class="hidden-box">
+              <p class="text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Accusantium dolor at sequi obcaecati cupiditate. Voluptates
+                repellendus cupiditate aperiam! Incidunt amet quo neque.
+              </p>
+            </div>
+          </div>
+
+          <div class="item">
+            <p class="title">¿Cómo se que mi mascota esta segura?</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+            <div class="hidden-box">
+              <p class="text">
+                En SafeDog trabajamos con dedicación y corazón para darle a tu
+                perrito el mejor cuidado y experiencia de su vida. Con muy altos
+                estandares de calidad para la asignación de cuidadores y
+                servicios profesionales, en SafeDog garantizamos que tu mascota
+                estará acompañada de los mejores corazones de México.
+              </p>
+            </div>
+          </div>
+
+          <div class="item">
+            <p class="title">¿Cómo me vuelvo cuidador?</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+            <div class="hidden-box">
+              <p class="text">
+                Da click
+                <a class="link--color" href="https://www.ejemplo.com">aquí</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="item">
+            <p class="title">¿Cómo puedo estar al pendiente de mi perrito?</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+            <div class="hidden-box">
+              <p class="text">Contamos con un sistema de ...</p>
+            </div>
+          </div>
+
+          <div class="item">
+            <p class="title">
+              ¿Qué ventajas me da Safedog sobre la competencia?
+            </p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+            <div class="hidden-box">
+              <p class="text">
+                SafeDog es la alternativa más rentable y de mayor calidad dentro
+                del mercado. Cuenta con todos los servicios de mayor demanda por
+                los dueños de perros en Guadalajara y Ciudad de México. Al
+                probar nuestro servicio, tu perrito te lo agradecerá.
+              </p>
+            </div>
+          </div>
+
+          <div class="item">
+            <p class="title">¿Qué tan preparados estan los cuidadores?</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+            <div class="hidden-box">
+              <p class="text">Nuestros cuidadores cuentan con...</p>
+            </div>
+          </div>
+
+          <div class="item">
+            <p class="title">¿Cuál es nuestra misión?</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+            <div class="hidden-box">
+              <p class="text">
+                Proveer un cuidado integral y personalizado a cada perro,
+                asegurando su bienestar físico, emocional y social. Fomentar un
+                ambiente seguro, amoroso y enriquecedor que promueva una vida
+                saludable y feliz para cada mascota. Para mayor info, da click
+                <a class="link--color" href="https://www.ejemplo.com">aquí</a>.
+              </p>
+            </div>
+          </div>
+
+          <div class="item">
+            <p class="title">¿SafeDog ofrece prestaciones de Ley?</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+            <div class="hidden-box">
+              <p class="text">
+                En SafeDog no ofrecemos prestaciones. SafeDog es una empresa que
+                ofrece una plataforma para cuidadores que serán remunerados a
+                destajo y con previa conveniencia de entre este y el cliente,
+                incluyendo las tarifas fijas por suscripción y comisiones de
+                servicios de la plataforma.
+              </p>
+            </div>
+          </div>
+
+          <div class="item">
+            <p class="title">¿Cómo crear mi perfil en SafeDog?</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+            <div class="hidden-box">
+              <p class="text">
+                Puedes crear tu perfil
+                <a class="link--color" href="https://www.ejemplo.com">aquí</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="item">
+            <p class="title">¿Cómo contratar a un cuidador?</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+            <div class="hidden-box">
+              <p class="text">
+                Es muy sencillo, solo da click
+                <a class="link--color" href="https://www.ejemplo.com">aquí</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section--form--question">
+        <div class="container">
+          <h2 class="heading-secondary">¡Contactanos!</h2>
+          <div class="exttra-text-container">
+            <p class="extra-text">
+              ¿Necesitas ayuda?... ¡Envianos tu duda! Si no encontraste
+              respuesta a tus preguntas, agrega tus datos y te contactaremos.
+            </p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="extra--question">
+            <div class="extra--question--text">
+              <form class="extra--question--form" action="#" id="form-cont">
+                <div>
+                  <label for="full-name">Nombre</label>
+                  <input
+                    id="full-name"
+                    type="text"
+                    placeholder="Nombre o Username"
+                    required
+                  />
+                  <p id="name-feedback" class="input-feedback"></p>
+                </div>
+
+                <div>
+                  <label for="email">Correo electrónico</label>
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="ejemplo@ejemplo.com"
+                    required
+                  />
+                  <p id="email-feedback" class="input-feedback"></p>
+                </div>
+
+                <div class="contact--part">
+                  <label class="text--cellphone--button" for="contacto"
+                    >¿Quieres matener comunicación activa?</label
+                  >
+                  <button
+                    class="btn btn--outline btn--cellphone btn--shadow"
+                    id="contacto--btn"
+                    type="button"
+                  >
+                    Contacto activo
+                    <ion-icon name="arrow-up-outline" id="arrow"></ion-icon>
+                  </button>
+                </div>
+
+                <div class="number--part" id="number--div">
+                  <label for="number">Número telefónico</label>
+                  <input id="number" type="tel" placeholder="55 1234 5678" />
+                  <p id="number-feedback" class="input-feedback"></p>
+                </div>
+
+                <div class="textarea--container">
+                  <label for="area-form">Pregunta y/o comentario</label>
+                  <textarea
+                    id="area-form"
+                    name="area-form"
+                    placeholder="Escribe tu comentario"
+                    required
+                  ></textarea>
+                </div>
+
+                <button class="btn btn--form btn--shadow" type="submit">
+                  Enviar
+                </button>
+              </form>
+            </div>
+            <div
+              class="extra--question-img-box"
+              role="img"
+              aria-label="Mujer felizmente con su perro"
+            ></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer--safeDog" style="font-size: 160.5%">
+      <div class="iconos">
+        <a href="#"
+          ><img src="../assets/correo5.png" alt="" target="_blank"
+        /></a>
+        <a href="#"><img src="../assets/fb5.png" alt="" /></a>
+        <a href="#"><img src="../assets/instagramb.png" alt="" /></a>
+        <a href="#"><img src="../assets/whatsapp.png" alt="" /></a>
+      </div>
+      <div class="footer--logo">
+        <img src="../assets/safedogfooter.png" alt="safeDog Footer" />
+      </div>
+      <div class="footer--info">
+        <h4 class="footer--question">¿Quieres formar parte de nuestra comunidad?</h4>
+        <ul class="footer--list">
+            <li><a href="../pages/formCuidador.html" target="_blank">Ser cuidador</a></li>
+            <li><a href="../pages/cardCuidadores.html" target="_blank">Ser cuidado</a></li>
+            <li><a href="../pages/preguntasFrecuentesContactanos.html" target="_blank">Preguntas frecuentes</a></li>
+            <li><a href="../pages/preguntasFrecuentesContactanos.html" target="_blank">Soporte</a></li>
+            <li><a href="../pages/terminoYcondiciones.html" target="_blank">Aviso de privacidad</a></li>
+        </ul>
+    </div>
+      <div class="footer--copy">
+        <h4>
+          © All rights reserved & design by SafeDog <br />
+          Hecho con ♥ en GDL y CDMX
+        </h4>
+      </div>
+    </footer>
+    <script src="../scripts/preguntasFrecuentesContactanos.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="../scripts/navBar.js"></script>
+  </body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/formCuidador.css" />
+    <link rel="stylesheet" href="../styles/formCuidador-queries.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/navbar.css" />
+    <title>Form - Cuidador</title>
+  </head>
+
+  <!-- Empieza Navbar -->
+  <nav style="font-size: 160.5%">
+    <div class="navbar">
+      <div class="logo">
+        <a href="../../inicio.html" target="_blank"
+          ><img src="../assets/SafeDog W (9).png" alt="SafeDog-Logo"
+        /></a>
+      </div>
+      <ul class="navbar--menu">
+        <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
+        <li>
+          <a href="./preguntasFrecuentesContactanos.html"
+            >Preguntas Frecuentes</a
+          >
+        </li>
+      </ul>
+      <div class="navbar--botones">
+        <button
+          class="boton--claro"
+          onclick="window.location.href='./formCuidador.html';"
+        >
+          Ser cuidador
+        </button>
+        <button
+          class="boton--claro"
+          onclick="window.location.href='./mainLogin.html';"
+        >
+          Iniciar sesión
+        </button>
+        <button
+          class="boton--azul"
+          onclick="window.location.href='./registroNuevoUsuario.html';"
+        >
+          Registrarse
+        </button>
+      </div>
+      <div class="menu-icon" id="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+
+    <div class="dropdown-menu" id="dropdown-menu">
+      <div class="letras"></div>
+      <ul>
+        <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
+        <li>
+          <a href="./preguntasFrecuentesContactanos.html"
+            >Preguntas Frecuentes</a
+          >
+        </li>
+        <li><a href="./formCuidador.html">Ser cuidador</a></li>
+        <li><a href="./mainLogin.html">Inicio de sesión</a></li>
+        <li><a href="./registroNuevoUsuario.html">Registrarse</a></li>
+      </ul>
+    </div>
+    <!-- termina navbar -->
+  </nav>
+
+  <body>
+    <main>
+      <section class="section--form--cuidador">
+        <div class="container">
+          <div class="form--header">
+            <h1 class="heading-primary">Datos Personales</h1>
+            <p class="extra--text">
+              Favor de proporcionarnos los siguientes datos
+            </p>
+          </div>
+          <form class="form--grid" action="#" id="form-cuidador-uno">
+            <div>
+              <div class="form--input--container">
+                <div class="form--imput--item">
+                  <label for="nombre">Nombre</label>
+                  <input
+                    id="nombre"
+                    type="nombre"
+                    name="nombre"
+                    placeholder="Nombre"
+                    required
+                  />
+                </div>
+                <div class="form--imput--validation">
+                  <p id="name-feedback" class="input-feedback"></p>
+                </div>
+              </div>
+              <div class="form--input--container">
+                <div class="form--imput--item">
+                  <label for="apellido">Apellido</label>
+                  <input
+                    id="apellido"
+                    type="apellido"
+                    name="apellido"
+                    placeholder="Apellidos"
+                    required
+                  />
+                </div>
+                <div class="form--imput--validation">
+                  <p id="apellido-feedback" class="input-feedback"></p>
+                </div>
+              </div>
+              <div class="form--input--container">
+                <div class="form--imput--item">
+                  <label for="number">Número telefónico</label>
+                  <input
+                    id="number"
+                    type="tel"
+                    name="number"
+                    placeholder="55 1234 5678"
+                    required
+                  />
+                </div>
+                <div class="form--imput--validation">
+                  <p id="number--feedback" class="input-feedback"></p>
+                </div>
+              </div>
+              <div class="form--input--container">
+                <div class="form--imput--item">
+                  <label for="email">Email</label>
+                  <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    placeholder="ejemplo@email.com"
+                    required
+                  />
+                </div>
+                <div class="form--imput--validation">
+                  <p id="email-feedback" class="input-feedback"></p>
+                </div>
+              </div>
+              <div class="form--input--container">
+                <div class="form--imput--city">
+                  <label class="label--title">Ciudad</label>
+                  <div class="form--imput--field">
+                    <div class="form--imput-radio">
+                      <input
+                        type="radio"
+                        id="ciudadCDMX"
+                        name="ciudad"
+                        value="CDMX"
+                      />
+                      <label for="ciudadCDMX">Ciudad de México</label>
+                    </div>
+                    <div class="form--imput-radio">
+                      <input
+                        type="radio"
+                        id="ciudadGDL"
+                        name="ciudad"
+                        value="GDL, JC"
+                      />
+                      <label for="ciudadGDL">Guadalajara, Jalisco</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form--input--container">
+                <div class="form--imput--item">
+                  <label for="name-emergency">Contacto emergencia</label>
+                  <input
+                    id="name-emergency"
+                    type="name-emergency"
+                    name="name-emergency"
+                    placeholder="Ingresa el nombre de tu contacto de emergencia"
+                    required
+                  />
+                </div>
+                <div class="form--imput--validation">
+                  <p id="name-emergency-feedback" class="input-feedback"></p>
+                </div>
+              </div>
+              <div class="form--input--container">
+                <div class="form--imput--item">
+                  <label for="number-emergency"></label>
+                  <input
+                    id="number-emergency"
+                    type="tel"
+                    name="number-emergency"
+                    placeholder="Ingresa el número telefónico de tu contacto de emergencia"
+                    required
+                  />
+                </div>
+                <div class="form--imput--validation">
+                  <p id="number-feedback" class="input-feedback"></p>
+                </div>
+              </div>
+              <div class="form--input--container">
+                <div class="form--imput--item">
+                  <label for="email-emergency"></label>
+                  <input
+                    id="email-emergency"
+                    type="email"
+                    name="email-emergency"
+                    placeholder="Ingresa el email de tu contacto de emergencia"
+                    required
+                  />
+                </div>
+                <div class="form--imput--validation">
+                  <p id="email-emergency-feedback" class="input-feedback"></p>
+                </div>
+              </div>
+              <div class="form--input--container">
+                <div class="form--imput--item">
+                  <label for="fecha-nacimiento">Fecha de nacimiento</label>
+                  <input
+                    id="fecha-nacimiento"
+                    type="date"
+                    name="fecha-nacimiento"
+                    placeholder="DD/MM/AAAA"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="all--up--img">
+              <div class="section--up--img">
+                <div>
+                  <p class="text--title">Adjunta algunas fotos</p>
+                  <p class="text--img">
+                    Puedes proporcionarnos fotos sobre tu trabajo y nosotros las
+                    mostraremos a nuestros usuarios, esto te ayudará a crear
+                    mejores conecciones.
+                  </p>
+                  <div class="up--img--container">
+                    <img
+                      src="../assets/image 37.png"
+                      alt="Cuidador"
+                      class="img--img"
+                      id="open-popup-img-feedback"
+                    />
+                    <div class="img--url--input">
+                      <input
+                        type="url"
+                        name="url-img"
+                        id="url-img"
+                        placeholder="https://www.ejemplo.com"
+                        required
+                      />
+                      <div class="form--imput--validation">
+                        <p id="url-img-feedback" class="input-feedback"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p class="text--title">Adjunta tu identificación oficial</p>
+                  <p class="text--img">
+                    Puedes proporcionarnos un scaner por ambos lados de tu
+                    credencial del lector, esto nos ayudará a crear un ambiente
+                    de confianza dentro de nustra comunidad.
+                  </p>
+                  <div class="up--img--container">
+                    <img
+                      src="../assets/image 38.png"
+                      alt="Cuidador"
+                      class="img--img"
+                    />
+                    <div class="img--url--input">
+                      <input
+                        type="url"
+                        name="url-ine"
+                        id="url-ine"
+                        placeholder="https://www.ejemplo.com"
+                        required
+                      />
+                      <div class="form--imput--validation">
+                        <p id="url-ine-feedback" class="input-feedback"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="button--submit">
+                <button class="btn btn--form btn--shadow" type="submit">
+                  Siguiente
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <!--Pie de página de safeDog-->
+    <footer class="footer--safeDog" style="font-size: 160.5%">
+      <div class="iconos">
+        <a href="#"
+          ><img src="../assets/correo5.png" alt="" target="_blank"
+        /></a>
+        <a href="#"><img src="../assets/fb5.png" alt="" /></a>
+        <a href="#"><img src="../assets/instagramb.png" alt="" /></a>
+        <a href="#"><img src="../assets/whatsapp.png" alt="" /></a>
+      </div>
+      <div class="footer--logo">
+        <img src="../assets/safedogfooter.png" alt="safeDog Footer" />
+      </div>
+      <div class="footer--info">
+        <h4 class="footer--question">¿Quieres formar parte de nuestra comunidad?</h4>
+        <ul class="footer--list">
+            <li><a href="../pages/formCuidador.html" target="_blank">Ser cuidador</a></li>
+            <li><a href="../pages/cardCuidadores.html" target="_blank">Ser cuidado</a></li>
+            <li><a href="../pages/preguntasFrecuentesContactanos.html" target="_blank">Preguntas frecuentes</a></li>
+            <li><a href="../pages/preguntasFrecuentesContactanos.html" target="_blank">Soporte</a></li>
+            <li><a href="../pages/terminoYcondiciones.html" target="_blank">Aviso de privacidad</a></li>
+        </ul>
+    </div>
+      <div class="footer--copy">
+        <h4>
+          © All rights reserved & design by SafeDog <br />
+          Hecho con ♥ en GDL y CDMX
+        </h4>
+      </div>
+    </footer>
+    <script src="../scripts/formCuidador.js"></script>
+    <script src="../scripts/navBar.js"></script>
+  </body>
+</html>

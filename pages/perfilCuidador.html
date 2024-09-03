@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil Cuidador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/perfilCuidador.css" />
+    <link rel="stylesheet" href="../styles/perfilCuidador-queries.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/navbar.css" />
+  </head>
+  <body>
+    <!-- Empieza Navbar -->
+    <nav style="font-size: 160.5%">
+      <div class="navbar">
+        <div class="logo">
+          <a href="../../inicio.html" target="_blank"
+            ><img src="../assets/SafeDog W (9).png" alt="SafeDog-Logo"
+          /></a>
+        </div>
+        <ul class="navbar--menu">
+          <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
+          <li>
+            <a href="./preguntasFrecuentesContactanos.html"
+              >Preguntas Frecuentes</a
+            >
+          </li>
+        </ul>
+        <div class="navbar--botones">
+          <button
+            class="boton--claro"
+            onclick="window.location.href='./formCuidador.html';"
+          >
+            Ser cuidador
+          </button>
+          <button
+            class="boton--claro"
+            onclick="window.location.href='./mainLogin.html';"
+          >
+            Iniciar sesión
+          </button>
+          <button
+            class="boton--azul"
+            onclick="window.location.href='./registroNuevoUsuario.html';"
+          >
+            Registrarse
+          </button>
+        </div>
+        <div class="menu-icon" id="menu-icon">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+
+      <div class="dropdown-menu" id="dropdown-menu">
+        <div class="letras"></div>
+        <ul>
+          <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
+          <li>
+            <a href="./preguntasFrecuentesContactanos.html"
+              >Preguntas Frecuentes</a
+            >
+          </li>
+          <li><a href="./formCuidador.html">Ser cuidador</a></li>
+          <li><a href="./mainLogin.html">Inicio de sesión</a></li>
+          <li><a href="./registroNuevoUsuario.html">Registrarse</a></li>
+        </ul>
+      </div>
+      <!-- termina navbar -->
+    </nav>
+
+    <main>
+      <section class="section--cuidador--contacto">
+        <div class="container">
+          <div class="cuidador--card">
+            <div class="cuidador--foto" role="img" aria-label="Cuidador"></div>
+            <div class="cuidador--text">
+              <h2 class="heading-secundary" id="cuidadorName">
+                Mariana del Valle
+              </h2>
+              <div class="cuidador--info">
+                <p class="text--info">Correo Electróncio:</p>
+                <p class="text--info">marianadelvalle@gmail.com</p>
+              </div>
+              <div class="cuidador--info">
+                <p class="text--info">Localidad:</p>
+                <p class="text--info">Colonia del Valle, Ciudad de México</p>
+              </div>
+              <div class="cuidador--info">
+                <p class="text--info">Reseñas:</p>
+                <div class="star--content">
+                  <ion-icon name="star" class="star-icon"></ion-icon>
+                  <ion-icon name="star" class="star-icon"></ion-icon>
+                  <ion-icon name="star" class="star-icon"></ion-icon>
+                  <ion-icon name="star-half" class="star-icon"></ion-icon>
+                  <ion-icon name="star-outline" class="star-icon"></ion-icon>
+                </div>
+              </div>
+              <div class="tarifas--cont">
+                <div class="tarifas--titel">
+                  <h3 id="serviciosYTarifas" class="heading-tertiary">Servicios y tarifas</h3>
+                </div>
+                <div class="cuidador--servicios">
+                  <h4 class="servicios_profile">Guarderia</h4>
+                  <div class="tarifa">
+                    <p class="text">
+                      desde <span class="servicios_profile">$300</span>
+                    </p>
+                    <p class="text align-guide">por dia</p>
+                  </div>
+                </div>
+                <div class="cuidador--servicios">
+                  <h4 class="servicios_profile">Hospedaje</h4>
+                  <div class="tarifa">
+                    <p class="text">
+                      desde <span class="servicios_profile">$500</span>
+                    </p>
+                    <p class="text align-guide">por dia</p>
+                  </div>
+                </div>
+                <div class="cuidador--servicios">
+                  <h4 class="servicios_profile">Paseo</h4>
+                  <div class="tarifa">
+                    <p class="text">
+                      desde <span class="servicios_profile">$100</span>
+                    </p>
+                    <p class="text align-guide">por hora</p>
+                  </div>
+                </div>
+                <div class="cuidador--servicios">
+                  <h4 class="servicios_profile">Baño</h4>
+                  <div class="tarifa">
+                    <p class="text">
+                      desde <span class="servicios_profile">$150</span>
+                    </p>
+                    <p class="text align-guide">por hora</p>
+                  </div>
+                </div>
+              </div>
+              <div class="cont--btn">
+                <button
+                  class="btn btn--outline btn--cellphone btn--shadow"
+                  type="button"
+                  onclick="window.location.href='./dueñoPago.html';"
+                >
+                  Pagar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section--cuidador--tags">
+        <div class="container">
+          <div class="tags--container">
+            <div class="text--tag">
+              <ion-icon name="business-outline"></ion-icon>
+              Guarderia
+            </div>
+            <div class="text--tag">
+              <ion-icon name="home-outline"></ion-icon> Hospedaje
+            </div>
+            <div class="text--tag">
+              <ion-icon name="walk-outline"></ion-icon> Paseo
+            </div>
+            <div class="text--tag">
+              <ion-icon name="water-outline"></ion-icon> Baño
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section--cuidador--resumen">
+        <div class="container">
+          <div class="experience--container">
+            <h3 class="heading-tertiary">Experiencia</h3>
+            <p id="experiencia" class="text">
+              ¡Hola! Soy Mariana del Valle y vivo en la hermosa Ciudad de México. <br> Soy una apasionada amante de los perros y disfruto cada momento que paso con ellos. Me encanta hospedar y pasear a estos maravillosos compañeros de cuatro patas, asegurándome de que se sientan amados y cuidados como si fueran parte de mi propia familia. Conmigo, tus perros disfrutarán de largos paseos al aire libre, juegos divertidos y mucho cariño. Mi objetivo es que cada perro que hospedo se sienta feliz y seguro, brindándote la tranquilidad de saber que tu mascota está en las mejores manos. ¡Espero tener la oportunidad de conocer a tu peludo amigo pronto! 🐾
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section--cuidador--reseña">
+        <div class="container">
+          <h2 class="heading-tertiary">
+            Reseñas del cuidador por otros dueños de perros:
+          </h2>
+          <div class="review--list" id="reviews-list"></div>
+          <div class="review--pagination" id="review-pagination"></div>
+        </div>
+      </section>
+
+      <section class="section--cuidador--reseña">
+        <div class="container">
+          <h2 class="heading-tertiary">
+            Escribenos tu reseña de este cuidador
+          </h2>
+          <form
+            class="review-container container--review"
+            action="#"
+            id="form-cont-review"
+          >
+            <div class="img--review">
+              <div class="user--picture"></div>
+            </div>
+            <div class="rev">
+              <h3 class="heading-four" id="userName">
+                Nombre Completo Usuario
+              </h3>
+              <div class="review-calification">
+                <p class="review--text">Calificacion:</p>
+                <span class="star-rating">
+                  <input type="radio" name="stars" value="1" /><i></i>
+                  <input type="radio" name="stars" value="2" /><i></i>
+                  <input type="radio" name="stars" value="3" /><i></i>
+                  <input type="radio" name="stars" value="4" /><i></i>
+                  <input type="radio" name="stars" value="5" /><i></i>
+                </span>
+              </div>
+              <div class="review-coment">
+                <label for="review-text" class="review--text text--space"
+                  >Escribenos tu reseña:
+                </label>
+                <textarea
+                  name="review"
+                  placeholder="Reseña"
+                  id="review-text"
+                  required
+                ></textarea>
+              </div>
+              <div class="button-review">
+                <button
+                  class="btn btn--form btn--shadow button-container"
+                  type="submit"
+                >
+                  Enviar
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="../scripts/perfilCuidador.js"></script>
+    <script src="../scripts/navBar.js"></script>
+  </body>
+  <!--Pie de página de safeDog-->
+  <footer class="footer--safeDog" style="font-size: 160.5%">
+    <div class="iconos">
+      <a href="#"><img src="../assets/correo5.png" alt="" target="_blank" /></a>
+      <a href="#"><img src="../assets/fb5.png" alt="" /></a>
+      <a href="#"><img src="../assets/instagramb.png" alt="" /></a>
+      <a href="#"><img src="../assets/whatsapp.png" alt="" /></a>
+    </div>
+    <div class="footer--logo">
+      <img src="../assets/safedogfooter.png" alt="safeDog Footer" />
+    </div>
+    <div class="footer--info">
+      <h4 class="footer--question">¿Quieres formar parte de nuestra comunidad?</h4>
+      <ul class="footer--list">
+          <li><a href="../pages/formCuidador.html" target="_blank">Ser cuidador</a></li>
+          <li><a href="../pages/cardCuidadores.html" target="_blank">Ser cuidado</a></li>
+          <li><a href="../pages/preguntasFrecuentesContactanos.html" target="_blank">Preguntas frecuentes</a></li>
+          <li><a href="../pages/preguntasFrecuentesContactanos.html" target="_blank">Soporte</a></li>
+          <li><a href="../pages/terminoYcondiciones.html" target="_blank">Aviso de privacidad</a></li>
+      </ul>
+  </div>
+    <div class="footer--copy">
+      <h4>
+        © All rights reserved & design by SafeDog <br />
+        Hecho con ♥ en GDL y CDMX
+      </h4>
+    </div>
+  </footer>
+</html>

@@ -1,0 +1,218 @@
+body {
+    font-family: Sansita, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #44A194; /* Color del fondo del menú */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Estilos para el logo */
+.logo img {
+    width: 200px; /* Reducido para hacer el logo más pequeño */
+    height: auto; /* Ajusta automáticamente la altura proporcionalmente */
+}   
+
+/* Menú de navegación */
+.navbar--menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+    
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.navbar--menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+}
+.letras{
+    font-size:25px;
+    text-align: right;
+    
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+/* Botones de la barra de navegación */
+.navbar--botones {
+    display: flex;
+    gap: 10px;
+    border: 0px;
+}
+
+.boton--azul {
+    padding: 8px 20px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+ 
+}
+
+.boton--claro {
+    background-color: #65B5A1;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 10px;
+    font-family: "Sansita";
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+   
+}
+
+.boton--azul {
+    background-color: #124C5F;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 10px;
+    font-family: "Sansita";
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+  
+}
+
+/* Estilo del ícono del menú hamburguesa */
+.menu-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: none; /* Oculto por defecto, se muestra en móviles */
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.menu-icon .bar {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* Menú desplegable */
+.dropdown-menu {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: #2B4453;
+    position: absolute;
+    top: 88px;
+    padding:10px;
+    right: 20px;
+    width: 250px;
+    display: none;
+    border-radius: 10px;
+    z-index: 1000; /* Asegura que el menú se muestre encima */
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+}
+
+.dropdown-menu ul li {
+    margin: 10px 5px 10PX 5px;
+    justify-content: center;
+   
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+
+
+.dropdown-menu ul li a {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #357D7E;
+    text-align: center;
+}
+
+.dropdown-menu ul li a:hover {
+    background-color: #4AA09A;
+}
+
+/* Mostrar el menú desplegable cuando esté activo */
+.show-menu {
+    display: block;
+    
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+a{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding:5px;
+}
+
+#dropdown-nenu{
+    
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+
+
+/* Estilo para "Acerca de nosotros" y "Preguntas Frecuentes" como texto simple */
+.dropdown-menu ul li:nth-child(1) a,
+.dropdown-menu ul li:nth-child(2) a {
+    background-color: transparent;
+    padding: 0;
+    text-align: left;
+}
+
+/* Medios responsive */
+@media (max-width: 900px) {
+    .navbar--menu,
+    .navbar--botones {
+        display: none; /* Oculta el menú y botones en pantallas pequeñas */
+    }
+    
+    .menu-icon {
+        display: flex; /* Muestra el ícono del menú hamburguesa */
+    }
+    
+    .dropdown-menu.active {
+        display: block; /* Muestra el menú desplegable cuando esté activo */
+    }
+}

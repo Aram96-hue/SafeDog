@@ -1,0 +1,120 @@
+body {
+    background-color: #FFF8E0 !important;
+    font-family: 'Roboto', sans-serif;
+}
+
+.custom-padding {
+    padding: 10px;
+}
+h3, h5 {
+    font-family: 'Sansita', sans-serif;
+}
+
+.card {
+    background-color: #F0BB69;
+}
+
+.btn-custom {
+    background-color: #44A194;
+    color: white;
+}
+
+.btn-custom:hover {
+    background-color: #7F636E;
+}
+
+.custom-list-group .list-group-item {
+    background-color: #44A194;
+    color: white;
+}
+
+.custom-list-group .list-group-item.active {
+    background-color: #7F636E;
+    color: white;
+}
+
+.custom-list-group .list-group-item:hover {
+    background-color: #F0BB69;
+    color: black;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+/* Custom padding for the card */
+.card .card-body {
+    padding: 20px;
+}
+
+/* Media queries for small screens (phones) */
+@media (max-width: 576px) {
+    h3, h5 {
+        font-size: 1.5rem;
+    }
+
+    .form-control {
+        font-size: 1rem;
+    }
+
+    .btn-custom {
+        font-size: 1rem;
+        padding: 10px 20px; /* Adjust button padding for better tap targets */
+    }
+
+    .list-group-item {
+        font-size: 1rem;
+    }
+
+    .card {
+        padding: 20px; /* Reduce padding for small screens */
+    }
+}
+
+/* Media queries for larger phones and tablets */
+@media (min-width: 577px) and (max-width: 768px) {
+    h3, h5 {
+        font-size: 1.75rem;
+    }
+
+    .form-control {
+        font-size: 1rem;
+    }
+
+    .btn-custom {
+        font-size: 1rem;
+    }
+
+    .list-group-item {
+        font-size: 1rem;
+    }
+
+    .card {
+        padding: 30px;
+    }
+}
+
+/* Media queries for tablets and small desktops */
+@media (min-width: 769px) and (max-width: 992px) {
+    h3, h5 {
+        font-size: 2rem;
+    }
+
+    .form-control {
+        font-size: 1rem;
+    }
+
+    .btn-custom {
+        font-size: 1rem;
+    }
+
+    .list-group-item {
+        font-size: 1rem;
+    }
+
+    .card {
+        padding: 35px;
+    }
+}
