@@ -1,120 +1,113 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.querySelector('.form-tarjeta');
+document.addEventListener('DOMContentLoaded', function () { 
+    // Elementos del formulario
+    const nombreInput = document.getElementById('nombre');
+    const tarjetaInput = document.getElementById('tarjeta');
+    const expiracionInput = document.getElementById('expiracion');
+    const cvvInput = document.getElementById('cvv');
+    const direccionInput = document.getElementById('direccion');
   
-  // Elementos del formulario
-  const nombreInput = document.getElementById('nombre');
-  const tarjetaInput = document.getElementById('tarjeta');
-  const expiracionInput = document.getElementById('expiracion');
-  const cvvInput = document.getElementById('cvv');
-  const direccionInput = document.getElementById('direccion');
-
-  // Elementos para mostrar feedback
-  const nameFeedback = document.getElementById('name-feedback');
-  const numCardFeedback = document.getElementById('numcard-feedback');
-  const dateExpFeedback = document.getElementById('datexp-feedback');
-  const codFeedback = document.getElementById('cod-feedback');
-  const adressFeedback = document.getElementById('adress-feedback');
-
-  // Validaciones
-  function validateName() {
+    // Elementos para mostrar feedback
+    const nameFeedback = document.getElementById('name-feedback');
+    const numCardFeedback = document.getElementById('numcard-feedback');
+    const dateExpFeedback = document.getElementById('datexp-feedback');
+    const codFeedback = document.getElementById('cod-feedback');
+    const adressFeedback = document.getElementById('adress-feedback');
+  
+    // Validaciones en tiempo real
+    nombreInput.addEventListener('input', function() {
       if (nombreInput.value.trim() === '') {
           nameFeedback.textContent = 'El nombre no puede estar vacío.';
-          return false;
+          nameFeedback.style.color = "red";
       } else if (!/^[a-zA-Z\s]+$/.test(nombreInput.value)) {
           nameFeedback.textContent = 'El nombre debe contener solo letras y espacios.';
           nameFeedback.style.color = "red";
-          return false;
       } else {
           nameFeedback.textContent = '';
-          return true;
       }
-  }
-
-  function validateCardNumber() {
+    });
+  
+    tarjetaInput.addEventListener('input', function() {
       if (!/^\d{16}$/.test(tarjetaInput.value)) {
           numCardFeedback.textContent = 'El número de tarjeta debe contener 16 dígitos.';
-          nameFeedback.style.color = "red";
-          return false;
+          numCardFeedback.style.color = "red";
       } else {
           numCardFeedback.textContent = '';
-          return true;
       }
-  }
-
-  function validateExpirationDate() {
+    });
+  
+    expiracionInput.addEventListener('input', function() {
       if (!/^\d{2}\/\d{2}$/.test(expiracionInput.value)) {
           dateExpFeedback.textContent = 'La fecha de vencimiento debe estar en formato MM/AA.';
-          nameFeedback.style.color = "red";
-          return false;
+          dateExpFeedback.style.color = "red";
       } else {
           dateExpFeedback.textContent = '';
-          return true;
       }
-  }
-
-  function validateCVV() {
+    });
+  
+    cvvInput.addEventListener('input', function() {
       if (!/^\d{3}$/.test(cvvInput.value)) {
           codFeedback.textContent = 'El CVV debe contener 3 dígitos.';
-          nameFeedback.style.color = "red";
-          return false;
+          codFeedback.style.color = "red";
       } else {
           codFeedback.textContent = '';
-          return true;
       }
-  }
-
-  function validateAddress() {
+    });
+  
+    direccionInput.addEventListener('input', function() {
       if (direccionInput.value.trim() === '') {
           adressFeedback.textContent = 'La dirección no puede estar vacía.';
-          nameFeedback.style.color = "red";
-          return false;
+          adressFeedback.style.color = "red";
       } else {
           adressFeedback.textContent = '';
-          return true;
       }
-  }
-
-  // Validar en el envío del formulario
-  form.addEventListener('submit', function (event) {
-      const isNameValid = validateName();
-      const isCardNumberValid = validateCardNumber();
-      const isExpirationDateValid = validateExpirationDate();
-      const isCVVValid = validateCVV();
-      const isAddressValid = validateAddress();
-
-      if (!isNameValid || !isCardNumberValid || !isExpirationDateValid || !isCVVValid || !isAddressValid) {
-          event.preventDefault(); // Detener el envío del formulario si hay errores
-      }
+    });
+  });
+  
+  document.getElementById('form-tarjeta').addEventListener('a', function(event) {
+      event.preventDefault(); // Evita el envío inmediato del formulario
+  
+      var popup = document.getElementById('pop-uppp-cuidador');
+      popup.style.display = 'block'; // Mostrar el popup
+  
+      // Simula el proceso de pago y oculta el popup después de 3 segundos
+      setTimeout(function() {
+          popup.style.display = 'none';
+          // Aquí puedes enviar el formulario manualmente si es necesario
+          event.target.submit(); // Enviar el formulario después de mostrar el popup
+      }, 3000);
   });
 
-  // Validar en tiempo real mientras se escribe
-  nombreInput.addEventListener('input', validateName);
-  tarjetaInput.addEventListener('input', validateCardNumber);
-  expiracionInput.addEventListener('input', validateExpirationDate);
-  cvvInput.addEventListener('input', validateCVV);
-  direccionInput.addEventListener('input', validateAddress);
+  /*popup*/
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // Obtener elementos del DOM
+    const popup = document.getElementById('popup');
+    const closePopup = document.getElementById('close-popup');
+    const payButton = document.querySelector('.form-tarjeta a');
+
+    // Mostrar el popup
+    payButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Evitar el enlace predeterminado
+        popup.style.display = 'block'; // Mostrar el popup
+
+        // Simular el proceso de pago y cerrar el popup después de 3 segundos
+        setTimeout(function() {
+            popup.style.display = 'none';
+            window.location.href = payButton.getAttribute('href'); // Redirigir a la página
+        }, 3000);
+    });
+
+    // Cerrar el popup cuando se hace clic en el botón de cerrar
+    closePopup.addEventListener('click', function() {
+        popup.style.display = 'none';
+    });
+
+    // Cerrar el popup si se hace clic fuera del contenido del popup
+    window.addEventListener('click', function(event) {
+        if (event.target === popup) {
+            popup.style.display = 'none';
+        }
+    });
 });
 
-
-form.addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita el envío del formulario
-
-    // Validar antes de mostrar el mensaje
-    const isFormValid = (
-        nombreInput.value.trim() !== '' &&
-        /^[a-zA-Z\s]+$/.test(nombreInput.value) &&
-        /^\d{16}$/.test(tarjetaInput.value) &&
-        /^\d{2}\/\d{2}$/.test(expiracionInput.value) &&
-        /^\d{3}$/.test(cvvInput.value) &&
-        direccionInput.value.trim() !== ''
-    );
-
-    if (isFormValid) {
-        alert('Su pago se realizó correctamente');
-        form.submit(); // Enviar el formulario si todas las validaciones son correctas
-    } else {
-        alert('Por favor, complete todos los campos correctamente.');
-    }
-});
-
-
+  
