@@ -131,6 +131,45 @@ body {
     box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 255, 255, 0.7);
 }
 
+/* Desktops grandes (mayor a 75rem) */
+@media (max-width: 75rem) {
+    .titulo {
+        font-size: 2.5rem;
+        margin: .5rem;
+    }
+
+    .pago-periodico-contenedor1 {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10rem;
+        gap: 5rem;
+    }
+
+    .tarjeta-M {
+        width: 40%;
+        height: auto;
+    }
+
+    .iconos_suscription {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .form-tarjeta {
+        width: 20rem;
+        max-width: 20rem;
+    }
+
+    .subtitulo {
+        font-size: 3rem;
+    }
+
+    .otros-medios-pago, .disclaimer {
+        margin: 5rem;
+    }
+}
+
+
 .form-tarjeta-hidden {
     display: hidden;
 }
@@ -607,183 +646,4 @@ a{
 /**********medias queries************/
 
 
-/*Mobile (menor a 576px) */
-/*@media (max-width: 575.98px) {
-    .titulo {
-        font-size: 1.8rem;
-    }
 
-    .pago-periodico-contenedor1 {
-        flex-direction: column;
-        padding: 2rem;
-        gap: 2rem;
-    }
-
-    .tarjeta-M {
-        width: 100%;
-        height: auto;
-        padding: 1rem;
-    }
-
-    .iconos_suscription {
-        width: 4rem;
-        height: 4rem;
-    }
-
-    .form-tarjeta {
-        width: 100%;
-        max-width: 100%;
-        padding: 1rem;
-    }
-
-    .subtitulo {
-        font-size: 2rem;
-    }
-
-    .otros-medios-pago, .disclaimer {
-        margin: 2rem;
-    }
-}
-
-/* Tablets (576px - 768px) */
-/*@media (min-width: 576px) and (max-width: 767.98px) {
-    .titulo {
-        font-size: 2rem;
-    }
-
-    .pago-periodico-contenedor1 {
-        flex-direction: column;
-        padding: 5rem;
-        gap: 3rem;
-    }
-
-    .tarjeta-M {
-        width: 80%;
-        height: auto;
-        padding: 1rem;
-    }
-
-    .iconos_suscription {
-        width: 5rem;
-        height: 5rem;
-    }
-
-    .form-tarjeta {
-        width: 90%;
-        max-width: 90%;
-        padding: 1.5rem;
-    }
-
-    .subtitulo {
-        font-size: 2.5rem;
-    }
-
-    .otros-medios-pago, .disclaimer {
-        margin: 3rem;
-    }
-}
-
-/* Tablets grandes y desktops pequeños (768px - 992px) */
-/*@media (min-width: 768px) and (max-width: 991.98px) {
-    .titulo {
-        font-size: 2.2rem;
-    }
-
-    .pago-periodico-contenedor1 {
-        padding: 8rem;
-        gap: 4rem;
-    }
-
-    .tarjeta-M {
-        width: 60%;
-        height: auto;
-    }
-
-    .iconos_suscription {
-        width: 5.5rem;
-        height: 5.5rem;
-    }
-
-    .form-tarjeta {
-        width: 80%;
-        max-width: 80%;
-    }
-
-    .subtitulo {
-        font-size: 2.8rem;
-    }
-
-    .otros-medios-pago, .disclaimer {
-        margin: 4rem;
-    }
-}
-
-/* Desktops medianos (992px - 1200px) */
-/*@media (min-width: 992px) and (max-width: 1199.98px) {
-    .titulo {
-        font-size: 2.3rem;
-    }
-
-    .pago-periodico-contenedor1 {
-        padding: 10rem;
-        gap: 4.5rem;
-    }
-
-    .tarjeta-M {
-        width: 50%;
-        height: auto;
-    }
-
-    .iconos_suscription {
-        width: 6rem;
-        height: 6rem;
-    }
-
-    .form-tarjeta {
-        width: 70%;
-        max-width: 70%;
-    }
-
-    .subtitulo {
-        font-size: 3rem;
-    }
-
-    .otros-medios-pago, .disclaimer {
-        margin: 5rem;
-    }
-}
-
-/* Desktops grandes (mayor a 1200px) */
-/*@media (min-width: 1200px) {
-    .titulo {
-        font-size: 2.5rem;
-    }
-
-    .pago-periodico-contenedor1 {
-        padding: 10rem;
-        gap: 5rem;
-    }
-
-    .tarjeta-M {
-        width: 40%;
-        height: auto;
-    }
-
-    .iconos_suscription {
-        width: 6rem;
-        height: 6rem;
-    }
-
-    .form-tarjeta {
-        width: 60%;
-        max-width: 60%;
-    }
-
-    .subtitulo {
-        font-size: 3rem;
-    }
-
-    .otros-medios-pago, .disclaimer {
-        margin: 5rem;
-    }
-}

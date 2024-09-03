@@ -1,147 +1,67 @@
-function validateNombre(input) {
-    let pattern = /^[A-Za-z\s]+$/;
-    let feedback = input.nextElementSibling;
+document.addEventListener('DOMContentLoaded', function () {
+    // Elementos del formulario
+    const nombreInput = document.getElementById('nombree');
+    const tarjetaInput = document.getElementById('tarjetaa');
+    const expiracionInput = document.getElementById('expiracionn');
+    const cvvInput = document.getElementById('cvvv');
+    const direccionInput = document.getElementById('direccionn');
 
-    if (!pattern.test(input.value)) {
-        input.setCustomValidity("Invalid");
-        feedback.textContent = "El nombre solo debe contener letras y espacios.";
-        feedback.classList.remove('valid-feedback');
-        feedback.classList.add('invalid-feedback');
-        feedback.style.display = 'block';
-    } else {
-        input.setCustomValidity("");
-        feedback.textContent = "Nombre válido.";
-        feedback.classList.remove('invalid-feedback');
-        feedback.classList.add('valid-feedback');
-        feedback.style.display = 'block';
-    }
-}
+    // Elementos para mostrar feedback
+    const nameFeedback = document.getElementById('namee-feedback');
+    const numCardFeedback = document.getElementById('numcardd-feedback');
+    const dateExpFeedback = document.getElementById('datexpp-feedback');
+    const codFeedback = document.getElementById('codd-feedback');
+    const adressFeedback = document.getElementById('adresss-feedback');
 
-function validateNumTarjeta(input) {
-    let pattern = /^\d{16}$/;
-    let feedback = input.nextElementSibling;
-
-    if (!pattern.test(input.value) || input.value.length !== 16) {
-        input.setCustomValidity("Invalid");
-        feedback.textContent = "Número de tarjeta invalido.";
-        feedback.classList.remove('valid-feedback');
-        feedback.classList.add('invalid-feedback');
-        feedback.style.display = 'block';
-    } else {
-        input.setCustomValidity("");
-        feedback.textContent = "Número de tarjeta válido.";
-        feedback.classList.remove('invalid-feedback');
-        feedback.classList.add('valid-feedback');
-        feedback.style.display = 'block';
-    }
-}
-
-function validateFechaVencimiento(input) {
-    let pattern = /^\d{4}$/;
-    let feedback = input.nextElementSibling;
-
-    if (!pattern.test(input.value) || input.value.length !== 4) {
-        input.setCustomValidity("Invalid");
-        feedback.textContent = "Formato de fecha no válido.";
-        feedback.classList.remove('valid-feedback');
-        feedback.classList.add('invalid-feedback');
-        feedback.style.display = 'block';
-    } else {
-        input.setCustomValidity("");
-        feedback.textContent = "Formato de fecha válido.";
-        feedback.classList.remove('invalid-feedback');
-        feedback.classList.add('valid-feedback');
-        feedback.style.display = 'block';
-    }
-}
-
-function validateCodigoVerificacion(input) {
-    let pattern = /^\d{3}$/;
-    let feedback = input.nextElementSibling;
-
-    if (!pattern.test(input.value) || input.value.length !== 3) {
-        input.setCustomValidity("Invalid");
-        feedback.textContent = "Código no válido.";
-        feedback.classList.remove('valid-feedback');
-        feedback.classList.add('invalid-feedback');
-        feedback.style.display = 'block';
-    } else {
-        input.setCustomValidity("");
-        feedback.textContent = "Código válido.";
-        feedback.classList.remove('invalid-feedback');
-        feedback.classList.add('valid-feedback');
-        feedback.style.display = 'block';
-    }
-}
-
-function validateDomicilio(input) {
-    let pattern = /^\d{3}$/;
-    let feedback = input.nextElementSibling;
-
-    if (!pattern.test(input.value) || input.value.length !== 3) {
-        input.setCustomValidity("Invalid");
-        feedback.textContent = "Entrada no válida.";
-        feedback.classList.remove('valid-feedback');
-        feedback.classList.add('invalid-feedback');
-        feedback.style.display = 'block';
-    } else {
-        input.setCustomValidity("");
-        feedback.textContent = "Entrada válida.";
-        feedback.classList.remove('invalid-feedback');
-        feedback.classList.add('valid-feedback');
-        feedback.style.display = 'block';
-    }
-}
-
-// Add event listeners
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.querySelector('.form-tipo-tarjeta');
-
-    form.addEventListener('input', event => {
-        const target = event.target;
-
-        if (target.id === 'nombre') {
-            validateNombre(target);
-        } else if (target.id === 'tarjeta') {
-            validateNumTarjeta(target);
-        } else if (target.id === 'exampleInputEmail1') {
-            validateCorreo(target);
-        } else if (target.id === 'exampleInputPassword1') {
-            validatePassword(target);
-        } else if (target.id === 'exampleInputPassword2') {
-            validatePasswordConfirm(target);
-        }
-    }, false);
-
-    form.addEventListener('submit', event => {
-        event.preventDefault();
-        event.stopPropagation();
-
-        if (form.checkValidity()) {
-            form.classList.add('was-validated');
-            document.getElementById('success-message').textContent = "Registro exitoso!";
-            document.getElementById('success-message').style.display = 'block';
-            
-            const username = form.querySelector('#nombre').value;
-            const correo = form.querySelector('#exampleInputEmail1').value;
-            const telefono = form.querySelector('#telefono').value;
-            const password2 = form.querySelector('#exampleInputPassword1').value;
-
-            const newUser = {
-                username,
-                correo,
-                telefono,
-                password2
-            };
-
-            let users = JSON.parse(localStorage.getItem('myForm2')) || [];
-            users.push(newUser);
-            localStorage.setItem('myForm2', JSON.stringify(users));
-            
-            console.log('Formulario enviado');
+    // Validaciones en tiempo real
+    nombreInput.addEventListener('input', function() {
+        if (nombreInput.value.trim() === '') {
+            nameFeedback.textContent = 'El nombre no puede estar vacío.';
+            nameFeedback.style.color = "red";
+        } else if (!/^[a-zA-Z\s]+$/.test(nombreInput.value)) {
+            nameFeedback.textContent = 'El nombre debe contener solo letras y espacios.';
+            nameFeedback.style.color = "red";
         } else {
-            form.classList.add('was-validated');
+            nameFeedback.textContent = '';
         }
-    }, false);
+    });
+
+    tarjetaInput.addEventListener('input', function() {
+        if (!/^\d{16}$/.test(tarjetaInput.value)) {
+            numCardFeedback.textContent = 'El número de tarjeta debe contener 16 dígitos.';
+            nameFeedback.style.color = "red";
+        } else {
+            numCardFeedback.textContent = '';
+        }
+    });
+
+    expiracionInput.addEventListener('input', function() {
+        if (!/^\d{2}\/\d{2}$/.test(expiracionInput.value)) {
+            dateExpFeedback.textContent = 'La fecha de vencimiento debe estar en formato MM/AA.';
+            nameFeedback.style.color = "red";
+        } else {
+            dateExpFeedback.textContent = '';
+        }
+    });
+
+    cvvInput.addEventListener('input', function() {
+        if (!/^\d{3}$/.test(cvvInput.value)) {
+            codFeedback.textContent = 'El CVV debe contener 3 dígitos.';
+            nameFeedback.style.color = "red";
+        } else {
+            codFeedback.textContent = '';
+        }
+    });
+
+    direccionInput.addEventListener('input', function() {
+        if (direccionInput.value.trim() === '') {
+            adressFeedback.textContent = 'La dirección no puede estar vacía.';
+            nameFeedback.style.color = "red";
+        } else {
+            adressFeedback.textContent = '';
+        }
+    });
 });
+  
+
 

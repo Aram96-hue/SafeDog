@@ -58,63 +58,39 @@
     </section>
     <section>
         <div class="container-form">
-            <form class="form-tipo-tarjeta" action="procesador de pago" method="post">
-
-
-               <!--- <label for="nombre">Nombre completo:</label>
-                <input type="text" id="nombre" name="nombre" required pattern="[A-Za-z\s]+" oninput="validateNombre(this)"required>-->
-                
-                <div class="mb-3">
-                    <div class="form-group">
-                      <label for="nombre">Nombre Completo</label>
-                      <input type="text" id="nombre" name="nombre" required pattern="[A-Za-z\s]+" oninput="validateNombre(this)" required>
-                      <div class="invalid-feedback"></div>
-                      <div class="valid-feedback"></div>
+                <form class="form-tipo-tarjeta" action="procesador de pago" method="post">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombree" name="nombre" placeholder="Ingresa el nombre que viene en tu tarjeta">
+                    <div class="form--imput--validation">
+                        <p id="namee-feedback" class="input-feedback"></p>
                     </div>
-                </div>
-      
-                <!--<label for="tarjeta">Número de tarjeta:</label>
-                <input type="text" id="tarjeta" name="tarjeta" pattern="\d{16}" placeholder="xxxx xxxx xxxx xxxx" required>-->
 
-                <div class="mb-3">
-                    <div class="form-group"></div>
-                        <label for="tarjeta">Número de Tarjeta</label>
-                        <input type="text" id="tarjeta" name="tarjeta" maxlength="16" placeholder="xxxx xxxx xxxx xxxx" required pattern="\d{16}" oninput="validateNumTarjeta(this)" required>
-                        <div class="invalid-feedback"></div>
-                        <div class="valid-feedback"></div>
+                    <label for="tarjeta">Número de tarjeta:</label>
+                    <input type="text" id="tarjetaa" name="tarjeta" pattern="\d{16}" placeholder="xxxx xxxx xxxx xxxx" required>
+                    <div class="form--imput--validation">
+                        <p id="numcardd-feedback" class="input-feedback"></p>
                     </div>
-                </div>    
 
-                <div class="mb-3">
-                    <div class="form-group"></div>
-                        <label for="expiracion">Fecha de vencimiento:</label>
-                        <input type="text" id="expiracion" name="expiracion" pattern="\d{2}/\d{2}" placeholder="MM/AA" maxlength="5"required>
-                        <div class="invalid-feedback"></div>
-                        <div class="valid-feedback"></div>
+                    <label for="expiracion">Fecha de vencimiento:</label>
+                    <input type="text" id="expiracionn" name="expiracion" pattern="\d{2}/\d{2}" placeholder="MM/AA" required>
+                    <div class="form--imput--validation">
+                        <p id="datexpp-feedback" class="input-feedback"></p>
                     </div>
-                </div>    
 
-                <div class="mb-3">
-                    <div class="form-group"></div>
-                        <label for="cvv">Código de seguridad (CVV):</label>
-                        <input type="text" id="cvv" name="cvv" maxlength="3" pattern="\d{3}" placeholder="xxx" required>
-                        <div class="invalid-feedback"></div>
-                        <div class="valid-feedback"></div>
+                    <label for="cvv">Código de seguridad (CVV):</label>
+                    <input type="text" id="cvvv" name="cvv" pattern="\d{3}" placeholder="xxx" required>
+                    <div class="form--imput--validation">
+                        <p id="codd-feedback" class="input-feedback"></p>
                     </div>
-                </div>    
 
-                <div class="mb-3">
-                    <div class="form-group"></div>
-                        <label for="direccion">Dirección de facturación:</label>
-                        <input type="text" id="direccion" name="direccion" required>
-                        <div class="invalid-feedback"></div>
-                        <div class="valid-feedback"></div>
+                    <label for="direccion">Dirección de facturación:</label>
+                    <input type="text" id="direccionn" name="direccion" placeholder="Ingresa tu domicilio">
+                    <div class="form--imput--validation">
+                        <p id="adresss-feedback" class="input-feedback"></p>
                     </div>
-                </div>    
 
-                <input type="submit" value="Pagar">
-                
-            </form>    
+                    <input type="submit" value="Pagar">
+                </form>
         </div>
     </section>
     <section>
@@ -142,13 +118,13 @@
     <section>
     <footer class="footer--safeDog">
         <div class="iconos">
-            <a href="#"><img src="../Diseño/assets/correo5 (1).png" alt="" target="_blank"></a>
-            <a href="#"><img src="../Diseño/assets/fb5 (1).png" alt="" ></a>
-            <a href="#"><img src="../Diseño/assets/instagramb (1).png" alt="" ></a>
-            <a href="#"><img src="../Diseño/assets/whatsapp (1).png" alt=""></a>
+            <a href="#"><img src="../assets/correo5 (1).png" alt="" target="_blank"></a>
+            <a href="#"><img src="../assets/fb5 (1).png" alt="" ></a>
+            <a href="#"><img src="../assets/instagramb (1).png" alt="" ></a>
+            <a href="#"><img src="../assets/whatsapp (1).png" alt=""></a>
         </div>
         <div class="footer--logo">
-            <img src="../assets/safedogfooter.png" alt="safeDog Footer">
+            <img src="../Diseño/assets/safedogfooter (1).png" alt="safeDog Footer">
         </div>
         <div class="footer--info">
             <h4 class="footer--question">¿Quieres formar parte de nuestra comunidad?</h4>

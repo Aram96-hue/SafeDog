@@ -39,7 +39,7 @@ body {
 .container-monto {
     border:none;
     border-radius: 0.5rem;
-    width: 500px; 
+    width: 31rem; 
     height: 16rem;
     text-align: center;
     gap: 1rem;
@@ -83,6 +83,30 @@ body {
     border-radius: 8px;
     box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 255, 255, 0.7);
 
+}
+
+/* Desktops grandes (mayor a 75rem) */
+@media (max-width: 75rem) {
+    .nombre-dueño-registrado {
+        font-size: 2.3rem;
+    }
+
+    .container-monto {
+        width: 500px;
+        height: 16rem;
+        margin: 3rem;
+        font-size: smaller;
+    }
+
+    .form-tipo-tarjeta {
+        width: 20rem;
+        max-width: 20rem;
+    }
+
+    .paypalpago, .tyc {
+        margin: 5rem;
+        font-size: medium;
+    }
 }
 
 .form-tipo-tarjeta label {
@@ -549,129 +573,3 @@ a{
 
 /*medias queries*/
 
-/* Mobile (menor a 576px) */
-/*@media (max-width: 575.98px) {
-    .nombre-dueño-registrado {
-        font-size: 1.5rem;
-        margin: 0.5rem;
-        padding: 0.3rem;
-    }
-
-    .container-alinearr {
-        flex-direction: column;
-    }
-
-    .container-monto {
-        width: 100%;
-        height: auto;
-        margin: 1rem;
-        padding: 1rem;
-    }
-
-    .form-tipo-tarjeta {
-        width: 100%;
-        max-width: 100%;
-        padding: 0.5rem;
-    }
-
-    .paypalpago, .tyc {
-        margin: 2rem;
-        font-size: x-small;
-    }
-}
-
-/* Tablets (576px - 768px) */
-/*@media (min-width: 576px) and (max-width: 767.98px) {
-    .nombre-dueño-registrado {
-        font-size: 1.8rem;
-    }
-
-    .container-monto {
-        width: 80%;
-        height: auto;
-        margin: 2rem;
-    }
-
-    .form-tipo-tarjeta {
-        width: 90%;
-        max-width: 90%;
-        padding: 1rem;
-    }
-
-    .paypalpago, .tyc {
-        margin: 3rem;
-        font-size: small;
-    }
-}
-
-/* Tablets grandes y desktops pequeños (768px - 992px) */
-/*@media (min-width: 768px) and (max-width: 991.98px) {
-    .nombre-dueño-registrado {
-        font-size: 2rem;
-    }
-
-    .container-monto {
-        width: 70%;
-        height: auto;
-        margin: 3rem;
-    }
-
-    .form-tipo-tarjeta {
-        width: 80%;
-        max-width: 80%;
-        padding: 1.5rem;
-    }
-
-    .paypalpago, .tyc {
-        margin: 4rem;
-        font-size: medium;
-    }
-}
-
-/* Desktops medianos (992px - 1200px) */
-/*@media (min-width: 992px) and (max-width: 1199.98px) {
-    .nombre-dueño-registrado {
-        font-size: 2.2rem;
-    }
-
-    .container-monto {
-        width: 60%;
-        height: auto;
-        margin: 4rem;
-    }
-
-    .form-tipo-tarjeta {
-        width: 70%;
-        max-width: 70%;
-        padding: 2rem;
-    }
-
-    .paypalpago, .tyc {
-        margin: 4rem;
-        font-size: medium;
-    }
-}
-
-/* Desktops grandes (mayor a 1200px) */
-/*@media (min-width: 1200px) {
-    .nombre-dueño-registrado {
-        font-size: 2.3rem;
-    }
-
-    .container-monto {
-        width: 50%;
-        height: auto;
-        margin: 5rem;
-    }
-
-    .form-tipo-tarjeta {
-        width: 60%;
-        max-width: 60%;
-        padding: 2rem;
-    }
-
-    .paypalpago, .tyc {
-        margin: 5rem;
-        font-size: medium;
-    }
-}
