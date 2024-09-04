@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () { 
+document.addEventListener('click', function () { 
     // Elementos del formulario
     const nombreInput = document.getElementById('nombre');
     const tarjetaInput = document.getElementById('tarjeta');
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const adressFeedback = document.getElementById('adress-feedback');
   
     // Validaciones en tiempo real
-    nombreInput.addEventListener('input', function() {
+    nombreInput.addEventListener('a', function() {
       if (nombreInput.value.trim() === '') {
           nameFeedback.textContent = 'El nombre no puede estar vacío.';
           nameFeedback.style.color = "red";
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 3000);
   });
 
-  /*popup*/
+  /*alert*/
 
   document.addEventListener('DOMContentLoaded', function() {
     const customAlert = document.getElementById('custom-alert');
