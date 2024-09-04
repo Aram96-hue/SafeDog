@@ -80,34 +80,28 @@ document.addEventListener('DOMContentLoaded', function () {
   /*popup*/
 
   document.addEventListener('DOMContentLoaded', function() {
-    // Obtener elementos del DOM
-    const popup = document.getElementById('popup');
-    const closePopup = document.getElementById('close-popup');
-    const payButton = document.querySelector('.form-tarjeta a');
+    const customAlert = document.getElementById('custom-alert');
+    const closeAlert = document.getElementById('close-alert');
+    const payButton = document.getElementById('pay-button');
 
-    // Mostrar el popup
+    // Mostrar el alert personalizado
     payButton.addEventListener('click', function(event) {
-        event.preventDefault(); // Evitar el enlace predeterminado
-        popup.style.display = 'block'; // Mostrar el popup
-
-        // Simular el proceso de pago y cerrar el popup después de 3 segundos
+        event.preventDefault(); // Evitar el comportamiento por defecto del enlace
+        customAlert.style.display = 'flex'; // Mostrar el modal
         setTimeout(function() {
-            popup.style.display = 'none';
-            window.location.href = payButton.getAttribute('href'); // Redirigir a la página
+            window.location.href = '../pages/preguntasFrecuentesContactanos.html'; // Redirigir a la página después de 3 segundos
         }, 3000);
     });
 
-    // Cerrar el popup cuando se hace clic en el botón de cerrar
-    closePopup.addEventListener('click', function() {
-        popup.style.display = 'none';
+    // Cerrar el alert personalizado
+    closeAlert.addEventListener('click', function() {
+        customAlert.style.display = 'none';
     });
 
-    // Cerrar el popup si se hace clic fuera del contenido del popup
+    // Cerrar el alert si se hace clic fuera del contenido del alert
     window.addEventListener('click', function(event) {
-        if (event.target === popup) {
-            popup.style.display = 'none';
+        if (event.target === customAlert) {
+            customAlert.style.display = 'none';
         }
     });
 });
-
-  

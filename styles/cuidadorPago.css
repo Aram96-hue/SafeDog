@@ -246,38 +246,38 @@ a{
     align-items: center;
   }
 
-  .popup {
-    display: none; /* Oculto por defecto */
+/* Estilos para el modal */
+#custom-alert {
+    display: none;
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
-    z-index: 1000; /* Asegura que el popup esté sobre otros elementos */
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
 }
-
-.popup-content {
-    background-color: #fff;
-    margin: 15% auto;
+#custom-alert-content {
+    background: white;
     padding: 20px;
     border-radius: 5px;
-    width: 80%;
-    max-width: 400px;
     text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
 }
-
-.close-btn {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+#custom-alert-content h2 {
+    margin: 0 0 10px;
 }
-
-.close-btn:hover,
-.close-btn:focus {
-    color: black;
-    text-decoration: none;
+#custom-alert-content p {
+    margin: 0 0 20px;
+}
+#close-alert {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 /********otros medios de pago********/
