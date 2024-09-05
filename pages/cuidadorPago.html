@@ -23,6 +23,7 @@
      <link
          href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap"
          rel="stylesheet">
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <section>
@@ -105,48 +106,40 @@
         <h2 class="subtitulo">Brindanos tu información para proceder con el pago</h2>
     <section>
             <div class="formularios-pagos-contenedor-principal">
-                <form class="form-tarjeta" method="post">
+                <form class="form-tarjeta" id="payment-form">
                     <label for="nombre">Nombre completo:</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa el nombre que viene en tu tarjeta">
+                    <input type="text" id="nombre" name="nombre" class="center-placeholder" placeholder="Titular de la tarjeta">
                     <div class="form--imput--validation">
                         <p id="name-feedback" class="input-feedback"></p>
                     </div>
-
+            
                     <label for="tarjeta">Número de tarjeta:</label>
-                    <input type="text" id="tarjeta" name="tarjeta" pattern="\d{16}" placeholder="xxxx xxxx xxxx xxxx" required>
+                    <input type="text" id="tarjeta" name="tarjeta" class="center-placeholder" pattern="\d{4} \d{4} \d{4} \d{4}" placeholder="xxxx xxxx xxxx xxxx">
                     <div class="form--imput--validation">
                         <p id="numcard-feedback" class="input-feedback"></p>
                     </div>
-
+            
                     <label for="expiracion">Fecha de vencimiento:</label>
-                    <input type="text" id="expiracion" name="expiracion" pattern="\d{2}/\d{2}" placeholder="MM/AA" required>
+                    <input type="text" id="expiracion" name="expiracion" class="center-placeholder" pattern="\d{2}/\d{2}" placeholder="MM/AA">
                     <div class="form--imput--validation">
                         <p id="datexp-feedback" class="input-feedback"></p>
                     </div>
-
+            
                     <label for="cvv">Código de seguridad (CVV):</label>
-                    <input type="text" id="cvv" name="cvv" pattern="\d{3}" placeholder="xxx" required>
+                    <input type="text" id="cvv" name="cvv" class="center-placeholder" pattern="\d{3}" placeholder="xxx">
                     <div class="form--imput--validation">
                         <p id="cod-feedback" class="input-feedback"></p>
                     </div>
-
                     <label for="direccion">Dirección de facturación:</label>
-                    <input type="text" id="direccion" name="direccion" placeholder="Ingresa tu domicilio">
+                    <input type="text" id="direccion" name="direccion" class="center-placeholder" placeholder="Domicilio">
                     <div class="form--imput--validation">
                         <p id="adress-feedback" class="input-feedback"></p>
                     </div>
-
-                    <div clas="button">
-                        <Button type="submit" value="Pagar" id="pay-button">Pagar</Button>
+            
+                    <div class="button">
+                        <button type="submit" value="Pagar" id="pay-button">Pagar</button>
                     </div>
                 </form>
-                <div id="custom-alert">
-                    <div id="custom-alert-content">
-                        <h2>¡Gracias!</h2>
-                        <p>Tu pago ha sido procesado correctamente.</p>
-                        <button id="close-alert">Cerrar</button>
-                    </div>
-                </div>
             </div> 
     </section>
     <section>
@@ -161,14 +154,15 @@
                 <p>Otros metodos de pago:</p>
             </div>
             <div class="otros-medios-pago-cuidador-i">
-                <img src="../assets/assets/icons8-mercado-pago-96.png" class="tamaño-de-iconos-cuidador-secundarios" alt="mercado_pago">
-                <img src="../assets/assets/paypal.png" class="tamaño-de-iconos-cuidador-secundarios" alt="paypal">
+                <a href="https://www.mercadopago.com.mx/hub/registration" ><img src="../assets/assets/icons8-mercado-pago-96.png" class="tamaño-de-iconos-cuidador-secundarios" alt="mercado_pago"></a>
+                <a href="https://www.paypal.com/mep/dashboard"><img src="../assets/assets/paypal.png" class="tamaño-de-iconos-cuidador-secundarios"  
+                alt="paypal"><a>
             </div>
         </div>
     </section>
     <section>
         <div class="disclaimer">
-            <h3>Aplican términos y condiciones.</h3>
+            <h3>*Aplican términos y condiciones.</h3>
         </div>
     </section>
     <section>
@@ -198,5 +192,6 @@
     </footer>
     </section>
     <script src="../scripts/cuidadorPago.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

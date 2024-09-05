@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const expiracionInput = document.getElementById('expiracionn');
     const cvvInput = document.getElementById('cvvv');
     const direccionInput = document.getElementById('direccionn');
+    const form = document.getElementById('payment-form2'); // Assuming your form has an id 'payment-form'
 
     // Elementos para mostrar feedback
     const nameFeedback = document.getElementById('namee-feedback');
@@ -27,8 +28,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     tarjetaInput.addEventListener('input', function() {
-        if (!/^\d{16}$/.test(tarjetaInput.value)) {
-            numCardFeedback.textContent = 'El número de tarjeta debe contener 16 dígitos.';
+        if (tarjetaInput.value.trim() === '') {
+            numCardFeedback.textContent = 'El número de tarjeta no puede estar vacío.';
+            numCardFeedback.style.color = "red";
+        } else if (!/^\d{4} \d{4} \d{4} \d{4}$/.test(tarjetaInput.value)) {
+            numCardFeedback.textContent = 'El número de tarjeta debe contener 16 dígitos (con espacios).';
             numCardFeedback.style.color = "red";
         } else {
             numCardFeedback.textContent = '';
@@ -36,8 +40,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     expiracionInput.addEventListener('input', function() {
-        if (!/^\d{2}\/\d{2}$/.test(expiracionInput.value)) {
-            dateExpFeedback.textContent = 'La fecha de vencimiento debe estar en formato MM/AA.';
+        if (expiracionInput.value.trim() === '') {
+            dateExpFeedback.textContent = 'La fecha de expiración no puede estar vacía.';
+            dateExpFeedback.style.color = "red";
+        } else if (!/^\d{2}\/\d{2}$/.test(expiracionInput.value)) {
+            dateExpFeedback.textContent = 'La fecha de expiración debe estar en formato MM/AA.';
             dateExpFeedback.style.color = "red";
         } else {
             dateExpFeedback.textContent = '';
@@ -45,7 +52,10 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     cvvInput.addEventListener('input', function() {
-        if (!/^\d{3}$/.test(cvvInput.value)) {
+        if (cvvInput.value.trim() === '') {
+            codFeedback.textContent = 'El CVV no puede estar vacío.';
+            codFeedback.style.color = "red";
+        } else if (!/^\d{3}$/.test(cvvInput.value)) {
             codFeedback.textContent = 'El CVV debe contener 3 dígitos.';
             codFeedback.style.color = "red";
         } else {
@@ -62,33 +72,58 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-});
+    // Form submit event listener
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
 
-/*alert*/
+        let isValid = true;
 
-document.addEventListener('DOMContentLoaded', function() {
-    const customAlert = document.getElementById('custom-alert2');
-    const closeAlert = document.getElementById('close-alert2');
-    const payButton = document.getElementById('pay-button2');
+        // Check each input and set isValid to false if any input is invalid
+        if (nombreInput.value.trim() === '') {
+            nameFeedback.textContent = 'El nombre no puede estar vacío.';
+            nameFeedback.style.color = "red";
+            isValid = false;
+        }
+        if (tarjetaInput.value.trim() === '') {
+            numCardFeedback.textContent = 'El número de tarjeta no puede estar vacío.';
+            numCardFeedback.style.color = "red";
+            isValid = false;
+        }
+        if (expiracionInput.value.trim() === '') {
+            dateExpFeedback.textContent = 'La fecha de expiración no puede estar vacía.';
+            dateExpFeedback.style.color = "red";
+            isValid = false;
+        }
+        if (cvvInput.value.trim() === '') {
+            codFeedback.textContent = 'El CVV no puede estar vacío.';
+            codFeedback.style.color = "red";
+            isValid = false;
+        }
+        if (direccionInput.value.trim() === '') {
+            adressFeedback.textContent = 'La dirección no puede estar vacía.';
+            adressFeedback.style.color = "red";
+            isValid = false;
+        }
 
-    // Mostrar el alert personalizado
-    payButton.addEventListener('click', function(event) {
-        event.preventDefault(); // Evitar el comportamiento por defecto del enlace
-        customAlert.style.display = 'flex'; // Mostrar el modal
-        setTimeout(function() {
-            window.location.href = '../pages/preguntasFrecuentesContactanos.html'; // Redirigir a la página después de 3 segundos
-        });
-    });
-
-    // Cerrar el alert personalizado
-    closeAlert.addEventListener('click', function() {
-        customAlert.style.display = 'none';
-    });
-
-    // Cerrar el alert si se hace clic fuera del contenido del alert
-    window.addEventListener('click', function(event) {
-        if (event.target === customAlert) {
-            customAlert.style.display = 'none';
+        if (isValid) {
+            Swal.fire({
+                icon: "success",
+                title: "¡Muchas Gracias!",
+                text: "Su orden de pago se proceso correctamente.",
+                confirmButtonText: "Aceptar",
+                confirmButtonColor: "#7f636e",
+                timer: 200000,
+            }).then(() => {
+                window.location.href = "preguntasFrecuentesContactanos.html";
+            });
+        } else {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Por favor, complete todos los campos correctamente.",
+                confirmButtonText: "Aceptar",
+                confirmButtonColor: "#7f636e",
+            });
         }
     });
 });
