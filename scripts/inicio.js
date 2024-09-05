@@ -22,16 +22,16 @@ const options = {
   //Testimonial Data
 const testimonials = [
   {
-      nameTestimonial:"Felipe Mejia",
+      nameTestimonial:"María de los Montes",
       locationTestimonial:"Guadalajara - Jalisco",
-      imageTestimonial: "../assets/fotosAcercadeNosotros/Felipe.png",
-      reviewTestimonial: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quasi adipisci eius exercitationem ratione ex quod. Libero impedit et quos est qui neque deleniti veniam?",
+      imageTestimonial: "../assets/rsns/resena1.jpg",
+      reviewTestimonial: "    El mejor servicio para cuidar a mi mascota, me sirivó mucho para una emergencia, mi perro se encariñó mucho con el cuidador, me dan un poco de celos jaja",
   },
   {
-      nameTestimonial:"Carlos Alberto",
-      locationTestimonial:"Ciudad de México- Buenavista",
-      imageTestimonial: "../assets/fotosAcercadeNosotros/Carlos.png",
-      reviewTestimonial: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quasi adipisci eius exercitationem ratione ex quod. Libero impedit et quos est qui neque deleniti veniam?",
+      nameTestimonial:"Ricardo de la Rosa (Firulais)",
+      locationTestimonial:"Lindavista - Ciudad de México",
+      imageTestimonial: "../assets/rsns/perrito.jpeg",
+      reviewTestimonial: "Mi perrito me paso el siguiente comentario, 🐶:'Me cuidaron mejor que mi dueño, creo que se puso celoso, pero ya quiero regresar a SafeDog woof woof'  ",
   },
   {
       nameTestimonial:"Mitzi Martinez",

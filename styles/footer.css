@@ -79,10 +79,10 @@
 
 
 
-.iconos{
-    display: flex;
-    gap: 20px;
-    
+.iconos img {
+    width: 100px; /* Ajusta el tamaño según lo necesites */
+    height: 100px; /* Ajusta el tamaño según lo necesites */
+    object-fit: contain; /* Asegura que la imagen mantenga su proporción */
 }
 
 .iconos img{

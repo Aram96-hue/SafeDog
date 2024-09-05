@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SafeDog-PerfilCuidador</title>
+    <link rel="icon" href="../assets/SafeDogWhite.png">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,53 +25,47 @@
     ></script>
     <title>Perfil del cuidador</title>
     <link rel="stylesheet" href="../styles/perfil-cuidador.css" />
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/navBar.css">
   </head>
-  <body>
-    <header>
-      <!--NavBar de safeDog-->
-   <nav class="navbar">
-
-    <div class="navbar--logo">
-        <a href="#" target="_blank"><img src="../assets/iconos/SafeDog W (9).png" alt="SafeDog-Logo"></a>
-    </div>
-
-    <div class="nav--container">
+  <nav>
+    <!-- Empieza Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <a href="../../inicio.html" target="_blank"><img src="../assets/SafeDog W (9).png" alt="SafeDog-Logo"></a>
+        </div>
         <ul class="navbar--menu">
-            <li><a href="./acercaDeNosotros.html" target="">Acerca de nosotros</a></li>
-            <li><a href="./nuestrosServicios.html" target="">Nuestros Servicios</a></li>
-            <li><a href="./preguntas.html">Preguntas Frecuentes</a></li>
+            <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
+            <li><a href="./preguntasFrecuentesContactanos.html">Preguntas Frecuentes</a></li>
         </ul>
-
         <div class="navbar--botones">
-            <button class="boton--claro" onclick="window.location.href='../pages/serCuidador.html';">Ser
-                cuidador</button>
-            <button class="boton--claro" onclick="window.location.href='../pages/inicioSesion.html';">Inicio de
-                sesión</button>
-            <button class="boton--azul" onclick="window.location.href='../pages/registro.html';">Registro</button>
+            <button class="boton--claro" onclick="window.location.href='./registroCuentaUsuarioDueño.html';">Ser cuidador</button>
+            <button class="boton--claro" onclick="window.location.href='./mainLogin.html';">Iniciar sesión</button>
+            <button class="boton--azul" onclick="window.location.href='./registroCuentaUsuarioDueño.html';">Registrarse</button>
+        </div>
+        <div class="menu-icon" id="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
     </div>
-    <!--Menu de hamburguesa-->
-    <div class="menu-btn">
-        <i class="fa-solid fa-bars fa-2x"></i>
+    
+    <div class="dropdown-menu" id="dropdown-menu">
+        <div class="letras"></div>
+        <ul>
+            <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
+            <li><a href="./preguntasFrecuentesContactanos.html">Preguntas Frecuentes</a></li>
+            <li><a href="./registroCuentaUsuarioDueño.html">Ser cuidador</a></li>
+            <li><a href="./mainLogin.html">Inicio de sesión</a></li>
+            <li><a href="./registroCuentaUsuarioDueño.html">Registrarse</a></li>
+        </ul>
     </div>
-
-</nav>
-<!-- Menu desplegable para móviles -->
-<div class="mobile-menu" id="mobileMenu">
-    <ul class="mobile-navbar--menu">
-        <li><a href="./acercaDeNosotros.html" target="_blank">Acerca de nosotros</a></li>
-        <li><a href="./nuestrosServicios.html" target="_blank">Nuestros Servicios</a></li>
-        <li><a href="./preguntasFrecuentes.html" target="_blank">Preguntas Frecuentes</a></li>
-    </ul>
-    <div class="mobile-navbar--botones">
-        <button class="boton--claro" onclick="window.location.href='./serCuidador.html';">Ser
-            cuidador</button>
-        <button class="boton--claro" onclick="window.location.href='./inicioSesion';">Inicio de
-            sesión</button>
-        <button class="boton--azul" onclick="window.location.href='./registro.html';">Registro</button>
     </div>
-</div>
-    </header>
+    <!-- termina navbar -->
+    
+    </nav> 
+  <body>
+    
     <main>
       <section class="section--cuidador--contacto">
         <div class="container">
@@ -284,32 +280,33 @@
       </section>
 
       <!--Pie de página de safeDog-->
-   <footer class="footer--safeDog">
-    <div class="iconos">
-        <a href="#"><img src="../assets/iconos/correo5.png" alt="" target="_blank"></a>
-        <a href="#"><img src="../assets/iconos/fb5.png" alt="" class="logo--fb"></a>
-        <a href="#"><img src="../assets/iconos/instagramb.png" alt="" class="logo--insta"></a>
-        <a href="#"><img src="../assets/iconos/whatsapp.png" alt=""></a>
-    </div>
-    <div class="footer--logo">
-        <img src="../assets/iconos/safedogfooter.png" alt="safeDog Footer">
-    </div>
-    <div class="footer--info">
-        <h4 class="footer--question">¿Quieres formar parte de nuestra comunidad?</h4>
-        <ul class="footer--list">
-            <li><a href="./pagesFooter/serCuidador.html" target="_blank">Ser cuidador</a></li>
-            <li><a href="./pagesFooter/serCuidado.html" target="_blank">Ser cuidado</a></li>
-            <li><a href="./pagesFooter/preguntasFrecuentes.html" target="_blank">Preguntas frecuentes</a></li>
-            <li><a href="./pagesFooter/soporte.html" target="_blank">Soporte</a></li>
-            <li><a href="./pagesFooter/avisoPrivacidad.html" target="_blank">Aviso de privacidad</a></li>
-        </ul>
-    </div>
-    <div class="footer--copy">
-        <h4>© All rights reserved & design by SafeDog</h4>
-    </div>
-</footer>
+      <footer class="footer--safeDog">
+        <div class="iconos">
+            <a href="#"><img src="../assets/correo5.png" alt="" target="_blank"></a>
+            <a href="#"><img src="../assets/fb5.png" alt="" ></a>
+            <a href="#"><img src="../assets/instagramb.png" alt="" ></a>
+            <a href="#"><img src="../assets/whatsapp.png" alt=""></a>
+        </div>
+        <div class="footer--logo">
+            <img src="../assets/safedogfooter.png" alt="safeDog Footer">
+        </div>
+        <div class="footer--info">
+            <h4 class="footer--question">¿Quieres formar parte de nuestra comunidad?</h4>
+            <ul class="footer--list">
+                <li><a href="./pagesFooter/serCuidador.html" target="_blank">Ser cuidador</a></li>
+                <li><a href="./pagesFooter/serCuidado.html" target="_blank">Ser cuidado</a></li>
+                <li><a href="./pagesFooter/preguntasFrecuentes.html" target="_blank">Preguntas frecuentes</a></li>
+                <li><a href="./pagesFooter/soporte.html" target="_blank">Soporte</a></li>
+                <li><a href="./pagesFooter/avisoPrivacidad.html" target="_blank">Aviso de privacidad</a></li>
+            </ul>
+        </div>
+        <div class="footer--copy">
+            <h4>© All rights reserved & design by SafeDog <br> Hecho con ♥ en GDL y CDMX</h4>
+        </div>
+    </footer>
     </main>
     <script src="../scripts/perfilCuidador.js"></script>
     <script src="../scripts/NavBar.js"></script>
+    
   </body>
 </html>

@@ -1,49 +1,39 @@
 body {
-    background-color: #FFF8E0;
-    font-family: "sansita", "roboto";
+    font-family: Sansita, sans-serif;
     margin: 0;
     padding: 0;
-    
+    box-sizing: border-box;
 }
 
-
-/*NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR*/
+/* NAVBAR */
 .navbar {
-    background-color: hsl(172, 41%, 45%);
-    color: #FFFFFF;
-    padding: 25px;
+    background-color: #44A194; /* Color del fondo del menú */
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content:center; 
-    border: 0px;
-    
+    padding: 10px 20px;
 }
 
-.navbar .nav--container {
+/* Estilos para el logo */
+.logo img {
+    width: 200px; /* Reducido para hacer el logo más pequeño */
+    height: auto; /* Ajusta automáticamente la altura proporcionalmente */
+}   
+
+/* Menú de navegación */
+.navbar--menu {
     display: flex;
-    justify-content: center;
-    flex-grow: 1;
-    border: 0px;
-    justify-content: center;
-    align-items: center;  
-}
-
-.navbar .navbar--logo a img {
-    width: 200px;
-    height: auto;
-    margin-right: 20px;
-}
-
-.navbar .navbar--menu {
     list-style: none;
-    display: flex;
-    gap: 5px;
     margin: 0;
     padding: 0;
-    margin-top:70x;
-   
+    gap: 20px;
+    
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 
+<<<<<<< HEAD
 .navbar .navbar--menu li {
     margin: 0;
     margin-top: 10px;
@@ -53,103 +43,177 @@ body {
 .navbar .navbar--menu a {
     color: #FFFFFF;
     font-size:large;
+=======
+.navbar--menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+>>>>>>> 6bd08543ad9dd79455f75cd283e3dfcb1abd4cc3
     font-weight: bold;
-    margin-right: 20px;
-    gap: 2px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+}
+.letras{
+    font-size:25px;
+    text-align: right;
+    
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 
-.navbar .navbar--menu a:hover {
-    color: #F0BB69;
-}
-
-.navbar .navbar--botones {
+/* Botones de la barra de navegación */
+.navbar--botones {
     display: flex;
     gap: 10px;
-    margin-left: 120px;
-     
+    border: 0px;
 }
 
-.navbar .navbar--botones .boton--claro {
+.boton--azul {
+    padding: 8px 20px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+ 
+}
+
+.boton--claro {
     background-color: #65B5A1;
-    color: #FFFFFF;
-    padding: 10px 10px 10px 10px;
+    color: white;
+    padding: 8px 20px;
     border-radius: 10px;
-    border-color: #FFFFFF;
-    font-family: "sansita";
-    font-size: larger;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    border: 0px;
-}
-
-.navbar .navbar--botones .boton--azul {
-    background-color: #124C5F;
-    color: #FFFFFF;
-    border-color: #F0BB69;
-    padding: 10px 10px 10px 10px;
-    border-radius: 10px;
-    font-family: "sansita";
-    font-size: larger;
-    font-weight: bold;
-    cursor: pointer;
-    border: 0px;
-}
-
-.navbar .navbar--botones .boton--claro:hover {
-    background-color: #F0BB69;
-}
-
-.navbar .navbar--botones .boton--azul:hover {
-    background-color: #777;
-}
-
-.menu-btn {
-    cursor: pointer;
-    font-size: 24px;
-    display: none;
-    z-index: 21;
-    position: relative;
-    right: 3px;
-}
-
-.mobile-menu {
-    display: none;
-    background-color: #124C5F;
-    color: #FFFFFF;
-    position:absolute; /*se cambió de fixed a absolute para evitar que estubiera fijo el menu al hacer scroll*/
-    top:5%;
-    right: 0;
-    width: 250px; 
-    height: 50%;
-    padding: 20px;
-    z-index: 10;
+    border: none;
    
 }
 
-.mobile-menu ul.mobile-navbar--menu {
+.boton--azul {
+    background-color: #124C5F;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+  
+}
+
+/* Estilo del ícono del menú hamburguesa */
+.menu-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: none; /* Oculto por defecto, se muestra en móviles */
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.menu-icon .bar {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* Menú desplegable */
+.dropdown-menu {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: #2B4453;
+    position: absolute;
+    top: 88px;
+    padding:10px;
+    right: 20px;
+    width: 250px;
+    display: none;
+    border-radius: 10px;
+    z-index: 1000; /* Asegura que el menú se muestre encima */
+}
+
+.dropdown-menu ul {
     list-style: none;
-    padding: 0;
+    padding: 10px;
     margin: 0;
-    margin-top: 40px; /*se agrego para bajar ewl texto*/
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+}
+
+.dropdown-menu ul li {
+    margin: 10px 5px 10PX 5px;
+    justify-content: center;
+   
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+
+
+.dropdown-menu ul li a {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #357D7E;
     text-align: center;
 }
 
-.mobile-menu ul.mobile-navbar--menu li {
-    margin: 20px 0;
+.dropdown-menu ul li a:hover {
+    background-color: #4AA09A;
+}
+
+/* Mostrar el menú desplegable cuando esté activo */
+.show-menu {
+    display: block;
     
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+a{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding:5px;
 }
 
-.mobile-menu ul.mobile-navbar--menu a {
-    text-decoration: none;
-    color: #FFFFFF;
-    font-size: larger;
-    font-weight: bold;
+#dropdown-nenu{
+    
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 
-.mobile-menu ul.mobile-navbar--menu a:hover {
-    color: #F0BB69;
+
+
+/* Estilo para "Acerca de nosotros" y "Preguntas Frecuentes" como texto simple */
+.dropdown-menu ul li:nth-child(1) a,
+.dropdown-menu ul li:nth-child(2) a {
+    background-color: transparent;
+    padding: 0;
+    text-align: left;
 }
 
+<<<<<<< HEAD
 .mobile-menu .mobile-navbar--botones {
     display: flex;
     flex-direction: column;
@@ -180,22 +244,20 @@ body {
 
 
 /* Mostrar el botón del menú hamburguesa en pantallas pequeñas */
+=======
+/* Medios responsive */
+>>>>>>> 6bd08543ad9dd79455f75cd283e3dfcb1abd4cc3
 @media (max-width: 900px) {
-    .navbar .navbar--menu {
-        display: none; /* Ocultar menú en pantallas pequeñas */
+    .navbar--menu,
+    .navbar--botones {
+        display: none; /* Oculta el menú y botones en pantallas pequeñas */
     }
     
-    .navbar .navbar--botones {
-        display: none; /* Ocultar botones en pantallas pequeñas */
+    .menu-icon {
+        display: flex; /* Muestra el ícono del menú hamburguesa */
     }
     
-    .menu-btn {
-        display: block; /* Mostrar botón del menú hamburguesa */
+    .dropdown-menu.active {
+        display: block; /* Muestra el menú desplegable cuando esté activo */
     }
 }
-
-@media (max-width: 900px) {
-    .mobile-menu.active {
-        display: block;
-    }
-} /*NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR*/
