@@ -192,7 +192,7 @@ h3 {
     
 }
 
-.form-tarjeta a {
+.form-tarjeta button {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -201,7 +201,7 @@ h3 {
     
 }
 
-.form-tarjeta a[type="submit"] {
+.form-tarjeta button[type="submit"] {
     background-color: #ffffff;
     color: black;
     border: none;
@@ -220,7 +220,7 @@ h3 {
         
 }
 
-.form-tarjeta a[type="submit"]:hover {
+.form-tarjeta button[type="submit"]:hover {
     background-color: #f0bb69;
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
@@ -230,13 +230,13 @@ h3 {
     
 }
 
-.form-tarjeta a[type="submit"]:active {
+.form-tarjeta button[type="submit"]:active {
     background: linear-gradient(145deg, #f0bb69, #f0bb69);
     box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.3), inset -4px -4px 8px rgba(255, 255, 255, 0.4);
     transform: translateY(2px);   
 }
 
-a{
+button{
     text-decoration: none;
 }
 
