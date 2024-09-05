@@ -64,16 +64,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-document.getElementById('form-tipo-tarjeta').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita el envío inmediato del formulario
+/*alert*/
 
-    var popup = document.getElementById('pop-uuup-cuidador');
-    popup.style.display = 'block'; // Mostrar el popup
+document.addEventListener('DOMContentLoaded', function() {
+    const customAlert = document.getElementById('custom-alert2');
+    const closeAlert = document.getElementById('close-alert2');
+    const payButton = document.getElementById('pay-button2');
 
-    // Simula el proceso de pago y oculta el popup después de 3 segundos
-    setTimeout(function() {
-        popup.style.display = 'none';
-        // Aquí puedes enviar el formulario manualmente si es necesario
-        event.target.submit(); // Enviar el formulario después de mostrar el popup
-    }, 3000);
+    // Mostrar el alert personalizado
+    payButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Evitar el comportamiento por defecto del enlace
+        customAlert.style.display = 'flex'; // Mostrar el modal
+        setTimeout(function() {
+            window.location.href = '../pages/preguntasFrecuentesContactanos.html'; // Redirigir a la página después de 3 segundos
+        });
+    });
+
+    // Cerrar el alert personalizado
+    closeAlert.addEventListener('click', function() {
+        customAlert.style.display = 'none';
+    });
+
+    // Cerrar el alert si se hace clic fuera del contenido del alert
+    window.addEventListener('click', function(event) {
+        if (event.target === customAlert) {
+            customAlert.style.display = 'none';
+        }
+    });
 });

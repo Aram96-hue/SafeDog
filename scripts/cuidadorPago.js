@@ -14,7 +14,7 @@ document.addEventListener('click', function () {
     const adressFeedback = document.getElementById('adress-feedback');
   
     // Validaciones en tiempo real
-    nombreInput.addEventListener('a', function() {
+    nombreInput.addEventListener('input', function() {
       if (nombreInput.value.trim() === '') {
           nameFeedback.textContent = 'El nombre no puede estar vacío.';
           nameFeedback.style.color = "red";
@@ -63,19 +63,6 @@ document.addEventListener('click', function () {
     });
   });
   
-  document.getElementById('form-tarjeta').addEventListener('a', function(event) {
-      event.preventDefault(); // Evita el envío inmediato del formulario
-  
-      var popup = document.getElementById('pop-uppp-cuidador');
-      popup.style.display = 'block'; // Mostrar el popup
-  
-      // Simula el proceso de pago y oculta el popup después de 3 segundos
-      setTimeout(function() {
-          popup.style.display = 'none';
-          // Aquí puedes enviar el formulario manualmente si es necesario
-          event.target.submit(); // Enviar el formulario después de mostrar el popup
-      }, 3000);
-  });
 
   /*alert*/
 
@@ -90,12 +77,12 @@ document.addEventListener('click', function () {
         customAlert.style.display = 'flex'; // Mostrar el modal
         setTimeout(function() {
             window.location.href = '../pages/preguntasFrecuentesContactanos.html'; // Redirigir a la página después de 3 segundos
-        }, 3000);
+        });
     });
 
     // Cerrar el alert personalizado
     closeAlert.addEventListener('click', function() {
-        customAlert.style.display = 'none';
+        customAlert.style.display = '';
     });
 
     // Cerrar el alert si se hace clic fuera del contenido del alert
