@@ -81,6 +81,10 @@ body {
     color: none;
 }
 
+h3 {
+    font-size: smaller;
+}
+
 /*Botones de tipo de pago*/
 .tipo-pago-contenedor2{
     display: flex;
@@ -116,7 +120,6 @@ body {
     max-width: 20rem;
     margin: 0 auto;
     padding: 1rem;
-    border-radius: 8px;
     justify-content: center; 
     display: flex;
     flex-wrap: wrap;
@@ -189,13 +192,21 @@ body {
     
 }
 
-.form-tarjeta input[type="submit"] {
+.form-tarjeta a {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    
+}
+
+.form-tarjeta a[type="submit"] {
     background-color: #ffffff;
     color: black;
     border: none;
     padding: 10px;
     cursor: pointer;
-    color: black;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     display: inline-block;
@@ -209,7 +220,7 @@ body {
         
 }
 
-.form-tarjeta input[type="submit"]:hover {
+.form-tarjeta a[type="submit"]:hover {
     background-color: #f0bb69;
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
@@ -219,18 +230,56 @@ body {
     
 }
 
-.form-tarjeta input[type="submit"]:active {
+.form-tarjeta a[type="submit"]:active {
     background: linear-gradient(145deg, #f0bb69, #f0bb69);
     box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.3), inset -4px -4px 8px rgba(255, 255, 255, 0.4);
     transform: translateY(2px);   
 }
 
-.form--imput--validation{
+a{
+    text-decoration: none;
+}
+
+.input-feedback{
     display: flex;
     justify-content: right;
     align-items: center;
   }
 
+/* Estilos para el modal */
+#custom-alert {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+#custom-alert-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+#custom-alert-content h2 {
+    margin: 0 0 10px;
+}
+#custom-alert-content p {
+    margin: 0 0 20px;
+}
+#close-alert {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 /********otros medios de pago********/
 
 .iconos-pago-cuidador {

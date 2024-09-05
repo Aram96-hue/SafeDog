@@ -79,7 +79,6 @@ h1{
     margin: 0 auto;
     padding: 1rem;
     border: none;
-    border-radius: 8px;
     justify-content: center; 
     display: flex;
     flex-wrap: wrap;
@@ -133,9 +132,16 @@ h1{
     border-radius: 4px;
 }
 
-.form-tipo-tarjeta input[type="submit"] {
+.form-tipo-tarjeta a {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-tipo-tarjeta a[type="submit"] {
     background-color: #ffffff;
-    color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -153,7 +159,7 @@ h1{
 }
 
 
-.form-tipo-tarjeta input[type="submit"]:hover {
+.form-tipo-tarjeta a[type="submit"]:hover {
     background-color: #f0bb69;
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
@@ -163,10 +169,28 @@ h1{
 
 }
 
-.form-tipo-tarjeta input[type="submit"]:active {
+.form-tipo-tarjeta a[type="submit"]:active {
     background: linear-gradient(145deg, #f0bb69, #f0bb69);
     box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.3), inset -4px -4px 8px rgba(255, 255, 255, 0.4);
     transform: translateY(2px);   
+}
+
+.pop-up-dueño {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f8f9fa;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: none; /* Oculto por defecto */
+    z-index: 1000;
+}
+
+a {
+    text-decoration: none;
 }
 
 /***********otros medios de pago************/
