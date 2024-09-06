@@ -33,7 +33,6 @@ body {
     align-items: center;
 }
 
-<<<<<<< HEAD
 .navbar .navbar--menu li {
     margin: 0;
     margin-top: 10px;
@@ -43,12 +42,12 @@ body {
 .navbar .navbar--menu a {
     color: #FFFFFF;
     font-size:large;
-=======
+}
+
 .navbar--menu li a {
     text-decoration: none;
     color: white;
     font-size: 18px;
->>>>>>> 6bd08543ad9dd79455f75cd283e3dfcb1abd4cc3
     font-weight: bold;
     justify-content: center;
     text-align: center;
@@ -213,7 +212,6 @@ a{
     text-align: left;
 }
 
-<<<<<<< HEAD
 .mobile-menu .mobile-navbar--botones {
     display: flex;
     flex-direction: column;
@@ -244,9 +242,6 @@ a{
 
 
 /* Mostrar el botón del menú hamburguesa en pantallas pequeñas */
-=======
-/* Medios responsive */
->>>>>>> 6bd08543ad9dd79455f75cd283e3dfcb1abd4cc3
 @media (max-width: 900px) {
     .navbar--menu,
     .navbar--botones {
