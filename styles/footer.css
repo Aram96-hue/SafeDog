@@ -1,0 +1,145 @@
+/*body{
+    background-color: #FFF8E0;
+    font-family: "sansita", "roboto";
+    margin: 0;
+    padding: 0;
+    
+}
+*/
+
+
+/*FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER*/
+
+.footer--safeDog{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #44A194;
+    padding: 20px;
+    margin: 0;
+    flex-wrap: wrap;
+    color: #ffffff;
+    text-align: center;
+}
+
+.footer--info{
+    display: flex;
+    flex-direction:column;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.footer--info .footer--question{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 50px;
+    
+}
+.footer--info ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.footer--info li{
+    margin: 0;
+}
+
+.footer--info a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footer--info .footer--list li a:hover{
+    color: #F0BB69;
+}
+
+.footer--logo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+
+.footer--logo img{
+    height: 200px;
+    width: 150px;
+
+}
+
+
+
+.iconos img {
+    width: 100px; /* Ajusta el tamaño según lo necesites */
+    height: 100px; /* Ajusta el tamaño según lo necesites */
+    object-fit: contain; /* Asegura que la imagen mantenga su proporción */
+}
+
+.iconos img{
+    width: 50px;
+    height: 50px;
+}
+.iconos .logo--fb{
+    width: 58px;
+    height: 48px;
+}
+
+.iconos .logo--insta{
+    width: 60px;
+    height: 50px;
+}
+
+
+.footer--copy{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: -10px;
+   
+}
+
+.footer--copy h4{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+ 
+  
+}
+
+
+
+@media(max-width: 600px){
+    .footer--safeDog{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer--logo {
+        margin: 30px 0;
+        text-align: center;
+    }
+
+    .footer--info ul{
+        align-items: center;
+    }
+
+    .footer--copy{
+        margin-top: 10px;
+        text-align: center;
+        align-items: center;
+    
+    }
+} /*FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER */
+
+

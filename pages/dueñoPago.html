@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método de pago Dueño</title>
+    <link rel="stylesheet" href="../styles/dueñoPago.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-- Estilos de fuente -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <!--Roboto-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link
+         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+         rel="stylesheet">
+     <!-- SANSITA -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link
+         href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap"
+         rel="stylesheet">
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <Header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="../../inicio.html" target="_blank"><img src="../assets/SafeDog W (9).png" alt="SafeDog-Logo"></a>
+            </div>
+            <ul class="navbar--menu">
+                <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
+                <li><a href="./preguntasFrecuentesContactanos.html">Preguntas Frecuentes</a></li>
+            </ul>
+            <div class="navbar--botones">
+                <button class="boton--claro" onclick="window.location.href='./formCuidador.html';">Ser cuidador</button>
+                <button class="boton--claro" onclick="window.location.href='./mainLogin.html';">Iniciar sesión</button>
+                <button class="boton--azul" onclick="window.location.href='./registroNuevoUsuario.html';">Registrarse</button>
+            </div>
+            <div class="menu-icon" id="menu-icon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+        
+        <div class="dropdown-menu" id="dropdown-menu">
+            <div class="letras"></div>
+            <ul>
+                <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
+                <li><a href="./preguntasFrecuentesContactanos.html">Preguntas Frecuentes</a></li>
+                <li><a href="./formCuidador.html">Ser cuidador</a></li>
+                <li><a href="./mainLogin.html">Inicio de sesión</a></li>
+                <li><a href="./registroNuevoUsuario.html">Registrarse</a></li>
+            </ul>
+        </div>
+        </div>
+    </Header>    
+    <section>
+        <div class="nombre-dueño-registrado">
+            <h1 class="color-titulo">ARAM PATLAN</h1>
+        </div>
+    </section>
+    <section>
+        <div class="container-alinearr">
+            <div class="container-monto">
+                <h3>Monto a pagar:</h3>
+                <h2>$450</h2>
+            </div>    
+        </div>
+    </section>
+    <section>
+        <div class="container-form">
+                <form class="form-tipo-tarjeta" id="payment-form2">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombree" name="nombre" class="center-placeholder2" placeholder="Titular de la tarjeta">
+                    <div class="form--imput--validation">
+                        <p id="namee-feedback" class="input-feedback"></p>
+                    </div>
+
+                    <label for="tarjeta">Número de tarjeta:</label>
+                    <input type="text" id="tarjetaa" name="tarjeta" class="center-placeholder2" pattern="\d{4} \d{4} \d{4} \d{4}" placeholder="xxxx xxxx xxxx xxxx">
+                    <div class="form--imput--validation">
+                        <p id="numcardd-feedback" class="input-feedback"></p>
+                    </div>
+
+                    <label for="expiracion">Fecha de vencimiento:</label>
+                    <input type="text" id="expiracionn" name="expiracion" class="center-placeholder2" pattern="\d{2}/\d{2}" placeholder="MM/AA">
+                    <div class="form--imput--validation">
+                        <p id="datexpp-feedback" class="input-feedback"></p>
+                    </div>
+
+                    <label for="cvv">Código de Seguridad (CVV):</label>
+                    <input type="text" id="cvvv" name="cvv" class="center-placeholder2" pattern="\d{3}" placeholder="xxx">
+                    <div class="form--imput--validation">
+                        <p id="codd-feedback" class="input-feedback"></p>
+                    </div>
+
+                    <label for="direccion">Dirección de Facturación:</label>
+                    <input type="text" id="direccionn" name="direccion" class="center-placeholder2" placeholder="Domicilio">
+                    <div class="form--imput--validation">
+                        <p id="adresss-feedback" class="input-feedback"></p>
+                    </div>
+
+                    <div class="button2">
+                        <Button type="submit" value="Pagar" id="pay-button2">Pagar</Button>
+                    </div>
+                </form>
+        </div>
+    </section>
+    <section>
+        <div class="iconos-pago-dueño">
+            <img src="../assets/assets/-mastercard_86833.png" class="tamaño-de-iconos-dueño-primarios" alt="mastervisamexjbc">   
+            <img src="../assets/assets/Visa_icon-icons.com_60549.png" class="tamaño-de-iconos-dueño-primarios" alt="mastervisamexjbc">       
+        </div>
+    </section>
+    <section>
+        <div class="contenedor-principal-iconos-dueño">
+            <div class="otros-medios-pago-dueño-pp">
+                <p>Otros metodos de pago:</p>
+            </div>
+            <div class="otros-medios-pago-dueño-ii">
+                <a href="https://www.mercadopago.com.mx/hub/registration" ><img src="../assets/assets/icons8-mercado-pago-96.png" class="tamaño-de-iconos-cuidador-secundarios" alt="mercado_pago"></a>
+                <a href="https://www.paypal.com/mep/dashboard"><img src="../assets/assets/paypal.png" class="tamaño-de-iconos-cuidador-secundarios"  
+                alt="paypal"><a>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="tyc">
+            <h3>*Aplican términos y condiciones.</h3>
+        </div>
+    </section>
+    <section>
+    <footer class="footer--safeDog">
+        <div class="iconos">
+            <a href="#"><img src="../assets/correo5.png" alt="" target="_blank"></a>
+            <a href="#"><img src="../assets/fb5.png" alt="" ></a>
+            <a href="#"><img src="../assets/instagramb.png" alt="" ></a>
+            <a href="#"><img src="../assets/whatsapp.png" alt=""></a>
+        </div>
+        <div class="footer--logo">
+            <img src="../assets/safedogfooter.png" alt="safeDog Footer">
+        </div>
+        <div class="footer--info">
+            <h4 class="footer--question">¿Quieres formar parte de nuestra comunidad?</h4>
+            <ul class="footer--list">
+                <li><a href="./pagesFooter/serCuidador.html" target="_blank">Ser cuidador</a></li>
+                <li><a href="./pagesFooter/serCuidado.html" target="_blank">Ser cuidado</a></li>
+                <li><a href="./pagesFooter/preguntasFrecuentes.html" target="_blank">Preguntas frecuentes</a></li>
+                <li><a href="./pagesFooter/soporte.html" target="_blank">Soporte</a></li>
+                <li><a href="./pagesFooter/avisoPrivacidad.html" target="_blank">Aviso de privacidad</a></li>
+            </ul>
+        </div>
+        <div class="footer--copy">
+            <h4>© All rights reserved & design by SafeDog <br> Hecho con ♥ en GDL y CDMX</h4>
+        </div>
+    </footer>
+    </section>
+    <script src="../scripts/dueñoPago.js"></script>   
+</body>
+</html>

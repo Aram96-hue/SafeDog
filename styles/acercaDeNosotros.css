@@ -1,0 +1,541 @@
+:root {
+/* Color de fondo */
+--bg-color: #FFF8E0;
+/* Colores primarios */
+    --color-primary: black;
+    --color-secondary: #44A194;
+    --color-tertiary: #F0BB69;
+    --color-cuarto: #7F636E;
+
+/* --------------------------------- */
+/* Letra */
+
+/* Color de letra */
+    --font-color-w: white;
+    --font-color-b: black;
+    
+/* Tipo de letra */
+    --font-primary: "Sansita", sans-serif;
+    --font-secondary: "Sansita", sans-serif;
+    --font-size-primary: 5rem;
+    --font-size-secondary: 2 rem;
+}
+
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    font-family:var(--font-secondary);
+}
+
+body h2{
+ font-family:var(--font-primary);
+ color: #4f3d44;
+}
+
+
+.fondoCuidamos{
+    background-image:url('../assets/fotosAcercadeNosotros/ImgenAcercaDeSafeDog.jpeg');
+    background-size: cover; 
+    object-fit: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.AcercaDeSafe {
+    padding: 20px;
+    width: 90%;
+    background: linear-gradient( 135deg, #E3E3E3 10%, var(--color-tertiary) 100%);
+    opacity: 95%;
+    margin: 0 20px;
+    border-radius: 30px;
+    font-family: "Sansita";
+    text-align: center;
+}
+
+/* .valores {
+    font-family:"Sansita";
+    font-size: 30px;
+    text-align: center;
+} */
+#ADSH{
+    font-size: 3em;
+}
+
+#ADSP {
+
+    text-align: justify;
+    line-height: 1.5;
+    font-size:22px;
+    color: var(--color-primary);   
+}
+
+.centrado {
+    text-align:center;
+    justify-content: center;
+}
+
+#titulo-seccion{
+    text-align: left;
+    font-size: 30px;
+}
+
+.nuestroEquipo{
+    justify-content: center;
+    text-align: center;
+    font-size: 48px;
+
+}
+
+.listaValores{
+/* padding: -20px; */
+}
+
+.Tarjeta-miembro span{
+    padding: 0px;
+    margin: 0px;
+}
+#titulo-seccion ul{
+    margin: 0px;
+    
+}
+
+#tituloTarjeta { 
+    color: #4f3d44 ;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    margin:0px;
+}
+.MisionVisionValores{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.card {
+    /* display: flex; */
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 90%;
+    margin: 0 20px;
+}
+
+.stat-block{
+    line-height: 1.5;
+}
+
+.stat-block p{
+    line-height: 1.2;
+    font-size: 20px;
+    font-family: "Sansita";
+}
+
+.stat-block ul{
+    line-height: 2.0;
+    list-style: none;
+    font-size: 20px;
+    font-family: "Roboto";
+}
+
+.image-div {
+    background-position: center;
+    padding: 5px;
+    background-size: cover;
+    object-fit: cover;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.image-div>img {
+    max-width: 500px;
+    max-height: auto;
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    min-width: 150px;
+    min-height: auto;
+}
+
+.content-area>div {
+    margin: 10px;
+    
+}
+
+.content-area {
+    padding: 15px 15px;
+    text-align: justify;
+}
+
+#señoraPerrije {
+    border-radius: 20px;
+}
+
+#dog{
+    font-size: 50px;
+}
+.parrafo{
+    font-family: "Roboto";
+    font-size: 25px;
+    justify-content: center;
+}
+h2{
+    font-family: "Sansita";
+    font-size: 40px;
+    text-align: center;
+}
+.AcercaDelProyecto{
+    font-family:"Roboto";
+}
+.nuestroEquipo{
+    font-family: "Sansita";
+}
+
+@media screen and (max-width: 1480px) {
+    .card {
+        flex-direction: column;
+        max-width: 100%;
+        min-width: 250px;
+    }
+
+    .image-div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .image-div>img {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .content-area {
+        padding: 1rem;
+        width: 100%;
+    }
+    .AcercaDelProyecto {
+        margin-top: 25px;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        text-align: justify;
+    }
+
+}
+
+
+.AcercaDelProyecto {
+    display: flex;
+    background-color: #65B5A1;
+    padding: 60px 60px;
+    width: 100%;
+    box-shadow: 0px 5px 15px rgba(46, 23, 8, 0.5);
+    font-size: 15px;
+    position: relative;
+    text-align: justify;
+    z-index: 0;
+    padding: 50px 0px;
+    margin: 150px 0px 20px 0px;
+    justify-content: center; 
+}
+
+#PerritoBloque {
+    width: 190px;
+    text-align: right;
+    position: absolute;
+    z-index: 2;
+    top: -150px;
+    left:90px;
+}
+
+#acercaDe--cont {
+    text-align: center;
+    display: flex;
+    width: 70%;
+    padding: 0px 0px 0px 10px;
+    font-size: 22px;
+    text-align: justify;
+}
+
+.titulo1 {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 1480px){
+    .card {
+        flex-direction: column;
+        max-width: 100%;
+        min-width: 250px;
+    }
+}
+
+.EquipoCarrousell {
+    width: 95%; 
+    overflow: hidden;
+    display: flex;
+    margin: 0px auto;
+    text-align: center;
+    flex-wrap: wrap;   
+}
+
+.Contenedor-Carrousell {
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-bottom: 50px;
+}
+
+.Contenedor-Carrousell {
+ width: 100%;    
+  max-width: 100%;
+  min-width: 320px;
+  margin: auto;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.Lista-desordenada {
+    display: grid;
+    grid-auto-flow: column;
+    overflow: none;
+    animation: slide 20s infinite;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    overflow: none;
+    position: relative;
+    flex: 1;
+    min-width: 250px;
+    background-attachment: fixed;
+    padding: 20px;
+}
+
+@media screen and (min-width: 250px) {
+
+    .Lista-desordenada {
+        
+        grid-auto-columns: calc((100% / 1) - 40px);
+        gap: 40px;
+    }
+}
+
+
+@media screen and (min-width: 750px) {
+
+    .Lista-desordenada {
+        
+        grid-auto-columns: calc((100% / 2) - 40px);
+        gap: 40px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    .Lista-desordenada {
+        
+        grid-auto-columns: calc((100% / 3) - 40px);
+        gap: 40px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+
+    .Lista-desordenada {
+        
+        grid-auto-columns: calc((100% / 4) - 40px);
+        gap: 40px;
+    }
+}
+
+@media screen and (min-width: 2500px) {
+
+    .Lista-desordenada {
+        
+        grid-auto-columns: calc((100% / 5) - 40px);
+        gap: 40px;
+    }
+} 
+
+@media screen and (min-width: 3000px) {
+
+    .Lista-desordenada {
+        
+        grid-auto-columns: calc((100% / 10) - 40px);
+        gap: 40px;
+    }
+}
+
+
+.Elemento-lista {
+    display: flex;
+    list-style: none;
+    border: var(--bg-color);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 60px;
+    background-attachment: fixed;
+    padding: 20px;
+}
+
+.Tarjeta-miembro {
+    background: linear-gradient( 135deg, var(--color-tertiary) 10%, #eadc93d1 100%);
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    border-radius: 60px;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-attachment: fixed;
+    font-size: 18px;
+    justify-content: space-between;
+}
+
+.Tarjeta-miembro img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border: #7F636E solid 5px;
+    object-fit: cover;
+}
+
+.Tarjeta-miembro {
+ width: 100%;
+ border-radius: 15px;
+ box-shadow: 0px 3px 5px rgba(15, 15, 15, 0.5);
+overflow: hidden;
+background-position: center;
+}
+
+.botonTarjeta {
+    padding: 14px;
+    color: var(--bg-color);
+    background-color: var(--color-cuarto);
+    border-radius: 0px;
+    border: 0px;
+    border-radius: 15px;
+    font-family: var(--font-secondary);
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 600ms ease;
+}
+
+.botonTarjeta{
+    transition: all 600ms ease;
+}
+
+.botonTarjeta:hover{
+    
+    background: linear-gradient( 135deg, var(--color-cuarto) 10%, #393627d1 100%);
+    border:var(--bg-color--);
+}
+
+  /*ANIMACION CARROUSEL*/
+
+
+ @keyframes slide { 
+    0% {
+        margin-left: 0%;
+    }
+
+    20% {
+        margin-left: 0%;
+    }
+
+    25% {
+        margin-left: -100%;
+    }
+
+    45% {
+        margin-left: -100%;
+    }
+
+    50% {
+        margin-left: -200%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    75% {
+        margin-left: -300%;
+    }
+
+    95% {
+        margin-left: -300%;
+    }
+
+    100% {
+        margin-left: -400%;
+    }
+
+    120% {
+        margin-left: -400%;
+    }
+
+    125% {
+        margin-left: -500%;
+    }
+
+    145% {
+        margin-left: -500%;
+    }
+
+    150% {
+        margin-left: -600%;
+    }
+
+    170% {
+        margin-left: -600%;
+    }
+
+    175% {
+        margin-left: -700%;
+    }
+
+    195% {
+        margin-left: -700%;
+    }
+
+    200% {
+        margin-left: -800%;
+    }
+
+    220% {
+        margin-left: -800%;
+    }
+
+    225% {
+        margin-left: -900%;
+    }
+
+    245% {
+        margin-left: -900%;
+    }
+}
+    
+ 

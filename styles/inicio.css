@@ -1,0 +1,551 @@
+:root {
+    /* Colores */
+
+
+    /* --------------------------------- */
+    /* Color de fondo */
+    --bg-color: #FFF8E0;
+    /* Colores primarios */
+    --color-primary: black;
+    --color-secondary: #44A194;
+    --color-tertiary: #F0BB69;
+    --color-cuarto: #7F636E;
+
+}
+
+body {
+    margin: 0px;
+    background-color: #FFF8E0;
+}
+
+/*     
+    div{
+        border: 5px solid rgb(0, 255, 4);
+        padding: 0px;
+    } 
+    */
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.titulo {
+    font-family: 'Sansita';
+    color: antiquewhite;
+    font-size: 3vw;
+    text-shadow: 2px 3px 2px black;
+    width: 50%;
+    padding: 5px;
+}
+
+.divBoton {
+    position: absolute;
+    bottom: -20%;
+    left: 21%;
+    text-align: center;
+    padding: 30px;
+
+
+}
+
+.boton {
+    color: var(--font-color-w);
+    background: linear-gradient( -135deg, var(--color-tertiary) 10%, #eadc93d1 100%);
+    padding: 1.5rem 2rem 1.5rem 2rem;
+    border: none;
+    border-radius: 40px;
+    font-size: 3vh;
+    font-family: 'Sansita';
+    /* height: 3rem;
+        width: 3rem; */
+    position: relative;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    cursor: pointer;
+    transform: translateY(-40%);
+    /* transition: background-color 0.7s, border-color 0.7s; */
+}
+.boton:hover {
+    background: linear-gradient( 135deg, #7F636E 10%, #3f2705d1 90%);    
+    
+    border-color: var(--color-tertiary);
+    color: var(--bg-color);
+}
+
+.centrar{
+    text-align: center;
+}
+
+.divPerfil {
+    position: absolute;
+    bottom: 60%;
+    right: 20px;
+    text-align: center;
+    z-index: 2;
+
+}
+
+.nombre {
+    font-family: 'Sansita';
+    color: black;
+    font-size: 3rem;
+    z-index: 2;
+    padding: 20px;
+}
+
+.ubicacion {
+    font-family: 'Sansita';
+    color: black;
+    font-size: 1.3rem;
+    z-index: 2;
+    padding: 20px;
+}
+
+
+.imagenDePerfil {
+    border-radius: 50%;
+    border: 0.7vh solid #7F636E;
+    /* border-image:linear-gradient(45deg, red,lime,blue); */
+    height: 20vh;
+    width: auto;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.imagenPortada{
+
+padding: 0px;
+border-radius: 20px;
+border: #fff9d1 8px solid;
+height: 250px;
+}
+
+
+.imagenDeFondo {
+
+    background-image: url('../assets/Cuidadora\ y\ perro\ \(portada\).jpg');
+    background-size: cover;
+    /* Ajusta la imagen para cubrir todo el div */
+    object-fit: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 40vh;
+
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+
+.ola {
+
+    /* background-position: bottom; */
+    object-fit: fill;
+    object-position: left left;
+    background-repeat: repeat-y;
+    width: 100%;
+    height: 60%;
+    /* min-height: 70px; */
+    /* max-height: 260px;        */
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    display: flex;
+    z-index: 1;
+
+}
+
+.nombreYUbicacion {
+    position: relative;
+    text-align: right;
+    padding: 20px;
+}
+
+
+/* <!------------------- Cards ------------------->*/
+
+/* a:hover {
+    background: #fff;
+    color: #333;
+    text-shadow: 0 0 1px #333;
+} */
+
+/*---Card box----*/
+.boxesContainer{
+    display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin: 20px;
+   padding: 20px;
+}
+.cardBox {
+   /* float: left;*/
+    font-size: 1.2em;
+    margin: 1% 0 0 1%;
+    perspective: 800px;
+    transition: all 0.3s ease 0s;
+    width: 23.7%;
+    border-radius: 5%;
+}
+
+/*---Rotacion de card al pasar el cursor---*/
+.cardBox:hover .card {
+    transform: rotateY(180deg);
+}
+
+/*----Diseño 3D de la tarjeta y giro---*/
+.card {
+    background: linear-gradient( 135deg, var(--color-tertiary) 10%, #eadc93d1 100%);
+    align-items: center;
+    justify-items: center;
+    cursor: default;
+    height: 300px;
+    border-radius: 10%;
+    transform-style: preserve-3d;
+    transition: transform 1s ease 0s;
+    width: 100%;
+    -webkit-animation: giro 1s 1;
+    animation: giro 1s 1;
+}
+
+/*Esconder la parte trasera de la tarjeta*/
+.front {
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    color: rgb(0, 0, 0);/*color de texto*/
+    display: block;
+    border:0px solid orange;
+    border-radius: 10%;
+    font-size: 1.2em;
+    height: 100%;
+    padding: 0.8em;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+.front img{
+    object-fit: contain;
+    width: 100px;
+}
+
+.titulosTarjeta{
+    text-align: center;
+
+}
+
+.back {
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    color: white;
+    /*color de texto*/
+    display: block;
+    border: solid #853b58;
+    align-items: center;
+    justify-items: center;
+    border-radius: 10%;
+    font-size: 1.2em;
+    height: 100%;
+    padding: 0.8em;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+/*---Transicion---*/
+.back {
+    align-content: center;
+    transform: rotateY(180deg);
+    font-size: 1.2rem;
+    box-sizing: border-box; 
+}
+
+/*---Back color card---*/
+.cardBox:nth-child(1) .card .back {
+    background: #7F636E;
+}
+
+.cardBox:nth-child(2) .card .back {
+    background: #7F636E;
+}
+
+.cardBox:nth-child(3) .card .back {
+    background: #7F636E;
+}
+
+.cardBox:nth-child(4) .card .back {
+    background: #7F636E;
+}
+
+/*Giro de tiempo cards*/
+
+.cardBox:nth-child(2) .card {
+    -webkit-animation: giro 1.5s 1;
+    animation: giro 1.5s 1;
+}
+
+.cardBox:nth-child(3) .card {
+    -webkit-animation: giro 2s 1;
+    animation: giro 2s 1;
+}
+
+.cardBox:nth-child(4) .card {
+    -webkit-animation: giro 2.5s 1;
+    animation: giro 2.5s 1;
+}
+
+/*---Al entrar a pagina giran las cards---*/
+@keyframes giro {
+    from {
+        transform: rotateY(180deg);
+
+        to {
+            transform: rotateY(0deg);
+        }
+    }
+}
+
+@-webkit-keyframes giro {
+    from {
+        transform: rotateY(180deg);
+    }
+
+    to {
+        transform: rotateY(0deg);
+    }
+}
+
+
+/*<!--------ESTELARES -------------- >*/
+.Estelares {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los elementos hijos */
+    align-items: center; /* Centra verticalmente los elementos hijos */
+    gap: 30px; /* Espacio entre los div hijos */
+    
+}
+
+.Estelares div {
+    text-align: center; 
+}/* Centra el contenido de cada div hijo */
+
+.Estelares img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    object-fit: contain;
+    margin: 0 auto; /* Centra las imágenes dentro de cada div hijo */
+  }
+  
+
+
+
+/* <!------------------- Review Cards ------------------->*/
+
+.reviews {
+    display: flex;
+    justify-content: center;
+    margin-top: 5em;
+    padding:2em;
+    box-sizing: border-box; 
+}
+
+.wrapper {
+    border: n;
+    justify-content: center;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    /* Ensure elements are stacked vertically */
+    gap: 1em;
+    padding: 1.5em;
+    background-color: #FFFFFF;
+    max-width: 100%; /* Prevent overflow */
+    box-sizing: border-box; /* Include padding in width/height */
+
+}
+
+.Card-review {
+    background-color: #82bfb8;
+    width: 50vw;
+    max-width: 40em;
+    border-radius: 0.6em;
+    box-shadow: 0 1.8em 3em rgb(1, 17, 39, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.testimonial-container {
+    border: none;
+    width: 90%;
+    height: auto;
+    /* Allow height to adjust based on content */
+    margin: 2em 1em 1.5em 1em;
+    align-items: center;
+}
+
+
+.buttonFuncionamiento {
+    font-size: 1.8em;
+    height: 2.2em;
+    width: 2.2em;
+    position: relative;
+    background-color: #ffffff;
+    margin: auto;
+    border: none;
+    color: #244f1c;
+    box-shadow: 0 0 1em rgba(1, 17, 39, 0.25);
+    cursor: pointer;
+    border-radius: 50%;
+    top: 50%;
+    position: absolute;
+    /* Absolute positioning relative to the wrapper */
+    transform: translateY(-50%);
+    /* Correct the centering */
+}
+
+#next {
+    right: -1em;
+}
+
+#prev {
+    left: -1em;
+}
+
+#testimonialReview {
+    color: var(--color-primary);
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    letter-spacing: 0.05em;
+}
+
+#imageTestimonial {
+    position: absolute;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    top: -4em;
+    left: 2em;
+    overflow: hidden;
+    border: 5px solid var(--color-cuarto);
+
+}
+
+#testimonialName {
+    color: var(--color-primary);
+    font-size: 1.8em;
+    text-align: right;
+}
+
+#testimonialLocation {
+    color: #000000;
+    font-size: 1.2em;
+    letter-spacing: 0.03em;
+    font-weight: bolder;
+    text-align: right;
+}
+
+#leerMas {
+    position: absolute;
+    display: inline-block;
+    padding: 15px 30px 15px 30px;
+    border-radius: 10px;
+    font-size: 1em;
+    background-color: var(--color-cuarto);
+    border: 0px solid var(--color-cuarto);
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, border-color 0.3s;
+    bottom: -1.2em;
+    align-self: flex-end;
+    margin: 0px;
+}
+
+#leerMas:hover {
+    background-color: #ffffff;
+    border-color: var(--color-cuarto);
+    color: var(--color-cuarto);
+}
+
+
+
+/*---Medias Queries---*/
+
+@media screen and (max-width: 400px) {
+
+    .cardBox {
+        margin: 5%;
+        width: calc(50% - 1em);
+    }
+
+    .card {
+        font-size: 3vw;
+        height: 285px;
+        
+    }
+
+    .cardBox:last-child {
+        margin: 5%;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+
+}
+
+@media screen and (max-width:650px){
+    .wrapper{
+        font-size: 14px;
+        flex-direction: column; 
+        gap: 4.2em; 
+    }
+}
+  
+@media screen and (max-width: 480px) {
+
+    .boxesContainer {
+        flex-direction: column; 
+    }
+    
+    .cardBox {
+        width: 94.5%;
+        height: 290px;
+    }
+
+    .card {
+        height: 290px;
+        font-size: 1rem;
+     
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+}
+
+.img--hospedaje {
+    width: 150px;
+    height: auto;
+}
+

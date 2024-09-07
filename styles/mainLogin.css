@@ -1,0 +1,168 @@
+body {
+    background-color: #FFF8E0;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('../assets/trees.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    font-family: "Sansita", sans-serif;
+}
+
+#login-main {
+    background-color: rgba(240, 187, 105, 0.85);
+    border-radius: 20px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    width: 90%;
+    max-width: 600px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: center;
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input2 {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input-border {
+    border: 2px solid #7F636E;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 250px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+#ingresar {
+    background-color: #FFF8E0;
+    cursor: pointer;
+    padding: 10px 20px;
+    width: 100%;
+    max-width: 250px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+a {
+    color: #7F636E;
+    font-size: 11px;
+}
+
+#access, #register {
+    flex: 1;
+    max-width: 300px;
+    min-width: 200px;
+    text-align: center;
+    margin: 10px;
+}
+
+/* Responsiveness for tablets */
+@media screen and (max-width: 768px) {
+    #login-main {
+        flex-direction: column;
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    #access, #register {
+        max-width: none;
+        margin: 10px 0;
+    }
+
+    .input-border, #ingresar {
+        max-width: 80%;
+        font-size: 1rem;
+    }
+}
+
+/* Responsiveness for mobile */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    #login-main {
+        padding: 15px;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 100%;
+        box-shadow: none;
+        border-radius: 10px;
+    }
+
+    #access, #register {
+        max-width: none;
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .input, .input2 {
+        padding: 10px;
+    }
+
+    .input-border, #ingresar {
+        max-width: 90%;
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    a {
+        font-size: 10px;
+    }
+}
+
+/* For smaller devices like iPhones */
+@media screen and (max-width: 375px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    #login-main {
+        padding: 10px;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 320px;
+        box-shadow: none;
+        border-radius: 10px;
+    }
+
+    #access, #register {
+        max-width: none;
+    }
+
+}    

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeDog - Preguntas Cerradas</title>
+    <link rel="icon" href="../assets/SafeDogWhite.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../styles/formPreguntasCerradas.css">
+
+
+      <!--Librería del menú hamburguesa-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href= "../styles/navbar.css">
+  <link rel="stylesheet" href="../styles/footer.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href="../../inicio.html" target="_blank"><img src="../assets/SafeDog W (9).png" alt="SafeDog-Logo"></a>
+        </div>
+        <ul class="navbar--menu">
+            <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
+            <li><a href="./preguntasFrecuentesContactanos.html">Preguntas Frecuentes</a></li>
+        </ul>
+        <div class="navbar--botones">
+            <button class="boton--claro" onclick="window.location.href='./formCuidador.html';">Ser cuidador</button>
+            <button class="boton--claro" onclick="window.location.href='./mainLogin.html';">Iniciar sesión</button>
+            <button class="boton--azul" onclick="window.location.href='./registroNuevoUsuario.html';">Registrarse</button>
+        </div>
+        <div class="menu-icon" id="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+    
+    <div class="dropdown-menu" id="dropdown-menu">
+        <div class="letras"></div>
+        <ul>
+            <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
+            <li><a href="./preguntasFrecuentesContactanos.html">Preguntas Frecuentes</a></li>
+            <li><a href="./formCuidador.html">Ser cuidador</a></li>
+            <li><a href="./mainLogin.html">Inicio de sesión</a></li>
+            <li><a href="./registroNuevoUsuario.html">Registrarse</a></li>
+        </ul>
+    </div>
+</div>
+    <div>    
+        <header class="header">
+        <h1 class="centrar-texto">Formulario SafeDog</h1>
+        
+     
+       
+    </header>
+    </div>
+
+    <div class="container">
+        <h3>Gracias por tomarse el tiempo para formar parte de esta gran experiencia en la familia SafeDog</h3>
+        <form class="formulario" id="servicesForm">
+            <div class="campo">
+                <!-- Pregunta 1 -->
+                <div class="margin">
+                    <div class="texto">
+                        <p>¿Cuentas con auto propio para transportarte a ti o al perrito?</p>
+                    </div>
+                    <div class="opciones">
+                        <input type="radio" id="auto-si" name="auto" value="Si">
+                        <label for="auto-si">Sí</label>
+                        <input type="radio" id="auto-no" name="auto" value="No">
+                        <label for="auto-no">No</label><br>
+                    </div>
+                </div>
+
+                <!-- Pregunta 2 -->
+                <div class="margin">
+                    <div class="texto">
+                        <p>¿Aceptas reservas de varios dueños al mismo tiempo?</p>
+                    </div>
+                    <div class="opciones">
+                        <input type="radio" id="reserva-si" name="reserva" value="Si">
+                        <label for="reserva-si">Sí</label>
+                        <input type="radio" id="reserva-no" name="reserva" value="No">
+                        <label for="reserva-no">No</label><br>
+                    </div>
+                </div>
+
+                <!-- Pregunta 3 -->
+                <div class="margin">
+                    <div class="texto">
+                        <p>¿Tienes alguna objeción en cuidar/pasear perros activos?</p>
+                    </div>
+                    <div class="opciones">
+                        <input type="radio" id="activo-si" name="activo" value="Si">
+                        <label for="activo-si">Sí</label>
+                        <input type="radio" id="activo-no" name="activo" value="No">
+                        <label for="activo-no">No</label><br>
+                    </div>
+                </div>
+
+                <!-- Pregunta 4 -->
+                <div class="margin">
+                    <div class="texto">
+                        <p class="conflicto">¿Estás dispuesto a mantener la comunicación con el dueño del perro en todo momento enviando fotos, mensajes, etc?</p>
+                    </div>
+                    <div class="opciones conflicto">
+                        <input type="radio" id="comunicacion-si" name="comunicacion" value="Si">
+                        <label for="comunicacion-si">Sí</label>
+                        <input type="radio" id="comunicacion-no" name="comunicacion" value="No">
+                        <label for="comunicacion-no">No</label><br>
+                    </div>
+                </div>
+
+                <!-- Pregunta 5 -->
+                <div class="margin">
+                    <div class="texto">
+                        <p>¿Cuidas cachorros?</p>
+                    </div>
+                    <div class="opciones">
+                        <input type="radio" id="cachorro-si" name="cachorro" value="Si">
+                        <label for="cachorro-si">Sí</label>
+                        <input type="radio" id="cachorro-no" name="cachorro" value="No">
+                        <label for="cachorro-no">No</label><br>
+                    </div>
+                </div>
+
+                <!-- Pregunta 6 -->
+                <div class="margin">
+                    <div class="texto">
+                        <p>¿Cuidas hembras en celo?</p>
+                    </div>
+                    <div class="opciones">
+                        <input type="radio" id="hembra-si" name="hembra" value="Si">
+                        <label for="hembra-si">Sí</label>
+                        <input type="radio" id="hembra-no" name="hembra" value="No">
+                        <label for="hembra-no">No</label><br>
+                    </div>
+                </div>
+
+                <!-- Pregunta 7 -->
+                <div class="margin">
+                    <div class="texto">
+                        <p>¿Cuidas perritos de la tercera edad?</p>
+                    </div>
+                    <div class="opciones">
+                        <input type="radio" id="tercera_edad-si" name="tercera_edad" value="Si">
+                        <label for="tercera_edad-si">Sí</label>
+                        <input type="radio" id="tercera_edad-no" name="tercera_edad" value="No">
+                        <label for="tercera_edad-no">No</label><br>
+                    </div>
+                </div>
+
+                <!-- Pregunta 8 -->
+                <div class="margin">
+                    <div class="texto">
+                        <p>¿Aplicas medicamentos/inyecciones?</p>
+                    </div>
+                    <div class="opciones">
+                        <input type="radio" id="medicamento-si" name="medicamento" value="Si">
+                        <label for="medicamento-si">Sí</label>
+                        <input type="radio" id="medicamento-no" name="medicamento" value="No">
+                        <label for="medicamento-no">No</label><br>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <button type="submit" class="botton">Siguiente</button>
+            </div>
+        </form>
+    </div>
+
+<br>
+<br>
+        <!--Pie de página de safeDog-->
+<footer class="footer--safeDog">
+    <div class="iconos">
+        <a href="#"><img src="../assets/correo5.png" alt="" target="_blank"></a>
+        <a href="#"><img src="../assets/fb5.png" alt="" class="logo--fb"></a>
+        <a href="#"><img src="../assets/instagramb.png" alt="" class="logo--insta"></a>
+        <a href="#"><img src="../assets/whatsapp.png" alt=""></a>
+    </div>
+    <div class="footer--logo">
+        <img src="../assets/safedogfooter.png" alt="safeDog Footer">
+    </div>
+    <div class="footer--info">
+        <h4 class="footer--question">¿Quieres formar parte de nuestra comunidad?</h4>
+        <ul class="footer--list">
+            <li><a href="../pages/serCuidador.html" target="_blank">Ser cuidador</a></li>
+            <li><a href="../pages/serCuidado.html" target="_blank">Ser cuidado</a></li>
+            <li><a href="../pages/preguntasFrecuentes.html" target="_blank">Preguntas frecuentes</a></li>
+            <li><a href="../pages/soporte.html" target="_blank">Soporte</a></li>
+            <li><a href="../pages/avisoPrivacidad.html" target="_blank">Aviso de privacidad</a></li>
+        </ul>
+    
+
+        
+    </div>
+    <div class="footer--copy">
+        <h4>© All rights reserved & design by SafeDog</h4>
+    </div>
+</footer>
+
+<script src="../scripts/NavBar.js"></script>
+<script src="../scripts/formPreguntasCerradas.js"></script>
+</div>
+</body>
+</html>

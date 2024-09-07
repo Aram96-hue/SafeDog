@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeDog-registroCuentaUsuarioDueño</title>
+    <link rel="icon" href="../assets/SafeDogWhite.png">
+    <!--Librería del menú hamburguesa-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Tu perfil | Dueño</title>
+    <!-- Aquí conectamos Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Se añade jQuery (para la localización en el mapa)
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  -->
+
+    <!-- Hoja de estilos -->
+    
+    <link rel="stylesheet" href="../styles/registroCuentaUsuarioDueño.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/navBar.css">
+
+    <!-- Estilos de fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- ROBOTO-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- SANSITA -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<!-- Empieza Navbar -->
+<div class="navbar">
+    <div class="logo">
+        <a href="../../inicio.html" target="_blank"><img src="../assets/SafeDog W (9).png" alt="SafeDog-Logo"></a>
+    </div>
+    <ul class="navbar--menu">
+        <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
+        <li><a href="./preguntasFrecuentesContactanos.html">Preguntas Frecuentes</a></li>
+    </ul>
+    <div class="navbar--botones">
+        <button class="boton--claro" onclick="window.location.href='./formCuidador.html';">Ser cuidador</button>
+        <button class="boton--claro" onclick="window.location.href='./mainLogin.html';">Iniciar sesión</button>
+        <button class="boton--azul" onclick="window.location.href='./registroNuevoUsuario.html';">Registrarse</button>
+    </div>
+    <div class="menu-icon" id="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+</div>
+
+<div class="dropdown-menu" id="dropdown-menu">
+    <div class="letras"></div>
+    <ul>
+        <li><a href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
+        <li><a href="./preguntasFrecuentesContactanos.html">Preguntas Frecuentes</a></li>
+        <li><a href="./formCuidador.html">Ser cuidador</a></li>
+        <li><a href="./mainLogin.html">Inicio de sesión</a></li>
+        <li><a href="./registroNuevoUsuario.html">Registrarse</a></li>
+    </ul>
+</div>
+</div>
+<!-- termina navbar -->
+
+<body>
+
+        <main>
+            <div class="General">
+                <div class="Instrucciones">
+                <h2>Mi cuenta | Dueño</h2>
+                <p>
+                    Para registrar y crear tu perfil llena los siguientes datos.
+                </p>
+                 </div>
+                <!-- Aqui se pone bootstrap (forms)-->
+                <form id="myForm" class="needs-validation form--grid" novalidate>
+                    <div class="container-Preguntas">
+                        <div class="mb-3">
+                            <!--Cuentanos de ti empieza aqui-->
+                            <h5>Información personal</h5>
+                            <div class="row">
+                                <div class="col-12 col-xl-6">
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text">Nombre(s)</span>
+                                        <input type="text" name="nombreDueño" placeholder="Nombres" 
+                                            aria-label="First name" class="form-control" required required pattern="[A-Za-z\s]+" oninput="validateNombre(this)">
+                                        <div class="invalid-feedback">Nombre inválido</div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-xl-6">
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text">Apellidos</span>
+                                        <input type="text" name="apellidoDueño" placeholder="Apellidos"
+                                            aria-label="Last name" class="form-control" required required pattern="[A-Za-z\s]+" oninput="validateNombre(this)">
+                                        <div class="invalid-feedback">Apellido inválido</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Telefono -->
+                            <input type="text" name="telefonoDueño" id="container-Input-Pequeño" class="form-control"
+                                placeholder="Telefono de contacto" required required pattern="\d{10}" oninput="validateTelefono(this)">
+                            <div class="invalid-feedback">Teléfono inválido</div>
+                            <!--Cuentanos de ti termina aqui-->
+                        </div>
+                        <!-- Nombre contacto de emergencia empieza aqui -->
+                        <div class="mb-3">
+                            <h5>Contacto de emergencia</h5>
+
+                            <div class="row">
+                                <div class="col-12 col-xl-6">
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text">Nombre(s)</span>
+                                        <input type="text" name="nombreEmergencia" aria-label="First name"
+                                            class="form-control" required required pattern="[A-Za-z\s]+" oninput="validateNombre(this)">
+                                        <div class="invalid-feedback">Nombre inválido</div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-xl-6">
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text">Apellidos</span>
+                                        <input type="text" name="apellidoEmergencia" aria-label="Last name"
+                                            class="form-control" required required pattern="[A-Za-z\s]+" oninput="validateNombre(this)">
+                                        <div class="invalid-feedback">Apellido inválido.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Teléfono de emergencia -->
+                            <input type="text" name="telefonoEmergencia" id="container-Input-Pequeño"
+                                class="form-control" placeholder="Telefono de emergencia" required required pattern="\d{10}" oninput="validateTelefono(this)">
+                            <div class="invalid-feedback">Teléfono inválido</div>
+                            <!-- Nombre contacto de emergencia termina aqui -->
+                        </div>
+
+                        <!-- Nombre de tu mascota -->
+                        <div class="mb-3">
+                            <h5>Sobre tu mascota</h5>
+                            <label for="formGroupExampleInput" class="form-label nombre">¿Como se llama tu perrito?</label>
+                            <input type="text" class="form-control" id="container-Input-Pequeño" name="nombrePerrito"
+                                placeholder="Nombre de tu perrito" required>
+                        </div>
+                        <!-- Información de tu mascota, raza, tamaño, edad género -->
+                        <div class="mb-3">
+                            <h5>Tamaño de tu perro</h5>
+                            <div class="container mt-2 tamañoPerro">
+                                <!-- Tamaño -->
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="pequeno" name="tamañoPerro" class="custom-control-input" value="pequeño">
+                                    <div class="perro">
+                                    <label class="tamañosPerro" for="pequeno">Pequeño</label>
+                                    </div>
+                                    <div class="image-container">
+                                        <img src="../assets/iconos/Raza pequeña icono.png" alt="icono Raza pequeña">
+                                    </div>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="mediano" name="tamañoPerro" class="custom-control-input">
+                                    <div class="perro">
+                                    <label class="tamañosPerro" for="mediano">Mediano</label>
+                                    </div>
+                                    <div class="image-container">
+                                        <img src="../assets/iconos/Raza mediana icono.png" alt="icono Raza mediana">
+                                    </div>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="grande" name="tamañoPerro" class="custom-control-input">
+                                    <div class="perro">
+                                    <label class="tamañosPerro" for="grande">Grande</label>
+                                    </div>
+                                    <div class="image-container">
+                                        <img src="../assets/iconos/Raza grande icono.png" alt="icono Raza Grande">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Raza -->
+
+                        <div class="mb-3">
+                            <h5>Selecciona la raza de tu perrito</h5>
+
+                            <div class="razasDePerros">
+                                <select name="razasPerros" id="lang" class="form-control" required>
+                                    <option value="Chihuahua">Chihuahua</option>
+                                    <option value="Labrador">Labrador</option>
+                                    <option value="Beagle">Beagle</option>
+                                    <option value="Golden">Golden Retriever</option>
+                                    <option value="Bulldog">Bulldog</option>
+                                    <option value="Poodle">Poodle</option>
+                                    <option value="Rottweiler">Rottweiler</option>
+                                    <option value="Cocker">Cocker Spaniel</option>
+                                    <option value="French">French Poodle</option>
+                                    <option value="Shiba">Shiba Inu</option>
+                                    <option value="Dachshund">Dachshund</option>
+                                    <option value="Boxer">Boxer</option>
+                                    <option value="Yorkshire Terrier">Yorkshire Terrier</option>
+                                    <option value="Siberian Husky">Siberian Husky</option>
+                                    <option value="Great Dane">Great Dane</option>
+                                    <option value="Pembroke Welsh Corgi">Pembroke Welsh Corgi</option>
+                                    <option value="Doberman Pinscher">Doberman Pinscher</option>
+                                    <option value="Australian Shepherd">Australian Shepherd</option>
+                                    <option value="Miniature Schnauzer">Miniature Schnauzer</option>
+                                    <option value="Cavalier King Charles Spaniel">Cavalier King Charles Spaniel
+                                    </option>
+                                    <option value="Shih Tzu">Shih Tzu</option>
+                                    <option value="Cane Corso">Cane Corso</option>
+                                    <option value="Mixto">De todas y de ninguna (mixto)</option>
+                                </select>
+
+
+
+                            </div>
+
+                        </div>
+
+                        <div class="mb-3">
+                            <h5>Edad de tu perrito </h5>
+                            <div class="flex">
+                                <div class="perro">
+                                <input type="number" class="form-control margin" id="numero" name="años" min="0" max="100" required> Años
+                            </div>
+                            <div class="perro">
+                                <input type="number" class="form-control margin" id="numero" name="meses" min="0" max="12" required> Meses
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <div class="mb-3">
+
+                            <h5>Sexo de tu perrito </h5>
+                            <div class="perro">
+                            <input type="radio" id="opcion1" name="generoPerro" value="Hembra">
+                           <label for="Option1" class="sexoPerro"><h6>Hembra</h6></label>
+                            </div> 
+                           <div class="perro">
+                            <input type="radio" id="option2" name="generoPerro" value="Macho">
+                            <label for="opcion2" class="sexoPerro" ><h6>Macho</h6></label><br>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    
+                    <div class="section--up--img">
+                        <div>
+                            <p class="text--title"><h4>Adjunta una foto de ti</h4></p>
+                            <p class="text--img">
+                                Te invitamos a compartir una foto tuya, que podremos mostrar a los cuidadores.
+                                Esto facilitará la creación de mejores conexiones y fortalecerá la relación entre ellos y tu mascota.
+
+                             <!-- Puedes proporcionarnos una foto de ti y nosotros la mostremos a los cuidadores o
+                                cuidadoras, esto te ayudará a crear mejores conecciones. -->
+                            </p>
+                            <div class="up--img--container ">
+                                <img src="../assets/foto-dueño.png" alt="foto-dueño" class="img--img imagenCuidador imagenDueño" id="open-popup-img" />
+                                  
+                                            
+                                        <div class="input-group mb-3">
+                                            <input type="text" id="imagenDueño" name="imagenDueño" placeholder="Copia aquí la URL de tu foto de perfil"
+                                                aria-label="First name" class="form-control" required>
+                                            <button class="boton-foto centrar btn btn--save btn--shadow" type="button"
+                                            onclick="loadImageFromUrldueño()">🔄 Actualizar</button>   
+                                            <div class="invalid-feedback">Favor de proporcionar una URL</div>
+                                        </div>
+                                    
+
+                                    <div class="invalid-feedback">Por favor, sube una foto de ti.</div>
+                            </div>
+
+                            
+                            <p class="text--title"><h4>Adjunta una foto de tu mascota</h4></p>
+                            <p class="text--img">
+                                Te invitamos a compartir una foto de tu mascota para describirla mejor. 
+                                <br>
+                                ¡Cuéntame más sobre tu peludo amigo!
+                                                
+
+                                <!-- Puedes proporcionarnos una foto de tu mascota, queremos conocerle ! -->
+                            </p>
+                            <div class="up--img--container">
+                                <img src="../assets/foto-mascota.jpg" alt="foto-mascota" class="img--img imagenCuidador imagenPerro" width="100px"/>
+                                
+                                
+                                    <div class="input-group mb-3">
+                                        <input type="text" id="imagenPerro" name="imagenMascota" placeholder="Copia aquí la URL de la foto de tu mascota"
+                                            aria-label="First name" class="form-control" required>
+                                        <button class="boton-foto centrar btn btn--save btn--shadow" type="button"
+                                            onclick="loadImageFromUrlperro()">🔄 Actualizar</button>
+                                        <div class="invalid-feedback">Favor de proporcionar una URL</div>
+                                    </div>
+                                
+                                <div class="invalid-feedback">Por favor, sube una foto de tu mascota.</div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="button--submit">
+                            <button type="submit" id="submit" class="btn btn--form btn--shadow" onclick="convertToJson()">Guardar</button>
+                            <!--onclick="convertToJson()"-->
+                            <div id="formMessage" class="mt-3"></div>
+                        </div>
+                    </div>
+                
+                </form>
+            </div>
+        </main>
+    <!--Script links added by beto, doesnt work yet tho-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="../scripts/registroCUD.js"></script>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+     crossorigin="anonymous"></script>
+<!--<script src="../scripts/tuPerfil.js"></script> -->
+
+<footer class="footer--safeDog">
+            <!--Pie de página de safeDog-->
+            <footer class="footer--safeDog">
+                <div class="iconos">
+                    <a href="#"><img src="../assets/correo5.png" alt="" target="_blank"></a>
+                    <a href="#"><img src="../assets/fb5.png" alt="" ></a>
+                    <a href="#"><img src="../assets/instagramb.png" alt="" ></a>
+                    <a href="#"><img src="../assets/whatsapp.png" alt=""></a>
+                </div>
+                <div class="footer--logo">
+                    <img src="../assets/safedogfooter.png" alt="safeDog Footer">
+                </div>
+                <div class="footer--info">
+                    <h4 class="footer--question">¿Quieres formar parte de nuestra comunidad?</h4>
+                    <ul class="footer--list">
+                        <li><a href="../pages/formCuidador.html" target="_blank">Ser cuidador</a></li>
+                        <li><a href="../pages/cardCuidadores.html" target="_blank">Ser cuidado</a></li>
+                        <li><a href="../pages/preguntasFrecuentesContactanos.html" target="_blank">Preguntas frecuentes</a></li>
+                        <li><a href="../pages/preguntasFrecuentesContactanos.html" target="_blank">Soporte</a></li>
+                        <li><a href="../pages/terminoYcondiciones.html" target="_blank">Aviso de privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer--copy">
+                    <h4>© All rights reserved & design by SafeDog <br> Hecho con ♥ en GDL y CDMX</h4>
+                </div>
+            </footer>
+
+
+    <script src="../scripts/registroCuentaUsuarioDueño.js"></script>
+    <script src="../scripts/registroCuentaUsuarioDueño.js"></script>
+    
+
+
+    <!-- Para el menú desplegable -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../scripts/NavBar.js"></script>
+
+</footer>
+
+</html>

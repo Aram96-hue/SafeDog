@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeDog - Inicio</title>
+    <link rel="stylesheet" href="./styles/inicio.css">
+
+    <!-- Icono de la página -->
+    <link rel="icon" href="../assets/SafeDogWhite.png">
+    
+         <!--Librería del menú hamburguesa-->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+         crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="../styles/navBar.css">
+     <link rel="stylesheet" href="../styles/footer.css">
+
+    <!-- Fuentes personalizadas -->
+
+    <!-- Sansita -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!--Roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+  
+
+    <!-- Hojas de estilos -->
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/navBar.css">
+
+
+      </head>
+
+<body>
+  <div class="navbar">
+    <div class="logo">
+        <a href="../../inicio.html" target="_blank"><img src="../assets/SafeDog W (9).png" alt="SafeDog-Logo"></a>
+    </div>
+    <ul class="navbar--menu">
+        <li><a href="./pages/acercaDeNosotros.html">Acerca de nosotros</a></li>
+        <li><a href="./pages/preguntasFrecuentesContactanos.html">Preguntas Frecuentes</a></li>
+    </ul>
+    <div class="navbar--botones">
+        <button class="boton--claro" onclick="window.location.href='./pages/formCuidador.html';">Ser cuidador</button>
+        <button class="boton--claro" onclick="window.location.href='./pages/mainLogin.html';">Iniciar sesión</button>
+        <button class="boton--azul" onclick="window.location.href='./pages/registroNuevoUsuario.html';">Registrarse</button>
+    </div>
+    <div class="menu-icon" id="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+</div>
+
+<div class="dropdown-menu" id="dropdown-menu">
+    <div class="letras"></div>
+    <ul>
+        <li><a href="./pages/acercaDeNosotros.html">Acerca de nosotros</a></li>
+        <li><a href="./pages/preguntasFrecuentesContactanos.html">Preguntas Frecuentes</a></li>
+        <li><a href="./pages/formCuidador.html">Ser cuidador</a></li>
+        <li><a href="./pages/mainLogin.html">Inicio de sesión</a></li>
+        <li><a href="./pages/registroNuevoUsuario.html">Registrarse</a></li>
+    </ul>
+</div>
+</div>
+<div class="portada">
+
+    <div class="imagenDeFondo">
+
+        <div class="titulo">En SafeDog encontrarás cuidados integrales para tu mascota canina</div>
+
+        <div class="ola">
+            <img src="./assets/Ola.png" class="ola" srcset="">
+
+            <div class="divBoton">
+                <button class="boton" onclick="location.href='./pages/cardCuidadores.html'">Contáctame</button>
+            </div>
+        </div>
+    </div>
+    <div class="nombreYUbicacion">
+        <div class="nombre">
+            Mariana del Valle
+        </div>
+        <div class="ubicacion">
+           <img src="./assets/iconos/Localizacion.png" alt="" srcset="" width="20px"> Colonia del Valle, CDMX
+        </div>
+    </div>
+     
+        <div class="perfilYBoton">
+            <div class="divPerfil">
+                <img onclick="location.href='/pages/perfilCuidador.html'" src="./assets/Foto perfil cuidadora.jpeg" alt="Foto cuidadora" srcset="" class="imagenDePerfil">       
+           
+        </div>
+    
+    </div>
+</div>
+    
+
+
+<!------------------------- Card giratorias------------------->
+<h1 class="centrar">Nuestros Servicios</h1>
+<div class="boxesContainer">
+    <div class="cardBox">
+      <div class="card">
+        <div class="front" onclick="location.href='/pages/cardCuidadores.html'">
+          <h3 class="titulosTarjeta">Hospedaje</h3>
+          <img src="./assets/iconos/Hospedaje (2).png" alt="Hospedaje" class="img--hospedaje">
+        </div>
+        <div class="back" onclick="location.href='/pages/cardCuidadores.html'">
+          <p>"Cuida de tu mascota mientras estás ausente. Ofrecemos un espacio seguro, cómodo y con atención personalizada para que tu perro se sienta como en casa."</p>
+       
+        </div>
+      </div>
+    </div>
+   
+    <div class="cardBox">
+      <div class="card">
+        <div class="front" onclick="location.href='/pages/cardCuidadores.html'">
+          <h3 class="titulosTarjeta">Paseo</h3>
+          <img src="./assets/iconos/Paseo (2).png" height="100px" alt="Paseo" >
+        </div>
+        <div class="back" onclick="location.href='/pages/cardCuidadores.html'">
+          <p>"Ofrecemos paseos personalizados para tu mascota, garantizando ejercicio y diversión con atención profesional y cuidadosa."</p>
+        </div>
+      </div>
+    </div>
+   
+
+
+    <div class="cardBox">
+      <div class="card" >
+        <div class="front" onclick="location.href='/pages/cardCuidadores.html'">
+          <h3 class="titulosTarjeta">Guardería</h3>
+          <img src="./assets/iconos/Guarderia (2).png" alt="Guarderia">
+        </div>
+        <div class="back" onclick="location.href='/pages/cardCuidadores.html'">
+          <p>"Proporcionamos un cuidado diurno lleno de atención y actividades para que tu perro esté feliz y bien cuidado mientras estás fuera."</p>
+        </div>
+      </div>
+    </div>
+   
+    <div class="cardBox">
+      <div class="card">
+        <div class="front" onclick="location.href='/pages/cardCuidadores.html'">
+          <h3 class="titulosTarjeta">Baño</h3>
+          <img src="./assets/iconos/Baño (2).png" alt="Baño">
+        </div>
+        <div class="back" onclick="location.href='/pages/cardCuidadores.html'">
+          <p>"Brindamos un baño refrescante y completo para tu perro, utilizando productos premium y técnicas cuidadosas para una limpieza óptima y confort."</p>
+        </div>
+      </div>
+    </div>
+   
+</div>
+
+<!---->
+<div class="Estelares">
+    <div>
+        <h2>El perro más travieso del mes</h2>
+        <img class="imagenPortada" src="./assets/Travesura.png" >
+    </div>
+    <div>
+        <h2>Cuidador del mes</h2>
+        <img class="imagenPortada" src="./assets/CuidadorMes.png" >
+    </div>
+</div>
+
+<!--Review Cards-->
+<div class="reviews">
+    <div class="wrapper">
+        <div class="Card-review" id="Card-one">
+            <img id="imageTestimonial" src="" alt="Testimonial Image">
+            <div class="testimonial-container">
+                <h3 id="testimonialName"></h3>
+                <h6 id="testimonialLocation"></h6>
+                <p id="testimonialReview"></p>
+            </div>
+            <button id="leerMas">Leer mas</button>
+        </div>
+
+        <div class="Card-review" id="Card-two">
+            <img id="imageTestimonial" src="" alt="Testimonial Image">
+            <div class="testimonial-container">
+                <h3 id="testimonialName"></h3>
+                <h6 id="testimonialLocation"></h6>
+                <p id="testimonialReview"></p>
+            </div>
+            <button id="leerMas">Leer mas</button>
+        </div>
+        <button class="buttonFuncionamiento" id="prev">&lt;</button>
+        <button class="buttonFuncionamiento" id="next">&gt;</button>
+    </div>          
+</div> 
+
+
+<script src="./scripts/inicio.js"></script>
+  <!--Hoja vinculada de JS-->
+  <script src="./scripts/NavBar.js"></script>
+</body>
+
+        <!--Pie de página de safeDog-->
+        <footer class="footer--safeDog">
+          <div class="iconos">
+              <a href="#"><img src="../assets/correo5.png" alt="" target="_blank"></a>
+              <a href="#"><img src="../assets/fb5.png" alt="" ></a>
+              <a href="#"><img src="../assets/instagramb.png" alt="" ></a>
+              <a href="#"><img src="../assets/whatsapp.png" alt=""></a>
+          </div>
+          <div class="footer--logo">
+              <img src="../assets/safedogfooter.png" alt="safeDog Footer">
+          </div>
+          <div class="footer--info">
+              <h4 class="footer--question">¿Quieres formar parte de nuestra comunidad?</h4>
+              <ul class="footer--list">
+                  <li><a href="./pages/formCuidador.html" target="_blank">Ser cuidador</a></li>
+                  <li><a href="./pages/cardCuidadores.html" target="_blank">Ser cuidado</a></li>
+                  <li><a href="./pages/preguntasFrecuentesContactanos.html" target="_blank">Preguntas frecuentes</a></li>
+                  <li><a href="./pages/preguntasFrecuentesContactanos.html" target="_blank">Soporte</a></li>
+                  <li><a href="./pages/terminoYcondiciones.html" target="_blank">Aviso de privacidad</a></li>
+              </ul>
+          </div>
+          <div class="footer--copy">
+              <h4>© All rights reserved & design by SafeDog <br> Hecho con ♥ en GDL y CDMX</h4>
+          </div>
+       <!-- Para el menú desplegable -->
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </div>
+</footer>
+</html>

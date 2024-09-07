@@ -1,0 +1,121 @@
+@media (max-width: 77rem) {
+    .cuidador--card {
+      grid-template-columns: 1fr;
+    }
+  
+    .cuidador--foto {
+      height: 60rem;
+    }
+  }
+  
+  @media (max-width: 57rem) {
+    .tags--container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      place-items: center;
+    }
+  
+    .review--pagination {
+      flex-direction: column;
+      align-items: center;
+      justify-items: center;
+    }
+  
+    .btn--help {
+      width: 100%;
+      max-width: none;
+      margin-bottom: 0;
+    }
+  }
+  
+  @media (max-width: 47rem) {
+    .review-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 42rem) {
+    .cuidador--info {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-bottom: 4rem;
+    }
+  
+    .cuidador--text {
+      width: auto;
+      background-color: var(--secondary);
+      padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+    }
+  
+    .btn--cellphone {
+      width: auto;
+    }
+  
+    .container {
+      /* 1140px */
+      max-width: 140rem;
+      padding: 0 2rem;
+      margin: 0 auto;
+    }
+  
+    .reviews--container {
+      padding: 0 2rem;
+    }
+  
+    .container--review {
+      padding-left: 2rem;
+    }
+  
+    .review-coment textarea {
+      margin-right: 2rem;
+    }
+  
+    .button-review {
+      margin-right: 2rem;
+    }
+  
+    .experience--container {
+      padding: 1rem 2rem 2rem 2rem;
+      border-radius: 9px;
+      border: none;
+    }
+  }
+  
+  @media (max-width: 35.5rem) {
+    .tags--container {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 25rem) {
+    .cuidador--servicios {
+      flex-direction: column;
+    }
+  
+    .align-guide {
+      text-align: unset;
+      justify-self: unset;
+    }
+  
+    .tarifa {
+      align-items: center;
+    }
+    
+    .servicios_profile {
+      margin-bottom: 2rem;
+    }
+  
+    .calification--review {
+      flex-direction: column;
+      gap: 0;
+    }
+  
+    .review-calification {
+      flex-direction: column;
+      gap: 0;
+      align-items: unset;
+    }
+  }

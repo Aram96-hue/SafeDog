@@ -1,0 +1,116 @@
+@media (max-width: 74rem) {
+    .form--imput--item input {
+      max-width: 50rem;
+    }
+    .form--imput--field{
+      width: 50rem;
+    }
+  }
+  
+  @media (max-width: 69rem) {
+    .up--img--container {
+      flex-direction: column;
+      gap: 3rem;
+    }
+  }
+  
+  @media (max-width: 67rem) {
+    .form--imput--item input {
+      max-width: 42rem;
+    }
+  
+    .form--imput--field {
+      width: 42rem;
+    }
+  }
+  
+  @media (max-width: 60rem) {
+    .form--grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 10rem;
+    }
+  
+    .form--imput--item input {
+      max-width: 70rem;
+    }
+  
+    .form--imput--field{
+      width: 70rem;
+    }
+  
+    .img--img {
+      width: 30rem;
+    }
+  
+    .up--img--container {
+      align-items: center;
+    }
+  }
+  
+  @media (max-width: 52rem) {
+    .form--imput--item input {
+      max-width: 56rem;
+    }
+  
+    .form--imput--field{
+      width: 56rem;
+    }
+  }
+  
+  @media (max-width: 43rem) {
+    .form--imput--item input {
+      max-width: 42rem;
+    }
+  
+    .form--imput--field{
+      width: 42rem;
+      gap: 2rem;
+    }
+  }
+  
+  @media (max-width: 35rem) {
+    .container {
+      padding: 0 1rem;
+    }
+  
+    .form--imput--item {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+  
+    .form--imput--city {
+      flex-direction: column;
+    }
+  
+    .form--imput--field {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+  
+    .form--imput--validation {
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+  
+    .label--title{
+      margin-bottom: 3rem;
+    }
+  }
+  
+  @media (max-width: 26rem) {
+    .container {
+      padding: 0 2rem;
+    }
+  
+    .form--imput--item input {
+      max-width: 30rem;
+    }
+  
+    .form--imput--field{
+      width: 30rem;
+      gap: 2rem;
+    }
+  }
