@@ -122,6 +122,22 @@ function validatePasswordConfirm(input) {
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('.needs-validation');
 
+    // Fetch the last ID when the DOM is fully loaded
+    let lastIdPerrito = null;
+    fetchLastIdPerrito().then(id => {
+        lastIdPerrito = id; // Store the fetched last ID
+        console.log('Last ID:', lastIdPerrito); // Optional: Log the ID for debugging
+        localStorage.setItem('idPerrito',lastIdPerrito);
+    });
+
+    // Fetch the last ID when the DOM is fully loaded
+    let lastIdContactE = null;
+    fetchLastIdContactE().then(id => {
+        lastIdContactE = id; // Store the fetched last ID
+        console.log('Last ID:', lastIdContactE); // Optional: Log the ID for debugging
+        localStorage.setItem('idContactoEmergencia', lastIdContactE);
+    });
+
     form.addEventListener('input', event => {
         const target = event.target;
 
@@ -138,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, false);
 
-    form.addEventListener('submit', event => {
+    form.addEventListener('submit', async event => {
         event.preventDefault();
         event.stopPropagation();
 
@@ -151,27 +167,151 @@ document.addEventListener('DOMContentLoaded', () => {
             const correo = form.querySelector('#exampleInputEmail1').value;
             const telefono = form.querySelector('#telefono').value;
             const password2 = form.querySelector('#exampleInputPassword1').value;
+            localStorage.setItem('correo', correo);
+            localStorage.setItem('contrasenia', password2);
 
+            const newPerrito = {
+                nombre: "",
+                tamanio: "",
+                raza: "",
+                anio: 0,
+                mes: 0,
+                genero: "",
+                urlFoto: ""
+            }
+
+            const newContactoED = {
+                nombre: "",
+                telefono: "",
+                apellido: null,
+                correo: ""
+            }
+          
             const newUser = {
-                username,
-                correo,
-                telefono,
-                password2
+                nombre: username,
+                apellido: "",
+                telefono: telefono,
+                correo: correo,
+                contrasenia: password2,
+                direccion: "",
+                urlFoto: "",
+                perrito: lastIdPerrito,
+                contactoDeEmergencia: lastIdContactE
             };
 
-            let users = JSON.parse(localStorage.getItem('myForm2')) || [];
-            users.push(newUser);
-            localStorage.setItem('myForm2', JSON.stringify(users));
+            jsonData = JSON.stringify(newUser);
+            jsonDataPerritoVacio = JSON.stringify(newPerrito);
+            jsonDataContactoEDVacio = JSON.stringify(newContactoED);
             
-            console.log('Formulario enviado');
+            try {
+                // Create new perrito and contacto emergency
+                await Promise.all([
+                    crearNuevoPerrito(),
+                    crearNuevoContactoEDVacio()
+                ]);
+
+                // Send new user registration
+                await sendRegistroNuevoUsuerio();
+
+                // Redirect to the new page
+                window.location.href = './registroCuentaUsuarioDueño.html';
+                console.log('Formulario enviado');
+            } catch (error) {
+                console.error('Error in submission process:', error);
+            }
         } else {
             form.classList.add('was-validated');
         }
     }, false);
 });
 
+const url = `http://127.0.0.1:8081/api/safedog/duenios`;
 
+//Enviar por API (metodo POST)
+async function sendRegistroNuevoUsuerio() {
+    try {
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: jsonData
+        });
+        const data = await response.json();
+        console.log('Guardado', data);
+    } catch (error) {
+        console.error('Error in sending new user:', error);
+    }
+}
 
+const urlPerrito = `http://127.0.0.1:8081/api/safedog/perritos`;
+
+//Enviar por API (metodo POST)
+async function crearNuevoPerrito() {
+    try {
+        const response = await fetch(urlPerrito, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: jsonDataPerritoVacio
+        });
+        const data = await response.json();
+        console.log('Perrito creado', data);
+        return data; // Optionally return data if needed
+    } catch (error) {
+        console.error('Error in creating new perrito:', error);
+        throw error; // Ensure that errors are propagated
+    }
+}
+
+const urlContactoEDVacio = `http://127.0.0.1:8081/api/safedog/Contacto_Emergencia`;
+
+//Enviar por API (metodo POST)
+async function crearNuevoContactoEDVacio() {
+    try {
+        const response = await fetch(urlContactoEDVacio, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: jsonDataContactoEDVacio
+        });
+        const data = await response.json();
+        console.log('Contacto de emergencia creado', data);
+        return data; // Optionally return data if needed
+    } catch (error) {
+        console.error('Error in creating new contacto de emergencia:', error);
+        throw error; // Ensure that errors are propagated
+    }
+}
+
+async function fetchLastIdPerrito() {
+    try {
+        const response = await fetch('http://localhost:8081/api/safedog/perritos/lastId'); // Adjust URL as needed
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        return data; // Returns the last ID
+    } catch (error) {
+        console.error('There was a problem with the fetch operation:', error);
+    }
+}
+
+async function fetchLastIdContactE() {
+    try {
+        const response = await fetch('http://localhost:8081/api/safedog/Contacto_Emergencia/lastId'); // Adjust URL as needed
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        return data; // Returns the last ID
+    } catch (error) {
+        console.error('There was a problem with the fetch operation:', error);
+    }
+}
+/*
  // Creación de multiples usuarios en el localStorage
  function createUsersJsonTest() {
     let usersJsonTest = [
@@ -237,7 +377,7 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         ]
         localStorage.setItem("usersTest", JSON.stringify(usersJsonTest));
-  };
+  };*/
 
 
 

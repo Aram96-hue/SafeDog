@@ -92,7 +92,7 @@ document.getElementById("servicesForm").addEventListener("submit", function(even
 */
 
 let jsonData
-const url = `http://localhost:8080/api/safedog/preguntas_cerradas`
+const url = `http://localhost:8081/api/safedog/preguntas_cerradas`
 
 //Enviar por API (metodo POST)
 function sendPreguntasCerradas() {

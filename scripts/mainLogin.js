@@ -1,17 +1,20 @@
+// Function to validate email format
 function isEmailValid(email) {
-  let correoRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const correoRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return correoRegex.test(email);
 }
 
+// Password validation requirements
 const requirements = [
-  {regex: /.{8,}/, index: 0, message: "Debe tener al menos 8 caracteres"}, // Minimo 8 caracteres.
-  {regex: /[0-9]/, index: 1, message: "Debe tener al menos un numero"}, // Al menos un numero.
-  {regex: /[a-z]/, index: 2,message: "Debe tener al menos una letra minúscula"}, // Al menos una letra minúscula
-  {regex: /[!#$%&*?_@.\-]/, index: 3, message: "Debe tener al menos un caracter especial"}, // Al menos un caracter especial
-  {regex: /[A-Z]/, index:4, message: "Debe tener al menos una letra mayúscula"}, // Al menos una letra mayúscula
+  { regex: /.{8,}/, index: 0, message: "Debe tener al menos 8 caracteres" },
+  { regex: /[0-9]/, index: 1, message: "Debe tener al menos un numero" },
+  { regex: /[a-z]/, index: 2, message: "Debe tener al menos una letra minúscula" },
+  { regex: /[!#$%&*?_@.\-]/, index: 3, message: "Debe tener al menos un caracter especial" },
+  { regex: /[A-Z]/, index: 4, message: "Debe tener al menos una letra mayúscula" },
 ];
 
-const requierementList = [
+// Elements for displaying password validation requirements
+const requirementList = [
   document.getElementById("req1"),
   document.getElementById("req2"),
   document.getElementById("req3"),
@@ -19,93 +22,127 @@ const requierementList = [
   document.getElementById("req5")
 ];
 
-document.getElementById("username").addEventListener("input", function () {
-  let correo = this.value.trim();
-  let feedback = document.getElementById("email-feedback");
+// Email input field and feedback element
+const emailInput = document.getElementById("username");
+const emailFeedback = document.getElementById("email-feedback");
 
+// Password input field and toggle button
+const passwordInput = document.getElementById("password");
+const togglePassword = document.getElementById("togglePassword");
+
+// Event listener for email input
+emailInput.addEventListener("input", function () {
+  const correo = this.value.trim();
   if (!isEmailValid(correo)) {
-    feedback.textContent = "❌ Correo electrónico inválido";
-    feedback.style.color = "red";
+    emailFeedback.textContent = "❌ Correo electrónico inválido";
+    emailFeedback.style.color = "red";
   } else {
-    feedback.textContent = "✅ Correo electrónico válido";
-    feedback.style.color = "green";
+    emailFeedback.textContent = "✅ Correo electrónico válido";
+    emailFeedback.style.color = "green";
   }
 });
 
-const passwordInput = document.getElementById("password");
+// Event listener for password input
 passwordInput.addEventListener("keyup", (e) => {
-    const password = e.target.value;
-    requirements.forEach(item => {
-        const isValid = item.regex.test(password);
-        const requirementItem = requierementList[item.index];
-        if (isValid) {
-            requirementItem.textContent = `✅ ${item.message}`;
-            requirementItem.style.color = "green";
-        } else {
-            requirementItem.textContent = `❌ ${item.message}`;
-            requirementItem.style.color = "red";
-        }
-    });
+  const password = e.target.value;
+  requirements.forEach(item => {
+    const isValid = item.regex.test(password);
+    const requirementItem = requirementList[item.index];
+    if (isValid) {
+      requirementItem.textContent = `✅ ${item.message}`;
+      requirementItem.style.color = "green";
+    } else {
+      requirementItem.textContent = `❌ ${item.message}`;
+      requirementItem.style.color = "red";
+    }
+  });
 });
 
-document.getElementById("togglePassword").addEventListener('click', (e)=>{
-  const type = password.getAttribute('type') === 'password' ? 'text': 'password';
-  password.setAttribute('type', type);
-  e.target.classList.toggle('bi-eye');
+// Event listener for password visibility toggle
+togglePassword.addEventListener('click', () => {
+  const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+  passwordInput.setAttribute('type', type);
+  togglePassword.classList.toggle('bi-eye');
 });
 
-document
-  .getElementById("login-form")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
-    let username = document.getElementById("username").value;
-    let password = document.getElementById("password").value;
+// Event listener for form submission
+document.getElementById("ingresar-submit").addEventListener("click", function (event) {
+  event.preventDefault(); // Prevent the default form submission
 
-    // Abajo la función de crear un usaurio dentro de localStorage para test
-    createUsersJsonTest();
-    // Para multiples usuarios
-    let usersTest = JSON.parse(localStorage.getItem("usersTest"));
-    let existUser = false;
-    let userIncorrect = true;
-    usersTest.forEach((user) => {
-      if (
-        user.username === username &&
-        user.password === password
-      ) {
-        // Aquí va el código referente a enviar al usuario con el resto de la página, se agrega un alert personalizado para ver que funciona esta parte
-        userIncorrect = false;
-        Swal.fire({
-          icon: "success",
-          title: "Bienvenido",
-          text: "Usario y Contraseña validos",
-          confirmButtonText: "Aceptar",
-          confirmButtonColor: "#7f636e",
-          timer: 1500,
-        
-        }).then(() => {
+  const username = emailInput.value;
+  const password = passwordInput.value;
 
-          window.location.href = "../inicio.html";
-          //location.replace("tuPerfil.html");
-        });
-        return;
-      } else if (user.username === username) {
-        existUser = true;
+  getInfoDuenio(username, password);
+});
+
+// Function to fetch user data
+function getInfoDuenio(username, password) {
+  const urlDuenio = `http://localhost:8081/api/safedog/duenios/duenio/correo?correo=${username}`;
+
+  console.log('Fetching data from URL:', urlDuenio); // Log the URL being used
+
+  
+  fetch(urlDuenio, {
+    method: 'GET' // Explicitly specify that this is a GET request
+  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
       }
-
-    });
-    if (userIncorrect) {
+      return response.json(); // Parse JSON from the response
+    })
+    .then(duenioInfo => {
+      console.log(duenioInfo);
+      usersTest(duenioInfo, username, password); // Pass the fetched data to usersTest
+    })
+    .catch(error => {
+      console.error('Error fetching Duenio info:', error);
       Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: existUser
-          ? "Contraseña incorrecta, favor de introducir nuevamente tu contraseña"
-          : "Usario y contraseña incorrectos, favor de intentar nuevamente",
+        text: "Error fetching user information. Please try again later.",
         confirmButtonText: "Aceptar",
         confirmButtonColor: "#7f636e",
       });
-    }
-  });
+    });
+}
 
+// Function to validate user credentials
+function usersTest(duenioInfo, username, password) {
+  if (duenioInfo && duenioInfo.correo === username && duenioInfo.contrasenia === password) {
+    Swal.fire({
+      icon: "success",
+      title: "Bienvenido",
+      text: "Usuario y Contraseña válidos",
+      confirmButtonText: "Aceptar",
+      confirmButtonColor: "#7f636e",
+      timer: 1500,
+    }).then(() => {
+      // Redirect or update the UI after successful login
+      window.location.href = "../inicio.html";
+    });
+  } else if (duenioInfo && duenioInfo.correo === username) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Contraseña incorrecta",
+      confirmButtonText: "Aceptar",
+      confirmButtonColor: "#7f636e",
+    });
+  } else {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Usuario no encontrado",
+      confirmButtonText: "Aceptar",
+      confirmButtonColor: "#7f636e",
+    });
+  }
+}
+
+
+
+  /*
 // Creación de multiples usuarios en el localStorage
 function createUsersJsonTest() {
   let usersJsonTest = [
@@ -151,4 +188,4 @@ function createUsersJsonTest() {
     },
   ];
   localStorage.setItem("usersTest", JSON.stringify(usersJsonTest));
-};
+};*/
